@@ -31,43 +31,28 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.slidePanel = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnAbout = new System.Windows.Forms.Button();
-            this.btnToggle = new System.Windows.Forms.Button();
-            this.btnWorkoutPlans = new System.Windows.Forms.Button();
-            this.btnBMICalculator = new System.Windows.Forms.Button();
-            this.btnDietPlans = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.pnlChallenge = new System.Windows.Forms.Panel();
             this.lblChallenge = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblwarning = new System.Windows.Forms.Label();
             this.btnChallenge = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDate = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblClock = new System.Windows.Forms.Label();
             this.lblQuote = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.lblWaterProgress = new System.Windows.Forms.Label();
+            this.lblWaterIntake = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAddWater = new System.Windows.Forms.Button();
             this.progressBarWater = new System.Windows.Forms.ProgressBar();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblWeightProgess = new System.Windows.Forms.Label();
@@ -79,19 +64,36 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.waterResetTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTipProgressWeight = new System.Windows.Forms.ToolTip(this.components);
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
+            this.btnToggle = new System.Windows.Forms.Button();
+            this.btnWorkoutPlans = new System.Windows.Forms.Button();
+            this.btnBMICalculator = new System.Windows.Forms.Button();
+            this.btnDietPlans = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnAddWater = new System.Windows.Forms.Button();
             this.btnProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnlMain.SuspendLayout();
             this.slidePanel.SuspendLayout();
             this.pnlChallenge.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,60 +109,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 70);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::Gym___Fitness_App.Properties.Resources.Gym___FItness_logo;
-            this.pictureBox5.Location = new System.Drawing.Point(66, -2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(80, 74);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 17;
-            this.pictureBox5.TabStop = false;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::Gym___Fitness_App.Properties.Resources.power_button;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(634, 16);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(104, 37);
-            this.btnLogout.TabIndex = 3;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Image = global::Gym___Fitness_App.Properties.Resources.enter7;
-            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(634, 16);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(97, 37);
-            this.btnLogin.TabIndex = 16;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label1
             // 
@@ -211,6 +159,295 @@
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(200, 540);
             this.slidePanel.TabIndex = 12;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label11.Location = new System.Drawing.Point(-141, 140);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(332, 30);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Welcome to Gym && Fitness App!";
+            // 
+            // pnlChallenge
+            // 
+            this.pnlChallenge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
+            this.pnlChallenge.Controls.Add(this.lblChallenge);
+            this.pnlChallenge.Controls.Add(this.pictureBox4);
+            this.pnlChallenge.Controls.Add(this.lblwarning);
+            this.pnlChallenge.Controls.Add(this.btnChallenge);
+            this.pnlChallenge.Controls.Add(this.label5);
+            this.pnlChallenge.Controls.Add(this.label4);
+            this.pnlChallenge.Location = new System.Drawing.Point(60, 270);
+            this.pnlChallenge.Name = "pnlChallenge";
+            this.pnlChallenge.Size = new System.Drawing.Size(500, 150);
+            this.pnlChallenge.TabIndex = 13;
+            // 
+            // lblChallenge
+            // 
+            this.lblChallenge.AutoSize = true;
+            this.lblChallenge.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChallenge.ForeColor = System.Drawing.Color.Blue;
+            this.lblChallenge.Location = new System.Drawing.Point(8, 70);
+            this.lblChallenge.Name = "lblChallenge";
+            this.lblChallenge.Size = new System.Drawing.Size(0, 20);
+            this.lblChallenge.TabIndex = 18;
+            // 
+            // lblwarning
+            // 
+            this.lblwarning.AutoSize = true;
+            this.lblwarning.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwarning.ForeColor = System.Drawing.Color.Red;
+            this.lblwarning.Location = new System.Drawing.Point(50, 101);
+            this.lblwarning.Name = "lblwarning";
+            this.lblwarning.Size = new System.Drawing.Size(124, 19);
+            this.lblwarning.TabIndex = 16;
+            this.lblwarning.Text = "Do if you can!!";
+            // 
+            // btnChallenge
+            // 
+            this.btnChallenge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnChallenge.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChallenge.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnChallenge.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.btnChallenge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChallenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.841584F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChallenge.ForeColor = System.Drawing.Color.Black;
+            this.btnChallenge.Location = new System.Drawing.Point(16, 29);
+            this.btnChallenge.Name = "btnChallenge";
+            this.btnChallenge.Size = new System.Drawing.Size(147, 28);
+            this.btnChallenge.TabIndex = 1;
+            this.btnChallenge.Text = "Get your Challenge";
+            this.toolTip1.SetToolTip(this.btnChallenge, "Task");
+            this.btnChallenge.UseVisualStyleBackColor = false;
+            this.btnChallenge.Click += new System.EventHandler(this.btnChallenge_Click_1);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(56, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(126, 19);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Not For Loosers!!";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 1);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(157, 21);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "CHALLENGE SECTION";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.Black;
+            this.lblDate.Location = new System.Drawing.Point(624, 9);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(0, 19);
+            this.lblDate.TabIndex = 9;
+            // 
+            // lblClock
+            // 
+            this.lblClock.AutoSize = true;
+            this.lblClock.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClock.ForeColor = System.Drawing.Color.Black;
+            this.lblClock.Location = new System.Drawing.Point(632, 46);
+            this.lblClock.Name = "lblClock";
+            this.lblClock.Size = new System.Drawing.Size(0, 21);
+            this.lblClock.TabIndex = 4;
+            // 
+            // lblQuote
+            // 
+            this.lblQuote.AutoSize = true;
+            this.lblQuote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblQuote.Font = new System.Drawing.Font("Rockwell", 22.09901F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuote.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lblQuote.Location = new System.Drawing.Point(197, 144);
+            this.lblQuote.Name = "lblQuote";
+            this.lblQuote.Size = new System.Drawing.Size(0, 38);
+            this.lblQuote.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label2.Location = new System.Drawing.Point(157, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(332, 30);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Welcome to Gym && Fitness App!";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.lblWaterIntake);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.btnAddWater);
+            this.panel2.Controls.Add(this.progressBarWater);
+            this.panel2.Controls.Add(this.pictureBox6);
+            this.panel2.Location = new System.Drawing.Point(568, 272);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(245, 262);
+            this.panel2.TabIndex = 14;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Blue;
+            this.label10.Location = new System.Drawing.Point(100, 62);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(70, 20);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "8 Glass";
+            // 
+            // lblWaterIntake
+            // 
+            this.lblWaterIntake.AutoSize = true;
+            this.lblWaterIntake.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWaterIntake.ForeColor = System.Drawing.Color.Blue;
+            this.lblWaterIntake.Location = new System.Drawing.Point(75, 104);
+            this.lblWaterIntake.Name = "lblWaterIntake";
+            this.lblWaterIntake.Size = new System.Drawing.Size(0, 20);
+            this.lblWaterIntake.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(97, 81);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 19);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Progress:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 10.3802F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(2, 61);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 20);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Target Intake: ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(4, 82);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(98, 19);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Current Intake";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.267326F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(2, 219);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(239, 34);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "* It is recommended to drink 8 glass of water daily!";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(67, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(175, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Daily Water Intake";
+            // 
+            // progressBarWater
+            // 
+            this.progressBarWater.Location = new System.Drawing.Point(5, 127);
+            this.progressBarWater.Name = "progressBarWater";
+            this.progressBarWater.Size = new System.Drawing.Size(233, 42);
+            this.progressBarWater.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.progressBarWater, "Water Intake");
+            // 
+            // panel6
+            // 
+            this.panel6.AutoSize = true;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
+            this.panel6.Controls.Add(this.lblWeightProgess);
+            this.panel6.Controls.Add(this.label14);
+            this.panel6.Controls.Add(this.progressBarWeight);
+            this.panel6.Location = new System.Drawing.Point(62, 434);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(498, 101);
+            this.panel6.TabIndex = 15;
+            // 
+            // lblWeightProgess
+            // 
+            this.lblWeightProgess.AutoSize = true;
+            this.lblWeightProgess.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeightProgess.ForeColor = System.Drawing.Color.Blue;
+            this.lblWeightProgess.Location = new System.Drawing.Point(208, 12);
+            this.lblWeightProgess.Name = "lblWeightProgess";
+            this.lblWeightProgess.Size = new System.Drawing.Size(0, 20);
+            this.lblWeightProgess.TabIndex = 19;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 11);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(145, 20);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Weight Progress:";
+            // 
+            // progressBarWeight
+            // 
+            this.progressBarWeight.Location = new System.Drawing.Point(29, 48);
+            this.progressBarWeight.Name = "progressBarWeight";
+            this.progressBarWeight.Size = new System.Drawing.Size(445, 41);
+            this.progressBarWeight.TabIndex = 12;
+            this.progressBarWeight.MouseEnter += new System.EventHandler(this.progressBarWeight_MouseEnter);
+            // 
+            // timerQuote
+            // 
+            this.timerQuote.Enabled = true;
+            this.timerQuote.Interval = 73;
+            this.timerQuote.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timerTime
+            // 
+            this.timerTime.Interval = 1000;
+            this.timerTime.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // slideTimer
+            // 
+            this.slideTimer.Interval = 1;
+            this.slideTimer.Tick += new System.EventHandler(this.slideTimer_Tick_1);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 200;
+            this.toolTip1.ReshowDelay = 100;
+            this.toolTip1.ShowAlways = true;
+            // 
+            // waterResetTimer
+            // 
+            this.waterResetTimer.Enabled = true;
+            this.waterResetTimer.Tick += new System.EventHandler(this.waterResetTimer_Tick);
             // 
             // btnHome
             // 
@@ -362,41 +599,6 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(-141, 140);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(332, 30);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Welcome to Gym && Fitness App!";
-            // 
-            // pnlChallenge
-            // 
-            this.pnlChallenge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
-            this.pnlChallenge.Controls.Add(this.lblChallenge);
-            this.pnlChallenge.Controls.Add(this.pictureBox4);
-            this.pnlChallenge.Controls.Add(this.lblwarning);
-            this.pnlChallenge.Controls.Add(this.btnChallenge);
-            this.pnlChallenge.Controls.Add(this.label5);
-            this.pnlChallenge.Controls.Add(this.label4);
-            this.pnlChallenge.Location = new System.Drawing.Point(60, 277);
-            this.pnlChallenge.Name = "pnlChallenge";
-            this.pnlChallenge.Size = new System.Drawing.Size(500, 143);
-            this.pnlChallenge.TabIndex = 13;
-            // 
-            // lblChallenge
-            // 
-            this.lblChallenge.AutoSize = true;
-            this.lblChallenge.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChallenge.ForeColor = System.Drawing.Color.Blue;
-            this.lblChallenge.Location = new System.Drawing.Point(8, 70);
-            this.lblChallenge.Name = "lblChallenge";
-            this.lblChallenge.Size = new System.Drawing.Size(0, 20);
-            this.lblChallenge.TabIndex = 18;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.warning_sign;
@@ -406,55 +608,6 @@
             this.pictureBox4.Size = new System.Drawing.Size(34, 36);
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
-            // 
-            // lblwarning
-            // 
-            this.lblwarning.AutoSize = true;
-            this.lblwarning.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwarning.ForeColor = System.Drawing.Color.Red;
-            this.lblwarning.Location = new System.Drawing.Point(50, 101);
-            this.lblwarning.Name = "lblwarning";
-            this.lblwarning.Size = new System.Drawing.Size(124, 19);
-            this.lblwarning.TabIndex = 16;
-            this.lblwarning.Text = "Do if you can!!";
-            // 
-            // btnChallenge
-            // 
-            this.btnChallenge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnChallenge.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChallenge.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnChallenge.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.btnChallenge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChallenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.841584F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChallenge.ForeColor = System.Drawing.Color.Black;
-            this.btnChallenge.Location = new System.Drawing.Point(16, 29);
-            this.btnChallenge.Name = "btnChallenge";
-            this.btnChallenge.Size = new System.Drawing.Size(147, 28);
-            this.btnChallenge.TabIndex = 1;
-            this.btnChallenge.Text = "Get your Challenge";
-            this.toolTip1.SetToolTip(this.btnChallenge, "Task");
-            this.btnChallenge.UseVisualStyleBackColor = false;
-            this.btnChallenge.Click += new System.EventHandler(this.btnChallenge_Click_1);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(56, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 19);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Not For Loosers!!";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 1);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 21);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "CHALLENGE SECTION";
             // 
             // pictureBox3
             // 
@@ -476,16 +629,6 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(624, 9);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(0, 19);
-            this.lblDate.TabIndex = 9;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.clock;
@@ -496,123 +639,14 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // lblClock
+            // pictureBox6
             // 
-            this.lblClock.AutoSize = true;
-            this.lblClock.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClock.ForeColor = System.Drawing.Color.Black;
-            this.lblClock.Location = new System.Drawing.Point(632, 46);
-            this.lblClock.Name = "lblClock";
-            this.lblClock.Size = new System.Drawing.Size(0, 21);
-            this.lblClock.TabIndex = 4;
-            // 
-            // lblQuote
-            // 
-            this.lblQuote.AutoSize = true;
-            this.lblQuote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblQuote.Font = new System.Drawing.Font("Rockwell", 22.09901F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuote.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblQuote.Location = new System.Drawing.Point(197, 144);
-            this.lblQuote.Name = "lblQuote";
-            this.lblQuote.Size = new System.Drawing.Size(0, 38);
-            this.lblQuote.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(157, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 30);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Welcome to Gym && Fitness App!";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.lblWaterProgress);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.btnAddWater);
-            this.panel2.Controls.Add(this.progressBarWater);
-            this.panel2.Location = new System.Drawing.Point(568, 278);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(245, 256);
-            this.panel2.TabIndex = 14;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Blue;
-            this.label10.Location = new System.Drawing.Point(104, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 20);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "8 Glass";
-            // 
-            // lblWaterProgress
-            // 
-            this.lblWaterProgress.AutoSize = true;
-            this.lblWaterProgress.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWaterProgress.ForeColor = System.Drawing.Color.Blue;
-            this.lblWaterProgress.Location = new System.Drawing.Point(108, 90);
-            this.lblWaterProgress.Name = "lblWaterProgress";
-            this.lblWaterProgress.Size = new System.Drawing.Size(0, 20);
-            this.lblWaterProgress.TabIndex = 20;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(98, 65);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 19);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Progress:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(7, 31);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 19);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Target Intake: ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 19);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Current Intake";
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.267326F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(2, 219);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(239, 34);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "* It is recommended to drink 8 glass of water daily!";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Daily Water Intake";
+            this.pictureBox6.Image = global::Gym___Fitness_App.Properties.Resources.drink_water;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 1);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(61, 65);
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
             // 
             // btnAddWater
             // 
@@ -620,95 +654,21 @@
             this.btnAddWater.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.plus;
             this.btnAddWater.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnAddWater.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddWater.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MediumTurquoise;
-            this.btnAddWater.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aquamarine;
+            this.btnAddWater.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnAddWater.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
             this.btnAddWater.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddWater.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddWater.ForeColor = System.Drawing.Color.White;
             this.btnAddWater.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddWater.Location = new System.Drawing.Point(10, 168);
+            this.btnAddWater.Location = new System.Drawing.Point(10, 180);
             this.btnAddWater.Name = "btnAddWater";
-            this.btnAddWater.Size = new System.Drawing.Size(136, 33);
+            this.btnAddWater.Size = new System.Drawing.Size(136, 35);
             this.btnAddWater.TabIndex = 2;
             this.btnAddWater.Text = "Add 1 Glass";
             this.btnAddWater.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolTip1.SetToolTip(this.btnAddWater, "Add a glass of water");
             this.btnAddWater.UseVisualStyleBackColor = false;
             this.btnAddWater.Click += new System.EventHandler(this.btnAddWater_Click);
-            // 
-            // progressBarWater
-            // 
-            this.progressBarWater.Location = new System.Drawing.Point(5, 115);
-            this.progressBarWater.Name = "progressBarWater";
-            this.progressBarWater.Size = new System.Drawing.Size(233, 42);
-            this.progressBarWater.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.progressBarWater, "Water Intake");
-            // 
-            // panel6
-            // 
-            this.panel6.AutoSize = true;
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
-            this.panel6.Controls.Add(this.lblWeightProgess);
-            this.panel6.Controls.Add(this.label14);
-            this.panel6.Controls.Add(this.progressBarWeight);
-            this.panel6.Location = new System.Drawing.Point(62, 434);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(498, 101);
-            this.panel6.TabIndex = 15;
-            // 
-            // lblWeightProgess
-            // 
-            this.lblWeightProgess.AutoSize = true;
-            this.lblWeightProgess.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeightProgess.ForeColor = System.Drawing.Color.Blue;
-            this.lblWeightProgess.Location = new System.Drawing.Point(208, 12);
-            this.lblWeightProgess.Name = "lblWeightProgess";
-            this.lblWeightProgess.Size = new System.Drawing.Size(0, 20);
-            this.lblWeightProgess.TabIndex = 19;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(145, 20);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "Weight Progress:";
-            // 
-            // progressBarWeight
-            // 
-            this.progressBarWeight.Location = new System.Drawing.Point(29, 48);
-            this.progressBarWeight.Name = "progressBarWeight";
-            this.progressBarWeight.Size = new System.Drawing.Size(445, 41);
-            this.progressBarWeight.TabIndex = 12;
-            this.progressBarWeight.MouseEnter += new System.EventHandler(this.progressBarWeight_MouseEnter);
-            // 
-            // timerQuote
-            // 
-            this.timerQuote.Enabled = true;
-            this.timerQuote.Interval = 73;
-            this.timerQuote.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timerTime
-            // 
-            this.timerTime.Interval = 1000;
-            this.timerTime.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // slideTimer
-            // 
-            this.slideTimer.Interval = 1;
-            this.slideTimer.Tick += new System.EventHandler(this.slideTimer_Tick_1);
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.AutoPopDelay = 5000;
-            this.toolTip1.InitialDelay = 200;
-            this.toolTip1.ReshowDelay = 100;
-            this.toolTip1.ShowAlways = true;
-            // 
-            // waterResetTimer
-            // 
-            this.waterResetTimer.Tick += new System.EventHandler(this.waterResetTimer_Tick);
             // 
             // btnProfilePicture
             // 
@@ -730,6 +690,60 @@
             this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click_1);
             this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter_1);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::Gym___Fitness_App.Properties.Resources.Gym___FItness_logo;
+            this.pictureBox5.Location = new System.Drawing.Point(66, -2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 17;
+            this.pictureBox5.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = global::Gym___Fitness_App.Properties.Resources.power_button;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(634, 16);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(104, 37);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Image = global::Gym___Fitness_App.Properties.Resources.enter7;
+            this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogin.Location = new System.Drawing.Point(634, 16);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(97, 37);
+            this.btnLogin.TabIndex = 16;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -746,22 +760,23 @@
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.slidePanel.ResumeLayout(false);
             this.slidePanel.PerformLayout();
             this.pnlChallenge.ResumeLayout(false);
             this.pnlChallenge.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -809,7 +824,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ProgressBar progressBarWeight;
         private System.Windows.Forms.Label lblWeightProgess;
-        private System.Windows.Forms.Label lblWaterProgress;
+        private System.Windows.Forms.Label lblWaterIntake;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Timer waterResetTimer;
         private System.Windows.Forms.ToolTip toolTipProgressWeight;
@@ -818,5 +833,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private Classes.RoundPictureBox btnProfilePicture;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

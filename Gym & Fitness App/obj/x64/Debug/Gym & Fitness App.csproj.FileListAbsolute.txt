@@ -99,3 +99,104 @@ C:\Users\Aamir\source\repos\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.ap
 C:\Users\Aamir\source\repos\Gym & Fitness App\obj\x64\Debug\Gym & Fi.4847FCFB.Up2Date
 C:\Users\Aamir\source\repos\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.exe
 C:\Users\Aamir\source\repos\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.pdb
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym_FitnessAppDB.accdb
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.exe.config
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.exe.manifest
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.application
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.exe
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.pdb
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\EntityFramework.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.Bcl.TimeProvider.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.Identity.Client.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\MsgPack.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Newtonsoft.Msgpack.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Buffers.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.ClientModel.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.IO.FileSystem.AccessControl.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.IO.Pipelines.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Memory.Data.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Memory.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Numerics.Vectors.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Security.AccessControl.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Security.Permissions.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Security.Principal.Windows.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Text.Encodings.Web.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Text.Json.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.ValueTuple.dll
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\EntityFramework.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.Bcl.TimeProvider.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.Identity.Client.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.Identity.Client.Extensions.Msal.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\MsgPack.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Newtonsoft.Msgpack.pdb
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Newtonsoft.Msgpack.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Buffers.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.ClientModel.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.IO.FileSystem.AccessControl.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.IO.Pipelines.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Memory.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Memory.Data.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Numerics.Vectors.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Security.AccessControl.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Security.Permissions.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Security.Principal.Windows.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Text.Encodings.Web.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Text.Json.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.ValueTuple.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.csproj.AssemblyReference.cache
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.exe.config
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.AboutForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.BMICalculatorForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.DashboardForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.DietPlansForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.Forms.LoadingForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.PasswordVerification.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.PaymentForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.PremiumForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.LoginForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.MainForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.MembershipForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.ProfileForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.Properties.Resources.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.SignupForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.WorkoutPlansForm.resources
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.csproj.GenerateResource.cache
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.csproj.CoreCompileInputs.cache
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.TrustInfo.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.exe.manifest
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.application
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fi.4847FCFB.Up2Date
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.exe
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.pdb

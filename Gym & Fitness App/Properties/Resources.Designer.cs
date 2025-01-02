@@ -323,6 +323,16 @@ namespace Gym___Fitness_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap drink_water {
+            get {
+                object obj = ResourceManager.GetObject("drink-water", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Easypaisa_New_Icon_Logo {
             get {
                 object obj = ResourceManager.GetObject("Easypaisa New Icon Logo", resourceCulture);

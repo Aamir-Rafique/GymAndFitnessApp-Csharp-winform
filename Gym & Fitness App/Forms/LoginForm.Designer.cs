@@ -95,7 +95,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPurpose = new System.Windows.Forms.Label();
@@ -55,15 +56,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             this.slidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLinkedin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTwitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -90,6 +90,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(782, 74);
             this.panel1.TabIndex = 6;
+            // 
+            // btnProfilePicture
+            // 
+            this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.btnProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.btnProfilePicture.BorderColor = System.Drawing.Color.Lime;
+            this.btnProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
+            this.btnProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.btnProfilePicture.BorderSize = 2;
+            this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfilePicture.GradientAngle = 50F;
+            this.btnProfilePicture.Image = global::Gym___Fitness_App.Properties.Resources.usernew;
+            this.btnProfilePicture.Location = new System.Drawing.Point(703, 9);
+            this.btnProfilePicture.Name = "btnProfilePicture";
+            this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
+            this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnProfilePicture.TabIndex = 39;
+            this.btnProfilePicture.TabStop = false;
+            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click_1);
+            this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter_1);
             // 
             // label6
             // 
@@ -174,6 +194,7 @@
             // 
             this.btnHome.BackColor = System.Drawing.Color.SpringGreen;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnHome.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -195,6 +216,7 @@
             // 
             this.btnAbout.BackColor = System.Drawing.Color.SpringGreen;
             this.btnAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnAbout.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
@@ -214,6 +236,7 @@
             // 
             this.btnToggle.BackColor = System.Drawing.Color.Lime;
             this.btnToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnToggle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnToggle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnToggle.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnToggle.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -235,6 +258,7 @@
             // 
             this.btnWorkoutPlans.BackColor = System.Drawing.Color.SpringGreen;
             this.btnWorkoutPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnWorkoutPlans.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWorkoutPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnWorkoutPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnWorkoutPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
@@ -255,6 +279,7 @@
             // 
             this.btnBMICalculator.BackColor = System.Drawing.Color.SpringGreen;
             this.btnBMICalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBMICalculator.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBMICalculator.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnBMICalculator.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnBMICalculator.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
@@ -275,6 +300,7 @@
             // 
             this.btnDietPlans.BackColor = System.Drawing.Color.SpringGreen;
             this.btnDietPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDietPlans.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDietPlans.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnDietPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnDietPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -296,6 +322,7 @@
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.SpringGreen;
             this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnDashboard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -429,26 +456,6 @@
             this.label8.TabIndex = 38;
             this.label8.Text = "Aamir Rafique";
             // 
-            // btnProfilePicture
-            // 
-            this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.btnProfilePicture.BorderColor = System.Drawing.Color.Lime;
-            this.btnProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
-            this.btnProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.btnProfilePicture.BorderSize = 2;
-            this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfilePicture.GradientAngle = 50F;
-            this.btnProfilePicture.Image = global::Gym___Fitness_App.Properties.Resources.usernew;
-            this.btnProfilePicture.Location = new System.Drawing.Point(703, 9);
-            this.btnProfilePicture.Name = "btnProfilePicture";
-            this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
-            this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProfilePicture.TabIndex = 39;
-            this.btnProfilePicture.TabStop = false;
-            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click_1);
-            this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter_1);
-            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,13 +486,13 @@
             this.Load += new System.EventHandler(this.AboutForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             this.slidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLinkedin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTwitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -136,9 +136,6 @@
   <data name="Diet_macronutrients" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\Diet_macronutrients.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="workout3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Workoutpics\workout3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,6 +151,9 @@
   <data name="member-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\member-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Gym &amp; FItness" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Gym &amp; FItness.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="calendar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\calendar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,9 +162,6 @@
   </data>
   <data name="diet4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\diet4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fast-food" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\fast-food.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +175,8 @@
   <data name="weightgain planworkout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\weightgain planworkout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Diet_carbs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\Diet_carbs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Diet_Protien" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\Diet_Protien.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="portfolio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\portfolio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,9 +190,6 @@
   <data name="dashboardfinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\dashboardfinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Diet_Protien" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\Diet_Protien.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="refresh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\refresh1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,8 +199,14 @@
   <data name="deluser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\deluser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Easypaisa New Icon Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Easypaisa New Icon Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="High Protein foods to build muscle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\High Protein foods to build muscle.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="home-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\home-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="enter11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\enter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,6 +223,9 @@
   <data name="workout1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Workoutpics\workout1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Avocado Egg Salad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\DietRecipes\Avocado Egg Salad.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Loading" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -235,14 +238,14 @@
   <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gym &amp; FItness logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Gym &amp; FItness logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chicken and Rice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\DietRecipes\Chicken and Rice.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="communication" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\communication.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usernew" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\usernew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -252,9 +255,6 @@
   </data>
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,14 +271,17 @@
   <data name="facebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\facebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Oatmeal with Fruits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\DietRecipes\Oatmeal with Fruits.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\logout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bmi chart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\bmi chart.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Zucchini Noodles with Pesto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\DietRecipes\Zucchini Noodles with Pesto.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="goal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\goal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -304,14 +307,17 @@
   <data name="Diet_Protien1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\Diet_Protien1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Gym &amp; FItness logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Gym &amp; FItness logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="workout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\workout.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bmi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\bmi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Jazz Cash Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Jazz Cash Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="userlogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\userlogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,6 +328,9 @@
   <data name="free3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\free3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Grilled Chicken Salad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\DietRecipes\Grilled Chicken Salad.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Diet_FOod_pyramid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\Diet_FOod_pyramid.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -331,11 +340,17 @@
   <data name="twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="drink-water" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\drink-water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="clock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\clock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gym &amp; FItness" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Gym &amp; FItness.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usernew" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\usernew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jazz Cash Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\Jazz Cash Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="enter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\enter1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,11 +358,17 @@
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\profile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\home-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Protein Smoothie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\DietRecipes\Protein Smoothie.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Easypaisa New Icon Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icons\Easypaisa New Icon Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Quinoa Bowl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\DietRecipes\Quinoa Bowl.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\diet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Grilled Salmon with Asparagus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\DietRecipes\Grilled Salmon with Asparagus.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="healthy-life" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\healthy-life.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -364,6 +385,9 @@
   <data name="Food To Lose Weight Fast" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Food To Lose Weight Fast.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icons\previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -379,11 +403,17 @@
   <data name="paypal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\paypal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="diet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\diet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Egg and Sweet Potato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\DietRecipes\Egg and Sweet Potato.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="workout3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Workoutpics\workout3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gym &amp; FItness (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Gym &amp; FItness (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Diet_carbs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Dietpics\Diet_carbs.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="diet2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\diet2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -399,32 +429,5 @@
   </data>
   <data name="key1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\key1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Avocado Egg Salad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\DietRecipes\Avocado Egg Salad.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chicken and Rice" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\DietRecipes\Chicken and Rice.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Egg and Sweet Potato" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\DietRecipes\Egg and Sweet Potato.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Grilled Chicken Salad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\DietRecipes\Grilled Chicken Salad.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Grilled Salmon with Asparagus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\DietRecipes\Grilled Salmon with Asparagus.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Oatmeal with Fruits" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\DietRecipes\Oatmeal with Fruits.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Protein Smoothie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\DietRecipes\Protein Smoothie.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Quinoa Bowl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\DietRecipes\Quinoa Bowl.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Zucchini Noodles with Pesto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Dietpics\DietRecipes\Zucchini Noodles with Pesto.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

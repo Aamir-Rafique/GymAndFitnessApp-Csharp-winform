@@ -39,50 +39,41 @@
             this.MealType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnSearchFoodItem = new System.Windows.Forms.Button();
             this.errorGroupBoxRadioButtons = new System.Windows.Forms.ErrorProvider(this.components);
             this.timerForPics = new System.Windows.Forms.Timer(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pnlWorkoutSelection = new System.Windows.Forms.Panel();
+            this.cmbDietType = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.pnlDietPlans = new System.Windows.Forms.Panel();
             this.lblMuscleGain = new System.Windows.Forms.Label();
-            this.pnlWorkoutSelection = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.cmbDietType = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblTotalNutrition = new System.Windows.Forms.Label();
-            this.btnCalculateTotalNutrition = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lstBreakfastInput = new System.Windows.Forms.ListBox();
-            this.lstLunchInput = new System.Windows.Forms.ListBox();
-            this.lstSnacksInput = new System.Windows.Forms.ListBox();
-            this.lstDinnerInput = new System.Windows.Forms.ListBox();
-            this.btnRemoveSelected = new System.Windows.Forms.Button();
-            this.richTextBoxNotesInput = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.richTextBoxNotesInput = new System.Windows.Forms.RichTextBox();
+            this.btnRemoveSelected = new System.Windows.Forms.Button();
+            this.lstDinnerInput = new System.Windows.Forms.ListBox();
+            this.lstSnacksInput = new System.Windows.Forms.ListBox();
+            this.lstLunchInput = new System.Windows.Forms.ListBox();
+            this.lstBreakfastInput = new System.Windows.Forms.ListBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnCalculateTotalNutrition = new System.Windows.Forms.Button();
+            this.lblTotalNutrition = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFoodItem = new System.Windows.Forms.TextBox();
-            this.btnSearchFoodItem = new System.Windows.Forms.Button();
-            this.lblNutritionInfo = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBoxRadioButtons = new System.Windows.Forms.GroupBox();
-            this.rbtnOnline = new System.Windows.Forms.RadioButton();
-            this.rbtnOffline = new System.Windows.Forms.RadioButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBoxRadioButtons = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.rbtnOffline = new System.Windows.Forms.RadioButton();
+            this.rbtnOnline = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblNutritionInfo = new System.Windows.Forms.Label();
+            this.txtFoodItem = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabDietPlan = new System.Windows.Forms.TabControl();
-            this.btnAddToDinner = new System.Windows.Forms.Button();
-            this.btnAddToLunch = new System.Windows.Forms.Button();
-            this.btnAddToSnacks = new System.Windows.Forms.Button();
-            this.pictureBoxIngredient = new System.Windows.Forms.PictureBox();
-            this.btnAddToBreakfast = new System.Windows.Forms.Button();
-            this.btnSaveDietPlan = new System.Windows.Forms.Button();
-            this.pbDiet = new System.Windows.Forms.PictureBox();
-            this.btnProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
@@ -90,20 +81,29 @@
             this.btnBMICalculator = new System.Windows.Forms.Button();
             this.btnDietPlans = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnAddToDinner = new System.Windows.Forms.Button();
+            this.btnAddToLunch = new System.Windows.Forms.Button();
+            this.btnAddToSnacks = new System.Windows.Forms.Button();
+            this.pictureBoxIngredient = new System.Windows.Forms.PictureBox();
+            this.btnAddToBreakfast = new System.Windows.Forms.Button();
+            this.btnSaveDietPlan = new System.Windows.Forms.Button();
+            this.pbDiet = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
             this.panel1.SuspendLayout();
             this.slidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorGroupBoxRadioButtons)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.pnlDietPlans.SuspendLayout();
             this.pnlWorkoutSelection.SuspendLayout();
+            this.pnlDietPlans.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBoxRadioButtons.SuspendLayout();
             this.tabDietPlan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIngredient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -192,6 +192,22 @@
             this.toolTip1.ReshowDelay = 100;
             this.toolTip1.ShowAlways = true;
             // 
+            // btnSearchFoodItem
+            // 
+            this.btnSearchFoodItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSearchFoodItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchFoodItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchFoodItem.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchFoodItem.ForeColor = System.Drawing.Color.White;
+            this.btnSearchFoodItem.Location = new System.Drawing.Point(243, 158);
+            this.btnSearchFoodItem.Name = "btnSearchFoodItem";
+            this.btnSearchFoodItem.Size = new System.Drawing.Size(78, 32);
+            this.btnSearchFoodItem.TabIndex = 4;
+            this.btnSearchFoodItem.Text = "Search";
+            this.toolTip1.SetToolTip(this.btnSearchFoodItem, "Click to search for a food item");
+            this.btnSearchFoodItem.UseVisualStyleBackColor = false;
+            this.btnSearchFoodItem.Click += new System.EventHandler(this.btnSearchFoodItem_Click);
+            // 
             // errorGroupBoxRadioButtons
             // 
             this.errorGroupBoxRadioButtons.ContainerControl = this;
@@ -213,6 +229,43 @@
             this.tabPage3.Text = "   Diet Recipes   ";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // pnlWorkoutSelection
+            // 
+            this.pnlWorkoutSelection.BackColor = System.Drawing.Color.LimeGreen;
+            this.pnlWorkoutSelection.Controls.Add(this.cmbDietType);
+            this.pnlWorkoutSelection.Controls.Add(this.label15);
+            this.pnlWorkoutSelection.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pnlWorkoutSelection.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlWorkoutSelection.Location = new System.Drawing.Point(3, 3);
+            this.pnlWorkoutSelection.Name = "pnlWorkoutSelection";
+            this.pnlWorkoutSelection.Size = new System.Drawing.Size(718, 41);
+            this.pnlWorkoutSelection.TabIndex = 50;
+            // 
+            // cmbDietType
+            // 
+            this.cmbDietType.FormattingEnabled = true;
+            this.cmbDietType.Items.AddRange(new object[] {
+            "Weight Loss",
+            "Muscle Gain",
+            "Keto"});
+            this.cmbDietType.Location = new System.Drawing.Point(317, 7);
+            this.cmbDietType.Name = "cmbDietType";
+            this.cmbDietType.Size = new System.Drawing.Size(145, 28);
+            this.cmbDietType.TabIndex = 1;
+            this.cmbDietType.Text = "  ";
+            this.cmbDietType.SelectedIndexChanged += new System.EventHandler(this.cmbDietType_SelectedIndexChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label15.Location = new System.Drawing.Point(43, 12);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(258, 20);
+            this.label15.TabIndex = 48;
+            this.label15.Text = "Please Select the type of Diet:";
+            // 
             // pnlDietPlans
             // 
             this.pnlDietPlans.AutoScroll = true;
@@ -233,43 +286,6 @@
             this.lblMuscleGain.Name = "lblMuscleGain";
             this.lblMuscleGain.Size = new System.Drawing.Size(0, 23);
             this.lblMuscleGain.TabIndex = 0;
-            // 
-            // pnlWorkoutSelection
-            // 
-            this.pnlWorkoutSelection.BackColor = System.Drawing.Color.LimeGreen;
-            this.pnlWorkoutSelection.Controls.Add(this.cmbDietType);
-            this.pnlWorkoutSelection.Controls.Add(this.label15);
-            this.pnlWorkoutSelection.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pnlWorkoutSelection.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlWorkoutSelection.Location = new System.Drawing.Point(3, 3);
-            this.pnlWorkoutSelection.Name = "pnlWorkoutSelection";
-            this.pnlWorkoutSelection.Size = new System.Drawing.Size(718, 41);
-            this.pnlWorkoutSelection.TabIndex = 50;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label15.Location = new System.Drawing.Point(43, 12);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(258, 20);
-            this.label15.TabIndex = 48;
-            this.label15.Text = "Please Select the type of Diet:";
-            // 
-            // cmbDietType
-            // 
-            this.cmbDietType.FormattingEnabled = true;
-            this.cmbDietType.Items.AddRange(new object[] {
-            "Weight Loss",
-            "Muscle Gain",
-            "Keto"});
-            this.cmbDietType.Location = new System.Drawing.Point(317, 7);
-            this.cmbDietType.Name = "cmbDietType";
-            this.cmbDietType.Size = new System.Drawing.Size(145, 28);
-            this.cmbDietType.TabIndex = 1;
-            this.cmbDietType.Text = "  ";
-            this.cmbDietType.SelectedIndexChanged += new System.EventHandler(this.cmbDietType_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -295,112 +311,23 @@
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "   Custom Plan   ";
             // 
-            // lblTotalNutrition
+            // label3
             // 
-            this.lblTotalNutrition.AutoSize = true;
-            this.lblTotalNutrition.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalNutrition.ForeColor = System.Drawing.Color.Blue;
-            this.lblTotalNutrition.Location = new System.Drawing.Point(84, 245);
-            this.lblTotalNutrition.Name = "lblTotalNutrition";
-            this.lblTotalNutrition.Size = new System.Drawing.Size(0, 23);
-            this.lblTotalNutrition.TabIndex = 15;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(476, 243);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 21);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Notes:";
             // 
-            // btnCalculateTotalNutrition
+            // richTextBoxNotesInput
             // 
-            this.btnCalculateTotalNutrition.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCalculateTotalNutrition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnCalculateTotalNutrition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.btnCalculateTotalNutrition.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCalculateTotalNutrition.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculateTotalNutrition.ForeColor = System.Drawing.Color.White;
-            this.btnCalculateTotalNutrition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculateTotalNutrition.Location = new System.Drawing.Point(67, 179);
-            this.btnCalculateTotalNutrition.Name = "btnCalculateTotalNutrition";
-            this.btnCalculateTotalNutrition.Size = new System.Drawing.Size(186, 29);
-            this.btnCalculateTotalNutrition.TabIndex = 16;
-            this.btnCalculateTotalNutrition.Text = "Calculate Total Nutrition";
-            this.btnCalculateTotalNutrition.UseVisualStyleBackColor = false;
-            this.btnCalculateTotalNutrition.Click += new System.EventHandler(this.btnCalculateTotalNutrition_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(539, 10);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 21);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Dinner";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(386, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 21);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Snacks";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(228, 10);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 21);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Lunch";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(67, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 21);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Breakfast";
-            // 
-            // lstBreakfastInput
-            // 
-            this.lstBreakfastInput.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstBreakfastInput.FormattingEnabled = true;
-            this.lstBreakfastInput.ItemHeight = 17;
-            this.lstBreakfastInput.Location = new System.Drawing.Point(67, 39);
-            this.lstBreakfastInput.Name = "lstBreakfastInput";
-            this.lstBreakfastInput.Size = new System.Drawing.Size(127, 123);
-            this.lstBreakfastInput.TabIndex = 21;
-            // 
-            // lstLunchInput
-            // 
-            this.lstLunchInput.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstLunchInput.FormattingEnabled = true;
-            this.lstLunchInput.ItemHeight = 17;
-            this.lstLunchInput.Location = new System.Drawing.Point(232, 39);
-            this.lstLunchInput.Name = "lstLunchInput";
-            this.lstLunchInput.Size = new System.Drawing.Size(127, 123);
-            this.lstLunchInput.TabIndex = 22;
-            // 
-            // lstSnacksInput
-            // 
-            this.lstSnacksInput.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstSnacksInput.FormattingEnabled = true;
-            this.lstSnacksInput.ItemHeight = 17;
-            this.lstSnacksInput.Location = new System.Drawing.Point(387, 39);
-            this.lstSnacksInput.Name = "lstSnacksInput";
-            this.lstSnacksInput.Size = new System.Drawing.Size(127, 123);
-            this.lstSnacksInput.TabIndex = 23;
-            // 
-            // lstDinnerInput
-            // 
-            this.lstDinnerInput.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstDinnerInput.FormattingEnabled = true;
-            this.lstDinnerInput.ItemHeight = 17;
-            this.lstDinnerInput.Location = new System.Drawing.Point(543, 39);
-            this.lstDinnerInput.Name = "lstDinnerInput";
-            this.lstDinnerInput.Size = new System.Drawing.Size(127, 123);
-            this.lstDinnerInput.TabIndex = 24;
+            this.richTextBoxNotesInput.Location = new System.Drawing.Point(480, 267);
+            this.richTextBoxNotesInput.Name = "richTextBoxNotesInput";
+            this.richTextBoxNotesInput.Size = new System.Drawing.Size(215, 144);
+            this.richTextBoxNotesInput.TabIndex = 26;
+            this.richTextBoxNotesInput.Text = "";
             // 
             // btnRemoveSelected
             // 
@@ -419,23 +346,112 @@
             this.btnRemoveSelected.UseVisualStyleBackColor = false;
             this.btnRemoveSelected.Click += new System.EventHandler(this.btnRemoveSelected_Click);
             // 
-            // richTextBoxNotesInput
+            // lstDinnerInput
             // 
-            this.richTextBoxNotesInput.Location = new System.Drawing.Point(480, 267);
-            this.richTextBoxNotesInput.Name = "richTextBoxNotesInput";
-            this.richTextBoxNotesInput.Size = new System.Drawing.Size(215, 144);
-            this.richTextBoxNotesInput.TabIndex = 26;
-            this.richTextBoxNotesInput.Text = "";
+            this.lstDinnerInput.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDinnerInput.FormattingEnabled = true;
+            this.lstDinnerInput.ItemHeight = 17;
+            this.lstDinnerInput.Location = new System.Drawing.Point(543, 39);
+            this.lstDinnerInput.Name = "lstDinnerInput";
+            this.lstDinnerInput.Size = new System.Drawing.Size(127, 123);
+            this.lstDinnerInput.TabIndex = 24;
             // 
-            // label3
+            // lstSnacksInput
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(476, 243);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 21);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Notes:";
+            this.lstSnacksInput.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstSnacksInput.FormattingEnabled = true;
+            this.lstSnacksInput.ItemHeight = 17;
+            this.lstSnacksInput.Location = new System.Drawing.Point(387, 39);
+            this.lstSnacksInput.Name = "lstSnacksInput";
+            this.lstSnacksInput.Size = new System.Drawing.Size(127, 123);
+            this.lstSnacksInput.TabIndex = 23;
+            // 
+            // lstLunchInput
+            // 
+            this.lstLunchInput.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstLunchInput.FormattingEnabled = true;
+            this.lstLunchInput.ItemHeight = 17;
+            this.lstLunchInput.Location = new System.Drawing.Point(232, 39);
+            this.lstLunchInput.Name = "lstLunchInput";
+            this.lstLunchInput.Size = new System.Drawing.Size(127, 123);
+            this.lstLunchInput.TabIndex = 22;
+            // 
+            // lstBreakfastInput
+            // 
+            this.lstBreakfastInput.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstBreakfastInput.FormattingEnabled = true;
+            this.lstBreakfastInput.ItemHeight = 17;
+            this.lstBreakfastInput.Location = new System.Drawing.Point(67, 39);
+            this.lstBreakfastInput.Name = "lstBreakfastInput";
+            this.lstBreakfastInput.Size = new System.Drawing.Size(127, 123);
+            this.lstBreakfastInput.TabIndex = 21;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(67, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 21);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Breakfast";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(228, 10);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 21);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Lunch";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(386, 10);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 21);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Snacks";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(539, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 21);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Dinner";
+            // 
+            // btnCalculateTotalNutrition
+            // 
+            this.btnCalculateTotalNutrition.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCalculateTotalNutrition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnCalculateTotalNutrition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnCalculateTotalNutrition.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCalculateTotalNutrition.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculateTotalNutrition.ForeColor = System.Drawing.Color.White;
+            this.btnCalculateTotalNutrition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalculateTotalNutrition.Location = new System.Drawing.Point(67, 179);
+            this.btnCalculateTotalNutrition.Name = "btnCalculateTotalNutrition";
+            this.btnCalculateTotalNutrition.Size = new System.Drawing.Size(186, 29);
+            this.btnCalculateTotalNutrition.TabIndex = 16;
+            this.btnCalculateTotalNutrition.Text = "Calculate Total Nutrition";
+            this.btnCalculateTotalNutrition.UseVisualStyleBackColor = false;
+            this.btnCalculateTotalNutrition.Click += new System.EventHandler(this.btnCalculateTotalNutrition_Click);
+            // 
+            // lblTotalNutrition
+            // 
+            this.lblTotalNutrition.AutoSize = true;
+            this.lblTotalNutrition.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalNutrition.ForeColor = System.Drawing.Color.Blue;
+            this.lblTotalNutrition.Location = new System.Drawing.Point(84, 245);
+            this.lblTotalNutrition.Name = "lblTotalNutrition";
+            this.lblTotalNutrition.Size = new System.Drawing.Size(0, 23);
+            this.lblTotalNutrition.TabIndex = 15;
             // 
             // tabPage2
             // 
@@ -461,60 +477,27 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "   Search   ";
             // 
-            // label2
+            // label14
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(33, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Search Food Items";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label14.Location = new System.Drawing.Point(550, 51);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(171, 21);
+            this.label14.TabIndex = 71;
+            this.label14.Text = "your Custom Diet Plan";
             // 
-            // txtFoodItem
+            // label7
             // 
-            this.txtFoodItem.Font = new System.Drawing.Font("Calibri", 14.25743F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFoodItem.Location = new System.Drawing.Point(42, 158);
-            this.txtFoodItem.Name = "txtFoodItem";
-            this.txtFoodItem.Size = new System.Drawing.Size(203, 32);
-            this.txtFoodItem.TabIndex = 3;
-            this.txtFoodItem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIngredient_KeyDown);
-            // 
-            // btnSearchFoodItem
-            // 
-            this.btnSearchFoodItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSearchFoodItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearchFoodItem.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchFoodItem.ForeColor = System.Drawing.Color.White;
-            this.btnSearchFoodItem.Location = new System.Drawing.Point(243, 158);
-            this.btnSearchFoodItem.Name = "btnSearchFoodItem";
-            this.btnSearchFoodItem.Size = new System.Drawing.Size(78, 32);
-            this.btnSearchFoodItem.TabIndex = 4;
-            this.btnSearchFoodItem.Text = "Search";
-            this.toolTip1.SetToolTip(this.btnSearchFoodItem, "Click to search for a food item");
-            this.btnSearchFoodItem.UseVisualStyleBackColor = false;
-            this.btnSearchFoodItem.Click += new System.EventHandler(this.btnSearchFoodItem_Click);
-            // 
-            // lblNutritionInfo
-            // 
-            this.lblNutritionInfo.AutoSize = true;
-            this.lblNutritionInfo.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNutritionInfo.Location = new System.Drawing.Point(35, 202);
-            this.lblNutritionInfo.Name = "lblNutritionInfo";
-            this.lblNutritionInfo.Size = new System.Drawing.Size(0, 23);
-            this.lblNutritionInfo.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(33, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(377, 21);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Search for any food item to get its Nutrition value:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label7.Location = new System.Drawing.Point(550, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(148, 21);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "Add Food Items to";
             // 
             // groupBoxRadioButtons
             // 
@@ -527,17 +510,15 @@
             this.groupBoxRadioButtons.TabIndex = 69;
             this.groupBoxRadioButtons.TabStop = false;
             // 
-            // rbtnOnline
+            // label5
             // 
-            this.rbtnOnline.AutoSize = true;
-            this.rbtnOnline.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnOnline.Location = new System.Drawing.Point(26, 49);
-            this.rbtnOnline.Name = "rbtnOnline";
-            this.rbtnOnline.Size = new System.Drawing.Size(78, 27);
-            this.rbtnOnline.TabIndex = 1;
-            this.rbtnOnline.TabStop = true;
-            this.rbtnOnline.Text = "Online";
-            this.rbtnOnline.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(18, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(201, 19);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Select the method of searching:";
             // 
             // rbtnOffline
             // 
@@ -551,37 +532,57 @@
             this.rbtnOffline.Text = "Offline";
             this.rbtnOffline.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // rbtnOnline
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(201, 19);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Select the method of searching:";
+            this.rbtnOnline.AutoSize = true;
+            this.rbtnOnline.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnOnline.Location = new System.Drawing.Point(26, 49);
+            this.rbtnOnline.Name = "rbtnOnline";
+            this.rbtnOnline.Size = new System.Drawing.Size(78, 27);
+            this.rbtnOnline.TabIndex = 1;
+            this.rbtnOnline.TabStop = true;
+            this.rbtnOnline.Text = "Online";
+            this.rbtnOnline.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // label4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(550, 31);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(148, 21);
-            this.label7.TabIndex = 70;
-            this.label7.Text = "Add Food Items to";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Navy;
+            this.label4.Location = new System.Drawing.Point(33, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(377, 21);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Search for any food item to get its Nutrition value:";
             // 
-            // label14
+            // lblNutritionInfo
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label14.Location = new System.Drawing.Point(550, 51);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(171, 21);
-            this.label14.TabIndex = 71;
-            this.label14.Text = "your Custom Diet Plan";
+            this.lblNutritionInfo.AutoSize = true;
+            this.lblNutritionInfo.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNutritionInfo.Location = new System.Drawing.Point(35, 202);
+            this.lblNutritionInfo.Name = "lblNutritionInfo";
+            this.lblNutritionInfo.Size = new System.Drawing.Size(0, 23);
+            this.lblNutritionInfo.TabIndex = 3;
+            // 
+            // txtFoodItem
+            // 
+            this.txtFoodItem.Font = new System.Drawing.Font("Calibri", 14.25743F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFoodItem.Location = new System.Drawing.Point(42, 158);
+            this.txtFoodItem.Name = "txtFoodItem";
+            this.txtFoodItem.Size = new System.Drawing.Size(203, 32);
+            this.txtFoodItem.TabIndex = 3;
+            this.txtFoodItem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIngredient_KeyDown);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label2.Location = new System.Drawing.Point(33, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Search Food Items";
             // 
             // tabDietPlan
             // 
@@ -598,9 +599,160 @@
             this.tabDietPlan.TabIndex = 3;
             this.tabDietPlan.Tag = "";
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnHome.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = global::Gym___Fitness_App.Properties.Resources.home_button;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(-1, 110);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(210, 47);
+            this.btnHome.TabIndex = 10;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnAbout.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.Image = global::Gym___Fitness_App.Properties.Resources.info;
+            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.Location = new System.Drawing.Point(0, 340);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(210, 47);
+            this.btnAbout.TabIndex = 15;
+            this.btnAbout.Text = "About";
+            this.btnAbout.UseVisualStyleBackColor = false;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
+            // btnToggle
+            // 
+            this.btnToggle.BackColor = System.Drawing.Color.Lime;
+            this.btnToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnToggle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnToggle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnToggle.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnToggle.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnToggle.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToggle.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToggle.Image = global::Gym___Fitness_App.Properties.Resources.menu_bar;
+            this.btnToggle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnToggle.Location = new System.Drawing.Point(-1, 12);
+            this.btnToggle.Name = "btnToggle";
+            this.btnToggle.Size = new System.Drawing.Size(210, 51);
+            this.btnToggle.TabIndex = 9;
+            this.btnToggle.Text = "Menu";
+            this.btnToggle.UseVisualStyleBackColor = false;
+            this.btnToggle.Click += new System.EventHandler(this.btnToggle_Click_1);
+            // 
+            // btnWorkoutPlans
+            // 
+            this.btnWorkoutPlans.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnWorkoutPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnWorkoutPlans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWorkoutPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnWorkoutPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnWorkoutPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnWorkoutPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnWorkoutPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWorkoutPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWorkoutPlans.Image = global::Gym___Fitness_App.Properties.Resources.workout;
+            this.btnWorkoutPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWorkoutPlans.Location = new System.Drawing.Point(-1, 294);
+            this.btnWorkoutPlans.Name = "btnWorkoutPlans";
+            this.btnWorkoutPlans.Size = new System.Drawing.Size(210, 47);
+            this.btnWorkoutPlans.TabIndex = 13;
+            this.btnWorkoutPlans.Text = "Workout Plans";
+            this.btnWorkoutPlans.UseVisualStyleBackColor = false;
+            this.btnWorkoutPlans.Click += new System.EventHandler(this.btnWorkoutPlans_Click);
+            // 
+            // btnBMICalculator
+            // 
+            this.btnBMICalculator.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnBMICalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBMICalculator.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBMICalculator.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnBMICalculator.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnBMICalculator.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBMICalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnBMICalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBMICalculator.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBMICalculator.Image = global::Gym___Fitness_App.Properties.Resources.bmi;
+            this.btnBMICalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBMICalculator.Location = new System.Drawing.Point(-1, 202);
+            this.btnBMICalculator.Name = "btnBMICalculator";
+            this.btnBMICalculator.Size = new System.Drawing.Size(210, 47);
+            this.btnBMICalculator.TabIndex = 12;
+            this.btnBMICalculator.Text = "BMI Calculator";
+            this.btnBMICalculator.UseVisualStyleBackColor = false;
+            this.btnBMICalculator.Click += new System.EventHandler(this.btnBMICalculator_Click);
+            // 
+            // btnDietPlans
+            // 
+            this.btnDietPlans.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnDietPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDietPlans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDietPlans.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDietPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnDietPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDietPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDietPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnDietPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDietPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDietPlans.Image = global::Gym___Fitness_App.Properties.Resources.diet;
+            this.btnDietPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDietPlans.Location = new System.Drawing.Point(-1, 248);
+            this.btnDietPlans.Name = "btnDietPlans";
+            this.btnDietPlans.Size = new System.Drawing.Size(210, 47);
+            this.btnDietPlans.TabIndex = 3;
+            this.btnDietPlans.Text = "Diet Plans";
+            this.btnDietPlans.UseVisualStyleBackColor = false;
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDashboard.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnDashboard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Image = global::Gym___Fitness_App.Properties.Resources.dashboardfinal;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(-1, 156);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(210, 47);
+            this.btnDashboard.TabIndex = 11;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_1);
+            // 
             // btnAddToDinner
             // 
             this.btnAddToDinner.BackColor = System.Drawing.Color.Cyan;
+            this.btnAddToDinner.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddToDinner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnAddToDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToDinner.Font = new System.Drawing.Font("Calibri", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -619,6 +771,7 @@
             // btnAddToLunch
             // 
             this.btnAddToLunch.BackColor = System.Drawing.Color.Cyan;
+            this.btnAddToLunch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddToLunch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnAddToLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToLunch.Font = new System.Drawing.Font("Calibri", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -637,6 +790,7 @@
             // btnAddToSnacks
             // 
             this.btnAddToSnacks.BackColor = System.Drawing.Color.Cyan;
+            this.btnAddToSnacks.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddToSnacks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnAddToSnacks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToSnacks.Font = new System.Drawing.Font("Calibri", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -664,6 +818,7 @@
             // btnAddToBreakfast
             // 
             this.btnAddToBreakfast.BackColor = System.Drawing.Color.Cyan;
+            this.btnAddToBreakfast.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddToBreakfast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnAddToBreakfast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToBreakfast.Font = new System.Drawing.Font("Calibri", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -709,6 +864,18 @@
             this.pbDiet.TabIndex = 51;
             this.pbDiet.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::Gym___Fitness_App.Properties.Resources.Gym___FItness_logo;
+            this.pictureBox3.Location = new System.Drawing.Point(68, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
             // btnProfilePicture
             // 
             this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
@@ -728,161 +895,6 @@
             this.btnProfilePicture.TabStop = false;
             this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click_1);
             this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter_1);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Gym___Fitness_App.Properties.Resources.Gym___FItness_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(68, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 74);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnHome.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = global::Gym___Fitness_App.Properties.Resources.home_button;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(-1, 110);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(210, 47);
-            this.btnHome.TabIndex = 10;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // btnAbout
-            // 
-            this.btnAbout.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAbout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnAbout.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbout.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.Image = global::Gym___Fitness_App.Properties.Resources.info;
-            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(0, 340);
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(210, 47);
-            this.btnAbout.TabIndex = 15;
-            this.btnAbout.Text = "About";
-            this.btnAbout.UseVisualStyleBackColor = false;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
-            // 
-            // btnToggle
-            // 
-            this.btnToggle.BackColor = System.Drawing.Color.Lime;
-            this.btnToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnToggle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnToggle.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnToggle.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnToggle.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToggle.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToggle.Image = global::Gym___Fitness_App.Properties.Resources.menu_bar;
-            this.btnToggle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnToggle.Location = new System.Drawing.Point(-1, 12);
-            this.btnToggle.Name = "btnToggle";
-            this.btnToggle.Size = new System.Drawing.Size(210, 51);
-            this.btnToggle.TabIndex = 9;
-            this.btnToggle.Text = "Menu";
-            this.btnToggle.UseVisualStyleBackColor = false;
-            this.btnToggle.Click += new System.EventHandler(this.btnToggle_Click_1);
-            // 
-            // btnWorkoutPlans
-            // 
-            this.btnWorkoutPlans.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnWorkoutPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnWorkoutPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnWorkoutPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnWorkoutPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnWorkoutPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnWorkoutPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWorkoutPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWorkoutPlans.Image = global::Gym___Fitness_App.Properties.Resources.workout;
-            this.btnWorkoutPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWorkoutPlans.Location = new System.Drawing.Point(-1, 294);
-            this.btnWorkoutPlans.Name = "btnWorkoutPlans";
-            this.btnWorkoutPlans.Size = new System.Drawing.Size(210, 47);
-            this.btnWorkoutPlans.TabIndex = 13;
-            this.btnWorkoutPlans.Text = "Workout Plans";
-            this.btnWorkoutPlans.UseVisualStyleBackColor = false;
-            this.btnWorkoutPlans.Click += new System.EventHandler(this.btnWorkoutPlans_Click);
-            // 
-            // btnBMICalculator
-            // 
-            this.btnBMICalculator.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnBMICalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnBMICalculator.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnBMICalculator.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnBMICalculator.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnBMICalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnBMICalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBMICalculator.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBMICalculator.Image = global::Gym___Fitness_App.Properties.Resources.bmi;
-            this.btnBMICalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBMICalculator.Location = new System.Drawing.Point(-1, 202);
-            this.btnBMICalculator.Name = "btnBMICalculator";
-            this.btnBMICalculator.Size = new System.Drawing.Size(210, 47);
-            this.btnBMICalculator.TabIndex = 12;
-            this.btnBMICalculator.Text = "BMI Calculator";
-            this.btnBMICalculator.UseVisualStyleBackColor = false;
-            this.btnBMICalculator.Click += new System.EventHandler(this.btnBMICalculator_Click);
-            // 
-            // btnDietPlans
-            // 
-            this.btnDietPlans.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnDietPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDietPlans.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnDietPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnDietPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDietPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDietPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnDietPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDietPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDietPlans.Image = global::Gym___Fitness_App.Properties.Resources.diet;
-            this.btnDietPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDietPlans.Location = new System.Drawing.Point(-1, 248);
-            this.btnDietPlans.Name = "btnDietPlans";
-            this.btnDietPlans.Size = new System.Drawing.Size(210, 47);
-            this.btnDietPlans.TabIndex = 3;
-            this.btnDietPlans.Text = "Diet Plans";
-            this.btnDietPlans.UseVisualStyleBackColor = false;
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDashboard.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnDashboard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.Image = global::Gym___Fitness_App.Properties.Resources.dashboardfinal;
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(-1, 156);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(210, 47);
-            this.btnDashboard.TabIndex = 11;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_1);
             // 
             // DietPlansForm
             // 
@@ -905,10 +917,10 @@
             this.slidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorGroupBoxRadioButtons)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.pnlDietPlans.ResumeLayout(false);
-            this.pnlDietPlans.PerformLayout();
             this.pnlWorkoutSelection.ResumeLayout(false);
             this.pnlWorkoutSelection.PerformLayout();
+            this.pnlDietPlans.ResumeLayout(false);
+            this.pnlDietPlans.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -918,8 +930,8 @@
             this.tabDietPlan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIngredient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             this.ResumeLayout(false);
 
         }
