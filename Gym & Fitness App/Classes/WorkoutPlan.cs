@@ -1,4 +1,4 @@
-﻿namespace Gym___Fitness_App
+﻿namespace GymAndFitness
 {
     public class WorkoutPlan
     {

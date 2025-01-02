@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public partial class PaymentForm : Form
     {

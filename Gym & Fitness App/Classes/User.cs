@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public class User
     {

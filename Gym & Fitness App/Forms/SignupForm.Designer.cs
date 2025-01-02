@@ -1,4 +1,4 @@
-﻿namespace Gym___Fitness_App
+﻿namespace GymAndFitness
 {
     partial class SignupForm
     {
@@ -73,7 +73,7 @@
             this.errorConfirmPassword = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProfilePicturePath = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pbProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
+            this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).BeginInit();
@@ -106,7 +106,7 @@
             // 
             // btnBackToLogin
             // 
-            this.btnBackToLogin.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.previous;
+            this.btnBackToLogin.BackgroundImage = global::GymAndFitness.Properties.Resources.previous;
             this.btnBackToLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBackToLogin.Location = new System.Drawing.Point(31, 15);
@@ -486,12 +486,12 @@
             // pbProfilePicture
             // 
             this.pbProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbProfilePicture.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.pbProfilePicture.BorderColor = System.Drawing.Color.Aqua;
             this.pbProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
             this.pbProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pbProfilePicture.BorderSize = 0;
+            this.pbProfilePicture.BorderSize = 2;
             this.pbProfilePicture.GradientAngle = 50F;
-            this.pbProfilePicture.Image = global::Gym___Fitness_App.Properties.Resources.usernew;
+            this.pbProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
             this.pbProfilePicture.Location = new System.Drawing.Point(751, 143);
             this.pbProfilePicture.Name = "pbProfilePicture";
             this.pbProfilePicture.Size = new System.Drawing.Size(150, 150);

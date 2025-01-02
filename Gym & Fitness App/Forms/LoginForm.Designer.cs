@@ -1,4 +1,4 @@
-﻿namespace Gym___Fitness_App
+﻿namespace GymAndFitness
 {
     partial class LoginForm
     {
@@ -55,7 +55,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(273, 109);
+            this.txtUsername.Location = new System.Drawing.Point(276, 109);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(179, 26);
             this.txtUsername.TabIndex = 1;
@@ -64,7 +64,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(273, 153);
+            this.txtPassword.Location = new System.Drawing.Point(276, 153);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(179, 26);
             this.txtPassword.TabIndex = 2;
@@ -74,20 +74,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(188, 156);
+            this.label2.Font = new System.Drawing.Font("Rockwell", 11.0802F);
+            this.label2.Location = new System.Drawing.Point(185, 156);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.Size = new System.Drawing.Size(84, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(188, 112);
+            this.label3.Font = new System.Drawing.Font("Rockwell", 11.0802F);
+            this.label3.Location = new System.Drawing.Point(185, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 17);
+            this.label3.Size = new System.Drawing.Size(89, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Username:";
             // 
@@ -213,7 +213,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Gym___Fitness_App.Properties.Resources.userlogin;
+            this.pictureBox1.Image = global::GymAndFitness.Properties.Resources.userlogin;
             this.pictureBox1.Location = new System.Drawing.Point(19, 97);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(157, 151);
@@ -245,6 +245,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
+            this.TopMost = true;
             this.VisibleChanged += new System.EventHandler(this.LoginForm_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

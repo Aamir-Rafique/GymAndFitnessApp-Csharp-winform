@@ -1,4 +1,4 @@
-﻿namespace Gym___Fitness_App
+﻿namespace GymAndFitness
 {
     partial class ProfileForm
     {
@@ -90,7 +90,7 @@
             this.toolTipRefresh = new System.Windows.Forms.ToolTip(this.components);
             this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.pbProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
+            this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -184,7 +184,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.portfolio;
+            this.pictureBox1.BackgroundImage = global::GymAndFitness.Properties.Resources.portfolio;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(15, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -289,7 +289,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.body_weight;
+            this.pictureBox3.BackgroundImage = global::GymAndFitness.Properties.Resources.body_weight;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(6, 3);
             this.pictureBox3.Name = "pictureBox3";
@@ -386,7 +386,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.goal;
+            this.pictureBox2.BackgroundImage = global::GymAndFitness.Properties.Resources.goal;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(14, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -443,6 +443,7 @@
             // btnGetMembershipPlan
             // 
             this.btnGetMembershipPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGetMembershipPlan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGetMembershipPlan.FlatAppearance.CheckedBackColor = System.Drawing.Color.SpringGreen;
             this.btnGetMembershipPlan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnGetMembershipPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -460,7 +461,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.member_card;
+            this.pictureBox4.BackgroundImage = global::GymAndFitness.Properties.Resources.member_card;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(13, 3);
             this.pictureBox4.Name = "pictureBox4";
@@ -501,7 +502,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::Gym___Fitness_App.Properties.Resources.power_button;
+            this.btnLogout.Image = global::GymAndFitness.Properties.Resources.power_button;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(659, 20);
             this.btnLogout.Name = "btnLogout";
@@ -514,7 +515,7 @@
             // 
             // btnBackToDashboard
             // 
-            this.btnBackToDashboard.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.previous;
+            this.btnBackToDashboard.BackgroundImage = global::GymAndFitness.Properties.Resources.previous;
             this.btnBackToDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBackToDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBackToDashboard.Location = new System.Drawing.Point(16, 11);
@@ -546,7 +547,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Image = global::Gym___Fitness_App.Properties.Resources.enter7;
+            this.btnLogin.Image = global::GymAndFitness.Properties.Resources.enter7;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogin.Location = new System.Drawing.Point(662, 21);
             this.btnLogin.Name = "btnLogin";
@@ -560,6 +561,7 @@
             // btnChangeProfilePicture
             // 
             this.btnChangeProfilePicture.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnChangeProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangeProfilePicture.FlatAppearance.CheckedBackColor = System.Drawing.Color.SpringGreen;
             this.btnChangeProfilePicture.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btnChangeProfilePicture.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
@@ -600,6 +602,7 @@
             // 
             this.btnHome.BackColor = System.Drawing.Color.SpringGreen;
             this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnHome.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -608,7 +611,7 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.Black;
-            this.btnHome.Image = global::Gym___Fitness_App.Properties.Resources.home_button;
+            this.btnHome.Image = global::GymAndFitness.Properties.Resources.home_button;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(-1, 110);
             this.btnHome.Name = "btnHome";
@@ -622,6 +625,7 @@
             // 
             this.btnAbout.BackColor = System.Drawing.Color.SpringGreen;
             this.btnAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnAbout.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
@@ -629,7 +633,7 @@
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.ForeColor = System.Drawing.Color.Black;
-            this.btnAbout.Image = global::Gym___Fitness_App.Properties.Resources.info;
+            this.btnAbout.Image = global::GymAndFitness.Properties.Resources.info;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.Location = new System.Drawing.Point(0, 340);
             this.btnAbout.Name = "btnAbout";
@@ -643,6 +647,7 @@
             // 
             this.btnToggle.BackColor = System.Drawing.Color.Lime;
             this.btnToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnToggle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnToggle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnToggle.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnToggle.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -651,7 +656,7 @@
             this.btnToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggle.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToggle.ForeColor = System.Drawing.Color.Black;
-            this.btnToggle.Image = global::Gym___Fitness_App.Properties.Resources.menu_bar;
+            this.btnToggle.Image = global::GymAndFitness.Properties.Resources.menu_bar;
             this.btnToggle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnToggle.Location = new System.Drawing.Point(-1, 12);
             this.btnToggle.Name = "btnToggle";
@@ -665,6 +670,7 @@
             // 
             this.btnWorkoutPlans.BackColor = System.Drawing.Color.SpringGreen;
             this.btnWorkoutPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnWorkoutPlans.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWorkoutPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnWorkoutPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnWorkoutPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
@@ -672,7 +678,7 @@
             this.btnWorkoutPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWorkoutPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWorkoutPlans.ForeColor = System.Drawing.Color.Black;
-            this.btnWorkoutPlans.Image = global::Gym___Fitness_App.Properties.Resources.workout;
+            this.btnWorkoutPlans.Image = global::GymAndFitness.Properties.Resources.workout;
             this.btnWorkoutPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWorkoutPlans.Location = new System.Drawing.Point(-1, 294);
             this.btnWorkoutPlans.Name = "btnWorkoutPlans";
@@ -686,6 +692,7 @@
             // 
             this.btnBMICalculator.BackColor = System.Drawing.Color.SpringGreen;
             this.btnBMICalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBMICalculator.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBMICalculator.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnBMICalculator.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnBMICalculator.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
@@ -693,7 +700,7 @@
             this.btnBMICalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBMICalculator.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBMICalculator.ForeColor = System.Drawing.Color.Black;
-            this.btnBMICalculator.Image = global::Gym___Fitness_App.Properties.Resources.bmi;
+            this.btnBMICalculator.Image = global::GymAndFitness.Properties.Resources.bmi;
             this.btnBMICalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBMICalculator.Location = new System.Drawing.Point(-1, 202);
             this.btnBMICalculator.Name = "btnBMICalculator";
@@ -707,6 +714,7 @@
             // 
             this.btnDietPlans.BackColor = System.Drawing.Color.SpringGreen;
             this.btnDietPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDietPlans.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDietPlans.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnDietPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnDietPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -715,7 +723,7 @@
             this.btnDietPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDietPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDietPlans.ForeColor = System.Drawing.Color.Black;
-            this.btnDietPlans.Image = global::Gym___Fitness_App.Properties.Resources.diet;
+            this.btnDietPlans.Image = global::GymAndFitness.Properties.Resources.diet;
             this.btnDietPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDietPlans.Location = new System.Drawing.Point(-1, 248);
             this.btnDietPlans.Name = "btnDietPlans";
@@ -729,6 +737,7 @@
             // 
             this.btnDashboard.BackColor = System.Drawing.Color.SpringGreen;
             this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnDashboard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -737,7 +746,7 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.Black;
-            this.btnDashboard.Image = global::Gym___Fitness_App.Properties.Resources.dashboardfinal;
+            this.btnDashboard.Image = global::GymAndFitness.Properties.Resources.dashboardfinal;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(-1, 156);
             this.btnDashboard.Name = "btnDashboard";
@@ -784,7 +793,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Image = global::Gym___Fitness_App.Properties.Resources.healthy_life;
+            this.pictureBox5.Image = global::GymAndFitness.Properties.Resources.healthy_life;
             this.pictureBox5.Location = new System.Drawing.Point(6, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(34, 34);
@@ -850,12 +859,13 @@
             // btnSaveCurrentHeightAndWeight
             // 
             this.btnSaveCurrentHeightAndWeight.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnSaveCurrentHeightAndWeight.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaveCurrentHeightAndWeight.FlatAppearance.BorderSize = 0;
             this.btnSaveCurrentHeightAndWeight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnSaveCurrentHeightAndWeight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveCurrentHeightAndWeight.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold);
             this.btnSaveCurrentHeightAndWeight.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSaveCurrentHeightAndWeight.Image = global::Gym___Fitness_App.Properties.Resources.save1;
+            this.btnSaveCurrentHeightAndWeight.Image = global::GymAndFitness.Properties.Resources.save1;
             this.btnSaveCurrentHeightAndWeight.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSaveCurrentHeightAndWeight.Location = new System.Drawing.Point(297, 14);
             this.btnSaveCurrentHeightAndWeight.Name = "btnSaveCurrentHeightAndWeight";
@@ -904,7 +914,7 @@
             this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteAccount.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAccount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDeleteAccount.Image = global::Gym___Fitness_App.Properties.Resources.deluser;
+            this.btnDeleteAccount.Image = global::GymAndFitness.Properties.Resources.deluser;
             this.btnDeleteAccount.Location = new System.Drawing.Point(693, 517);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(61, 60);
@@ -921,7 +931,7 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRefresh.Image = global::Gym___Fitness_App.Properties.Resources.refresh1;
+            this.btnRefresh.Image = global::GymAndFitness.Properties.Resources.refresh1;
             this.btnRefresh.Location = new System.Drawing.Point(451, 507);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(70, 70);
@@ -938,8 +948,9 @@
             this.pbProfilePicture.BorderColor2 = System.Drawing.Color.Fuchsia;
             this.pbProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.pbProfilePicture.BorderSize = 3;
+            this.pbProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbProfilePicture.GradientAngle = 50F;
-            this.pbProfilePicture.Image = global::Gym___Fitness_App.Properties.Resources.usernew;
+            this.pbProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
             this.pbProfilePicture.Location = new System.Drawing.Point(606, 124);
             this.pbProfilePicture.Name = "pbProfilePicture";
             this.pbProfilePicture.Size = new System.Drawing.Size(150, 150);

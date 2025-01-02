@@ -100,11 +100,11 @@ C:\Users\Aamir\source\repos\Gym & Fitness App\obj\x64\Debug\Gym & Fi.4847FCFB.Up
 C:\Users\Aamir\source\repos\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.exe
 C:\Users\Aamir\source\repos\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.pdb
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym_FitnessAppDB.accdb
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.exe.config
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.exe.manifest
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.application
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.exe
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Gym & Fitness App.pdb
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\GymNFitness.exe.config
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\GymNFitness.exe.manifest
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\GymNFitness.application
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\GymNFitness.exe
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\GymNFitness.pdb
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\EntityFramework.dll
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\EntityFramework.SqlServer.dll
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.dll
@@ -176,7 +176,7 @@ C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.Threading
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\bin\x64\Debug\System.ValueTuple.xml
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.csproj.AssemblyReference.cache
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.csproj.SuggestedBindingRedirects.cache
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.exe.config
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymNFitness.exe.config
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.AboutForm.resources
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.BMICalculatorForm.resources
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.DashboardForm.resources
@@ -194,9 +194,9 @@ C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_Ap
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym___Fitness_App.WorkoutPlansForm.resources
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.csproj.GenerateResource.cache
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.csproj.CoreCompileInputs.cache
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.TrustInfo.xml
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.exe.manifest
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.application
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymNFitness.TrustInfo.xml
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymNFitness.exe.manifest
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymNFitness.application
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fi.4847FCFB.Up2Date
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.exe
-C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\Gym & Fitness App.pdb
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymNFitness.exe
+C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymNFitness.pdb

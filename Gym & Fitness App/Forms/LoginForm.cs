@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data.OleDb; //for ms access
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public partial class LoginForm : Form
     {
@@ -52,6 +52,7 @@ namespace Gym___Fitness_App
                 if (IsValidLogin(username, password))
                 {
                     MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
                     User user = UserDataManager.GetUserDetails(txtUsername.Text);
                     if (user != null && user.Password == txtPassword.Text)

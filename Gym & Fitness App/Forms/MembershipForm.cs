@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public partial class MembershipForm : Form
     {
@@ -23,6 +23,8 @@ namespace Gym___Fitness_App
                 UpdateMembershipInDatabase("Free");
                 MessageBox.Show("Membership updated to Free!", "Success");
                 this.Close();
+                ProfileForm profile = new ProfileForm();
+                profile.Show();
             }
             else
             {
@@ -34,9 +36,12 @@ namespace Gym___Fitness_App
         {
             if (UserDataManager.CurrentUser != null)
             {
+                ProfileForm profile = new ProfileForm();
+                profile.Close();
                 if (UserDataManager.CurrentUser.MembershipStatus == "Premium")
                 {
                     MessageBox.Show("You are already a Premium member!");
+                    
                 }
                 else
                 {

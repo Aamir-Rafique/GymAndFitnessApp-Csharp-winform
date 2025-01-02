@@ -1,9 +1,9 @@
-﻿using Gym___Fitness_App.Forms;
+﻿using GymAndFitness.Forms;
 using System;
 using System.Windows.Forms;
 
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     internal static class Program
     {
@@ -15,7 +15,7 @@ namespace Gym___Fitness_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new LoadingForm());
         }
     }
 }

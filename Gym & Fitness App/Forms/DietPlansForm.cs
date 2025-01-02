@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public partial class DietPlansForm : Form
     {
@@ -142,19 +142,19 @@ namespace Gym___Fitness_App
                 {
                     Name = "1. Grilled Chicken Salad",
                     Recipe = "- Grilled chicken breast\n- Lettuce, spinach, and kale\n- Cherry tomatoes and cucumbers\n- Olive oil and lemon dressing",
-                    Image =Properties.Resources.Grilled_Chicken_Salad 
+                    Image = Properties.Resources.Grilled_Chicken_Salad
                 });
                 dietPlans.Add(new DietPlan
                 {
                     Name = "2. Oatmeal with Fruits",
                     Recipe = "- Rolled oats\n- Almond milk\n- Sliced bananas and berries\n- A drizzle of honey",
-                    Image =Properties.Resources.Oatmeal_with_Fruits 
+                    Image = Properties.Resources.Oatmeal_with_Fruits
                 });
                 dietPlans.Add(new DietPlan
                 {
                     Name = "3. Quinoa Bowl",
                     Recipe = "- Cooked quinoa\n- Steamed broccoli\n- Sliced avocado\n- Grilled salmon",
-                    Image =Properties.Resources.Quinoa_Bowl 
+                    Image = Properties.Resources.Quinoa_Bowl
                 });
             }
             else if (dietType == "Muscle Gain")
@@ -163,19 +163,19 @@ namespace Gym___Fitness_App
                 {
                     Name = "1. Chicken and Rice",
                     Recipe = "- Grilled chicken breast\n- Steamed brown rice\n- Steamed vegetables (broccoli, carrots)\n- Light soy sauce",
-                    Image =Properties.Resources.Chicken_and_Rice
+                    Image = Properties.Resources.Chicken_and_Rice
                 });
                 dietPlans.Add(new DietPlan
                 {
                     Name = "2. Protein Smoothie",
                     Recipe = "- Whey protein powder\n- Almond milk\n- Frozen berries\n- A spoonful of peanut butter",
-                    Image =Properties.Resources.Protein_Smoothie
+                    Image = Properties.Resources.Protein_Smoothie
                 });
                 dietPlans.Add(new DietPlan
                 {
                     Name = "3. Egg and Sweet Potato",
                     Recipe = "- Scrambled eggs\n- Roasted sweet potatoes\n- Sautéed spinach\n- A sprinkle of paprika",
-                    Image =Properties.Resources.Egg_and_Sweet_Potato 
+                    Image = Properties.Resources.Egg_and_Sweet_Potato
                 });
             }
             else if (dietType == "Keto")
@@ -184,19 +184,19 @@ namespace Gym___Fitness_App
                 {
                     Name = "1. Avocado Egg Salad",
                     Recipe = "- Hard-boiled eggs\n- Mashed avocado\n- Diced celery\n- A pinch of salt and pepper",
-                    Image =Properties.Resources.Avocado_Egg_Salad 
+                    Image = Properties.Resources.Avocado_Egg_Salad
                 });
                 dietPlans.Add(new DietPlan
                 {
                     Name = "2. Zucchini Noodles with Pesto",
                     Recipe = "- Spiralized zucchini\n- Homemade pesto (basil, olive oil, pine nuts, garlic)\n- Grated Parmesan cheese",
-                    Image =Properties.Resources.Zucchini_Noodles_with_Pesto
+                    Image = Properties.Resources.Zucchini_Noodles_with_Pesto
                 });
                 dietPlans.Add(new DietPlan
                 {
                     Name = "3. Grilled Salmon with Asparagus",
                     Recipe = "- Grilled salmon fillet\n- Steamed asparagus\n- Lemon butter sauce",
-                    Image =Properties.Resources.Grilled_Salmon_with_Asparagus
+                    Image = Properties.Resources.Grilled_Salmon_with_Asparagus
                 });
             }
 
@@ -234,7 +234,7 @@ namespace Gym___Fitness_App
             // Generate a random index
             Random random = new Random();
             imageIndex = random.Next(0, workoutImages.Length);
-        
+
 
             // Set the current image
             pbDiet.Image = workoutImages[imageIndex];
@@ -376,6 +376,8 @@ namespace Gym___Fitness_App
             { "kheer", "Calories: 200, Carbs: 30g, Protein: 5g, Fat: 6g (per serving)" },
             { "ice cream", "Calories: 207, Carbs: 24g, Protein: 3.5g, Fat: 11g (per scoop)" },
             { "brownie", "Calories: 290, Carbs: 36g, Protein: 4g, Fat: 14g (per piece)" },
+
+
         };
 
 
@@ -1175,7 +1177,9 @@ namespace Gym___Fitness_App
             }
         }
 
-      
-    
+        private void pnlWorkoutSelection_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

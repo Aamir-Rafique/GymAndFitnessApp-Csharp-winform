@@ -3,7 +3,7 @@ using System.Configuration;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public partial class PremiumForm : Form
     {
@@ -45,9 +45,12 @@ namespace Gym___Fitness_App
                             if (result != null && result.ToString() == enteredKey)
                             {
                                 MessageBox.Show("License key validated successfully! You now have premium membership.", "Validation Success");
+
                                 UserDataManager.CurrentUser.MembershipStatus = "Premium";
                                 UpdateMembershipInDatabase("Premium");
                                 this.Close();
+                                ProfileForm profile = new ProfileForm();
+                                profile.Show();
                             }
                             else
                             {

@@ -1,4 +1,4 @@
-﻿namespace Gym___Fitness_App
+﻿namespace GymAndFitness
 {
     partial class AboutForm
     {
@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
+            this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPurpose = new System.Windows.Forms.Label();
@@ -101,7 +101,7 @@
             this.btnProfilePicture.BorderSize = 2;
             this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProfilePicture.GradientAngle = 50F;
-            this.btnProfilePicture.Image = global::Gym___Fitness_App.Properties.Resources.usernew;
+            this.btnProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
             this.btnProfilePicture.Location = new System.Drawing.Point(703, 9);
             this.btnProfilePicture.Name = "btnProfilePicture";
             this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
@@ -202,7 +202,7 @@
             this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = global::Gym___Fitness_App.Properties.Resources.home_button;
+            this.btnHome.Image = global::GymAndFitness.Properties.Resources.home_button;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(-1, 110);
             this.btnHome.Name = "btnHome";
@@ -223,7 +223,7 @@
             this.btnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAbout.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.Image = global::Gym___Fitness_App.Properties.Resources.info;
+            this.btnAbout.Image = global::GymAndFitness.Properties.Resources.info;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.Location = new System.Drawing.Point(-1, 340);
             this.btnAbout.Name = "btnAbout";
@@ -244,7 +244,7 @@
             this.btnToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggle.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToggle.Image = global::Gym___Fitness_App.Properties.Resources.menu_bar;
+            this.btnToggle.Image = global::GymAndFitness.Properties.Resources.menu_bar;
             this.btnToggle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnToggle.Location = new System.Drawing.Point(-1, 12);
             this.btnToggle.Name = "btnToggle";
@@ -265,7 +265,7 @@
             this.btnWorkoutPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnWorkoutPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWorkoutPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWorkoutPlans.Image = global::Gym___Fitness_App.Properties.Resources.workout;
+            this.btnWorkoutPlans.Image = global::GymAndFitness.Properties.Resources.workout;
             this.btnWorkoutPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWorkoutPlans.Location = new System.Drawing.Point(-1, 294);
             this.btnWorkoutPlans.Name = "btnWorkoutPlans";
@@ -286,7 +286,7 @@
             this.btnBMICalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnBMICalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBMICalculator.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBMICalculator.Image = global::Gym___Fitness_App.Properties.Resources.bmi;
+            this.btnBMICalculator.Image = global::GymAndFitness.Properties.Resources.bmi;
             this.btnBMICalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBMICalculator.Location = new System.Drawing.Point(-1, 202);
             this.btnBMICalculator.Name = "btnBMICalculator";
@@ -308,7 +308,7 @@
             this.btnDietPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnDietPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDietPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDietPlans.Image = global::Gym___Fitness_App.Properties.Resources.diet;
+            this.btnDietPlans.Image = global::GymAndFitness.Properties.Resources.diet;
             this.btnDietPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDietPlans.Location = new System.Drawing.Point(-1, 248);
             this.btnDietPlans.Name = "btnDietPlans";
@@ -330,7 +330,7 @@
             this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.Image = global::Gym___Fitness_App.Properties.Resources.dashboardfinal;
+            this.btnDashboard.Image = global::GymAndFitness.Properties.Resources.dashboardfinal;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(-1, 156);
             this.btnDashboard.Name = "btnDashboard";
@@ -356,7 +356,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Gym___Fitness_App.Properties.Resources.github;
+            this.pictureBox1.Image = global::GymAndFitness.Properties.Resources.github;
             this.pictureBox1.Location = new System.Drawing.Point(275, 509);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 38);
@@ -369,7 +369,7 @@
             // 
             this.pbLinkedin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbLinkedin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbLinkedin.Image = global::Gym___Fitness_App.Properties.Resources.linkedin;
+            this.pbLinkedin.Image = global::GymAndFitness.Properties.Resources.linkedin;
             this.pbLinkedin.Location = new System.Drawing.Point(190, 509);
             this.pbLinkedin.Name = "pbLinkedin";
             this.pbLinkedin.Size = new System.Drawing.Size(52, 38);
@@ -382,7 +382,7 @@
             // 
             this.pbFacebook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbFacebook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbFacebook.Image = global::Gym___Fitness_App.Properties.Resources.facebook;
+            this.pbFacebook.Image = global::GymAndFitness.Properties.Resources.facebook;
             this.pbFacebook.Location = new System.Drawing.Point(443, 510);
             this.pbFacebook.Name = "pbFacebook";
             this.pbFacebook.Size = new System.Drawing.Size(52, 38);
@@ -395,7 +395,7 @@
             // 
             this.pbTwitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbTwitter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbTwitter.Image = global::Gym___Fitness_App.Properties.Resources.twitter;
+            this.pbTwitter.Image = global::GymAndFitness.Properties.Resources.twitter;
             this.pbTwitter.Location = new System.Drawing.Point(524, 509);
             this.pbTwitter.Name = "pbTwitter";
             this.pbTwitter.Size = new System.Drawing.Size(52, 38);
@@ -408,7 +408,7 @@
             // 
             this.pbGmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbGmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbGmail.Image = global::Gym___Fitness_App.Properties.Resources.youtube;
+            this.pbGmail.Image = global::GymAndFitness.Properties.Resources.youtube;
             this.pbGmail.Location = new System.Drawing.Point(360, 509);
             this.pbGmail.Name = "pbGmail";
             this.pbGmail.Size = new System.Drawing.Size(52, 38);

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.OleDb;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness 
 {
     public partial class SignupForm : Form
     {
@@ -17,7 +16,7 @@ namespace Gym___Fitness_App
         //connection string...
         private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
-       
+
 
 
         private void btnSignup_Click(object sender, EventArgs e)
@@ -408,5 +407,9 @@ namespace Gym___Fitness_App
             login.Show();
             this.Close();
         }
+
+
+
+
     }
 }

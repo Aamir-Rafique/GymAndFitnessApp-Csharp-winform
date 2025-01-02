@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public partial class BMICalculatorForm : Form
     {
@@ -48,7 +48,7 @@ namespace Gym___Fitness_App
             else
             {
                 //pnlMain.BackColor = Color.LightGreen; //change the color of main panel
-                slidePanel.Width -=7; // Collapse the panel
+                slidePanel.Width -= 7; // Collapse the panel
                 if (slidePanel.Width <= 45)
                 {
                     slideTimer.Stop();

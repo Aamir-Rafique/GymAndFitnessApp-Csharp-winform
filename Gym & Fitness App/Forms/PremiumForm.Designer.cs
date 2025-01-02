@@ -1,4 +1,4 @@
-﻿namespace Gym___Fitness_App
+﻿namespace GymAndFitness
 {
     partial class PremiumForm
     {
@@ -148,7 +148,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.key3;
+            this.pictureBox2.BackgroundImage = global::GymAndFitness.Properties.Resources.key3;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(259, 203);
             this.pictureBox2.Name = "pictureBox2";
@@ -174,6 +174,7 @@
             this.Name = "PremiumForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
+            this.TopMost = true;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorLicenseKey)).EndInit();

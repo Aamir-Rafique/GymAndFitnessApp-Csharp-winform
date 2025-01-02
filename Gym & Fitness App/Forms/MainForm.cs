@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public partial class MainForm : Form
     {
@@ -24,7 +23,7 @@ namespace Gym___Fitness_App
         {
             if (isPanelCollapsed)
             {
-                slidePanel.Width +=7; // Expand the panel
+                slidePanel.Width += 7; // Expand the panel
                 if (slidePanel.Width >= panelWidth)
                 {
                     slideTimer.Stop();
@@ -33,7 +32,7 @@ namespace Gym___Fitness_App
             }
             else
             {
-                slidePanel.Width -=7; // Collapse the panel
+                slidePanel.Width -= 7; // Collapse the panel
                 if (slidePanel.Width <= 45)
                 {
                     slideTimer.Stop();
@@ -171,6 +170,6 @@ namespace Gym___Fitness_App
             this.Close();
         }
 
-       
+
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Gym___Fitness_App
+﻿namespace GymAndFitness
 {
     partial class PaymentForm
     {
@@ -162,7 +162,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Image = global::Gym___Fitness_App.Properties.Resources.Easypaisa_New_Icon_Logo;
+            this.pictureBox4.Image = global::GymAndFitness.Properties.Resources.Easypaisa_New_Icon_Logo;
             this.pictureBox4.Location = new System.Drawing.Point(25, 16);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(39, 35);
@@ -173,7 +173,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::Gym___Fitness_App.Properties.Resources.paypal;
+            this.pictureBox3.Image = global::GymAndFitness.Properties.Resources.paypal;
             this.pictureBox3.Location = new System.Drawing.Point(14, 76);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(52, 44);
@@ -184,7 +184,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::Gym___Fitness_App.Properties.Resources.Jazz_Cash_Logo;
+            this.pictureBox1.Image = global::GymAndFitness.Properties.Resources.Jazz_Cash_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(278, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 33);
@@ -195,7 +195,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::Gym___Fitness_App.Properties.Resources.visa;
+            this.pictureBox2.Image = global::GymAndFitness.Properties.Resources.visa;
             this.pictureBox2.Location = new System.Drawing.Point(286, 81);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 32);
@@ -274,6 +274,7 @@
             this.Name = "PaymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.errorGroupBoxRadioButtons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).EndInit();
             this.groupBoxRadioButtons.ResumeLayout(false);

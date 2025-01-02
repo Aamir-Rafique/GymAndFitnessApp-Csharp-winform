@@ -3,7 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public partial class ProfileForm : Form
     {
@@ -20,7 +20,7 @@ namespace Gym___Fitness_App
             panelWidth = slidePanel.Width;
             slidePanel.Width = 45; // Start collapsed
 
-            
+
 
             if (UserDataManager.CurrentUser != null)
             {
@@ -49,9 +49,6 @@ namespace Gym___Fitness_App
 
                     //membership status
                     lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
-
-
-
                 }
                 else
                 {
@@ -196,8 +193,11 @@ namespace Gym___Fitness_App
         {
             if (UserDataManager.CurrentUser != null)
             {
+                this.Close();
+
                 MembershipForm membershipForm = new MembershipForm();
                 membershipForm.ShowDialog();
+
                 lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
 
                 //membership pln pic
@@ -208,8 +208,8 @@ namespace Gym___Fitness_App
                 }
                 else if (lblMembershipStatus.Text == "Premium")
                 {
-                    lblMembershipStatus.ForeColor = Color.Purple;
                     pbMembershipStatus.Image = Properties.Resources.crown1;
+                    lblMembershipStatus.ForeColor = Color.Purple;
                 }
                 else
                 {
@@ -230,20 +230,22 @@ namespace Gym___Fitness_App
         {
             if (UserDataManager.CurrentUser != null)
             {
-                using (OpenFileDialog openFileDialog = new OpenFileDialog())
-                {
-                    openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"; if (openFileDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        string selectedFilePath = openFileDialog.FileName; byte[] profilePicture = File.ReadAllBytes(selectedFilePath);
-                        // Update the profile picture in the PictureBox
-                        using (MemoryStream ms = new MemoryStream(profilePicture))
-                        {
-                            pbProfilePicture.Image = Image.FromStream(ms);
-                        }
-                        // Save the new profile picture
-                        UserDataManager.UpdateProfilePictureInDatabase(profilePicture);
-                    }
-                }
+                UserDataManager.ChangeProfilePicture(pbProfilePicture);
+
+                //using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                //{
+                //    openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"; if (openFileDialog.ShowDialog() == DialogResult.OK)
+                //    {
+                //        string selectedFilePath = openFileDialog.FileName; byte[] profilePicture = File.ReadAllBytes(selectedFilePath);
+                //        // Update the profile picture in the PictureBox
+                //        using (MemoryStream ms = new MemoryStream(profilePicture))
+                //        {
+                //            pbProfilePicture.Image = Image.FromStream(ms);
+                //        }
+                //        // Save the new profile picture
+                //        UserDataManager.UpdateProfilePictureInDatabase(profilePicture);
+                //    }
+                //}
             }
             else
             {
@@ -325,7 +327,7 @@ namespace Gym___Fitness_App
 
 
 
-       
+
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {

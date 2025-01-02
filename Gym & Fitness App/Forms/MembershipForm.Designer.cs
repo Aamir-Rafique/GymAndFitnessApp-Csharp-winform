@@ -1,4 +1,4 @@
-﻿namespace Gym___Fitness_App
+﻿namespace GymAndFitness
 {
     partial class MembershipForm
     {
@@ -155,7 +155,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.free3;
+            this.pictureBox1.BackgroundImage = global::GymAndFitness.Properties.Resources.free3;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(61, 7);
             this.pictureBox1.Name = "pictureBox1";
@@ -208,7 +208,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.crown1;
+            this.pictureBox2.BackgroundImage = global::GymAndFitness.Properties.Resources.crown1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(88, 4);
             this.pictureBox2.Name = "pictureBox2";

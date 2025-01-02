@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App.Forms
+namespace GymAndFitness.Forms
 {
     public partial class LoadingForm : Form
     {
@@ -21,11 +14,11 @@ namespace Gym___Fitness_App.Forms
 
         // Constants for timing events
         private const int initiazlize_app = 1000;
-        private const int LOAD_RESOURCES_TIME = 2500;
-        private const int CONNECT_DB_TIME = 3500;
-        private const int FINALIZE_TIME = 5000;
-        private const int ALMOST_THERE_TIME = 6500;
-        private const int COMPLETE_TIME = 9600;
+        private const int LOAD_RESOURCES_TIME = 2000;
+        private const int CONNECT_DB_TIME = 3000;
+        private const int FINALIZE_TIME = 3800;
+        private const int ALMOST_THERE_TIME = 5000;
+        private const int COMPLETE_TIME = 6000;
 
         private void LoadingForm_Load(object sender, EventArgs e)
         {
@@ -41,34 +34,33 @@ namespace Gym___Fitness_App.Forms
             {
                 case initiazlize_app:
                     lblLoading.Text = "Initializing application...";
-                    progressBarLoading.Value = 25;
+                    progressBarLoading.Value = 20;
                     lbl1Develop.Text = "Aamir Rafique";
+                    lbl2Develop.Text = "Hamza Shahid";
+                    lbl3Develop.Text = "Raja Shadab";
                     break;
 
                 case LOAD_RESOURCES_TIME:
                     lblLoading.Text = "Loading resources...";
-                    lbl2Develop.Text = "Hamza Shahid";
-                    progressBarLoading.Value = 45;
+                    progressBarLoading.Value = 35;
                     break;
 
                 case CONNECT_DB_TIME:
                     lblLoading.Text = "Connecting to database...";
-                    lbl3Develop.Text = "Raja Shadab";
-                    progressBarLoading.Value = 60;
+                    progressBarLoading.Value = 50;
                     break;
 
                 case FINALIZE_TIME:
                     lblLoading.Text = "Finalizing...";
-                    progressBarLoading.Value = 75;
                     break;
 
                 case ALMOST_THERE_TIME:
                     lblLoading.Text = "Almost there...";
-                    progressBarLoading.Value = 83;
+                    progressBarLoading.Value = 70;
                     break;
 
                 case COMPLETE_TIME:
-                    lblLoading.Text ="";
+                    lblLoading.Text = "";
                     lblWelcome.Text = "Welcome";
                     progressBarLoading.Value = 100;
                     break;
@@ -79,7 +71,7 @@ namespace Gym___Fitness_App.Forms
                         // Open LoginForm and close LoadingForm
                         timerLoading.Stop();
 
-                        this.Hide(); 
+                        this.Hide();
 
                         LoginForm login = new LoginForm();
                         login.Show();

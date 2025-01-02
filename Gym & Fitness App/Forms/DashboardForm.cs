@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.OleDb;
-using System.Drawing;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public partial class DashboardForm : Form
     {

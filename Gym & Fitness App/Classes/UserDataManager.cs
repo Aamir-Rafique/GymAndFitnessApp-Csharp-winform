@@ -5,7 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Gym___Fitness_App
+namespace GymAndFitness
 {
     public static class UserDataManager
     {
@@ -45,7 +45,7 @@ namespace Gym___Fitness_App
                                     TargetWeight = reader["TargetWeight"].ToString(),
                                     FitnessGoal = reader["FitnessGoal"].ToString(),
                                     FitnessLevel = reader["FitnessLevel"].ToString(),
-                                    ProfilePicture = reader["ProfilePicture"] != DBNull.Value ? (byte[])reader["ProfilePicture"] : null,
+                                    ProfilePicture = reader["ProfilePicture"] as byte[],
                                     DailyWaterIntake = reader["DailyWaterIntake"] == DBNull.Value ? 0 : Convert.ToDouble(reader["DailyWaterIntake"]),
                                     MembershipStatus = reader["MembershipStatus"].ToString(),
                                     LicenseKey = reader["LicenseKey"].ToString(),
@@ -221,17 +221,8 @@ namespace Gym___Fitness_App
         //    return dietPlans;
         //}
 
-
-
-        //public static void UpdateProfilePicture(byte[] profilePicture)
-        //{
-        //    if (CurrentUser != null)
-        //    {
-        //        CurrentUser.ProfilePicture = profilePicture;
-        //    }
-
-        //}
-
+        
+        
         public static void ApplyProfilePicture(PictureBox pictureBox)
         {
             if (CurrentUser != null && CurrentUser.ProfilePicture != null)
@@ -309,31 +300,31 @@ namespace Gym___Fitness_App
 
 
 
-        //public static void ChangeProfilePicture(PictureBox pictureBox)
-        //{
-        //    // Open file dialog to let user choose an image
-        //    OpenFileDialog openFileDialog = new OpenFileDialog();
-        //    openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;";
+        public static void ChangeProfilePicture(PictureBox pictureBox)
+        {
+            // Open file dialog to let user choose an image
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;";
 
-        //    if (openFileDialog.ShowDialog() == DialogResult.OK)
-        //    {
-        //        try
-        //        {
-        //            // Convert selected image to byte array
-        //            byte[] profilePicture = File.ReadAllBytes(openFileDialog.FileName);
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    // Convert selected image to byte array
+                    byte[] profilePicture = File.ReadAllBytes(openFileDialog.FileName);
 
-        //            // Update the profile picture in the database
-        //            UpdateProfilePictureInDatabase(profilePicture);
+                    // Update the profile picture in the database
+                    UpdateProfilePictureInDatabase(profilePicture);
 
-        //            // Apply the new profile picture to the PictureBox in the current form
-        //            ApplyProfilePicture(pictureBox);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show($"Error changing profile picture: {ex.Message}", "Error");
-        //        }
-        //    }
-        //}
+                    // Apply the new profile picture to the PictureBox in the current form
+                    ApplyProfilePicture(pictureBox);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error changing profile picture: {ex.Message}", "Error");
+                }
+            }
+        }
 
 
         //delete user account
