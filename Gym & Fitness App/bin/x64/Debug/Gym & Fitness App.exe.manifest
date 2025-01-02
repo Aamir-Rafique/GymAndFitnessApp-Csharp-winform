@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gym &amp; Fitness App.exe" size="23032744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Gym &amp; Fitness App.exe" size="24106408">
       <assemblyIdentity name="Gym &amp; Fitness App" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VBQiUigCZHZ4IgWJLZHTIbaSp3uCNm9wYV/ZXGvDuOc=</dsig:DigestValue>
+        <dsig:DigestValue>GA6Jwq6bfKaiQJwwNBav7K0+oLYu6Bdx775GpEg8wXo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

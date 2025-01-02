@@ -33,15 +33,18 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pnlWorkoutSelection = new System.Windows.Forms.Panel();
             this.cmbWorkoutType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlExercises = new System.Windows.Forms.Panel();
+            this.pbWorkout = new System.Windows.Forms.PictureBox();
             this.tabWorkoutPlan = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,19 +54,15 @@
             this.Workout = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Intensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveWorkoutPlan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.slidePanel = new System.Windows.Forms.Panel();
-            this.timerForPics = new System.Windows.Forms.Timer(this.components);
-            this.pbWorkout = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSaveWorkoutPlan = new System.Windows.Forms.Button();
-            this.btnProfilePicture = new Gym___Fitness_App.Classes.RoundPictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
@@ -71,24 +70,25 @@
             this.btnBMICalculator = new System.Windows.Forms.Button();
             this.btnDietPlans = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.timerForPics = new System.Windows.Forms.Timer(this.components);
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.pnlWorkoutSelection.SuspendLayout();
             this.pnlExercises.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWorkout)).BeginInit();
             this.tabWorkoutPlan.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkoutPlan)).BeginInit();
             this.panel1.SuspendLayout();
-            this.slidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbWorkout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.slidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -122,6 +122,17 @@
             this.label13.Size = new System.Drawing.Size(226, 20);
             this.label13.TabIndex = 2;
             this.label13.Text = "Fat Loss Workout Routine";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.weightloss_workout;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(714, 444);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // label9
             // 
@@ -195,6 +206,17 @@
             this.pnlExercises.Size = new System.Drawing.Size(714, 444);
             this.pnlExercises.TabIndex = 1;
             // 
+            // pbWorkout
+            // 
+            this.pbWorkout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbWorkout.Image = global::Gym___Fitness_App.Properties.Resources.workout7;
+            this.pbWorkout.Location = new System.Drawing.Point(0, 0);
+            this.pbWorkout.Name = "pbWorkout";
+            this.pbWorkout.Size = new System.Drawing.Size(714, 444);
+            this.pbWorkout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbWorkout.TabIndex = 50;
+            this.pbWorkout.TabStop = false;
+            // 
             // tabWorkoutPlan
             // 
             this.tabWorkoutPlan.Appearance = System.Windows.Forms.TabAppearance.Buttons;
@@ -232,6 +254,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(714, 41);
             this.panel4.TabIndex = 50;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.weightgain_planworkout;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(714, 444);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // tabPage5
             // 
@@ -316,6 +349,25 @@
             this.Intensity.HeaderText = "Intensity";
             this.Intensity.Name = "Intensity";
             // 
+            // btnSaveWorkoutPlan
+            // 
+            this.btnSaveWorkoutPlan.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnSaveWorkoutPlan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.btnSaveWorkoutPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnSaveWorkoutPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveWorkoutPlan.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold);
+            this.btnSaveWorkoutPlan.Image = global::Gym___Fitness_App.Properties.Resources.save1;
+            this.btnSaveWorkoutPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSaveWorkoutPlan.Location = new System.Drawing.Point(274, 363);
+            this.btnSaveWorkoutPlan.Name = "btnSaveWorkoutPlan";
+            this.btnSaveWorkoutPlan.Size = new System.Drawing.Size(127, 44);
+            this.btnSaveWorkoutPlan.TabIndex = 29;
+            this.btnSaveWorkoutPlan.Text = "Save Plan";
+            this.btnSaveWorkoutPlan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip1.SetToolTip(this.btnSaveWorkoutPlan, "Click To save");
+            this.btnSaveWorkoutPlan.UseVisualStyleBackColor = false;
+            this.btnSaveWorkoutPlan.Click += new System.EventHandler(this.btnSaveWorkoutPlan_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -350,96 +402,11 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(200, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 74);
+            this.panel1.Size = new System.Drawing.Size(784, 74);
             this.panel1.TabIndex = 5;
-            // 
-            // slideTimer
-            // 
-            this.slideTimer.Interval = 1;
-            this.slideTimer.Tick += new System.EventHandler(this.slideTimer_Tick);
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.AutoPopDelay = 5000;
-            this.toolTip1.InitialDelay = 200;
-            this.toolTip1.ReshowDelay = 100;
-            this.toolTip1.ShowAlways = true;
-            // 
-            // slidePanel
-            // 
-            this.slidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.slidePanel.Controls.Add(this.btnHome);
-            this.slidePanel.Controls.Add(this.btnAbout);
-            this.slidePanel.Controls.Add(this.btnToggle);
-            this.slidePanel.Controls.Add(this.btnWorkoutPlans);
-            this.slidePanel.Controls.Add(this.btnBMICalculator);
-            this.slidePanel.Controls.Add(this.btnDietPlans);
-            this.slidePanel.Controls.Add(this.btnDashboard);
-            this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.slidePanel.Location = new System.Drawing.Point(0, 0);
-            this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(200, 560);
-            this.slidePanel.TabIndex = 35;
-            // 
-            // timerForPics
-            // 
-            this.timerForPics.Interval = 4500;
-            this.timerForPics.Tick += new System.EventHandler(this.timerForPics_Tick);
-            // 
-            // pbWorkout
-            // 
-            this.pbWorkout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbWorkout.Image = global::Gym___Fitness_App.Properties.Resources.workout7;
-            this.pbWorkout.Location = new System.Drawing.Point(0, 0);
-            this.pbWorkout.Name = "pbWorkout";
-            this.pbWorkout.Size = new System.Drawing.Size(714, 444);
-            this.pbWorkout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbWorkout.TabIndex = 50;
-            this.pbWorkout.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.weightgain_planworkout;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(714, 444);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Gym___Fitness_App.Properties.Resources.weightloss_workout;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(714, 444);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnSaveWorkoutPlan
-            // 
-            this.btnSaveWorkoutPlan.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.btnSaveWorkoutPlan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnSaveWorkoutPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
-            this.btnSaveWorkoutPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveWorkoutPlan.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold);
-            this.btnSaveWorkoutPlan.Image = global::Gym___Fitness_App.Properties.Resources.save1;
-            this.btnSaveWorkoutPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveWorkoutPlan.Location = new System.Drawing.Point(274, 363);
-            this.btnSaveWorkoutPlan.Name = "btnSaveWorkoutPlan";
-            this.btnSaveWorkoutPlan.Size = new System.Drawing.Size(127, 44);
-            this.btnSaveWorkoutPlan.TabIndex = 29;
-            this.btnSaveWorkoutPlan.Text = "Save Plan";
-            this.btnSaveWorkoutPlan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.btnSaveWorkoutPlan, "Click To save");
-            this.btnSaveWorkoutPlan.UseVisualStyleBackColor = false;
-            this.btnSaveWorkoutPlan.Click += new System.EventHandler(this.btnSaveWorkoutPlan_Click);
             // 
             // btnProfilePicture
             // 
@@ -472,6 +439,34 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            // 
+            // slideTimer
+            // 
+            this.slideTimer.Interval = 1;
+            this.slideTimer.Tick += new System.EventHandler(this.slideTimer_Tick);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 200;
+            this.toolTip1.ReshowDelay = 100;
+            this.toolTip1.ShowAlways = true;
+            // 
+            // slidePanel
+            // 
+            this.slidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.slidePanel.Controls.Add(this.btnHome);
+            this.slidePanel.Controls.Add(this.btnAbout);
+            this.slidePanel.Controls.Add(this.btnToggle);
+            this.slidePanel.Controls.Add(this.btnWorkoutPlans);
+            this.slidePanel.Controls.Add(this.btnBMICalculator);
+            this.slidePanel.Controls.Add(this.btnDietPlans);
+            this.slidePanel.Controls.Add(this.btnDashboard);
+            this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.slidePanel.Location = new System.Drawing.Point(0, 74);
+            this.slidePanel.Name = "slidePanel";
+            this.slidePanel.Size = new System.Drawing.Size(200, 486);
+            this.slidePanel.TabIndex = 35;
             // 
             // btnHome
             // 
@@ -623,15 +618,20 @@
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
+            // timerForPics
+            // 
+            this.timerForPics.Interval = 4500;
+            this.timerForPics.Tick += new System.EventHandler(this.timerForPics_Tick);
+            // 
             // WorkoutPlansForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(784, 560);
+            this.Controls.Add(this.slidePanel);
             this.Controls.Add(this.tabWorkoutPlan);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.slidePanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -642,14 +642,17 @@
             this.tabPage4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.pnlWorkoutSelection.ResumeLayout(false);
             this.pnlWorkoutSelection.PerformLayout();
             this.pnlExercises.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbWorkout)).EndInit();
             this.tabWorkoutPlan.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -657,12 +660,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkoutPlan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.slidePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbWorkout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.slidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

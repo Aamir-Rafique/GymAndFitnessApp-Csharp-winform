@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|c:\\users\\aamir\\desktop\\projects\\gym \u0026 fitness app\\forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|c:\\users\\aamir\\desktop\\projects\\gym \u0026 fitness app\\forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -15,18 +27,6 @@
       "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\bmicalculatorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|c:\\users\\aamir\\desktop\\projects\\gym \u0026 fitness app\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|c:\\users\\aamir\\desktop\\projects\\gym \u0026 fitness app\\forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -35,16 +35,8 @@
       "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|solutionrelative:forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|Gym \u0026 Fitness App.csproj|C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,6 +105,18 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DietPlansForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DietPlansForm.cs",
+              "RelativeDocumentMoniker": "Forms\\DietPlansForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DietPlansForm.cs [Design]",
+              "RelativeToolTip": "Forms\\DietPlansForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T13:04:26.119Z",
+              "EditorCaption": " [Design]"
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
@@ -121,8 +125,50 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkoutPlansForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\WorkoutPlansForm.cs",
+              "RelativeDocumentMoniker": "Forms\\WorkoutPlansForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\WorkoutPlansForm.cs [Design]",
+              "RelativeToolTip": "Forms\\WorkoutPlansForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T13:03:22.692Z",
+              "EditorCaption": " [Design]"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "WorkoutPlansForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\WorkoutPlansForm.cs",
+              "RelativeDocumentMoniker": "Forms\\WorkoutPlansForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\WorkoutPlansForm.cs",
+              "RelativeToolTip": "Forms\\WorkoutPlansForm.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAAAIwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T18:59:03.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DietPlansForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DietPlansForm.cs",
+              "RelativeDocumentMoniker": "Forms\\DietPlansForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DietPlansForm.cs",
+              "RelativeToolTip": "Forms\\DietPlansForm.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T06:38:01.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "BMICalculatorForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\BMICalculatorForm.cs",
               "RelativeDocumentMoniker": "Forms\\BMICalculatorForm.cs",
@@ -134,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "DashboardForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DashboardForm.cs",
               "RelativeDocumentMoniker": "Forms\\DashboardForm.cs",
@@ -142,55 +188,6 @@
               "RelativeToolTip": "Forms\\DashboardForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-01T05:53:36.525Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DashboardForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DashboardForm.cs",
-              "RelativeDocumentMoniker": "Forms\\DashboardForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DashboardForm.cs",
-              "RelativeToolTip": "Forms\\DashboardForm.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAUwK0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T06:22:39.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\LoginForm.cs [Design]",
-              "RelativeToolTip": "Forms\\LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T11:47:57.405Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WorkoutPlansForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\WorkoutPlansForm.cs",
-              "RelativeDocumentMoniker": "Forms\\WorkoutPlansForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\WorkoutPlansForm.cs [Design]",
-              "RelativeToolTip": "Forms\\WorkoutPlansForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T18:54:15.64Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DietPlansForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DietPlansForm.cs",
-              "RelativeDocumentMoniker": "Forms\\DietPlansForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DietPlansForm.cs [Design]",
-              "RelativeToolTip": "Forms\\DietPlansForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T05:53:57.721Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -219,32 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "WorkoutPlansForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\WorkoutPlansForm.cs",
-              "RelativeDocumentMoniker": "Forms\\WorkoutPlansForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\WorkoutPlansForm.cs",
-              "RelativeToolTip": "Forms\\WorkoutPlansForm.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAzwHQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T18:59:03.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "DietPlansForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DietPlansForm.cs",
-              "RelativeDocumentMoniker": "Forms\\DietPlansForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\DietPlansForm.cs",
-              "RelativeToolTip": "Forms\\DietPlansForm.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAAAIEAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-01T06:38:01.412Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "ProfileForm.cs",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\ProfileForm.cs",
               "RelativeDocumentMoniker": "Forms\\ProfileForm.cs",
@@ -257,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Classes\\Program.cs",
               "RelativeDocumentMoniker": "Classes\\Program.cs",
@@ -270,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "Forms\\MainForm.cs",
@@ -283,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 11,
               "Title": "ProfileForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\ProfileForm.cs",
               "RelativeDocumentMoniker": "Forms\\ProfileForm.cs",
@@ -295,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "LoadingForm.cs",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\LoadingForm.cs",
               "RelativeDocumentMoniker": "Forms\\LoadingForm.cs",
@@ -308,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "LoadingForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\LoadingForm.cs",
               "RelativeDocumentMoniker": "Forms\\LoadingForm.cs",
@@ -320,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "BMICalculatorForm.cs",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\BMICalculatorForm.cs",
               "RelativeDocumentMoniker": "Forms\\BMICalculatorForm.cs",
@@ -333,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "AboutForm.cs",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\AboutForm.cs",
               "RelativeDocumentMoniker": "Forms\\AboutForm.cs",
@@ -346,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "SignupForm.cs",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\SignupForm.cs",
               "RelativeDocumentMoniker": "Forms\\SignupForm.cs",
@@ -359,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "PaymentForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\PaymentForm.cs",
               "RelativeDocumentMoniker": "Forms\\PaymentForm.cs",
@@ -371,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "PremiumForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\PremiumForm.cs",
               "RelativeDocumentMoniker": "Forms\\PremiumForm.cs",
@@ -383,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 19,
               "Title": "MembershipForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\MembershipForm.cs",
               "RelativeDocumentMoniker": "Forms\\MembershipForm.cs",
@@ -395,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 20,
               "Title": "RoundPictureBox.cs",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Classes\\RoundPictureBox.cs",
               "RelativeDocumentMoniker": "Classes\\RoundPictureBox.cs",
@@ -408,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 21,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\PROJECTS\\Gym \u0026 Fitness App\\Forms\\LoginForm.cs",
               "RelativeDocumentMoniker": "Forms\\LoginForm.cs",

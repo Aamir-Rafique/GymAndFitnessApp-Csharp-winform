@@ -531,6 +531,21 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+    <None Include="Resources\Images\WorkoutType pics\ChildPoseImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\WarriorPoseImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\TreePoseImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\SquatsImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\ShoulderPressImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\PushupsImage.jpeg" />
+    <None Include="Resources\Images\WorkoutType pics\PullUpsImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\PlankImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\MountainClimbersImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\LungesImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\DownwardDogImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\DeadliftsImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\CobraPoseImage.jpg" />
+    <None Include="Resources\Images\WorkoutType pics\BurpeesImage.jpeg" />
+    <None Include="Resources\Images\WorkoutType pics\BenchPressImage.jpg" />
     <None Include="Resources\gifs\Bench-press.gif" />
     <None Include="Resources\Icons\drink-water.png" />
     <None Include="Resources\Images\Dietpics\DietRecipes\Zucchini Noodles with Pesto.jpeg" />
