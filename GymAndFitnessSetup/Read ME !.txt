@@ -1,7 +1,0 @@
-In order to install this application, 
-
-1. Go to "Debug" folder and open "setup file".
-2. After the app is installed, go to Debug/MsAccessDBEngin2010/  
- and open "AccessDatabaseEngine" file to setup database for the app.
-
-Note: if you skip step 2, you will not be able to access database!!
