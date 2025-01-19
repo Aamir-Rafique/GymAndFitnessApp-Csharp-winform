@@ -40,6 +40,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblStartingWeight = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lblBMICategory = new System.Windows.Forms.Label();
@@ -52,6 +53,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.lblTargetWeightRange = new System.Windows.Forms.Label();
             this.lblFitnessGoal = new System.Windows.Forms.Label();
             this.lblTargetWeight = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -92,9 +95,6 @@
             this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblTargetWeightRange = new System.Windows.Forms.Label();
-            this.lblStartingWeight = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -238,6 +238,17 @@
             this.panel2.Size = new System.Drawing.Size(286, 210);
             this.panel2.TabIndex = 6;
             // 
+            // lblStartingWeight
+            // 
+            this.lblStartingWeight.AutoSize = true;
+            this.lblStartingWeight.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartingWeight.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblStartingWeight.Location = new System.Drawing.Point(186, 88);
+            this.lblStartingWeight.Name = "lblStartingWeight";
+            this.lblStartingWeight.Size = new System.Drawing.Size(83, 23);
+            this.lblStartingWeight.TabIndex = 16;
+            this.lblStartingWeight.Text = "Loading...";
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -369,6 +380,27 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(366, 147);
             this.panel3.TabIndex = 7;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(8, 78);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(204, 20);
+            this.label17.TabIndex = 21;
+            this.label17.Text = "Target Weight Range(kg):";
+            // 
+            // lblTargetWeightRange
+            // 
+            this.lblTargetWeightRange.AutoSize = true;
+            this.lblTargetWeightRange.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTargetWeightRange.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblTargetWeightRange.Location = new System.Drawing.Point(221, 75);
+            this.lblTargetWeightRange.Name = "lblTargetWeightRange";
+            this.lblTargetWeightRange.Size = new System.Drawing.Size(80, 23);
+            this.lblTargetWeightRange.TabIndex = 22;
+            this.lblTargetWeightRange.Text = "Loading...";
             // 
             // lblFitnessGoal
             // 
@@ -864,6 +896,7 @@
             this.nudCurrentHeight.Size = new System.Drawing.Size(88, 30);
             this.nudCurrentHeight.TabIndex = 40;
             this.nudCurrentHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudCurrentHeight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudCurrentHeight_KeyDown);
             // 
             // label16
             // 
@@ -916,6 +949,7 @@
             this.nudCurrentWeight.Size = new System.Drawing.Size(88, 30);
             this.nudCurrentWeight.TabIndex = 38;
             this.nudCurrentWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudCurrentWeight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.nudCurrentWeight_KeyDown);
             // 
             // toolTipRefresh
             // 
@@ -977,38 +1011,6 @@
             this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProfilePicture.TabIndex = 39;
             this.pbProfilePicture.TabStop = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(8, 78);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(204, 20);
-            this.label17.TabIndex = 21;
-            this.label17.Text = "Target Weight Range(kg):";
-            // 
-            // lblTargetWeightRange
-            // 
-            this.lblTargetWeightRange.AutoSize = true;
-            this.lblTargetWeightRange.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTargetWeightRange.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTargetWeightRange.Location = new System.Drawing.Point(221, 75);
-            this.lblTargetWeightRange.Name = "lblTargetWeightRange";
-            this.lblTargetWeightRange.Size = new System.Drawing.Size(80, 23);
-            this.lblTargetWeightRange.TabIndex = 22;
-            this.lblTargetWeightRange.Text = "Loading...";
-            // 
-            // lblStartingWeight
-            // 
-            this.lblStartingWeight.AutoSize = true;
-            this.lblStartingWeight.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartingWeight.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblStartingWeight.Location = new System.Drawing.Point(186, 88);
-            this.lblStartingWeight.Name = "lblStartingWeight";
-            this.lblStartingWeight.Size = new System.Drawing.Size(83, 23);
-            this.lblStartingWeight.TabIndex = 16;
-            this.lblStartingWeight.Text = "Loading...";
             // 
             // ProfileForm
             // 

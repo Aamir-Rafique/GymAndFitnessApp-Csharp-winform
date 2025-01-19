@@ -607,13 +607,11 @@ namespace GymAndFitness
 
 
 
-
-
-
+        //pixabay api
         private async Task<string> GetImageUrl(string FoodItem)
         {
-            string apiKey = "G6ZA7FX7OgAKsiTkAqujD3D4wxkoyyxKoZIP63eG5-g";
-            string apiUrl = $"https://api.unsplash.com/search/photos?query={FoodItem}+food&client_id={apiKey}"; // Added "+food" to query
+            //string apiKey = "47992933-2341adae39ed2c2859c834f8c";
+            string apiUrl = $"https://pixabay.com/api/?key=47992933-2341adae39ed2c2859c834f8c&q={FoodItem}&image_type=photo&pretty=true";  // Added "+food" to query
 
             using (HttpClient client = new HttpClient())
             {
@@ -648,6 +646,51 @@ namespace GymAndFitness
                 }
             }
         }
+
+
+
+
+
+        //unsplash api
+
+        //private async Task<string> GetImageUrl(string FoodItem)
+        //{
+        //    string apiKey = "G6ZA7FX7OgAKsiTkAqujD3D4wxkoyyxKoZIP63eG5-g";
+        //    string apiUrl = $"https://api.unsplash.com/search/photos?query={FoodItem}+food&client_id={apiKey}"; // Added "+food" to query
+
+        //    using (HttpClient client = new HttpClient())
+        //    {
+        //        try
+        //        {
+        //            HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+        //            if (response.IsSuccessStatusCode)
+        //            {
+        //                string jsonResponse = await response.Content.ReadAsStringAsync();
+        //                JObject json = JObject.Parse(jsonResponse);
+
+        //                if (json["results"] != null && json["results"].HasValues)
+        //                {
+        //                    return json["results"][0]["urls"]["regular"].ToString();
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show($"No images found for '{FoodItem}'.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                    return null;
+        //                }
+        //            }
+        //            else
+        //            {
+        //                MessageBox.Show("Failed to fetch image from Unsplash.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //                return null;
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return $"An error occurred: {ex.Message}";
+        //        }
+        //    }
+        //}
 
 
 

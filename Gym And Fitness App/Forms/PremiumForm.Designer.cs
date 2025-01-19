@@ -92,6 +92,7 @@
             this.txtLicenseKey.Name = "txtLicenseKey";
             this.txtLicenseKey.Size = new System.Drawing.Size(207, 26);
             this.txtLicenseKey.TabIndex = 1;
+            this.txtLicenseKey.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLicenseKey_KeyDown);
             this.txtLicenseKey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLicenseKey_KeyPress);
             // 
             // label5

@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="24110504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="24111016">
       <assemblyIdentity name="GymAndFitness" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b7OdEjPTaUMrGGpvE5d0+6beR7g7nGS6dflfeFBA4Bc=</dsig:DigestValue>
+        <dsig:DigestValue>vbP2XHWl4V/qApezRH0plm0N9tq7V8eBhNXGQUm+APk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -477,7 +477,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>nWjIBOiMeosrZqRwYECYXQ74ZAoi6Z9SOUNYZFwAzKI=</dsig:DigestValue>
+      <dsig:DigestValue>8riylF/c0WMFt80+tDNqg6cEGQKo2gj15qatfKirKdo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GymAndFitness.exe.config" size="5782">
@@ -489,13 +489,13 @@
       <dsig:DigestValue>XgOXr6/GWKXkKbGjjnOsy9CwuIkf8eI8IIyDtJ5nh/Y=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GymAndFitness.pdb" size="386560">
+  <file name="GymAndFitness.pdb" size="388608">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>aonq7Az46xrb3jmuvNaINKKWmFBe93+flyZtci4qNtI=</dsig:DigestValue>
+      <dsig:DigestValue>m1jGkelp7PwrSONLTKSkHoaE4ZvwaNOS3cfGnVu1x8w=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ILLink\ILLink.Descriptors.LibraryBuild.xml" size="305" writeableType="applicationData">

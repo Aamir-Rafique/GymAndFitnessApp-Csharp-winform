@@ -181,6 +181,7 @@
             this.txtWeight.Size = new System.Drawing.Size(144, 30);
             this.txtWeight.TabIndex = 2;
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtWeight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWeight_KeyDown);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // label5

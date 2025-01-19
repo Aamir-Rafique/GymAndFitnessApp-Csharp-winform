@@ -406,6 +406,22 @@ namespace GymAndFitness
             }
         }
 
-     
+        private void nudCurrentWeight_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) // Check if Enter key was pressed
+            {
+                e.SuppressKeyPress = true; // Prevent the default behavior (e.g., beep sound)
+                btnSaveCurrentHeightAndWeight.PerformClick(); // Trigger the button's click event
+            }
+        }
+
+        private void nudCurrentHeight_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) // Check if Enter key was pressed
+            {
+                e.SuppressKeyPress = true; // Prevent the default behavior (e.g., beep sound)
+                btnSaveCurrentHeightAndWeight.PerformClick(); // Trigger the button's click event
+            }
+        }
     }
 }

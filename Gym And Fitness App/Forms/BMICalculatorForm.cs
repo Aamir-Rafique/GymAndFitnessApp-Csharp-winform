@@ -285,8 +285,13 @@ namespace GymAndFitness
             }
         }
 
-
-
-
+        private void txtWeight_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) // Check if Enter key was pressed
+            {
+                e.SuppressKeyPress = true; // Prevent the default behavior (e.g., beep sound)
+                btnCalculate.PerformClick(); // Trigger the button's click event
+            }
+        }
     }
 }
