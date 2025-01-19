@@ -35,7 +35,7 @@ namespace GymAndFitness.Forms
                 case initiazlize_app:
                     lblLoading.Text = "Initializing application...";
                     progressBarLoading.Value = 20;
-                   
+
                     break;
 
                 case LOAD_RESOURCES_TIME:

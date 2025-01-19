@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.OleDb;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -13,11 +11,6 @@ namespace GymAndFitness
         {
             InitializeComponent();
         }
-
-
-        //connection string...
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
-
 
 
         //load
@@ -34,12 +27,9 @@ namespace GymAndFitness
             if (UserDataManager.CurrentUser != null)
             {
                 UserDataManager.ApplyProfilePicture(btnProfilePicture);
-
-                //database
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
-                LoadWorkoutPlan(userId);
+                UserDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
             }
-
         }
 
 
@@ -365,90 +355,7 @@ namespace GymAndFitness
                 return;
             }
 
-            int userId = UserDataManager.CurrentUser.UserID;
-
-
-
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    // Clear existing workout plans for the user
-                    string deleteQuery = "DELETE FROM WorkoutPlan WHERE UserID = @UserID";
-                    using (OleDbCommand deleteCmd = new OleDbCommand(deleteQuery, conn))
-                    {
-                        deleteCmd.Parameters.Add(new OleDbParameter("@UserID", OleDbType.Integer) { Value = userId });
-                        deleteCmd.ExecuteNonQuery();
-                    }
-
-                    // Insert updated workout plan
-                    string insertQuery = "INSERT INTO WorkoutPlan ([UserID], [Day], [Workout], [Duration], [Intensity]) VALUES (@UserID, @Day, @Workout, @Duration, @Intensity)";
-                    using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, conn))
-                    {
-                        foreach (DataGridViewRow row in dgvWorkoutPlan.Rows)
-                        {
-                            if (!row.IsNewRow) // Skip the empty row at the end
-                            {
-                                insertCmd.Parameters.Clear();
-                                insertCmd.Parameters.Add(new OleDbParameter("@UserID", OleDbType.Integer) { Value = userId });
-                                insertCmd.Parameters.Add(new OleDbParameter("@Day", OleDbType.VarChar) { Value = row.Cells["Day"].Value?.ToString() ?? "" });
-                                insertCmd.Parameters.Add(new OleDbParameter("@Workout", OleDbType.VarChar) { Value = row.Cells["Workout"].Value?.ToString() ?? "" });
-                                insertCmd.Parameters.Add(new OleDbParameter("@Duration", OleDbType.VarChar) { Value = row.Cells["Duration"].Value?.ToString() ?? "" });
-                                insertCmd.Parameters.Add(new OleDbParameter("@Intensity", OleDbType.VarChar) { Value = row.Cells["Intensity"].Value?.ToString() ?? "" });
-                                insertCmd.ExecuteNonQuery();
-                            }
-                        }
-                    }
-
-                    MessageBox.Show("Workout plan saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-
-
-
-        private void LoadWorkoutPlan(int userId)
-        {
-
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-
-                    string query = "SELECT Day, Workout, Duration, Intensity FROM WorkoutPlan WHERE UserID = @UserID";
-                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@UserID", userId);
-
-                        using (OleDbDataReader reader = cmd.ExecuteReader())
-                        {
-                            dgvWorkoutPlan.Rows.Clear(); // Clear existing rows in the DataGridView
-
-                            while (reader.Read())
-                            {
-                                dgvWorkoutPlan.Rows.Add(
-                                    reader["Day"].ToString(),
-                                    reader["Workout"].ToString(),
-                                    reader["Duration"].ToString(),
-                                    reader["Intensity"].ToString()
-                                );
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
+            UserDataManager.SaveWorkoutPlan(dgvWorkoutPlan);
         }
 
 

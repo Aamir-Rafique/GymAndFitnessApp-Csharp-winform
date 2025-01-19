@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Configuration;
-using System.Data.OleDb;
 using System.IO;
-using System.Security.RightsManagement;
 using System.Windows.Forms;
-using System.Windows.Media.Media3D;
 
 namespace GymAndFitness
 {
@@ -15,8 +11,6 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-        //connection string...
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
 
         private string targetWeightRange = "";
@@ -55,7 +49,7 @@ namespace GymAndFitness
                 txtConfirmPassword.Focus();
                 errorConfirmPassword.SetError(this.txtConfirmPassword, "Please Confirm your password");
             }
-            else if(txtConfirmPassword.Text!=txtPassword.Text)
+            else if (txtConfirmPassword.Text != txtPassword.Text)
             {
                 MessageBox.Show("Password and Confirm password must be same!");
             }
@@ -120,49 +114,7 @@ namespace GymAndFitness
                 }
 
 
-                // Insert user details into the database
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
-                {
-                    try
-                    {
-                        connection.Open();
-
-                        // SQL query to insert data
-                        //Wrap all column names in square brackets to avoid conflicts with reserved keywords.
-                        string query = "INSERT INTO Users ([Username], [Password], [Age], [Gender], [Height], [StartingWeight], [BMI], [TargetWeight], [TargetWeightRange],  [FitnessGoal], [FitnessLevel], [ProfilePicture]) " +
-                "VALUES (@Username, @Password, @Age, @Gender, @Height, @StartingWeight, @BMI, @TargetWeight, @TargetWeightRange, @FitnessGoal, @FitnessLevel, @ProfilePicture)";
-
-
-                        using (OleDbCommand command = new OleDbCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@Username", username);
-                            command.Parameters.AddWithValue("@Password", password);
-                            command.Parameters.AddWithValue("@Age", age);
-                            command.Parameters.AddWithValue("@Gender", gender);
-                            command.Parameters.AddWithValue("@Height", height);
-                            command.Parameters.AddWithValue("@StartingWeight", weight);
-                            command.Parameters.AddWithValue("@BMI", bmi);
-                            command.Parameters.AddWithValue("@TargetWeight", targetWeight);
-                            command.Parameters.AddWithValue("@TargetWeightRange", targetWeightRange);
-                            command.Parameters.AddWithValue("@FitnessGoal", fitnessGoal);
-                            command.Parameters.AddWithValue("@FitnessLevel", fitnessLevel);
-                            command.Parameters.AddWithValue("@ProfilePicture", profilePicture ?? (object)DBNull.Value);
-
-                            command.ExecuteNonQuery();
-                            MessageBox.Show("Sign-Up Successful!", "Success");
-
-                            // Open the login form and close the current form
-                            LoginForm loginForm = new LoginForm();
-                            loginForm.Show();
-                            this.Close();
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"An error occurred: {ex.Message}", "Database Error");
-                    }
-                }
-
+                UserDataManager.SignUpUser(username, password, age, gender, height, weight, bmi, targetWeight, targetWeightRange, fitnessGoal, fitnessLevel, profilePicture);
 
             }
         }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Configuration;
-using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -11,9 +9,6 @@ namespace GymAndFitness
         {
             InitializeComponent();
         }
-
-        //connection string...
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
 
         private void btnGenerateKey_Click(object sender, EventArgs e)
@@ -44,20 +39,7 @@ namespace GymAndFitness
                     txtGeneratedKey.Text = licenseKey;
 
                     // Store the license key in the database
-
-                    using (OleDbConnection connection = new OleDbConnection(connectionString))
-                    {
-                        string query = "UPDATE Users SET LicenseKey = @LicenseKey, MembershipStatus = 'Premium' WHERE Username = @Username";
-
-                        using (OleDbCommand command = new OleDbCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@LicenseKey", licenseKey);
-                            command.Parameters.AddWithValue("@Username", UserDataManager.CurrentUser.Username); // Use the currentUsername variable
-
-                            connection.Open();
-                            command.ExecuteNonQuery();
-                        }
-                    }
+                    UserDataManager.StoreLicenseKey(licenseKey);
 
                     MessageBox.Show("Your license key has been generated. Please copy it and close this this form, then paste it in license key feild! ", "Key Generated");
                 }

@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Configuration;
-using System.Data.OleDb; //for ms access
 using System.Windows.Forms;
 
 namespace GymAndFitness
 {
     public partial class LoginForm : Form
     {
-        //connection string
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
         public LoginForm()
         {
@@ -49,7 +45,7 @@ namespace GymAndFitness
                 string username = txtUsername.Text.Trim();
                 string password = txtPassword.Text.Trim();
 
-                if (IsValidLogin(username, password))
+                if (UserDataManager.IsValidLogin(username, password))
                 {
                     MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -73,33 +69,6 @@ namespace GymAndFitness
                 else
                 {
                     MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private bool IsValidLogin(string username, string password)
-        {
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT COUNT(*) FROM Users WHERE Username = ? AND Password = ?";
-
-                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
-                    {
-                        // Add parameters to prevent SQL injection
-                        cmd.Parameters.AddWithValue("?", username);
-                        cmd.Parameters.AddWithValue("?", password);
-
-                        int count = (int)cmd.ExecuteScalar();
-                        return count > 0;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
                 }
             }
         }

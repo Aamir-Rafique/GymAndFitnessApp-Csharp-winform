@@ -1,8 +1,6 @@
 ﻿using Newtonsoft.Json.Linq; // Newtonsoft.Json for api integration
 using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Net.Http;
@@ -19,8 +17,6 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-        //connection string...
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
         //LOAD
         private void DietPlansForm_Load(object sender, EventArgs e)
@@ -40,7 +36,7 @@ namespace GymAndFitness
                 //database...
                 int userId = UserDataManager.CurrentUser.UserID;
                 // Replace with actual logic to get the current user ID
-                LoadDietPlans(userId);
+                UserDataManager.LoadDietPlans(userId, lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, richTextBoxNotesInput);
             }
 
         }
@@ -809,67 +805,25 @@ namespace GymAndFitness
             // Check which ListBox has an item selected
             if (lstBreakfastInput.SelectedItem != null)
             {
-                RemoveSelectedItem(lstBreakfastInput, "Breakfast");
+                UserDataManager.RemoveSelectedItem(lstBreakfastInput, "Breakfast");
             }
             else if (lstLunchInput.SelectedItem != null)
             {
-                RemoveSelectedItem(lstLunchInput, "Lunch");
+                UserDataManager.RemoveSelectedItem(lstLunchInput, "Lunch");
             }
             else if (lstSnacksInput.SelectedItem != null)
             {
-                RemoveSelectedItem(lstSnacksInput, "Snacks");
+                UserDataManager.RemoveSelectedItem(lstSnacksInput, "Snacks");
             }
             else if (lstDinnerInput.SelectedItem != null)
             {
-                RemoveSelectedItem(lstDinnerInput, "Dinner");
+                UserDataManager.RemoveSelectedItem(lstDinnerInput, "Dinner");
             }
             else
             {
                 MessageBox.Show("Please select an item to remove.");
             }
         }
-
-        private void RemoveSelectedItem(ListBox listBox, string mealTime)
-        {
-            if (listBox.SelectedItem != null)
-            {
-                string selectedItem = listBox.SelectedItem.ToString();
-                listBox.Items.Remove(selectedItem);
-
-
-                int userId = UserDataManager.CurrentUser.UserID; // Replace with actual logic to get the current user ID
-
-                using (OleDbConnection conn = new OleDbConnection(connectionString))
-                {
-                    try
-                    {
-                        conn.Open();
-
-                        string query = "DELETE FROM DietPlan WHERE UserID = @UserID AND MealTime = @MealTime AND FoodItem = @FoodItem";
-
-                        using (OleDbCommand cmd = new OleDbCommand(query, conn))
-                        {
-                            cmd.Parameters.AddWithValue("@UserID", userId);
-                            cmd.Parameters.AddWithValue("@MealTime", mealTime);
-                            cmd.Parameters.AddWithValue("@FoodItem", selectedItem);
-
-                            cmd.ExecuteNonQuery();
-                        }
-
-                        //MessageBox.Show($"Item '{selectedItem}' removed successfully!");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-                }
-            }
-        }
-
-
-
-
-
 
 
         private async void btnCalculateTotalNutrition_Click(object sender, EventArgs e)
@@ -1065,68 +1019,7 @@ namespace GymAndFitness
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with actual logic to get the current user ID
                 string notes = richTextBoxNotesInput.Text; // Get the notes from the RichTextBox
 
-                using (OleDbConnection conn = new OleDbConnection(connectionString))
-                {
-                    try
-                    {
-                        conn.Open();
-
-                        string query = "INSERT INTO DietPlan (UserID, MealTime, FoodItem, Notes) VALUES (@UserID, @MealTime, @FoodItem, @Notes)";
-
-                        using (OleDbCommand cmd = new OleDbCommand(query, conn))
-                        {
-                            // Save Breakfast items
-                            foreach (var item in lstBreakfastInput.Items)
-                            {
-                                cmd.Parameters.Clear();
-                                cmd.Parameters.AddWithValue("@UserID", userId);
-                                cmd.Parameters.AddWithValue("@MealTime", "Breakfast");
-                                cmd.Parameters.AddWithValue("@FoodItem", item.ToString());
-                                cmd.Parameters.AddWithValue("@Notes", notes);
-                                cmd.ExecuteNonQuery();
-                            }
-
-                            // Save Lunch items
-                            foreach (var item in lstLunchInput.Items)
-                            {
-                                cmd.Parameters.Clear();
-                                cmd.Parameters.AddWithValue("@UserID", userId);
-                                cmd.Parameters.AddWithValue("@MealTime", "Lunch");
-                                cmd.Parameters.AddWithValue("@FoodItem", item.ToString());
-                                cmd.Parameters.AddWithValue("@Notes", notes);
-                                cmd.ExecuteNonQuery();
-                            }
-
-                            // Save Snacks items
-                            foreach (var item in lstSnacksInput.Items)
-                            {
-                                cmd.Parameters.Clear();
-                                cmd.Parameters.AddWithValue("@UserID", userId);
-                                cmd.Parameters.AddWithValue("@MealTime", "Snacks");
-                                cmd.Parameters.AddWithValue("@FoodItem", item.ToString());
-                                cmd.Parameters.AddWithValue("@Notes", notes);
-                                cmd.ExecuteNonQuery();
-                            }
-
-                            // Save Dinner items
-                            foreach (var item in lstDinnerInput.Items)
-                            {
-                                cmd.Parameters.Clear();
-                                cmd.Parameters.AddWithValue("@UserID", userId);
-                                cmd.Parameters.AddWithValue("@MealTime", "Dinner");
-                                cmd.Parameters.AddWithValue("@FoodItem", item.ToString());
-                                cmd.Parameters.AddWithValue("@Notes", notes);
-                                cmd.ExecuteNonQuery();
-                            }
-                        }
-
-                        MessageBox.Show("Diet plan saved successfully!");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-                }
+                UserDataManager.SaveDietPlan(lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, notes);
             }
             else
             {
@@ -1136,70 +1029,8 @@ namespace GymAndFitness
 
 
 
-        //loading data from database
-        private void LoadDietPlans(int userId)
-        {
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
 
-                    // Change query to select based on UserId or Username
-                    string query = "SELECT MealTime, FoodItem, Notes FROM DietPlan WHERE UserID = @UserID"; // Ensure the column name matches the database
 
-                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@UserID", userId);  // Add parameter for userId
-
-                        using (OleDbDataReader reader = cmd.ExecuteReader())  // Use OleDbDataReader for MS Access
-                        {
-                            // Clear the current lists
-                            lstBreakfastInput.Items.Clear();
-                            lstLunchInput.Items.Clear();
-                            lstSnacksInput.Items.Clear();
-                            lstDinnerInput.Items.Clear();
-                            richTextBoxNotesInput.Clear();
-
-                            // Populate the lists with data from the database
-                            while (reader.Read())
-                            {
-                                string mealTime = reader["MealTime"].ToString();
-                                string foodItem = reader["FoodItem"].ToString();
-                                string notes = reader["Notes"].ToString();
-
-                                // Add food item to the appropriate meal list based on the MealTime
-                                switch (mealTime)
-                                {
-                                    case "Breakfast":
-                                        lstBreakfastInput.Items.Add(foodItem);
-                                        break;
-                                    case "Lunch":
-                                        lstLunchInput.Items.Add(foodItem);
-                                        break;
-                                    case "Snacks":
-                                        lstSnacksInput.Items.Add(foodItem);
-                                        break;
-                                    case "Dinner":
-                                        lstDinnerInput.Items.Add(foodItem);
-                                        break;
-                                }
-
-                                // Load notes (assuming notes are the same for all meals)
-                                if (!string.IsNullOrEmpty(notes))
-                                {
-                                    richTextBoxNotesInput.Text = notes;
-                                }
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-            }
-        }
 
 
         private bool IsAnyRadioButtonChecked()

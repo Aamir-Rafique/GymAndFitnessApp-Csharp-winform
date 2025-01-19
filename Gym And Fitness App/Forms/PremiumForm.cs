@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Configuration;
-using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -12,8 +10,6 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-        //connection string...
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
         private void btnVerifyKey_Click(object sender, EventArgs e)
         {
@@ -31,33 +27,7 @@ namespace GymAndFitness
                     string username = UserDataManager.CurrentUser.Username; // Replace with the logged-in user's username
                     string enteredKey = txtLicenseKey.Text;
 
-                    using (OleDbConnection connection = new OleDbConnection(connectionString))
-                    {
-                        string query = "SELECT LicenseKey FROM Users WHERE Username = @Username";
-
-                        using (OleDbCommand command = new OleDbCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@Username", username);
-
-                            connection.Open();
-                            object result = command.ExecuteScalar();
-
-                            if (result != null && result.ToString() == enteredKey)
-                            {
-                                MessageBox.Show("License key validated successfully! You now have premium membership.", "Validation Success");
-
-                                UserDataManager.CurrentUser.MembershipStatus = "Premium";
-                                UpdateMembershipInDatabase("Premium");
-                                this.Close();
-                                ProfileForm profile = new ProfileForm();
-                                profile.Show();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Invalid license key. Please try again.", "Validation Failed");
-                            }
-                        }
-                    }
+                    UserDataManager.VerifyLicenseKey(username, enteredKey);
 
                 }
                 else
@@ -71,23 +41,6 @@ namespace GymAndFitness
 
 
 
-
-        // Method to update membership status in the database
-        private void UpdateMembershipInDatabase(string membershipStatus)
-        {
-            string query = "UPDATE Users SET MembershipStatus = @MembershipStatus WHERE Username = @Username";
-
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
-            {
-                using (OleDbCommand command = new OleDbCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@MembershipStatus", membershipStatus);
-                    command.Parameters.AddWithValue("@Username", UserDataManager.CurrentUser.Username);
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
 
         private void btnGetNewKey_Click(object sender, EventArgs e)
         {

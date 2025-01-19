@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Configuration;
-using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -13,14 +11,12 @@ namespace GymAndFitness
         }
 
 
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
-
         private void btnFreePlan_Click(object sender, EventArgs e)
         {
             if (UserDataManager.CurrentUser != null)
             {
                 UserDataManager.CurrentUser.MembershipStatus = "Free";
-                UpdateMembershipInDatabase("Free");
+                UserDataManager.UpdateMembershipInDatabase("Free");
                 MessageBox.Show("Membership updated to Free!", "Success");
                 this.Close();
                 ProfileForm profile = new ProfileForm();
@@ -41,7 +37,7 @@ namespace GymAndFitness
                 if (UserDataManager.CurrentUser.MembershipStatus == "Premium")
                 {
                     MessageBox.Show("You are already a Premium member!");
-                    
+
                 }
                 else
                 {
@@ -55,38 +51,6 @@ namespace GymAndFitness
                 MessageBox.Show("No user is logged in.");
             }
         }
-
-
-
-        // Helper function to update membership in the database
-        private void UpdateMembershipInDatabase(string status)
-        {
-
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
-            {
-                string query = "UPDATE Users SET MembershipStatus = @MembershipStatus WHERE Username = @Username";
-
-                using (OleDbCommand command = new OleDbCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@MembershipStatus", status);
-                    command.Parameters.AddWithValue("@Username", UserDataManager.CurrentUser.Username);
-
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                }
-            }
-
-
-
-
-        }
-
-
-
-
-
-
-
 
 
     }

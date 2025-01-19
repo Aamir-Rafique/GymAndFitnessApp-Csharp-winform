@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Configuration;
-using System.Data.OleDb;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -11,9 +9,6 @@ namespace GymAndFitness
         {
             InitializeComponent();
         }
-
-        //connection string...
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
 
         //LOAD
@@ -383,32 +378,14 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
-                // Initialize DailyWaterIntake to 0 if not set
-                //if (UserDataManager.CurrentUser.DailyWaterIntake == 0)
-                //{
-                //    UserDataManager.CurrentUser.DailyWaterIntake = 0;
-                //}
+
 
                 // Add one glass
                 if (UserDataManager.CurrentUser.DailyWaterIntake < 8) // Ensure limit is not exceeded
                 {
                     UserDataManager.CurrentUser.DailyWaterIntake++;
 
-                    // Update the database
-                    using (OleDbConnection connection = new OleDbConnection(connectionString))
-                    {
-                        string query = "UPDATE Users SET DailyWaterIntake = @DailyWaterIntake WHERE Username = @Username";
-
-                        using (OleDbCommand command = new OleDbCommand(query, connection))
-                        {
-                            command.Parameters.AddWithValue("@DailyWaterIntake", UserDataManager.CurrentUser.DailyWaterIntake);
-                            command.Parameters.AddWithValue("@Username", UserDataManager.CurrentUser.Username);
-
-                            connection.Open();
-                            command.ExecuteNonQuery();
-                        }
-                    }
-
+                    UserDataManager.UpdateDailyWaterIntake();
                     //refresh
                     lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
                     progressBarWater.Value = (int)((UserDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
@@ -431,26 +408,12 @@ namespace GymAndFitness
 
 
 
-
         private void ResetDailyWaterIntake()
         {
             if (UserDataManager.CurrentUser != null)
             {
-                // Reset DailyWaterIntake to 0
-                UserDataManager.CurrentUser.DailyWaterIntake = 0;
-
-                // Update the database
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
-                {
-                    string query = "UPDATE Users SET DailyWaterIntake = 0 WHERE Username = @Username";
-
-                    using (OleDbCommand command = new OleDbCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Username", UserDataManager.CurrentUser.Username);
-                        connection.Open();
-                        command.ExecuteNonQuery();
-                    }
-                }
+                // Reset DailyWaterIntake in UserDataManager
+                UserDataManager.ResetDailyWaterIntake();
 
                 // Reset UI elements
                 lblWaterIntake.Text = "0 / 8 Glasses";
@@ -461,11 +424,6 @@ namespace GymAndFitness
                 MessageBox.Show("No user is logged in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
-
-
 
 
         private void waterResetTimer_Tick(object sender, EventArgs e)
