@@ -537,9 +537,9 @@
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.btnLogin);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(200, 0);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(663, 74);
+            this.panel5.Size = new System.Drawing.Size(863, 74);
             this.panel5.TabIndex = 9;
             // 
             // btnLogout
@@ -554,7 +554,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = global::GymAndFitness.Properties.Resources.power_button;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(659, 20);
+            this.btnLogout.Location = new System.Drawing.Point(678, 20);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(103, 37);
             this.btnLogout.TabIndex = 16;
@@ -599,7 +599,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = global::GymAndFitness.Properties.Resources.enter7;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(662, 21);
+            this.btnLogin.Location = new System.Drawing.Point(679, 20);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(97, 37);
             this.btnLogin.TabIndex = 15;
@@ -618,7 +618,7 @@
             this.btnChangeProfilePicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeProfilePicture.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangeProfilePicture.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnChangeProfilePicture.Location = new System.Drawing.Point(679, 281);
+            this.btnChangeProfilePicture.Location = new System.Drawing.Point(675, 278);
             this.btnChangeProfilePicture.Name = "btnChangeProfilePicture";
             this.btnChangeProfilePicture.Size = new System.Drawing.Size(120, 31);
             this.btnChangeProfilePicture.TabIndex = 4;
@@ -643,9 +643,9 @@
             this.slidePanel.Controls.Add(this.btnDashboard);
             this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidePanel.ForeColor = System.Drawing.Color.Black;
-            this.slidePanel.Location = new System.Drawing.Point(0, 0);
+            this.slidePanel.Location = new System.Drawing.Point(0, 74);
             this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(200, 614);
+            this.slidePanel.Size = new System.Drawing.Size(200, 540);
             this.slidePanel.TabIndex = 35;
             // 
             // btnHome
@@ -1019,6 +1019,7 @@
             this.BackColor = System.Drawing.Color.LightGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(863, 614);
+            this.Controls.Add(this.slidePanel);
             this.Controls.Add(this.pbProfilePicture);
             this.Controls.Add(this.btnDeleteAccount);
             this.Controls.Add(this.btnRefresh);
@@ -1030,7 +1031,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.slidePanel);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.DarkGreen;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

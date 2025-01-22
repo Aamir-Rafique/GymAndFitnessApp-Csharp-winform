@@ -602,57 +602,56 @@ namespace GymAndFitness
         }
 
 
-
-        //pixabay api
-        private async Task<string> GetImageUrl(string FoodItem)
-        {
-            //string apiKey = "47992933-2341adae39ed2c2859c834f8c";
-            string apiUrl = $"https://pixabay.com/api/?key=47992933-2341adae39ed2c2859c834f8c&q={FoodItem}&image_type=photo&pretty=true";  // Added "+food" to query
-
-            using (HttpClient client = new HttpClient())
-            {
-                try
-                {
-                    HttpResponseMessage response = await client.GetAsync(apiUrl);
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string jsonResponse = await response.Content.ReadAsStringAsync();
-                        JObject json = JObject.Parse(jsonResponse);
-
-                        if (json["results"] != null && json["results"].HasValues)
-                        {
-                            return json["results"][0]["urls"]["regular"].ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show($"No images found for '{FoodItem}'.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            return null;
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to fetch image from Unsplash.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return null;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    return $"An error occurred: {ex.Message}";
-                }
-            }
-        }
-
-
-
-
-
-        //unsplash api
-
+        //pexels api
         //private async Task<string> GetImageUrl(string FoodItem)
         //{
-        //    string apiKey = "G6ZA7FX7OgAKsiTkAqujD3D4wxkoyyxKoZIP63eG5-g";
-        //    string apiUrl = $"https://api.unsplash.com/search/photos?query={FoodItem}+food&client_id={apiKey}"; // Added "+food" to query
+        //    string apiKey = "Z4k70r4SZZJYRB96lr7HDCvQsUbLxn9sbmdIWUDxNfKtO8rua2S1Lp69";
+        //    string apiUrl = $"https://api.pexels.com/v1/search?query={FoodItem}; ";
+        //        // Added "+food" to query
+
+        //    using (HttpClient client = new HttpClient())
+        //    {
+        //        client.DefaultRequestHeaders.Add("Authorization", apiKey);
+        //        try
+        //        {
+        //            HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+        //            if (response.IsSuccessStatusCode)
+        //            {
+        //                string jsonResponse = await response.Content.ReadAsStringAsync();
+        //                JObject json = JObject.Parse(jsonResponse);
+
+        //                if (json["photos"] != null && json["photos"].HasValues)
+        //                {
+        //                    return json["photos"][0]["src"]["medium"].ToString();
+        //                }
+        //                else
+        //                {
+        //                    MessageBox.Show($"No images found for '{FoodItem}'.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //                    return null;
+        //                }
+        //            }
+        //            else
+        //            {
+        //                MessageBox.Show("Failed to fetch image from Pexels.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //                return null;
+        //            }
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            return $"An error occurred: {ex.Message}";
+        //        }
+        //    }
+        //}
+
+
+
+
+        //pixabay api
+        //private async Task<string> GetImageUrl(string FoodItem)
+        //{
+        //    //string apiKey = "47992933-2341adae39ed2c2859c834f8c";
+        //    string apiUrl = $"https://pixabay.com/api/?key=47992933-2341adae39ed2c2859c834f8c&q={FoodItem}&image_type=photo&pretty=true";  // Added "+food" to query
 
         //    using (HttpClient client = new HttpClient())
         //    {
@@ -687,6 +686,51 @@ namespace GymAndFitness
         //        }
         //    }
         //}
+
+
+
+        //...ye wali work kr rahi hn
+
+        //unsplash api
+
+        private async Task<string> GetImageUrl(string FoodItem)
+        {
+            string apiKey = "G6ZA7FX7OgAKsiTkAqujD3D4wxkoyyxKoZIP63eG5-g";
+            string apiUrl = $"https://api.unsplash.com/search/photos?query={FoodItem}&client_id={apiKey}"; // Added "+food" to query
+
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string jsonResponse = await response.Content.ReadAsStringAsync();
+                        JObject json = JObject.Parse(jsonResponse);
+
+                        if (json["results"] != null && json["results"].HasValues)
+                        {
+                            return json["results"][0]["urls"]["regular"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show($"No images found for '{FoodItem}'.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return null;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to fetch image from Unsplash.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return $"An error occurred: {ex.Message}";
+                }
+            }
+        }
 
 
 

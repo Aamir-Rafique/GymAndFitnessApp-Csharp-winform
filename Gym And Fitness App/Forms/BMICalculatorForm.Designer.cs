@@ -55,7 +55,7 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbBMIChart = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.errorHeight = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorWeight = new System.Windows.Forms.ErrorProvider(this.components);
@@ -63,7 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.slidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorWeight)).BeginInit();
             this.SuspendLayout();
@@ -435,18 +435,19 @@
             this.toolTip1.ReshowDelay = 100;
             this.toolTip1.ShowAlways = true;
             // 
-            // pictureBox1
+            // pbBMIChart
             // 
-            this.pictureBox1.BackgroundImage = global::GymAndFitness.Properties.Resources.bmi_chart_new;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(401, 138);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(371, 314);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "BMI Scale");
+            this.pbBMIChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbBMIChart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBMIChart.Image = global::GymAndFitness.Properties.Resources.bmiChartNormal;
+            this.pbBMIChart.Location = new System.Drawing.Point(401, 138);
+            this.pbBMIChart.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pbBMIChart.Name = "pbBMIChart";
+            this.pbBMIChart.Size = new System.Drawing.Size(371, 314);
+            this.pbBMIChart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBMIChart.TabIndex = 4;
+            this.pbBMIChart.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbBMIChart, "BMI Scale");
             // 
             // label7
             // 
@@ -484,7 +485,7 @@
             this.Controls.Add(this.txtWeight);
             this.Controls.Add(this.txtHeight);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbBMIChart);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -503,7 +504,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.slidePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorWeight)).EndInit();
             this.ResumeLayout(false);
@@ -517,7 +518,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.TextBox txtWeight;
@@ -542,5 +542,6 @@
         private System.Windows.Forms.ErrorProvider errorWeight;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Classes.RoundPictureBox btnProfilePicture;
+        private System.Windows.Forms.PictureBox pbBMIChart;
     }
 }

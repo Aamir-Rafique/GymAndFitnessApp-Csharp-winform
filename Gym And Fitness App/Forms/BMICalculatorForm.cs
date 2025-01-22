@@ -88,15 +88,30 @@ namespace GymAndFitness
         private string GetBMICategory(double bmi)
         {
             if (bmi < 18.5)
+            {
+                pbBMIChart.Image = Properties.Resources.bmiChartUnderW8;
                 return "Underweight!";
+            }
             else if (bmi >= 18.5 && bmi <= 24.9)
+            {
+                pbBMIChart.Image = Properties.Resources.bmiChartNormal;
                 return "Normal.";
+            }
             else if (bmi >= 25 && bmi <= 29.9)
+            {
+                pbBMIChart.Image = Properties.Resources.bmiChartOverW8;
                 return "Overweight!";
+            }
             else if (bmi >= 30 && bmi <= 35)
+            {
+                pbBMIChart.Image = Properties.Resources.bmiChartObese;
                 return "Obese!!";
+            }
             else
+            {
+                pbBMIChart.Image = Properties.Resources.bmiChartExtremeObese;
                 return "Extremely Obese!!!";
+            }
         }
 
         //button event

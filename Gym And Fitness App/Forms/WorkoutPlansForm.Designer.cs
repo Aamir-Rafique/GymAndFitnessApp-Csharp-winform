@@ -99,7 +99,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 32);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(720, 450);
+            this.tabPage4.Size = new System.Drawing.Size(720, 490);
             this.tabPage4.TabIndex = 5;
             this.tabPage4.Text = "  Fat Loss  ";
             // 
@@ -130,7 +130,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(714, 444);
+            this.pictureBox1.Size = new System.Drawing.Size(714, 484);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -241,7 +241,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(720, 450);
+            this.tabPage3.Size = new System.Drawing.Size(720, 490);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "  Muscle Gain  ";
             // 
@@ -262,7 +262,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(714, 444);
+            this.pictureBox2.Size = new System.Drawing.Size(714, 484);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
@@ -276,7 +276,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 32);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(720, 450);
+            this.tabPage5.Size = new System.Drawing.Size(720, 490);
             this.tabPage5.TabIndex = 6;
             this.tabPage5.Text = "  Custom Plan  ";
             // 
@@ -402,10 +402,10 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(200, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(781, 74);
+            this.panel1.Size = new System.Drawing.Size(581, 74);
             this.panel1.TabIndex = 5;
             // 
             // btnProfilePicture
@@ -463,9 +463,9 @@
             this.slidePanel.Controls.Add(this.btnDietPlans);
             this.slidePanel.Controls.Add(this.btnDashboard);
             this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.slidePanel.Location = new System.Drawing.Point(0, 74);
+            this.slidePanel.Location = new System.Drawing.Point(0, 0);
             this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(200, 526);
+            this.slidePanel.Size = new System.Drawing.Size(200, 600);
             this.slidePanel.TabIndex = 35;
             // 
             // btnHome
@@ -629,9 +629,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(781, 600);
-            this.Controls.Add(this.slidePanel);
             this.Controls.Add(this.tabWorkoutPlan);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.slidePanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

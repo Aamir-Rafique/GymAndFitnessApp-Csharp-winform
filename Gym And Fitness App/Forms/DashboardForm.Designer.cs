@@ -631,9 +631,9 @@
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 7);
+            this.label3.Location = new System.Drawing.Point(66, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 24);
+            this.label3.Size = new System.Drawing.Size(175, 26);
             this.label3.TabIndex = 0;
             this.label3.Text = "Daily Water Intake";
             // 

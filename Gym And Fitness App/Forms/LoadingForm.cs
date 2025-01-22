@@ -20,6 +20,9 @@ namespace GymAndFitness.Forms
         private const int ALMOST_THERE_TIME = 5000;
         private const int COMPLETE_TIME = 6000;
 
+        private Random random = new Random();
+        
+
         private void LoadingForm_Load(object sender, EventArgs e)
         {
             timerLoading.Start();
@@ -34,18 +37,18 @@ namespace GymAndFitness.Forms
             {
                 case initiazlize_app:
                     lblLoading.Text = "Initializing application...";
-                    progressBarLoading.Value = 20;
+                    progressBarLoading.Value = random.Next(5,15);
 
                     break;
 
                 case LOAD_RESOURCES_TIME:
                     lblLoading.Text = "Loading resources...";
-                    progressBarLoading.Value = 35;
+                    progressBarLoading.Value = random.Next(25, 40);
                     break;
 
                 case CONNECT_DB_TIME:
                     lblLoading.Text = "Connecting to database...";
-                    progressBarLoading.Value = 50;
+                    progressBarLoading.Value = random.Next(45, 65);
                     break;
 
                 case FINALIZE_TIME:
@@ -54,7 +57,7 @@ namespace GymAndFitness.Forms
 
                 case ALMOST_THERE_TIME:
                     lblLoading.Text = "Almost there...";
-                    progressBarLoading.Value = 70;
+                    progressBarLoading.Value = random.Next(70, 85);
                     break;
 
                 case COMPLETE_TIME:
