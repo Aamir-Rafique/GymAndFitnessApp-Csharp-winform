@@ -39,7 +39,10 @@ namespace GymAndFitness
                 UserDataManager.LoadDietPlans(userId, lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, richTextBoxNotesInput);
             }
 
+            txtFoodItem.Text = "Type here";
+            txtFoodItem.ForeColor = Color.Gray;
         }
+
         //for slide panel
         private bool isPanelCollapsed = true; // Track panel state
         private int panelWidth; // Store the panel's default width
@@ -1095,5 +1098,23 @@ namespace GymAndFitness
             }
         }
 
+
+        //adding placeholder in txt box
+        private void txtFoodItem_Enter(object sender, EventArgs e)
+        {
+            txtFoodItem.Text = "";
+            txtFoodItem.ForeColor = Color.Black;
+        }
+
+        private void txtFoodItem_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtFoodItem.Text))
+            {
+                txtFoodItem.Text = "Type here";
+                txtFoodItem.ForeColor = Color.Gray;
+            }
+        }
+
+    
     }
 }
