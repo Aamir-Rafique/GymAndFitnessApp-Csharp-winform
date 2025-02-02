@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="GymAndFitness.exe.manifest" size="30720">
+    <dependentAssembly dependencyType="install" codebase="GymAndFitness.exe.manifest" size="33285">
       <assemblyIdentity name="GymAndFitness.exe" version="1.0.0.8" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YI6T4qD/K5P39izYIlR6tcK6YZOsk2Phi1NyyNWdeQ4=</dsig:DigestValue>
+        <dsig:DigestValue>QGAzUv4drZhv9aMXHE1y/IJZEAA0rvyl24YcOvK7WE0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

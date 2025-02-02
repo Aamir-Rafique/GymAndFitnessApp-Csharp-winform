@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Configuration;
-using System.Data.OleDb;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -18,12 +20,12 @@ namespace GymAndFitness
         //save user details
         public static void SignUpUser(string username, string password, int age, string gender, double height, double weight, double bmi, double targetWeight, string targetWeightRange, string fitnessGoal, string fitnessLevel, byte[] profilePicture)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open(); // SQL query to insert data
-                    string query = "INSERT INTO Users ([Username], [Password], [Age], [Gender], [Height], [StartingWeight], [BMI], [TargetWeight], [TargetWeightRange], [FitnessGoal], [FitnessLevel], [ProfilePicture]) " + "VALUES (@Username, @Password, @Age, @Gender, @Height, @StartingWeight, @BMI, @TargetWeight, @TargetWeightRange, @FitnessGoal, @FitnessLevel, @ProfilePicture)"; using (OleDbCommand command = new OleDbCommand(query, connection))
+                    string query = "INSERT INTO Users ([Username], [Password], [Age], [Gender], [Height], [StartingWeight], [BMI], [TargetWeight], [TargetWeightRange], [FitnessGoal], [FitnessLevel], [ProfilePicture]) " + "VALUES (@Username, @Password, @Age, @Gender, @Height, @StartingWeight, @BMI, @TargetWeight, @TargetWeightRange, @FitnessGoal, @FitnessLevel, @ProfilePicture)"; using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Username", username); command.Parameters.AddWithValue("@Password", password); command.Parameters.AddWithValue("@Age", age); command.Parameters.AddWithValue("@Gender", gender); command.Parameters.AddWithValue("@Height", height); command.Parameters.AddWithValue("@StartingWeight", weight); command.Parameters.AddWithValue("@BMI", bmi); command.Parameters.AddWithValue("@TargetWeight", targetWeight); command.Parameters.AddWithValue("@TargetWeightRange", targetWeightRange); command.Parameters.AddWithValue("@FitnessGoal", fitnessGoal); command.Parameters.AddWithValue("@FitnessLevel", fitnessLevel); command.Parameters.AddWithValue("@ProfilePicture", profilePicture ?? (object)DBNull.Value); command.ExecuteNonQuery();
                         MessageBox.Show("Sign-Up Successful!", "Success");
@@ -31,6 +33,7 @@ namespace GymAndFitness
                         // Open the login form and close the current form
                         LoginForm loginForm = new LoginForm();
                         loginForm.Show();
+                        Application.OpenForms["SignUpForm"].Close();
                     }
                 }
                 catch (Exception ex)
@@ -40,21 +43,22 @@ namespace GymAndFitness
             }
         }
 
+
         //verify login
         public static bool IsValidLogin(string username, string password)
         {
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM Users WHERE Username = ? AND Password = ?";
+                    string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
 
-                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         // Add parameters to prevent SQL injection
-                        cmd.Parameters.AddWithValue("?", username);
-                        cmd.Parameters.AddWithValue("?", password);
+                        cmd.Parameters.AddWithValue("@Username", username);
+                        cmd.Parameters.AddWithValue("@Password", password);
 
                         int count = (int)cmd.ExecuteScalar();
                         return count > 0;
@@ -67,6 +71,8 @@ namespace GymAndFitness
                 }
             }
         }
+}
+
 
 
         //get user details
@@ -74,17 +80,17 @@ namespace GymAndFitness
         {
             User user = null;
 
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
 
                     string query = "SELECT * FROM Users WHERE [Username] = @Username";
-                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Username", username);
-                        using (OleDbDataReader reader = command.ExecuteReader())
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
                             {
@@ -126,11 +132,11 @@ namespace GymAndFitness
         //verify and update license keys
         public static void VerifyLicenseKey(string username, string enteredKey)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT LicenseKey FROM Users WHERE Username = @Username";
 
-                using (OleDbCommand command = new OleDbCommand(query, connection))
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
 
@@ -146,6 +152,7 @@ namespace GymAndFitness
 
                         ProfileForm profile = new ProfileForm();
                         profile.Show();
+                        Application.OpenForms["PremiumForm"].Close();
 
                         // Assuming this is called from a form, close the current form
                         // ((Form)Application.OpenForms[0]).Close();
@@ -162,11 +169,11 @@ namespace GymAndFitness
         //updateMembershipsatatus
         public static void UpdateMembershipInDatabase(string membershipStatus)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Users SET MembershipStatus = @MembershipStatus WHERE UserID = @UserID";
 
-                using (OleDbCommand command = new OleDbCommand(query, connection))
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@MembershipStatus", membershipStatus);
                     command.Parameters.AddWithValue("@UserID", CurrentUser.UserID);
@@ -180,11 +187,11 @@ namespace GymAndFitness
         //store license key
         public static void StoreLicenseKey(string licenseKey)
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Users SET LicenseKey = @LicenseKey, MembershipStatus = 'Premium' WHERE Username = @Username";
 
-                using (OleDbCommand command = new OleDbCommand(query, connection))
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@LicenseKey", licenseKey);
                     command.Parameters.AddWithValue("@Username", CurrentUser.Username);
@@ -204,7 +211,7 @@ namespace GymAndFitness
         {
             int userId = CurrentUser.UserID;
 
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
@@ -212,26 +219,26 @@ namespace GymAndFitness
 
                     // Clear existing workout plans for the user
                     string deleteQuery = "DELETE FROM WorkoutPlan WHERE UserID = @UserID";
-                    using (OleDbCommand deleteCmd = new OleDbCommand(deleteQuery, conn))
+                    using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn))
                     {
-                        deleteCmd.Parameters.Add(new OleDbParameter("@UserID", OleDbType.Integer) { Value = userId });
+                        deleteCmd.Parameters.Add(new SqlParameter("@UserID", SqlDbType.Int) { Value = userId });
                         deleteCmd.ExecuteNonQuery();
                     }
 
                     // Insert updated workout plan
                     string insertQuery = "INSERT INTO WorkoutPlan ([UserID], [Day], [Workout], [Duration], [Intensity]) VALUES (@UserID, @Day, @Workout, @Duration, @Intensity)";
-                    using (OleDbCommand insertCmd = new OleDbCommand(insertQuery, conn))
+                    using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
                     {
                         foreach (DataGridViewRow row in dgvWorkoutPlan.Rows)
                         {
                             if (!row.IsNewRow) // Skip the empty row at the end
                             {
                                 insertCmd.Parameters.Clear();
-                                insertCmd.Parameters.Add(new OleDbParameter("@UserID", OleDbType.Integer) { Value = userId });
-                                insertCmd.Parameters.Add(new OleDbParameter("@Day", OleDbType.VarChar) { Value = row.Cells["Day"].Value?.ToString() ?? "" });
-                                insertCmd.Parameters.Add(new OleDbParameter("@Workout", OleDbType.VarChar) { Value = row.Cells["Workout"].Value?.ToString() ?? "" });
-                                insertCmd.Parameters.Add(new OleDbParameter("@Duration", OleDbType.VarChar) { Value = row.Cells["Duration"].Value?.ToString() ?? "" });
-                                insertCmd.Parameters.Add(new OleDbParameter("@Intensity", OleDbType.VarChar) { Value = row.Cells["Intensity"].Value?.ToString() ?? "" });
+                                insertCmd.Parameters.Add(new SqlParameter("@UserID", SqlDbType.Int) { Value = userId });
+                                insertCmd.Parameters.Add(new SqlParameter("@Day", SqlDbType.VarChar) { Value = row.Cells["Day"].Value?.ToString() ?? "" });
+                                insertCmd.Parameters.Add(new SqlParameter("@Workout", SqlDbType.VarChar) { Value = row.Cells["Workout"].Value?.ToString() ?? "" });
+                                insertCmd.Parameters.Add(new SqlParameter("@Duration", SqlDbType.VarChar) { Value = row.Cells["Duration"].Value?.ToString() ?? "" });
+                                insertCmd.Parameters.Add(new SqlParameter("@Intensity", SqlDbType.VarChar) { Value = row.Cells["Intensity"].Value?.ToString() ?? "" });
                                 insertCmd.ExecuteNonQuery();
                             }
                         }
@@ -250,13 +257,13 @@ namespace GymAndFitness
         //load workout plan..
         public static void LoadWorkoutPlan(DataGridView dgvWorkoutPlan, int userId)
         {
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
-                    conn.Open(); string query = "SELECT Day, Workout, Duration, Intensity FROM WorkoutPlan WHERE UserID = @UserID"; using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    conn.Open(); string query = "SELECT Day, Workout, Duration, Intensity FROM WorkoutPlan WHERE UserID = @UserID"; using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@UserID", userId); using (OleDbDataReader reader = cmd.ExecuteReader())
+                        cmd.Parameters.AddWithValue("@UserID", userId); using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             dgvWorkoutPlan.Rows.Clear(); // Clear existing rows in the DataGridView
                             while (reader.Read())
@@ -289,14 +296,14 @@ namespace GymAndFitness
                 return;
             }
 
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
 
                     string query = "INSERT INTO DietPlan (UserID, MealTime, FoodItem, Notes) VALUES (@UserID, @MealTime, @FoodItem, @Notes)";
-                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@UserID", CurrentUser.UserID);
                         command.Parameters.AddWithValue("@MealTime", dietPlan.MealTime);
@@ -318,7 +325,7 @@ namespace GymAndFitness
         {
             int userId = CurrentUser.UserID;
 
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
@@ -326,7 +333,7 @@ namespace GymAndFitness
 
                     string query = "INSERT INTO DietPlan (UserID, MealTime, FoodItem, Notes) VALUES (@UserID, @MealTime, @FoodItem, @Notes)";
 
-                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         // Save Breakfast items
                         foreach (var item in lstBreakfastInput.Items)
@@ -394,7 +401,7 @@ namespace GymAndFitness
 
                 int userId = CurrentUser.UserID; // Replace with actual logic to get the current user ID
 
-                using (OleDbConnection conn = new OleDbConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     try
                     {
@@ -402,7 +409,7 @@ namespace GymAndFitness
 
                         string query = "DELETE FROM DietPlan WHERE UserID = @UserID AND MealTime = @MealTime AND FoodItem = @FoodItem";
 
-                        using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
                             cmd.Parameters.AddWithValue("@UserID", userId);
                             cmd.Parameters.AddWithValue("@MealTime", mealTime);
@@ -426,7 +433,7 @@ namespace GymAndFitness
         //load diet plans 
         public static void LoadDietPlans(int userId, ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, RichTextBox richTextBoxNotesInput)
         {
-            using (OleDbConnection conn = new OleDbConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
@@ -435,11 +442,11 @@ namespace GymAndFitness
                     // Change query to select based on UserId or Username
                     string query = "SELECT MealTime, FoodItem, Notes FROM DietPlan WHERE UserID = @UserID"; // Ensure the column name matches the database
 
-                    using (OleDbCommand cmd = new OleDbCommand(query, conn))
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@UserID", userId);  // Add parameter for userId
 
-                        using (OleDbDataReader reader = cmd.ExecuteReader())  // Use OleDbDataReader for MS Access
+                        using (SqlDataReader reader = cmd.ExecuteReader())  // Use SqlDataReader for MS Access
                         {
                             // Clear the current lists
                             lstBreakfastInput.Items.Clear();
@@ -492,11 +499,11 @@ namespace GymAndFitness
         //update water intake
         public static void UpdateDailyWaterIntake()
         {
-            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Users SET DailyWaterIntake = @DailyWaterIntake WHERE Username = @Username";
 
-                using (OleDbCommand command = new OleDbCommand(query, connection))
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@DailyWaterIntake", CurrentUser.DailyWaterIntake);
                     command.Parameters.AddWithValue("@Username", CurrentUser.Username);
@@ -517,11 +524,11 @@ namespace GymAndFitness
                 CurrentUser.DailyWaterIntake = 0;
 
                 // Update the database
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     string query = "UPDATE Users SET DailyWaterIntake = 0 WHERE Username = @Username";
 
-                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Username", CurrentUser.Username);
                         connection.Open();
@@ -557,13 +564,13 @@ namespace GymAndFitness
         {
             if (CurrentUser != null)
             {
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     try
                     {
                         connection.Open();
                         string query = "UPDATE Users SET [ProfilePicture] = @ProfilePicture WHERE [Username] = @Username";
-                        using (OleDbCommand command = new OleDbCommand(query, connection))
+                        using (SqlCommand command = new SqlCommand(query, connection))
                         {
                             command.Parameters.AddWithValue("@ProfilePicture", profilePicture);
                             command.Parameters.AddWithValue("@Username", CurrentUser.Username);
@@ -587,13 +594,13 @@ namespace GymAndFitness
         {
             if (CurrentUser != null)
             {
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     try
                     {
                         connection.Open();
                         string query = "UPDATE Users SET [Height] = @Height,[CurrentWeight] = @CurrentWeight, [BMI] = @BMI WHERE [Username] = @Username";
-                        using (OleDbCommand command = new OleDbCommand(query, connection))
+                        using (SqlCommand command = new SqlCommand(query, connection))
                         {
                             command.Parameters.AddWithValue("@Height", currentheight);
                             command.Parameters.AddWithValue("@CurrentWeight", currentweight);
@@ -652,10 +659,10 @@ namespace GymAndFitness
                 // Database query to delete the user
                 string deleteQuery = "DELETE FROM Users WHERE UserID = @UserID";
 
-                using (OleDbConnection connection = new OleDbConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    using (OleDbCommand command = new OleDbCommand(deleteQuery, connection))
+                    using (SqlCommand command = new SqlCommand(deleteQuery, connection))
                     {
                         command.Parameters.AddWithValue("@UserID", userId);
                         command.ExecuteNonQuery();

@@ -99,7 +99,6 @@ C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymAndFitness.ap
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymAndFi.70414824.Up2Date
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymAndFitness.exe
 C:\Users\Aamir\Desktop\PROJECTS\Gym & Fitness App\obj\x64\Debug\GymAndFitness.pdb
-C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Gym_FitnessAppDB.accdb
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\GymAndFitness.exe.config
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\GymAndFitness.exe.manifest
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\GymAndFitness.application
@@ -109,6 +108,9 @@ C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\E
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\EntityFramework.SqlServer.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.Bcl.TimeProvider.dll
+C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.Data.Tools.Components.dll
+C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
+C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.Identity.Client.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.IdentityModel.Abstractions.dll
@@ -139,6 +141,7 @@ C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\S
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\System.Text.Json.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\System.ValueTuple.dll
+C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\EntityFramework.xml
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\EntityFramework.SqlServer.xml
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.xml

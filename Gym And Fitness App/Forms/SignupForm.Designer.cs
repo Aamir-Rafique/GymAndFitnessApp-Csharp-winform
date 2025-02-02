@@ -213,7 +213,6 @@
             this.txtPassword.Size = new System.Drawing.Size(148, 26);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtAge
@@ -224,7 +223,6 @@
             this.txtAge.Size = new System.Drawing.Size(148, 26);
             this.txtAge.TabIndex = 2;
             this.txtAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtAge.TextChanged += new System.EventHandler(this.txtAge_TextChanged);
             this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
             // 
             // txtHeight
@@ -235,7 +233,6 @@
             this.txtHeight.Size = new System.Drawing.Size(148, 26);
             this.txtHeight.TabIndex = 6;
             this.txtHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtHeight.TextChanged += new System.EventHandler(this.txtHeight_TextChanged);
             this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHeight_KeyPress);
             this.txtHeight.Leave += new System.EventHandler(this.txtHeight_Leave);
             // 
@@ -247,7 +244,6 @@
             this.txtWeight.Size = new System.Drawing.Size(148, 26);
             this.txtWeight.TabIndex = 7;
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             this.txtWeight.Leave += new System.EventHandler(this.txtWeight_Leave);
             // 
@@ -259,7 +255,6 @@
             this.txtUsername.Size = new System.Drawing.Size(148, 26);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
@@ -513,7 +508,6 @@
             this.txtTargetWeight.Size = new System.Drawing.Size(94, 26);
             this.txtTargetWeight.TabIndex = 8;
             this.txtTargetWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTargetWeight.TextChanged += new System.EventHandler(this.txtTargetWeight_TextChanged);
             this.txtTargetWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTargetWeight_KeyPress_1);
             // 
             // label17

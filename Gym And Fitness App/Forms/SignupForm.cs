@@ -405,34 +405,6 @@ namespace GymAndFitness
             lblTargetWeightRange.Text = targetWeightRange;
         }
 
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAge_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtHeight_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtWeight_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTargetWeight_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+    
     }
 }
