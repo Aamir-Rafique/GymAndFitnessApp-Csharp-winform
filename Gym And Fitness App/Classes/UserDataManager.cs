@@ -47,12 +47,19 @@ namespace GymAndFitness
         //verify login
         public static bool IsValidLogin(string username, string password)
         {
+            //if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            //{
+            //    MessageBox.Show("Username and Password cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return false;
+            //}
+
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username AND Password = @Password";
+                    // Modify the query to use a case-sensitive collation for both Username and Password
+                    string query = "SELECT COUNT(*) FROM Users WHERE Username COLLATE Latin1_General_CS_AS = @Username AND Password COLLATE Latin1_General_CS_AS = @Password";
 
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
@@ -71,7 +78,7 @@ namespace GymAndFitness
                 }
             }
         }
-}
+
 
 
 
