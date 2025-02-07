@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Configuration;
 using System.Data;
-using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -27,7 +26,19 @@ namespace GymAndFitness
                     connection.Open(); // SQL query to insert data
                     string query = "INSERT INTO Users ([Username], [Password], [Age], [Gender], [Height], [StartingWeight], [BMI], [TargetWeight], [TargetWeightRange], [FitnessGoal], [FitnessLevel], [ProfilePicture]) " + "VALUES (@Username, @Password, @Age, @Gender, @Height, @StartingWeight, @BMI, @TargetWeight, @TargetWeightRange, @FitnessGoal, @FitnessLevel, @ProfilePicture)"; using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Username", username); command.Parameters.AddWithValue("@Password", password); command.Parameters.AddWithValue("@Age", age); command.Parameters.AddWithValue("@Gender", gender); command.Parameters.AddWithValue("@Height", height); command.Parameters.AddWithValue("@StartingWeight", weight); command.Parameters.AddWithValue("@BMI", bmi); command.Parameters.AddWithValue("@TargetWeight", targetWeight); command.Parameters.AddWithValue("@TargetWeightRange", targetWeightRange); command.Parameters.AddWithValue("@FitnessGoal", fitnessGoal); command.Parameters.AddWithValue("@FitnessLevel", fitnessLevel); command.Parameters.AddWithValue("@ProfilePicture", profilePicture ?? (object)DBNull.Value); command.ExecuteNonQuery();
+                        command.Parameters.AddWithValue("@Username", username);
+                        command.Parameters.AddWithValue("@Password", password);
+                        command.Parameters.AddWithValue("@Age", age);
+                        command.Parameters.AddWithValue("@Gender", gender);
+                        command.Parameters.AddWithValue("@Height", height);
+                        command.Parameters.AddWithValue("@StartingWeight", weight);
+                        command.Parameters.AddWithValue("@BMI", bmi);
+                        command.Parameters.AddWithValue("@TargetWeight", targetWeight);
+                        command.Parameters.AddWithValue("@TargetWeightRange", targetWeightRange);
+                        command.Parameters.AddWithValue("@FitnessGoal", fitnessGoal);
+                        command.Parameters.AddWithValue("@FitnessLevel", fitnessLevel);
+                        command.Parameters.AddWithValue("@ProfilePicture", profilePicture ?? (object)DBNull.Value);
+                        command.ExecuteNonQuery();
                         MessageBox.Show("Sign-Up Successful!", "Success");
 
                         // Open the login form and close the current form
@@ -97,30 +108,30 @@ namespace GymAndFitness
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Username", username);
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
                             {
                                 user = new User
                                 {
-                                    UserID = int.Parse(reader["UserID"].ToString()),
+                                    UserID = reader["UserID"] != DBNull.Value ? Convert.ToInt32(reader["UserID"]) : 0,
                                     Username = reader["Username"].ToString(),
                                     Password = reader["Password"].ToString(),
-                                    Age = int.Parse(reader["Age"].ToString()),
+                                    Age = reader["Age"] != DBNull.Value ? Convert.ToInt32(reader["Age"]) : 0,
                                     Gender = reader["Gender"].ToString(),
-                                    Height = double.Parse(reader["Height"].ToString()),
-                                    StartingWeight = double.Parse(reader["StartingWeight"].ToString()),
-                                    CurrentWeight = double.Parse(reader["CurrentWeight"].ToString()),
-                                    BMI = double.Parse(reader["BMI"].ToString()),
+                                    Height = reader["Height"] != DBNull.Value ? Convert.ToDouble(reader["Height"]) : 0.0,
+                                    StartingWeight = reader["StartingWeight"] != DBNull.Value ? Convert.ToDouble(reader["StartingWeight"]) : 0.0,
+                                    CurrentWeight = reader["CurrentWeight"] != DBNull.Value ? Convert.ToDouble(reader["CurrentWeight"]) : 0.0,
+                                    BMI = reader["BMI"] != DBNull.Value ? Convert.ToDouble(reader["BMI"]) : 0.0,
                                     TargetWeightRange = reader["TargetWeightRange"].ToString(),
-                                    TargetWeight = double.Parse(reader["TargetWeight"].ToString()),
+                                    TargetWeight = reader["TargetWeight"] != DBNull.Value ? Convert.ToDouble(reader["TargetWeight"]) : 0.0,
                                     FitnessGoal = reader["FitnessGoal"].ToString(),
                                     FitnessLevel = reader["FitnessLevel"].ToString(),
-                                    ProfilePicture = reader["ProfilePicture"] as byte[],
-                                    DailyWaterIntake = reader["DailyWaterIntake"] == DBNull.Value ? 0 : Convert.ToDouble(reader["DailyWaterIntake"]),
+                                    ProfilePicture = reader["ProfilePicture"] != DBNull.Value ? (byte[])reader["ProfilePicture"] : null,
+                                    DailyWaterIntake = reader["DailyWaterIntake"] != DBNull.Value ? Convert.ToDouble(reader["DailyWaterIntake"]) : 0.0,
                                     MembershipStatus = reader["MembershipStatus"].ToString(),
                                     LicenseKey = reader["LicenseKey"].ToString(),
-
                                 };
                             }
                         }
@@ -128,13 +139,14 @@ namespace GymAndFitness
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error fetching user details: {ex.Message}", "Database Error");
+                    MessageBox.Show($"Error fetching user details: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
             CurrentUser = user;
             return user;
         }
+
 
         //verify and update license keys
         public static void VerifyLicenseKey(string username, string enteredKey)

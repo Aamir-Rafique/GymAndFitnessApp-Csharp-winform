@@ -42,8 +42,8 @@ namespace GymAndFitness
             }
             else
             {
-                string username = txtUsername.Text.Trim();
-                string password = txtPassword.Text.Trim();
+                string username = txtUsername.Text;
+                string password = txtPassword.Text;
 
                 if (UserDataManager.IsValidLogin(username, password))
                 {
@@ -72,6 +72,8 @@ namespace GymAndFitness
                 }
             }
         }
+
+
 
         private void lblCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

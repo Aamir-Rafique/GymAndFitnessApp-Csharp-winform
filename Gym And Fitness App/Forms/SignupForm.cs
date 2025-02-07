@@ -405,6 +405,6 @@ namespace GymAndFitness
             lblTargetWeightRange.Text = targetWeightRange;
         }
 
-    
+
     }
 }

@@ -748,7 +748,14 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
-                await AddFoodItemToList(txtFoodItem.Text, lstBreakfastInput);
+                if (txtFoodItem.Text.Contains("Type here")||string.IsNullOrEmpty(txtFoodItem.Text))
+                {
+                    MessageBox.Show("Please search any food item first!.");
+                }
+                else
+                {
+                    await AddFoodItemToList(txtFoodItem.Text, lstBreakfastInput);
+                }
             }
             else
             {
@@ -762,7 +769,14 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
+                if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
+                {
+                    MessageBox.Show("Please search any food item first!.");
+                }
+                else
+                {
                 await AddFoodItemToList(txtFoodItem.Text, lstLunchInput);
+                }
             }
             else
             {
@@ -775,8 +789,14 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
+                if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
+                {
+                    MessageBox.Show("Please search any food item first!.");
+                }
+                else
+                {
                 await AddFoodItemToList(txtFoodItem.Text, lstSnacksInput);
-
+                }
             }
             else
             {
@@ -789,7 +809,14 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
+                if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
+                {
+                    MessageBox.Show("Please search any food item first!.");
+                }
+                else
+                {
                 await AddFoodItemToList(txtFoodItem.Text, lstDinnerInput);
+                }
             }
             else
             {
@@ -1115,6 +1142,6 @@ namespace GymAndFitness
             }
         }
 
-    
+
     }
 }

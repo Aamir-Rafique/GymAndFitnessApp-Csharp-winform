@@ -21,7 +21,7 @@ namespace GymAndFitness.Forms
         private const int COMPLETE_TIME = 6000;
 
         private Random random = new Random();
-        
+
 
         private void LoadingForm_Load(object sender, EventArgs e)
         {
@@ -37,7 +37,7 @@ namespace GymAndFitness.Forms
             {
                 case initiazlize_app:
                     lblLoading.Text = "Initializing application...";
-                    progressBarLoading.Value = random.Next(5,15);
+                    progressBarLoading.Value = random.Next(5, 15);
 
                     break;
 
