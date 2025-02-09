@@ -13,15 +13,12 @@ namespace GymAndFitness.Forms
         private int elapsedTime = 0;
 
         // Constants for timing events
-        private const int initiazlize_app = 1000;
+        private const int INITIALIZE_APP_TIME = 1000;
         private const int LOAD_RESOURCES_TIME = 2000;
         private const int CONNECT_DB_TIME = 3000;
         private const int FINALIZE_TIME = 3800;
         private const int ALMOST_THERE_TIME = 5000;
         private const int COMPLETE_TIME = 6000;
-
-        private Random random = new Random();
-
 
         private void LoadingForm_Load(object sender, EventArgs e)
         {
@@ -31,59 +28,59 @@ namespace GymAndFitness.Forms
         private void timerLoading_Tick(object sender, EventArgs e)
         {
             elapsedTime += timerLoading.Interval;
+            UpdateProgressBarAndMessage();
+        }
 
+        private void UpdateProgressBarAndMessage()
+        {
             // Update progress bar and label based on elapsed time
-            switch (elapsedTime)
+            if (elapsedTime < INITIALIZE_APP_TIME)
             {
-                case initiazlize_app:
-                    lblLoading.Text = "Initializing application...";
-                    progressBarLoading.Value = random.Next(5, 15);
+                lblLoading.Text = "Initializing application...";
+                UpdateProgressBar(5, 15);
+            }
+            else if (elapsedTime < LOAD_RESOURCES_TIME)
+            {
+                lblLoading.Text = "Loading resources...";
+                UpdateProgressBar(25, 40);
+            }
+            else if (elapsedTime < CONNECT_DB_TIME)
+            {
+                lblLoading.Text = "Connecting to database...";
+                UpdateProgressBar(45, 65);
+            }
+            else if (elapsedTime < FINALIZE_TIME)
+            {
+                lblLoading.Text = "Finalizing setup...";
+                UpdateProgressBar(70, 85);
+            }
+            else if (elapsedTime < ALMOST_THERE_TIME)
+            {
+                lblLoading.Text = "Almost there...";
+                UpdateProgressBar(90, 95);
+            }
+            else if (elapsedTime < COMPLETE_TIME)
+            {
+                lblLoading.Text = "Welcome!";
+                progressBarLoading.Value = 100;
+            }
+            else
+            {
+                lblLoading.Text = "";
+                lblWelcome.Text = "Welcome";
+                timerLoading.Stop();
 
-                    break;
-
-                case LOAD_RESOURCES_TIME:
-                    lblLoading.Text = "Loading resources...";
-                    progressBarLoading.Value = random.Next(25, 40);
-                    break;
-
-                case CONNECT_DB_TIME:
-                    lblLoading.Text = "Connecting to database...";
-                    progressBarLoading.Value = random.Next(45, 65);
-                    break;
-
-                case FINALIZE_TIME:
-                    lblLoading.Text = "Finalizing...";
-                    break;
-
-                case ALMOST_THERE_TIME:
-                    lblLoading.Text = "Almost there...";
-                    progressBarLoading.Value = random.Next(70, 85);
-                    break;
-
-                case COMPLETE_TIME:
-                    lblLoading.Text = "";
-                    lblWelcome.Text = "Welcome";
-                    progressBarLoading.Value = 100;
-                    break;
-
-                default:
-                    if (elapsedTime >= COMPLETE_TIME + 600)
-                    {
-                        // Open LoginForm and close LoadingForm
-                        timerLoading.Stop();
-
-                        this.Hide();
-
-                        LoginForm login = new LoginForm();
-                        login.Show();
-
-                        //this.Close();
-                    }
-                    break;
+                // Open LoginForm and close LoadingForm
+                this.Hide();
+                LoginForm login = new LoginForm();
+                login.Show();
             }
         }
 
-
-
+        private void UpdateProgressBar(int min, int max)
+        {
+            int increment = (max - min) / (COMPLETE_TIME / timerLoading.Interval);
+            progressBarLoading.Value = Math.Min(progressBarLoading.Value + increment, max);
+        }
     }
 }

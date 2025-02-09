@@ -409,12 +409,12 @@ namespace GymAndFitness
             }
 
             // Validation: Special Characters
-            if (!System.Text.RegularExpressions.Regex.IsMatch(FoodItem, @"^[a-zA-Z\s]+$"))
-            {
-                MessageBox.Show("Food item name should only contain alphabets.", "Validation Error");
-                txtFoodItem.Focus();
-                return;
-            }
+            //if (!System.Text.RegularExpressions.Regex.IsMatch(FoodItem, @"^[a-zA-Z\s]+$"))
+            //{
+            //    MessageBox.Show("Food item name should only contain alphabets.", "Validation Error");
+            //    txtFoodItem.Focus();
+            //    return;
+            //}
 
             // Validation: Length
             if (FoodItem.Length < 3)
@@ -459,12 +459,10 @@ namespace GymAndFitness
                     await Task.Delay(800); // for better user feedback
 
                     lblNutritionInfo.Text = nutritionData[FoodItem];
-                    DisplayLocalImage(FoodItem); // Display offline image
                 }
                 else
                 {
                     lblNutritionInfo.Text = "Ingredient not found in local database.";
-                    pictureBoxIngredient.Image = null; // Clear the image
                 }
             }
             else if (rbtnOnline.Checked)
@@ -477,28 +475,11 @@ namespace GymAndFitness
                 if (!string.IsNullOrEmpty(nutritionInfo) && !nutritionInfo.StartsWith("Error"))
                 {
                     lblNutritionInfo.Text = nutritionInfo;
-                    string imageUrl = await GetImageUrl(FoodItem);
-
-
-                    if (lblNutritionInfo.Text.Contains("Ingredient not found in local database.") || lblNutritionInfo.Text.Contains("Nutrition information not available.") || lblNutritionInfo.Text.Contains("No results found."))
-                    {
-                        pictureBoxIngredient.Image = null;
-                    }
-                    else if (!string.IsNullOrEmpty(imageUrl))
-                    {
-                        DisplayOnlineImage(imageUrl); // Display online image
-                    }
-                    else
-                    {
-                        MessageBox.Show("No image found for this food item.", "Image Not Found");
-                        pictureBoxIngredient.Image = null; // Clear the image
-                    }
                 }
                 else
                 {
                     MessageBox.Show("Food item not found online or invalid.", "Search Error");
                     lblNutritionInfo.Text = "Nutrition information not available.";
-                    pictureBoxIngredient.Image = null; // Clear the image
                 }
 
 
@@ -507,20 +488,32 @@ namespace GymAndFitness
         }
 
 
-
-
-
-
+        //Nutritionix api for nutrition info
         private async Task<string> GetNutritionInfo(string foodItem)
         {
-            string apiKey = "83b4xpJNvvkEAjgrq7pxlLB2kvOPbaE1xF1qTRSY";
-            string apiUrl = $"https://api.nal.usda.gov/fdc/v1/foods/search?query={foodItem}&api_key={apiKey}";
+            string apiKey = "c71c93c9ef026c9c018df7285e7b660e";
+            string appId = "f2cd5f94";
+            string apiUrl = $"https://trackapi.nutritionix.com/v2/natural/nutrients";
 
             try
             {
                 using (HttpClient client = new HttpClient())
                 {
-                    HttpResponseMessage response = await client.GetAsync(apiUrl);
+                    client.DefaultRequestHeaders.Add("x-app-id", appId);
+                    client.DefaultRequestHeaders.Add("x-app-key", apiKey);
+
+                    var requestBody = new
+                    {
+                        query = foodItem
+                    };
+
+                    var jsonRequestBody = new StringContent(
+                        Newtonsoft.Json.JsonConvert.SerializeObject(requestBody),
+                        System.Text.Encoding.UTF8,
+                        "application/json"
+                    );
+
+                    HttpResponseMessage response = await client.PostAsync(apiUrl, jsonRequestBody);
 
                     if (response.IsSuccessStatusCode)
                     {
@@ -531,22 +524,13 @@ namespace GymAndFitness
                         {
                             JToken firstFood = json["foods"][0];
 
-                            // Check if it contains foodNutrients
-                            if (firstFood["foodNutrients"] != null && firstFood["foodNutrients"].HasValues)
-                            {
-                                string description = firstFood["description"]?.ToString() ?? "Unknown";
-                                string calories = firstFood["foodNutrients"]?.FirstOrDefault(n => n["nutrientName"]?.ToString() == "Energy")?["value"]?.ToString() ?? "0";
+                            string foodName = firstFood["food_name"]?.ToString() ?? "Unknown";
+                            string calories = firstFood["nf_calories"]?.ToString() ?? "0";
+                            string carbs = firstFood["nf_total_carbohydrate"]?.ToString() ?? "0";
+                            string protein = firstFood["nf_protein"]?.ToString() ?? "0";
+                            string fat = firstFood["nf_total_fat"]?.ToString() ?? "0";
 
-                                // Additional nutrient validation
-                                if (calories != "0")
-                                {
-                                    string carbs = firstFood["foodNutrients"]?.FirstOrDefault(n => n["nutrientName"]?.ToString() == "Carbohydrate, by difference")?["value"]?.ToString() ?? "0";
-                                    string protein = firstFood["foodNutrients"]?.FirstOrDefault(n => n["nutrientName"]?.ToString() == "Protein")?["value"]?.ToString() ?? "0";
-                                    string fat = firstFood["foodNutrients"]?.FirstOrDefault(n => n["nutrientName"]?.ToString() == "Total lipid (fat)")?["value"]?.ToString() ?? "0";
-
-                                    return $"Calories: {calories}, Carbs: {carbs}g, Protein: {protein}g, Fat: {fat}g";
-                                }
-                            }
+                            return $"Food: {foodName}, Calories: {calories}, Carbs: {carbs}g, Protein: {protein}g, Fat: {fat}g";
                         }
 
                         return "No valid food item found.";
@@ -566,56 +550,16 @@ namespace GymAndFitness
 
 
 
+        //USDA api for nutrition info
 
-        //to display images
-
-        //offline
-        private void DisplayLocalImage(string FoodItem)
-        {
-            string imagePath = $"images/{FoodItem}.jpg"; // Ensure you have images stored locally with this naming convention
-            if (System.IO.File.Exists(imagePath))
-            {
-                pictureBoxIngredient.SizeMode = PictureBoxSizeMode.Zoom;
-                pictureBoxIngredient.Image = Image.FromFile(imagePath);
-            }
-            else
-            {
-                pictureBoxIngredient.Image = null;
-            }
-        }
-
-        //online
-        private void DisplayOnlineImage(string imageUrl)
-        {
-            try
-            {
-                if (!string.IsNullOrEmpty(imageUrl))
-                {
-                    pictureBoxIngredient.Load(imageUrl);
-                }
-                else
-                {
-                    pictureBoxIngredient.Image = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}");
-            }
-        }
-
-
-        //pexels api
-        //private async Task<string> GetImageUrl(string FoodItem)
+        //private async Task<string> GetNutritionInfo(string foodItem)
         //{
-        //    string apiKey = "Z4k70r4SZZJYRB96lr7HDCvQsUbLxn9sbmdIWUDxNfKtO8rua2S1Lp69";
-        //    string apiUrl = $"https://api.pexels.com/v1/search?query={FoodItem}; ";
-        //        // Added "+food" to query
+        //    string apiKey = "83b4xpJNvvkEAjgrq7pxlLB2kvOPbaE1xF1qTRSY";
+        //    string apiUrl = $"https://api.nal.usda.gov/fdc/v1/foods/search?query={foodItem}&api_key={apiKey}";
 
-        //    using (HttpClient client = new HttpClient())
+        //    try
         //    {
-        //        client.DefaultRequestHeaders.Add("Authorization", apiKey);
-        //        try
+        //        using (HttpClient client = new HttpClient())
         //        {
         //            HttpResponseMessage response = await client.GetAsync(apiUrl);
 
@@ -624,120 +568,47 @@ namespace GymAndFitness
         //                string jsonResponse = await response.Content.ReadAsStringAsync();
         //                JObject json = JObject.Parse(jsonResponse);
 
-        //                if (json["photos"] != null && json["photos"].HasValues)
+        //                if (json["foods"] != null && json["foods"].HasValues)
         //                {
-        //                    return json["photos"][0]["src"]["medium"].ToString();
+        //                    JToken firstFood = json["foods"][0];
+
+        //                    // Check if it contains foodNutrients
+        //                    if (firstFood["foodNutrients"] != null && firstFood["foodNutrients"].HasValues)
+        //                    {
+        //                        string description = firstFood["description"]?.ToString() ?? "Unknown";
+        //                        string calories = firstFood["foodNutrients"]?.FirstOrDefault(n => n["nutrientName"]?.ToString() == "Energy")?["value"]?.ToString() ?? "0";
+
+        //                        // Additional nutrient validation
+        //                        if (calories != "0")
+        //                        {
+        //                            string carbs = firstFood["foodNutrients"]?.FirstOrDefault(n => n["nutrientName"]?.ToString() == "Carbohydrate, by difference")?["value"]?.ToString() ?? "0";
+        //                            string protein = firstFood["foodNutrients"]?.FirstOrDefault(n => n["nutrientName"]?.ToString() == "Protein")?["value"]?.ToString() ?? "0";
+        //                            string fat = firstFood["foodNutrients"]?.FirstOrDefault(n => n["nutrientName"]?.ToString() == "Total lipid (fat)")?["value"]?.ToString() ?? "0";
+
+        //                            return $"Calories: {calories}, Carbs: {carbs}g, Protein: {protein}g, Fat: {fat}g";
+        //                        }
+        //                    }
         //                }
-        //                else
-        //                {
-        //                    MessageBox.Show($"No images found for '{FoodItem}'.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //                    return null;
-        //                }
+
+        //                return "No valid food item found.";
         //            }
         //            else
         //            {
-        //                MessageBox.Show("Failed to fetch image from Pexels.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //                return null;
+        //                return $"Error: {response.ReasonPhrase}";
         //            }
         //        }
-        //        catch (Exception ex)
-        //        {
-        //            return $"An error occurred: {ex.Message}";
-        //        }
         //    }
-        //}
-
-
-
-
-        //pixabay api
-        //private async Task<string> GetImageUrl(string FoodItem)
-        //{
-        //    //string apiKey = "47992933-2341adae39ed2c2859c834f8c";
-        //    string apiUrl = $"https://pixabay.com/api/?key=47992933-2341adae39ed2c2859c834f8c&q={FoodItem}&image_type=photo&pretty=true";  // Added "+food" to query
-
-        //    using (HttpClient client = new HttpClient())
+        //    catch (Exception ex)
         //    {
-        //        try
-        //        {
-        //            HttpResponseMessage response = await client.GetAsync(apiUrl);
-
-        //            if (response.IsSuccessStatusCode)
-        //            {
-        //                string jsonResponse = await response.Content.ReadAsStringAsync();
-        //                JObject json = JObject.Parse(jsonResponse);
-
-        //                if (json["results"] != null && json["results"].HasValues)
-        //                {
-        //                    return json["results"][0]["urls"]["regular"].ToString();
-        //                }
-        //                else
-        //                {
-        //                    MessageBox.Show($"No images found for '{FoodItem}'.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //                    return null;
-        //                }
-        //            }
-        //            else
-        //            {
-        //                MessageBox.Show("Failed to fetch image from Unsplash.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //                return null;
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            return $"An error occurred: {ex.Message}";
-        //        }
+        //        return $"An error occurred: {ex.Message}";
         //    }
         //}
 
 
 
-        //...ye wali work kr rahi hn
-
-        //unsplash api
-
-        private async Task<string> GetImageUrl(string FoodItem)
-        {
-            string apiKey = "G6ZA7FX7OgAKsiTkAqujD3D4wxkoyyxKoZIP63eG5-g";
-            string apiUrl = $"https://api.unsplash.com/search/photos?query={FoodItem}&client_id={apiKey}"; // Added "+food" to query
-
-            using (HttpClient client = new HttpClient())
-            {
-                try
-                {
-                    HttpResponseMessage response = await client.GetAsync(apiUrl);
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        string jsonResponse = await response.Content.ReadAsStringAsync();
-                        JObject json = JObject.Parse(jsonResponse);
-
-                        if (json["results"] != null && json["results"].HasValues)
-                        {
-                            return json["results"][0]["urls"]["regular"].ToString();
-                        }
-                        else
-                        {
-                            MessageBox.Show($"No images found for '{FoodItem}'.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            return null;
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to fetch image from Unsplash.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return null;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    return $"An error occurred: {ex.Message}";
-                }
-            }
-        }
 
 
-
-
+        
 
 
 
@@ -976,12 +847,6 @@ namespace GymAndFitness
 
 
 
-
-
-
-
-
-
         private int ExtractCalories1(string nutritionInfo)
         {
             var match = Regex.Match(nutritionInfo, @"Calories:\s*(\d+)");
@@ -990,8 +855,8 @@ namespace GymAndFitness
 
         private double ExtractCarbs(string nutritionInfo)
         {
-            var match = Regex.Match(nutritionInfo, @"Carbs:\s*(\d+)g");
-            return match.Success ? int.Parse(match.Groups[1].Value) : 0;
+            var match = Regex.Match(nutritionInfo, @"Carbs:\s*(\d+(\.\d+)?)g");
+            return match.Success ? double.Parse(match.Groups[1].Value) : 0.0;
         }
 
         private double ExtractProtein(string nutritionInfo)
@@ -1005,16 +870,6 @@ namespace GymAndFitness
             var match = Regex.Match(nutritionInfo, @"Fat:\s*(\d+(\.\d+)?)g");
             return match.Success ? double.Parse(match.Groups[1].Value) : 0.0;
         }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1142,6 +997,6 @@ namespace GymAndFitness
             }
         }
 
-
+     
     }
 }
