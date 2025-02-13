@@ -11,6 +11,9 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
+
 
         //LOAD
         private void ProfileForm_Load(object sender, EventArgs e)
@@ -21,35 +24,35 @@ namespace GymAndFitness
 
 
 
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                UserDataManager.ApplyProfilePicture(pbProfilePicture);
+                userDataManager.ApplyProfilePicture(pbProfilePicture);
 
-                nudCurrentHeight.Value = (decimal)UserDataManager.CurrentUser.Height;
-                nudCurrentWeight.Value = (decimal)UserDataManager.CurrentUser.CurrentWeight;
+                nudCurrentHeight.Value = (decimal)userDataManager.CurrentUser.Height;
+                nudCurrentWeight.Value = (decimal)userDataManager.CurrentUser.CurrentWeight;
 
                 btnLogout.Visible = true;
                 btnLogout.Enabled = true;
                 btnLogin.Visible = false;
                 btnLogin.Enabled = false;
 
-                if (UserDataManager.CurrentUser != null)
+                if (userDataManager.CurrentUser != null)
                 {
-                    lblUsername.Text = UserDataManager.CurrentUser.Username;
-                    lblAge.Text = UserDataManager.CurrentUser.Age.ToString();
-                    lblGender.Text = UserDataManager.CurrentUser.Gender;
-                    lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
-                    lblStartingWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
+                    lblUsername.Text = userDataManager.CurrentUser.Username;
+                    lblAge.Text = userDataManager.CurrentUser.Age.ToString();
+                    lblGender.Text = userDataManager.CurrentUser.Gender;
+                    lblHeight.Text = $"{userDataManager.CurrentUser.Height} cm";
+                    lblStartingWeight.Text = $"{userDataManager.CurrentUser.StartingWeight} kg";
                     lblCurrentWeight.Text = lblStartingWeight.Text;
-                    lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
-                    lblTargetWeight.Text = $"{UserDataManager.CurrentUser.TargetWeight} kg";
-                    lblFitnessGoal.Text = UserDataManager.CurrentUser.FitnessGoal;
-                    lblFitnessLevel.Text = UserDataManager.CurrentUser.FitnessLevel;
-                    lblTargetWeightRange.Text = UserDataManager.CurrentUser.TargetWeightRange;
+                    lblBMI.Text = userDataManager.CurrentUser.BMI.ToString("F2");
+                    lblTargetWeight.Text = $"{userDataManager.CurrentUser.TargetWeight} kg";
+                    lblFitnessGoal.Text = userDataManager.CurrentUser.FitnessGoal;
+                    lblFitnessLevel.Text = userDataManager.CurrentUser.FitnessLevel;
+                    lblTargetWeightRange.Text = userDataManager.CurrentUser.TargetWeightRange;
 
 
                     //membership status
-                    lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
+                    lblMembershipStatus.Text = $"{userDataManager.CurrentUser.MembershipStatus}";
                 }
                 else
                 {
@@ -192,14 +195,14 @@ namespace GymAndFitness
 
         private void btnGetMembershipPlan_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
                 this.Close();
 
                 MembershipForm membershipForm = new MembershipForm();
                 membershipForm.ShowDialog();
 
-                lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
+                lblMembershipStatus.Text = $"{userDataManager.CurrentUser.MembershipStatus}";
 
                 //membership pln pic
                 //load membership plan pics
@@ -229,9 +232,9 @@ namespace GymAndFitness
 
         private void btnChangeProfilePicture_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                UserDataManager.ChangeProfilePicture(pbProfilePicture);
+                userDataManager.ChangeProfilePicture(pbProfilePicture);
 
                 //using (OpenFileDialog openFileDialog = new OpenFileDialog())
                 //{
@@ -244,7 +247,7 @@ namespace GymAndFitness
                 //            pbProfilePicture.Image = Image.FromStream(ms);
                 //        }
                 //        // Save the new profile picture
-                //        UserDataManager.UpdateProfilePictureInDatabase(profilePicture);
+                //        userDataManager.UpdateProfilePictureInDatabase(profilePicture);
                 //    }
                 //}
             }
@@ -293,18 +296,18 @@ namespace GymAndFitness
 
         private void btnSaveCurrentHeightAndWeight_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
                 if ((nudCurrentWeight.Value >= 0 && nudCurrentWeight.Value <= 250) && (nudCurrentHeight.Value >= 0 && nudCurrentHeight.Value <= 270))
                 {
-                    UserDataManager.CurrentUser.CurrentWeight = (double)nudCurrentWeight.Value;
-                    UserDataManager.CurrentUser.Height = (double)nudCurrentHeight.Value;
+                    userDataManager.CurrentUser.CurrentWeight = (double)nudCurrentWeight.Value;
+                    userDataManager.CurrentUser.Height = (double)nudCurrentHeight.Value;
 
                     double height = (double)nudCurrentHeight.Value;
                     double weight = (double)nudCurrentWeight.Value;
 
-                    UserDataManager.CurrentUser.BMI = CalculateBMI(height, weight);
-                    UserDataManager.UpdateHeightAndWeight(UserDataManager.CurrentUser.Height, UserDataManager.CurrentUser.CurrentWeight, UserDataManager.CurrentUser.BMI);
+                    userDataManager.CurrentUser.BMI = CalculateBMI(height, weight);
+                    userDataManager.UpdateHeightAndWeight(userDataManager.CurrentUser.Height, userDataManager.CurrentUser.CurrentWeight, userDataManager.CurrentUser.BMI);
                     MessageBox.Show("Height and weight updated successfully!", "Success!");
                 }
                 else
@@ -332,12 +335,12 @@ namespace GymAndFitness
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
-                lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
-                lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
-                lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
+                lblHeight.Text = $"{userDataManager.CurrentUser.Height} cm";
+                lblCurrentWeight.Text = $"{userDataManager.CurrentUser.CurrentWeight} kg";
+                lblBMI.Text = userDataManager.CurrentUser.BMI.ToString("F2");
+                lblMembershipStatus.Text = $"{userDataManager.CurrentUser.MembershipStatus}";
 
             }
         }
@@ -356,7 +359,7 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            UserDataManager.CurrentUser = null;
+            userDataManager.CurrentUser = null;
             LoginForm login = new LoginForm();
             login.Show();
             this.Close();
@@ -364,7 +367,7 @@ namespace GymAndFitness
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
                 // Confirmation dialog
                 DialogResult confirmResult = MessageBox.Show(
@@ -376,7 +379,7 @@ namespace GymAndFitness
                 {
 
 
-                    if (UserDataManager.DeleteAccount(UserDataManager.CurrentUser.UserID))
+                    if (userDataManager.DeleteAccount(userDataManager.CurrentUser.UserID))
                     {
 
 

@@ -11,6 +11,9 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
+
         private void AboutForm_Load(object sender, EventArgs e)
         {
             lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals \nby providing personalized workout plans, nutritional guidance, \nand progress tracking. Whether you're looking to build muscle, \nlose weight, or improve overall fitness, this app offers a \ncomprehensive solution to support your journey.\n\nOur mission is to make fitness accessible, convenient, and enjoyable for everyone. \nStay fit, stay healthy!";
@@ -22,9 +25,9 @@ namespace GymAndFitness
 
 
             //  accessing current user 
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                userDataManager.ApplyProfilePicture(btnProfilePicture);
             }
 
 
@@ -242,9 +245,9 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {

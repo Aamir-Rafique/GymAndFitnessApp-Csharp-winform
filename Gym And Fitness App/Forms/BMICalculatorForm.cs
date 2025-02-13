@@ -11,6 +11,10 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
+
+
         //load
         private void BMICalculatorForm_Load(object sender, EventArgs e)
         {
@@ -21,9 +25,9 @@ namespace GymAndFitness
 
 
             //  accessing current user 
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                userDataManager.ApplyProfilePicture(btnProfilePicture);
             }
 
         }
@@ -290,9 +294,9 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {

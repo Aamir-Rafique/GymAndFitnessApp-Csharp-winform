@@ -8,23 +8,30 @@ using System.Windows.Forms;
 
 namespace GymAndFitness
 {
-    public static class UserDataManager
+
+    public class UserDataManager
     {
+        public User CurrentUser { get; set; }
 
-        public static User CurrentUser { get; set; }
+        private string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
-        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
+        // Constructor
+        public UserDataManager()
+        {
+            // Initialize any necessary objects or properties here
+        }
 
-
-        //save user details
-        public static void SignUpUser(string username, string password, int age, string gender, double height, double weight, double bmi, double targetWeight, string targetWeightRange, string fitnessGoal, string fitnessLevel, byte[] profilePicture)
+        // Save user details
+        public void SignUpUser(string username, string password, int age, string gender, double height, double weight, double bmi, double targetWeight, string targetWeightRange, string fitnessGoal, string fitnessLevel, byte[] profilePicture)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
-                    connection.Open(); // SQL query to insert data
-                    string query = "INSERT INTO Users ([Username], [Password], [Age], [Gender], [Height], [StartingWeight], [BMI], [TargetWeight], [TargetWeightRange], [FitnessGoal], [FitnessLevel], [ProfilePicture]) " + "VALUES (@Username, @Password, @Age, @Gender, @Height, @StartingWeight, @BMI, @TargetWeight, @TargetWeightRange, @FitnessGoal, @FitnessLevel, @ProfilePicture)"; using (SqlCommand command = new SqlCommand(query, connection))
+                    connection.Open();
+                    string query = "INSERT INTO Users ([Username], [Password], [Age], [Gender], [Height], [StartingWeight], [BMI], [TargetWeight], [TargetWeightRange], [FitnessGoal], [FitnessLevel], [ProfilePicture]) " +
+                                   "VALUES (@Username, @Password, @Age, @Gender, @Height, @StartingWeight, @BMI, @TargetWeight, @TargetWeightRange, @FitnessGoal, @FitnessLevel, @ProfilePicture)";
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Username", username);
                         command.Parameters.AddWithValue("@Password", password);
@@ -54,27 +61,17 @@ namespace GymAndFitness
             }
         }
 
-
-        //verify login
-        public static bool IsValidLogin(string username, string password)
+        // Verify login
+        public bool IsValidLogin(string username, string password)
         {
-            //if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-            //{
-            //    MessageBox.Show("Username and Password cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return false;
-            //}
-
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-                    // Modify the query to use a case-sensitive collation for both Username and Password
                     string query = "SELECT COUNT(*) FROM Users WHERE Username COLLATE Latin1_General_CS_AS = @Username AND Password COLLATE Latin1_General_CS_AS = @Password";
-
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        // Add parameters to prevent SQL injection
                         cmd.Parameters.AddWithValue("@Username", username);
                         cmd.Parameters.AddWithValue("@Password", password);
 
@@ -90,11 +87,8 @@ namespace GymAndFitness
             }
         }
 
-
-
-
-        //get user details
-        public static User GetUserDetails(string username)
+        // Get user details
+        public User GetUserDetails(string username)
         {
             User user = null;
 
@@ -103,7 +97,6 @@ namespace GymAndFitness
                 try
                 {
                     connection.Open();
-
                     string query = "SELECT * FROM Users WHERE [Username] = @Username";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -147,14 +140,12 @@ namespace GymAndFitness
             return user;
         }
 
-
-        //verify and update license keys
-        public static void VerifyLicenseKey(string username, string enteredKey)
+        // Verify and update license keys
+        public void VerifyLicenseKey(string username, string enteredKey)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT LicenseKey FROM Users WHERE Username = @Username";
-
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username", username);
@@ -172,9 +163,6 @@ namespace GymAndFitness
                         ProfileForm profile = new ProfileForm();
                         profile.Show();
                         Application.OpenForms["PremiumForm"].Close();
-
-                        // Assuming this is called from a form, close the current form
-                        // ((Form)Application.OpenForms[0]).Close();
                     }
                     else
                     {
@@ -184,14 +172,12 @@ namespace GymAndFitness
             }
         }
 
-
-        //updateMembershipsatatus
-        public static void UpdateMembershipInDatabase(string membershipStatus)
+        // Update membership status
+        public void UpdateMembershipInDatabase(string membershipStatus)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Users SET MembershipStatus = @MembershipStatus WHERE UserID = @UserID";
-
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@MembershipStatus", membershipStatus);
@@ -203,13 +189,12 @@ namespace GymAndFitness
             }
         }
 
-        //store license key
-        public static void StoreLicenseKey(string licenseKey)
+        // Store license key
+        public void StoreLicenseKey(string licenseKey)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Users SET LicenseKey = @LicenseKey, MembershipStatus = 'Premium' WHERE Username = @Username";
-
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@LicenseKey", licenseKey);
@@ -221,12 +206,8 @@ namespace GymAndFitness
             }
         }
 
-
-
-
-
-        //button save workout plan click
-        public static void SaveWorkoutPlan(DataGridView dgvWorkoutPlan)
+        // Save workout plan
+        public void SaveWorkoutPlan(DataGridView dgvWorkoutPlan)
         {
             int userId = CurrentUser.UserID;
 
@@ -272,17 +253,19 @@ namespace GymAndFitness
             }
         }
 
-
-        //load workout plan..
-        public static void LoadWorkoutPlan(DataGridView dgvWorkoutPlan, int userId)
+        // Load workout plan
+        public void LoadWorkoutPlan(DataGridView dgvWorkoutPlan, int userId)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
-                    conn.Open(); string query = "SELECT Day, Workout, Duration, Intensity FROM WorkoutPlan WHERE UserID = @UserID"; using (SqlCommand cmd = new SqlCommand(query, conn))
+                    conn.Open();
+                    string query = "SELECT Day, Workout, Duration, Intensity FROM WorkoutPlan WHERE UserID = @UserID";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@UserID", userId); using (SqlDataReader reader = cmd.ExecuteReader())
+                        cmd.Parameters.AddWithValue("@UserID", userId);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             dgvWorkoutPlan.Rows.Clear(); // Clear existing rows in the DataGridView
                             while (reader.Read())
@@ -302,12 +285,8 @@ namespace GymAndFitness
             }
         }
 
-
-
-
-
-        //add dietplan
-        public static void AddDietPlan(DietPlan dietPlan)
+        // Add diet plan
+        public void AddDietPlan(DietPlan dietPlan)
         {
             if (CurrentUser == null)
             {
@@ -320,7 +299,6 @@ namespace GymAndFitness
                 try
                 {
                     connection.Open();
-
                     string query = "INSERT INTO DietPlan (UserID, MealTime, FoodItem, Notes) VALUES (@UserID, @MealTime, @FoodItem, @Notes)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -339,8 +317,8 @@ namespace GymAndFitness
             }
         }
 
-        //save diet plan
-        public static void SaveDietPlan(ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, string notes)
+        // Save diet plan
+        public void SaveDietPlan(ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, string notes)
         {
             int userId = CurrentUser.UserID;
 
@@ -349,9 +327,7 @@ namespace GymAndFitness
                 try
                 {
                     conn.Open();
-
                     string query = "INSERT INTO DietPlan (UserID, MealTime, FoodItem, Notes) VALUES (@UserID, @MealTime, @FoodItem, @Notes)";
-
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         // Save Breakfast items
@@ -408,10 +384,8 @@ namespace GymAndFitness
             }
         }
 
-
-
-        //remove workout plan
-        public static void RemoveSelectedItem(ListBox listBox, string mealTime)
+        // Remove workout plan
+        public void RemoveSelectedItem(ListBox listBox, string mealTime)
         {
             if (listBox.SelectedItem != null)
             {
@@ -425,9 +399,7 @@ namespace GymAndFitness
                     try
                     {
                         conn.Open();
-
                         string query = "DELETE FROM DietPlan WHERE UserID = @UserID AND MealTime = @MealTime AND FoodItem = @FoodItem";
-
                         using (SqlCommand cmd = new SqlCommand(query, conn))
                         {
                             cmd.Parameters.AddWithValue("@UserID", userId);
@@ -448,24 +420,20 @@ namespace GymAndFitness
             }
         }
 
-
-        //load diet plans 
-        public static void LoadDietPlans(int userId, ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, RichTextBox richTextBoxNotesInput)
+        // Load diet plans
+        public void LoadDietPlans(int userId, ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, RichTextBox richTextBoxNotesInput)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
-
-                    // Change query to select based on UserId or Username
-                    string query = "SELECT MealTime, FoodItem, Notes FROM DietPlan WHERE UserID = @UserID"; // Ensure the column name matches the database
-
+                    string query = "SELECT MealTime, FoodItem, Notes FROM DietPlan WHERE UserID = @UserID";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@UserID", userId);  // Add parameter for userId
+                        cmd.Parameters.AddWithValue("@UserID", userId);
 
-                        using (SqlDataReader reader = cmd.ExecuteReader())  // Use SqlDataReader for MS Access
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             // Clear the current lists
                             lstBreakfastInput.Items.Clear();
@@ -514,14 +482,12 @@ namespace GymAndFitness
             }
         }
 
-
-        //update water intake
-        public static void UpdateDailyWaterIntake()
+        // Update water intake
+        public void UpdateDailyWaterIntake()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "UPDATE Users SET DailyWaterIntake = @DailyWaterIntake WHERE Username = @Username";
-
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@DailyWaterIntake", CurrentUser.DailyWaterIntake);
@@ -534,8 +500,10 @@ namespace GymAndFitness
         }
 
 
+
+
         //reset water
-        public static void ResetDailyWaterIntake()
+        public void ResetDailyWaterIntake()
         {
             if (CurrentUser != null)
             {
@@ -562,7 +530,7 @@ namespace GymAndFitness
         }
 
 
-        public static void ApplyProfilePicture(PictureBox pictureBox)
+        public void ApplyProfilePicture(PictureBox pictureBox)
         {
             if (CurrentUser != null && CurrentUser.ProfilePicture != null)
             {
@@ -579,7 +547,7 @@ namespace GymAndFitness
 
 
 
-        public static void UpdateProfilePictureInDatabase(byte[] profilePicture)
+        public void UpdateProfilePictureInDatabase(byte[] profilePicture)
         {
             if (CurrentUser != null)
             {
@@ -609,7 +577,7 @@ namespace GymAndFitness
 
 
         //update Height & weight
-        public static void UpdateHeightAndWeight(double currentheight, double currentweight, double currentBMI)
+        public void UpdateHeightAndWeight(double currentheight, double currentweight, double currentBMI)
         {
             if (CurrentUser != null)
             {
@@ -641,7 +609,7 @@ namespace GymAndFitness
 
         //change Profile Picture
 
-        public static void ChangeProfilePicture(PictureBox pictureBox)
+        public void ChangeProfilePicture(PictureBox pictureBox)
         {
             // Open file dialog to let user choose an image
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -671,7 +639,7 @@ namespace GymAndFitness
 
 
         //delete user account
-        public static bool DeleteAccount(int userId)
+        public bool DeleteAccount(int userId)
         {
             try
             {

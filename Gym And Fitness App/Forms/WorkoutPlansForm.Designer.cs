@@ -402,10 +402,10 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(200, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(581, 74);
+            this.panel1.Size = new System.Drawing.Size(781, 74);
             this.panel1.TabIndex = 5;
             // 
             // btnProfilePicture
@@ -463,9 +463,9 @@
             this.slidePanel.Controls.Add(this.btnDietPlans);
             this.slidePanel.Controls.Add(this.btnDashboard);
             this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.slidePanel.Location = new System.Drawing.Point(0, 0);
+            this.slidePanel.Location = new System.Drawing.Point(0, 74);
             this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(200, 600);
+            this.slidePanel.Size = new System.Drawing.Size(200, 526);
             this.slidePanel.TabIndex = 35;
             // 
             // btnHome
@@ -629,9 +629,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(781, 600);
+            this.Controls.Add(this.slidePanel);
             this.Controls.Add(this.tabWorkoutPlan);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.slidePanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

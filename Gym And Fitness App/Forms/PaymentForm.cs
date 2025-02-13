@@ -11,6 +11,9 @@ namespace GymAndFitness
         }
 
 
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
+
         private void btnGenerateKey_Click(object sender, EventArgs e)
         {
             // Check if any radio button is selected
@@ -39,7 +42,7 @@ namespace GymAndFitness
                     txtGeneratedKey.Text = licenseKey;
 
                     // Store the license key in the database
-                    UserDataManager.StoreLicenseKey(licenseKey);
+                    userDataManager.StoreLicenseKey(licenseKey);
 
                     MessageBox.Show("Your license key has been generated. Please copy it and close this this form, then paste it in license key feild! ", "Key Generated");
                 }

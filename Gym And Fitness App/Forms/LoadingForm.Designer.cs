@@ -48,22 +48,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 24.23762F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cascadia Code", 24.23762F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(159, 94);
+            this.label2.Location = new System.Drawing.Point(153, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 42);
+            this.label2.Size = new System.Drawing.Size(280, 45);
             this.label2.TabIndex = 2;
             this.label2.Text = "Gym && Fitness";
             // 
             // lblLoading
             // 
             this.lblLoading.AutoSize = true;
-            this.lblLoading.Font = new System.Drawing.Font("Segoe UI Semibold", 12.69307F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblLoading.Font = new System.Drawing.Font("Cascadia Mono", 12.83168F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoading.ForeColor = System.Drawing.Color.White;
-            this.lblLoading.Location = new System.Drawing.Point(209, 163);
+            this.lblLoading.Location = new System.Drawing.Point(203, 158);
             this.lblLoading.Name = "lblLoading";
-            this.lblLoading.Size = new System.Drawing.Size(0, 25);
+            this.lblLoading.Size = new System.Drawing.Size(0, 24);
             this.lblLoading.TabIndex = 0;
             // 
             // lbl1Develop
@@ -80,11 +80,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.267326F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.Font = new System.Drawing.Font("Cascadia Code Light", 8.267326F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label4.Location = new System.Drawing.Point(3, 197);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 15);
+            this.label4.Size = new System.Drawing.Size(91, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Developed by";
             // 
@@ -93,11 +93,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(368, 131);
+            this.label1.Location = new System.Drawing.Point(390, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 19);
+            this.label1.Size = new System.Drawing.Size(31, 19);
             this.label1.TabIndex = 7;
-            this.label1.Text = "v1.0.0";
+            this.label1.Text = "v1.1";
             // 
             // pictureBox1
             // 
@@ -114,7 +114,7 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Segoe UI Semibold", 12.69307F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(247, 162);
+            this.lblWelcome.Location = new System.Drawing.Point(241, 160);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(0, 25);
             this.lblWelcome.TabIndex = 9;

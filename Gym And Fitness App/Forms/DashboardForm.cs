@@ -11,6 +11,8 @@ namespace GymAndFitness
         }
 
 
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
         //LOAD
         private void DashboardForm_Load(object sender, EventArgs e)
         {
@@ -30,10 +32,10 @@ namespace GymAndFitness
 
 
             //  accessing current user 
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
 
-                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                userDataManager.ApplyProfilePicture(btnProfilePicture);
 
                 //
                 btnLogout.Visible = true;
@@ -44,14 +46,14 @@ namespace GymAndFitness
                 // Weight Progress
 
                 // Get user data
-                double startingWeight = UserDataManager.CurrentUser.StartingWeight;
-                double currentWeight = UserDataManager.CurrentUser.CurrentWeight;
-                double targetWeight = UserDataManager.CurrentUser.TargetWeight;
+                double startingWeight = userDataManager.CurrentUser.StartingWeight;
+                double currentWeight = userDataManager.CurrentUser.CurrentWeight;
+                double targetWeight = userDataManager.CurrentUser.TargetWeight;
 
                 double weightProgressPercentage = 0;
 
                 // Calculate progress based on fitness goal
-                if (UserDataManager.CurrentUser.FitnessGoal == "Muscle Gain")
+                if (userDataManager.CurrentUser.FitnessGoal == "Muscle Gain")
                 {
                     // Ensure calculation is valid
                     if (currentWeight >= startingWeight && currentWeight <= targetWeight)
@@ -59,7 +61,7 @@ namespace GymAndFitness
                         weightProgressPercentage = ((currentWeight - startingWeight) / (targetWeight - startingWeight)) * 100;
                     }
                 }
-                else if (UserDataManager.CurrentUser.FitnessGoal == "Fat Loss")
+                else if (userDataManager.CurrentUser.FitnessGoal == "Fat Loss")
                 {
                     // Ensure calculation is valid
                     if (currentWeight <= startingWeight && currentWeight >= targetWeight)
@@ -77,13 +79,13 @@ namespace GymAndFitness
 
 
                 // Water Intake Progress
-                lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
-                progressBarWater.Value = (int)((UserDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
+                lblWaterIntake.Text = $"{userDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
+                progressBarWater.Value = (int)((userDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
 
                 //lblWaterIntake.Text = $"{waterProgressPercentage}%";
 
-                Console.WriteLine($"Height: {UserDataManager.CurrentUser.Height}");
-                Console.WriteLine($"Weight: {UserDataManager.CurrentUser.CurrentWeight}");
+                Console.WriteLine($"Height: {userDataManager.CurrentUser.Height}");
+                Console.WriteLine($"Weight: {userDataManager.CurrentUser.CurrentWeight}");
                 Console.WriteLine($"Progress Percentage: {weightProgressPercentage}");
 
 
@@ -376,19 +378,19 @@ namespace GymAndFitness
 
         private void btnAddWater_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
 
 
                 // Add one glass
-                if (UserDataManager.CurrentUser.DailyWaterIntake < 8) // Ensure limit is not exceeded
+                if (userDataManager.CurrentUser.DailyWaterIntake < 8) // Ensure limit is not exceeded
                 {
-                    UserDataManager.CurrentUser.DailyWaterIntake++;
+                    userDataManager.CurrentUser.DailyWaterIntake++;
 
-                    UserDataManager.UpdateDailyWaterIntake();
+                    userDataManager.UpdateDailyWaterIntake();
                     //refresh
-                    lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
-                    progressBarWater.Value = (int)((UserDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
+                    lblWaterIntake.Text = $"{userDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
+                    progressBarWater.Value = (int)((userDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
 
                 }
                 else
@@ -410,10 +412,10 @@ namespace GymAndFitness
 
         private void ResetDailyWaterIntake()
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
                 // Reset DailyWaterIntake in UserDataManager
-                UserDataManager.ResetDailyWaterIntake();
+                userDataManager.ResetDailyWaterIntake();
 
                 // Reset UI elements
                 lblWaterIntake.Text = "0 / 8 Glasses";
@@ -438,9 +440,9 @@ namespace GymAndFitness
 
         private void progressBarWeight_MouseEnter(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                toolTipProgressWeight.SetToolTip(progressBarWeight, $"Current Weight: {UserDataManager.CurrentUser.CurrentWeight} kg\nTarget Weight: {UserDataManager.CurrentUser.TargetWeight} kg");
+                toolTipProgressWeight.SetToolTip(progressBarWeight, $"Current Weight: {userDataManager.CurrentUser.CurrentWeight} kg\nTarget Weight: {userDataManager.CurrentUser.TargetWeight} kg");
             }
             else
             {
@@ -458,7 +460,7 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            UserDataManager.CurrentUser = null;
+            userDataManager.CurrentUser = null;
             LoginForm login = new LoginForm();
             login.Show();
             this.Close();
@@ -466,9 +468,9 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {

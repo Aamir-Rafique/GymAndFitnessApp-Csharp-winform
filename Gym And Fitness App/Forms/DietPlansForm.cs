@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -17,6 +16,8 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
 
         //LOAD
         private void DietPlansForm_Load(object sender, EventArgs e)
@@ -29,14 +30,14 @@ namespace GymAndFitness
             timerForPics.Start();
 
             //  accessing current user 
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                userDataManager.ApplyProfilePicture(btnProfilePicture);
 
                 //database...
-                int userId = UserDataManager.CurrentUser.UserID;
+                int userId = userDataManager.CurrentUser.UserID;
                 // Replace with actual logic to get the current user ID
-                UserDataManager.LoadDietPlans(userId, lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, richTextBoxNotesInput);
+                userDataManager.LoadDietPlans(userId, lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, richTextBoxNotesInput);
             }
 
             txtFoodItem.Text = "Type here";
@@ -608,7 +609,7 @@ namespace GymAndFitness
 
 
 
-        
+
 
 
 
@@ -617,9 +618,9 @@ namespace GymAndFitness
         // Breakfast
         private async void btnAddToBreakfast_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                if (txtFoodItem.Text.Contains("Type here")||string.IsNullOrEmpty(txtFoodItem.Text))
+                if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
                 {
                     MessageBox.Show("Please search any food item first!.");
                 }
@@ -638,7 +639,7 @@ namespace GymAndFitness
         // Lunch
         private async void btnAddToLunch_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
                 if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
                 {
@@ -646,7 +647,7 @@ namespace GymAndFitness
                 }
                 else
                 {
-                await AddFoodItemToList(txtFoodItem.Text, lstLunchInput);
+                    await AddFoodItemToList(txtFoodItem.Text, lstLunchInput);
                 }
             }
             else
@@ -658,7 +659,7 @@ namespace GymAndFitness
         // Snacks
         private async void btnAddToSnacks_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
                 if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
                 {
@@ -666,7 +667,7 @@ namespace GymAndFitness
                 }
                 else
                 {
-                await AddFoodItemToList(txtFoodItem.Text, lstSnacksInput);
+                    await AddFoodItemToList(txtFoodItem.Text, lstSnacksInput);
                 }
             }
             else
@@ -678,7 +679,7 @@ namespace GymAndFitness
         // Dinner
         private async void btnAddToDinner_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
                 if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
                 {
@@ -686,7 +687,7 @@ namespace GymAndFitness
                 }
                 else
                 {
-                await AddFoodItemToList(txtFoodItem.Text, lstDinnerInput);
+                    await AddFoodItemToList(txtFoodItem.Text, lstDinnerInput);
                 }
             }
             else
@@ -750,19 +751,19 @@ namespace GymAndFitness
             // Check which ListBox has an item selected
             if (lstBreakfastInput.SelectedItem != null)
             {
-                UserDataManager.RemoveSelectedItem(lstBreakfastInput, "Breakfast");
+                userDataManager.RemoveSelectedItem(lstBreakfastInput, "Breakfast");
             }
             else if (lstLunchInput.SelectedItem != null)
             {
-                UserDataManager.RemoveSelectedItem(lstLunchInput, "Lunch");
+                userDataManager.RemoveSelectedItem(lstLunchInput, "Lunch");
             }
             else if (lstSnacksInput.SelectedItem != null)
             {
-                UserDataManager.RemoveSelectedItem(lstSnacksInput, "Snacks");
+                userDataManager.RemoveSelectedItem(lstSnacksInput, "Snacks");
             }
             else if (lstDinnerInput.SelectedItem != null)
             {
-                UserDataManager.RemoveSelectedItem(lstDinnerInput, "Dinner");
+                userDataManager.RemoveSelectedItem(lstDinnerInput, "Dinner");
             }
             else
             {
@@ -943,12 +944,12 @@ namespace GymAndFitness
 
         private void btnSaveDietPlan_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                int userId = UserDataManager.CurrentUser.UserID; // Replace with actual logic to get the current user ID
+                int userId = userDataManager.CurrentUser.UserID; // Replace with actual logic to get the current user ID
                 string notes = richTextBoxNotesInput.Text; // Get the notes from the RichTextBox
 
-                UserDataManager.SaveDietPlan(lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, notes);
+                userDataManager.SaveDietPlan(lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, notes);
             }
             else
             {
@@ -970,9 +971,9 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {
@@ -997,6 +998,6 @@ namespace GymAndFitness
             }
         }
 
-     
+
     }
 }

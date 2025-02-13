@@ -11,7 +11,7 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -45,16 +45,16 @@ namespace GymAndFitness
                 string username = txtUsername.Text;
                 string password = txtPassword.Text;
 
-                if (UserDataManager.IsValidLogin(username, password))
+                if (userDataManager.IsValidLogin(username, password))
                 {
                     MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                    User user = UserDataManager.GetUserDetails(txtUsername.Text);
+                    User user = userDataManager.GetUserDetails(txtUsername.Text);
                     if (user != null && user.Password == txtPassword.Text)
                     {
-                        UserDataManager.CurrentUser = user;
-                        MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!");
+                        userDataManager.CurrentUser = user;
+                        MessageBox.Show($"Welcome, {userDataManager.CurrentUser.Username}!");
 
 
                         // Open main form
@@ -62,7 +62,7 @@ namespace GymAndFitness
                         // Navigate to MainForm
                         MainForm mainForm = new MainForm();
                         mainForm.Show();
-                        this.Hide();
+                        this.Close();
                     }
 
                 }
@@ -96,7 +96,7 @@ namespace GymAndFitness
         {
             MainForm mainForm = new MainForm();
             mainForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void LoginForm_VisibleChanged(object sender, EventArgs e)

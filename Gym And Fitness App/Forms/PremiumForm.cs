@@ -11,6 +11,9 @@ namespace GymAndFitness
         }
 
 
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
+
         private void btnVerifyKey_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtLicenseKey.Text))
@@ -21,13 +24,13 @@ namespace GymAndFitness
             else
             {
 
-                if (UserDataManager.CurrentUser != null)
+                if (userDataManager.CurrentUser != null)
                 {
 
-                    string username = UserDataManager.CurrentUser.Username; // Replace with the logged-in user's username
+                    string username = userDataManager.CurrentUser.Username; // Replace with the logged-in user's username
                     string enteredKey = txtLicenseKey.Text;
 
-                    UserDataManager.VerifyLicenseKey(username, enteredKey);
+                    userDataManager.VerifyLicenseKey(username, enteredKey);
 
                 }
                 else
@@ -44,9 +47,9 @@ namespace GymAndFitness
 
         private void btnGetNewKey_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!");
+                MessageBox.Show($"Welcome, {userDataManager.CurrentUser.Username}!");
                 PaymentForm paymentForm = new PaymentForm();
                 paymentForm.ShowDialog();
                 paymentForm.Focus();

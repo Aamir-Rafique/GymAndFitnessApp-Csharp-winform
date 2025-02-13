@@ -12,6 +12,9 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
+
 
         //load
         private void WorkoutPlansForm_Load(object sender, EventArgs e)
@@ -24,11 +27,11 @@ namespace GymAndFitness
             timerForPics.Start();
 
             //  accessing current user 
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                UserDataManager.ApplyProfilePicture(btnProfilePicture);
-                int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
-                UserDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
+                userDataManager.ApplyProfilePicture(btnProfilePicture);
+                int userId = userDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
+                userDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
             }
         }
 
@@ -349,13 +352,13 @@ namespace GymAndFitness
         private void btnSaveWorkoutPlan_Click(object sender, EventArgs e)
         {
             // Validate user
-            if (UserDataManager.CurrentUser == null || UserDataManager.CurrentUser.UserID <= 0)
+            if (userDataManager.CurrentUser == null || userDataManager.CurrentUser.UserID <= 0)
             {
                 MessageBox.Show("No user is logged in or User ID is invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            UserDataManager.SaveWorkoutPlan(dgvWorkoutPlan);
+            userDataManager.SaveWorkoutPlan(dgvWorkoutPlan);
         }
 
 
@@ -363,9 +366,9 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {

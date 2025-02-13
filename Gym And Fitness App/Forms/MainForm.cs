@@ -10,7 +10,7 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-
+        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
 
         //for slide panel
@@ -53,10 +53,10 @@ namespace GymAndFitness
             slidePanel.Width = 45; // Start collapsed
 
             //  accessing current user 
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
 
-                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                userDataManager.ApplyProfilePicture(btnProfilePicture);
 
                 btnLogout.Visible = true;
                 btnLogout.Enabled = true;
@@ -145,9 +145,9 @@ namespace GymAndFitness
         //hovering message
         private void btnProfilePicture_MouseEnter(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
+            if (userDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {
@@ -157,7 +157,7 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            UserDataManager.CurrentUser = null;
+            userDataManager.CurrentUser = null;
             LoginForm login = new LoginForm();
             login.Show();
             this.Close();

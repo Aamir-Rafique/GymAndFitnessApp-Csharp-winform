@@ -247,7 +247,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
-            this.TopMost = true;
             this.VisibleChanged += new System.EventHandler(this.LoginForm_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
