@@ -61,13 +61,14 @@ namespace GymAndFitness.Forms
             }
             else if (elapsedTime < COMPLETE_TIME)
             {
-                lblLoading.Text = "Welcome!";
+                lblLoading.Text = " ";
+                lblWelcome.Text = "Welcome!";
                 progressBarLoading.Value = 100;
             }
             else
             {
                 lblLoading.Text = "";
-                lblWelcome.Text = "Welcome";
+                //lblWelcome.Text = "Welcome!";
                 timerLoading.Stop();
 
                 // Open LoginForm and close LoadingForm
@@ -82,5 +83,7 @@ namespace GymAndFitness.Forms
             int increment = (max - min) / (COMPLETE_TIME / timerLoading.Interval);
             progressBarLoading.Value = Math.Min(progressBarLoading.Value + increment, max);
         }
+
+       
     }
 }

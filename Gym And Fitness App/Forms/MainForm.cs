@@ -55,9 +55,7 @@ namespace GymAndFitness
             //  accessing current user 
             if (userDataManager.CurrentUser != null)
             {
-
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
-
                 btnLogout.Visible = true;
                 btnLogout.Enabled = true;
                 btnLogin.Visible = false;

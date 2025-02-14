@@ -236,6 +236,10 @@ namespace GymAndFitness
             {
                 e.Handled = false;
             }
+            else if(char.IsDigit(ch)==true)
+            {
+                e.Handled = false;
+            }
             else
             {
                 e.Handled = true;
@@ -290,7 +294,7 @@ namespace GymAndFitness
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("All the input data will be erased!");
             txtUsername.Clear();
             txtPassword.Clear();
             txtConfirmPassword.Clear();
@@ -395,15 +399,21 @@ namespace GymAndFitness
             {
                 height = double.Parse(txtHeight.Text);
             }
+            SuggestTargetWeightRange();
+
         }
 
-
-        private void txtWeight_Leave(object sender, EventArgs e)
+        private void SuggestTargetWeightRange()
         {
             double lowerTargetWeight = 18.5 * Math.Pow((height / 100), 2); // BMI 18.5
             double upperTargetWeight = 24.9 * Math.Pow((height / 100), 2); // BMI 24.9
             targetWeightRange = $"{Math.Round(lowerTargetWeight)}kg - {Math.Round(upperTargetWeight)}kg";
             lblTargetWeightRange.Text = targetWeightRange;
+        }
+
+        private void txtWeight_Leave(object sender, EventArgs e)
+        {
+            SuggestTargetWeightRange();
         }
 
 
