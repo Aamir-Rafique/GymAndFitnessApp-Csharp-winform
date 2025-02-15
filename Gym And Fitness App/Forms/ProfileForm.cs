@@ -12,6 +12,7 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
 
 
 
@@ -134,62 +135,40 @@ namespace GymAndFitness
 
 
 
-        //go back to dashboard
         private void btnBackToDashboard_Click(object sender, EventArgs e)
         {
-            MainForm home = new MainForm();
-            home.Show();
+            features.OpenDashboardForm();
             this.Hide();
         }
-
-
-        //home Button
         private void btnHome_Click_1(object sender, EventArgs e)
         {
-            MainForm home = new MainForm();
-            home.Show();
+            features.OpenMainForm();
             this.Hide();
         }
-
-        //bmi calculator button
         private void btnBMICalculator_Click_1(object sender, EventArgs e)
         {
-            BMICalculatorForm bmiCalculator = new BMICalculatorForm();
-            bmiCalculator.Show();
+            features.OpenBMICalculatorForm();
             this.Hide();
         }
-
-        //dietplan form
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-            DietPlansForm dietPlans = new DietPlansForm();
-            dietPlans.Show();
+            features.OpenDietPlansForm();
             this.Hide();
         }
-
-        //WorkoutPlan form
         private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
         {
-            WorkoutPlansForm workoutPlans = new WorkoutPlansForm();
-            workoutPlans.Show();
+            features.OpenWorkoutPlansForm();
             this.Hide();
         }
-
-
-
-
-        // About Form
         private void btnAbout_Click_1(object sender, EventArgs e)
         {
-            AboutForm about = new AboutForm();
-            about.Show();
+            features.OpenAboutForm();
             this.Hide();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            DashboardForm dashboard = new DashboardForm();
-            dashboard.Show();
+            features.OpenDashboardForm();
             this.Hide();
         }
 
@@ -199,9 +178,7 @@ namespace GymAndFitness
             {
                 this.Close();
 
-                MembershipForm membershipForm = new MembershipForm();
-                membershipForm.ShowDialog();
-
+                features.OpenMembershipForm();
                 lblMembershipStatus.Text = $"{userDataManager.CurrentUser.MembershipStatus}";
 
                 //membership pln pic
@@ -235,21 +212,6 @@ namespace GymAndFitness
             if (userDataManager.CurrentUser != null)
             {
                 userDataManager.ChangeProfilePicture(pbProfilePicture);
-
-                //using (OpenFileDialog openFileDialog = new OpenFileDialog())
-                //{
-                //    openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"; if (openFileDialog.ShowDialog() == DialogResult.OK)
-                //    {
-                //        string selectedFilePath = openFileDialog.FileName; byte[] profilePicture = File.ReadAllBytes(selectedFilePath);
-                //        // Update the profile picture in the PictureBox
-                //        using (MemoryStream ms = new MemoryStream(profilePicture))
-                //        {
-                //            pbProfilePicture.Image = Image.FromStream(ms);
-                //        }
-                //        // Save the new profile picture
-                //        userDataManager.UpdateProfilePictureInDatabase(profilePicture);
-                //    }
-                //}
             }
             else
             {
@@ -258,40 +220,12 @@ namespace GymAndFitness
         }
 
 
-        private Color GetBMIColor(double bmi)
-        {
-            if (bmi < 18.5)
-                return Color.Blue;
-            else if (bmi >= 18.5 && bmi <= 24.9)
-                return Color.Green;
-            else if (bmi >= 25 && bmi <= 29.9)
-                return Color.YellowGreen;
-            else if (bmi >= 30 && bmi <= 35)
-                return Color.DarkOrange;
-            else
-                return Color.Red;
-        }
-
-
-        private string GetBMICategory(double bmi)
-        {
-            if (bmi < 18.5)
-                return "Underweight!";
-            else if (bmi >= 18.5 && bmi <= 24.9)
-                return "Normal.";
-            else if (bmi >= 25 && bmi <= 29.9)
-                return "Overweight!";
-            else if (bmi >= 30 && bmi <= 35)
-                return "Obese!!";
-            else
-                return "Extremely Obese!!!";
-        }
-
+      
         private void lblBMI_TextChanged(object sender, EventArgs e)
         {
             double bmi = Double.Parse(lblBMI.Text);
-            lblBMI.ForeColor = GetBMIColor(bmi);
-            lblBMICategory.Text = GetBMICategory(bmi);
+            lblBMI.ForeColor = features.GetBMIColor(bmi);
+            lblBMICategory.Text = features.GetBMICategory(bmi);
         }
 
         private void btnSaveCurrentHeightAndWeight_Click(object sender, EventArgs e)
@@ -306,7 +240,7 @@ namespace GymAndFitness
                     double height = (double)nudCurrentHeight.Value;
                     double weight = (double)nudCurrentWeight.Value;
 
-                    userDataManager.CurrentUser.BMI = CalculateBMI(height, weight);
+                    userDataManager.CurrentUser.BMI = features.CalculateBMI(height, weight);
                     userDataManager.UpdateHeightAndWeight(userDataManager.CurrentUser.Height, userDataManager.CurrentUser.CurrentWeight, userDataManager.CurrentUser.BMI);
                     MessageBox.Show("Height and weight updated successfully!", "Success!");
                 }
@@ -320,17 +254,6 @@ namespace GymAndFitness
                 MessageBox.Show("You need to login First !");
             }
         }
-
-
-        private double CalculateBMI(double height, double weight)
-        {
-            height = height / 100; // Convert height from cm to meters
-            return weight / (height * height);
-
-        }
-
-
-
 
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -352,16 +275,14 @@ namespace GymAndFitness
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.Show();
+            features.OpenLoginForm();
             this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             userDataManager.CurrentUser = null;
-            LoginForm login = new LoginForm();
-            login.Show();
+            features.OpenLoginForm();
             this.Close();
         }
 
@@ -377,17 +298,12 @@ namespace GymAndFitness
                     MessageBoxIcon.Warning);
                 if (confirmResult == DialogResult.Yes)
                 {
-
-
                     if (userDataManager.DeleteAccount(userDataManager.CurrentUser.UserID))
                     {
-
-
                         MessageBox.Show("Your account has been deleted successfully.", "Account Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         this.Hide();
-                        LoginForm loginForm = new LoginForm();
-                        loginForm.Show();
+                        features.OpenLoginForm();
                     }
                     else
                     {
@@ -399,8 +315,6 @@ namespace GymAndFitness
                     // User canceled password input
                     MessageBox.Show("Account deletion aborted.", "Operation Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
-
             }
             else
             {

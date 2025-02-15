@@ -1035,6 +1035,8 @@
             this.ForeColor = System.Drawing.Color.DarkGreen;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(879, 654);
+            this.MinimumSize = new System.Drawing.Size(879, 654);
             this.Name = "ProfileForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness App";

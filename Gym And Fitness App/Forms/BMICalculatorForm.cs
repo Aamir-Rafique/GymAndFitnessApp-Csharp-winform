@@ -12,12 +12,19 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
 
 
 
         //load
         private void BMICalculatorForm_Load(object sender, EventArgs e)
         {
+            this.Focus();
+
+            // Set placeholder for TextBox
+            Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
+            Features.SetTextBoxPlaceholder(txtWeight, "Your weight in kg..");
+
             //slide panel
             panelWidth = slidePanel.Width;
             slidePanel.Width = 45; // Start collapsed
@@ -29,6 +36,7 @@ namespace GymAndFitness
             {
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
             }
+
 
         }
         //for slide panel
@@ -63,60 +71,9 @@ namespace GymAndFitness
 
 
 
+      
 
 
-
-
-        //calculate bmi
-        private double CalculateBMI(double weight, double height)
-        {
-            height = height / 100; // Convert height from cm to meters
-            return weight / (height * height);
-
-        }
-
-        //color code
-        private Color GetBMIColor(double bmi)
-        {
-            if (bmi < 18.5)
-                return Color.Blue;
-            else if (bmi >= 18.5 && bmi <= 24.9)
-                return Color.Green;
-            else if (bmi >= 25 && bmi <= 29.9)
-                return Color.Yellow;
-            else if (bmi >= 30 && bmi <= 35)
-                return Color.Orange;
-            else
-                return Color.Red;
-        }
-        private string GetBMICategory(double bmi)
-        {
-            if (bmi < 18.5)
-            {
-                pbBMIChart.Image = Properties.Resources.bmiChartUnderW8;
-                return "Underweight!";
-            }
-            else if (bmi >= 18.5 && bmi <= 24.9)
-            {
-                pbBMIChart.Image = Properties.Resources.bmiChartNormal;
-                return "Normal.";
-            }
-            else if (bmi >= 25 && bmi <= 29.9)
-            {
-                pbBMIChart.Image = Properties.Resources.bmiChartOverW8;
-                return "Overweight!";
-            }
-            else if (bmi >= 30 && bmi <= 35)
-            {
-                pbBMIChart.Image = Properties.Resources.bmiChartObese;
-                return "Obese!!";
-            }
-            else
-            {
-                pbBMIChart.Image = Properties.Resources.bmiChartExtremeObese;
-                return "Extremely Obese!!!";
-            }
-        }
 
         //button event
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -124,12 +81,12 @@ namespace GymAndFitness
             if (string.IsNullOrEmpty(txtHeight.Text))
             {
                 txtHeight.Focus(); //isi pr focus!
-                errorHeight.SetError(this.txtHeight, "Please Enter your height");
+                error.SetError(this.txtHeight, "Please Enter your height");
             }
             else if (string.IsNullOrEmpty(txtWeight.Text))
             {
                 txtWeight.Focus(); //isi pr focus!
-                errorWeight.SetError(this.txtWeight, "Please Enter your Weight");
+                error.SetError(this.txtWeight, "Please Enter your Weight");
             }
             else
             {
@@ -138,39 +95,16 @@ namespace GymAndFitness
                 {
                     double weight = double.Parse(txtWeight.Text);
                     height = double.Parse(txtHeight.Text);
-                    double bmi = CalculateBMI(weight, height);
+                    double bmi = features.CalculateBMI(weight, height);
                     lblBMI.Text = $"Your BMI is {bmi:F2}";
-                    lblBMI.ForeColor = GetBMIColor(bmi);
-                    lblBMICategory.Text = GetBMICategory(bmi);
+                    lblBMI.ForeColor = features.GetBMIColor(bmi);
+                    lblBMICategory.Text = features.GetBMICategory(bmi);
+                    pbBMIChart.Image = features.GetBMIChartUpdate(bmi);
+                    lblTargetWeightRange.Text = features.SuggestTargetWeightRange(height);
                 }
                 catch (FormatException ex) { MessageBox.Show("Please enter valid numeric values for height and weight: " + ex.Message); }
                 catch (Exception ex) { MessageBox.Show("An error occurred while calculating BMI: " + ex.Message); }
 
-                // Calculate target weight range
-
-                BMICalculator bmiCalculator = new BMICalculator();
-                (double minWeight, double maxWeight) targetWeightRange = bmiCalculator.CalculateTargetWeightRange(height);
-                lblTargetWeightRange.Text = $"{targetWeightRange.minWeight:F2} kg - {targetWeightRange.maxWeight:F2} kg";
-            }
-        }
-
-        //Target Weight
-        public class BMICalculator
-        {
-            public double CalculateTargetWeight(double heightInCm, double targetBMI)
-            {
-                double heightInMeters = heightInCm / 100;
-                double targetWeight = targetBMI * Math.Pow(heightInMeters, 2);
-                return targetWeight;
-            }
-
-            public (double minWeight, double maxWeight) CalculateTargetWeightRange(double heightInCm)
-            {
-                double minBMI = 18.5;
-                double maxBMI = 24.9;
-                double minWeight = CalculateTargetWeight(heightInCm, minBMI);
-                double maxWeight = CalculateTargetWeight(heightInCm, maxBMI);
-                return (minWeight, maxWeight);
             }
         }
 
@@ -184,67 +118,42 @@ namespace GymAndFitness
         }
 
 
-
-
-        //profile button
+        //to open each form..
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            ProfileForm profile = new ProfileForm();
-            profile.Show();
+            features.OpenProfileForm();
+            this.Hide();
         }
-        //home Button
         private void btnHome_Click_1(object sender, EventArgs e)
         {
-            MainForm home = new MainForm();
-            home.Show();
+            features.OpenMainForm();
             this.Hide();
         }
-
-
-
-        //dietplan form
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-            DietPlansForm dietPlans = new DietPlansForm();
-            dietPlans.Show();
+            features.OpenDietPlansForm();
             this.Hide();
         }
-
-        //WorkoutPlan form
         private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
         {
-            WorkoutPlansForm workoutPlans = new WorkoutPlansForm();
-            workoutPlans.Show();
+            features.OpenWorkoutPlansForm();
             this.Hide();
         }
-
-
-
-        // About Form
         private void btnAbout_Click_1(object sender, EventArgs e)
         {
-            AboutForm about = new AboutForm();
-            about.Show();
+            features.OpenAboutForm();
             this.Hide();
         }
-
-
-        //dashboard form
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            DashboardForm dashboard = new DashboardForm();
-            dashboard.Show();
+            features.OpenDashboardForm();
             this.Hide();
         }
 
-        private void btnProfile_MouseEnter(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(btnProfilePicture, "Profile");
-        }
 
         private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorHeight.Clear();
+            error.Clear();
             char ch = e.KeyChar;
             if (char.IsDigit(ch) == true)
             {
@@ -266,7 +175,7 @@ namespace GymAndFitness
 
         private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorWeight.Clear();
+            error.Clear();
             char ch = e.KeyChar;
             if (char.IsDigit(ch) == true)
             {
@@ -286,11 +195,6 @@ namespace GymAndFitness
             }
 
         }
-
-
-
-
-
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {

@@ -64,9 +64,9 @@
             this.lblLoading.Location = new System.Drawing.Point(4, 195);
             this.lblLoading.MaximumSize = new System.Drawing.Size(350, 0);
             this.lblLoading.Name = "lblLoading";
-            this.lblLoading.Size = new System.Drawing.Size(307, 24);
+            this.lblLoading.Size = new System.Drawing.Size(120, 24);
             this.lblLoading.TabIndex = 0;
-            this.lblLoading.Text = "Loading Resourcdddddddddes!";
+            this.lblLoading.Text = "Loading...";
             this.lblLoading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl1Develop
@@ -119,15 +119,16 @@
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
             this.lblWelcome.Location = new System.Drawing.Point(212, 154);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(0, 31);
+            this.lblWelcome.Size = new System.Drawing.Size(114, 31);
             this.lblWelcome.TabIndex = 9;
+            this.lblWelcome.Text = "loading...";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // progressBarLoading
             // 
             this.progressBarLoading.Location = new System.Drawing.Point(0, 222);
             this.progressBarLoading.Name = "progressBarLoading";
-            this.progressBarLoading.Size = new System.Drawing.Size(534, 7);
+            this.progressBarLoading.Size = new System.Drawing.Size(537, 7);
             this.progressBarLoading.TabIndex = 1;
             // 
             // LoadingForm
@@ -135,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
-            this.ClientSize = new System.Drawing.Size(534, 282);
+            this.ClientSize = new System.Drawing.Size(535, 284);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -146,6 +147,8 @@
             this.Controls.Add(this.lblLoading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(535, 284);
+            this.MinimumSize = new System.Drawing.Size(535, 284);
             this.Name = "LoadingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoadingForm";

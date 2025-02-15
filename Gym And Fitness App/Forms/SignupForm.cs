@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GymAndFitness.Classes;
+using System;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
@@ -12,10 +14,33 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
+
+
+
+
+        //Load
+        private void SignupForm_Load(object sender, EventArgs e)
+        {
+            // Set placeholder for ComboBox
+            Features.SetComboBoxPlaceholder(cmbFitnessGoal, "Select an option...");
+            Features.SetComboBoxPlaceholder(cmbFitnessLevel, "Select an option...");
+            Features.SetComboBoxPlaceholder(cmbGender, "Select an option...");
+
+            // Align ComboBox text in center
+            Features.AlignComboBoxTextCenter(cmbGender);
+            Features.AlignComboBoxTextCenter(cmbFitnessGoal);
+            Features.AlignComboBoxTextCenter(cmbFitnessLevel);
+
+            // Set placeholder for TextBox
+        
+
+        }
 
 
         private string targetWeightRange = "";
         private double height = 0;
+
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
@@ -23,23 +48,23 @@ namespace GymAndFitness
             if (string.IsNullOrEmpty(txtUsername.Text))
             {
                 txtUsername.Focus(); //isi pr focus!
-                errorUsername.SetError(this.txtUsername, "Please Enter your name");
+                error.SetError(this.txtUsername, "Please Enter your name");
             }
             else if (string.IsNullOrEmpty(txtAge.Text))
             {
                 txtAge.Focus(); //isi pr focus!
-                errorAge.SetError(this.txtAge, "Please Enter your Age");
+                error.SetError(this.txtAge, "Please Enter your Age");
             }
 
             else if (cmbGender.SelectedItem == null)
             {
                 cmbGender.Focus(); //isi pr focus!
-                errorGender.SetError(this.cmbGender, "Please Enter your Gender");
+                error.SetError(this.cmbGender, "Please Enter your Gender");
             }
             else if (string.IsNullOrEmpty(txtPassword.Text))
             {
                 txtPassword.Focus(); //isi pr focus!
-                errorPassword.SetError(this.txtPassword, "Please Enter your password");
+                error.SetError(this.txtPassword, "Please Enter your password");
             }
             else if (txtPassword.Text.Length < 6)
             {
@@ -48,7 +73,7 @@ namespace GymAndFitness
             else if (string.IsNullOrEmpty(txtConfirmPassword.Text))
             {
                 txtConfirmPassword.Focus();
-                errorConfirmPassword.SetError(this.txtConfirmPassword, "Please Confirm your password");
+                error.SetError(this.txtConfirmPassword, "Please Confirm your password");
             }
             else if (txtConfirmPassword.Text != txtPassword.Text)
             {
@@ -57,34 +82,34 @@ namespace GymAndFitness
             else if (string.IsNullOrEmpty(txtHeight.Text))
             {
                 txtHeight.Focus(); //isi pr focus!
-                errorHeight.SetError(this.txtHeight, "Please Enter your height");
+                error.SetError(this.txtHeight, "Please Enter your height");
             }
             else if (string.IsNullOrEmpty(txtWeight.Text))
             {
                 txtWeight.Focus(); //isi pr focus!
-                errorWeight.SetError(this.txtWeight, "Please Enter your Weight");
+                error.SetError(this.txtWeight, "Please Enter your Weight");
             }
             else if (string.IsNullOrEmpty(txtTargetWeight.Text))
             {
                 txtTargetWeight.Focus(); //isi pr focus!
-                errorTargetWeight.SetError(this.txtTargetWeight, "Please Enter your Weight");
+                error.SetError(this.txtTargetWeight, "Please Enter your Weight");
             }
 
             else if (cmbFitnessGoal.SelectedItem == null)
             {
                 cmbFitnessGoal.Focus(); //isi pr focus!
-                errorFitnessGoal.SetError(this.cmbFitnessGoal, "Please Enter your Fitness Goal ");
+                error.SetError(this.cmbFitnessGoal, "Please Enter your Fitness Goal ");
             }
             else if (cmbFitnessLevel.SelectedItem == null)
             {
                 cmbFitnessLevel.Focus(); //isi pr focus!
-                errorFitnessLevel.SetError(this.cmbFitnessLevel, "Please Enter your Fitness Level");
+                error.SetError(this.cmbFitnessLevel, "Please Enter your Fitness Level");
             }
 
             //else if (string.IsNullOrEmpty(lblProfilePicturePath.Text))
             //{
             //    lblProfilePicturePath.Focus(); //isi pr focus!
-            //    errorProfilePicturePath.SetError(this.lblProfilePicturePath, "Please upload a Profile picture by clicking the Upload Button!");
+            //    error.SetError(this.lblProfilePicturePath, "Please upload a Profile picture by clicking the Upload Button!");
             //}
 
             else
@@ -94,16 +119,11 @@ namespace GymAndFitness
                 string password = txtPassword.Text; // Consider hashing this
                 int age = int.Parse(txtAge.Text);
                 string gender = cmbGender.SelectedItem.ToString();
-                height = double.Parse(txtHeight.Text);
+                double height = double.Parse(txtHeight.Text);
                 double weight = double.Parse(txtWeight.Text);
                 double bmi = weight / ((height / 100) * (height / 100)); // Assuming height is in cm
                 double targetWeight = double.Parse(txtTargetWeight.Text);
-
-                // Calculate Target Weight Range
-                double lowerTargetWeight = 18.5 * Math.Pow((height / 100), 2); // BMI 18.5
-                double upperTargetWeight = 24.9 * Math.Pow((height / 100), 2); // BMI 24.9
-                targetWeightRange = $"{Math.Round(lowerTargetWeight)}kg - {Math.Round(upperTargetWeight)}kg";
-
+                string targetWeightRange =lblTargetWeightRange.Text;
                 string fitnessGoal = cmbFitnessGoal.SelectedItem.ToString();
                 string fitnessLevel = cmbFitnessLevel.SelectedItem.ToString();
 
@@ -114,7 +134,6 @@ namespace GymAndFitness
                     profilePicture = File.ReadAllBytes(lblProfilePicturePath.Text);
                 }
 
-
                 userDataManager.SignUpUser(username, password, age, gender, height, weight, bmi, targetWeight, targetWeightRange, fitnessGoal, fitnessLevel, profilePicture);
 
             }
@@ -123,7 +142,7 @@ namespace GymAndFitness
         //upload btn
         private void btnUploadPicture_Click(object sender, EventArgs e)
         {
-            errorProfilePicturePath.Clear();
+            error.Clear();
             // Open a file dialog to select an image
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
@@ -142,14 +161,10 @@ namespace GymAndFitness
 
 
         //jab textbox leave krne lage
-        private void txtUsername_Leave(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorAge.Clear();
+            error.Clear();
             char ch = e.KeyChar;
             if (char.IsDigit(ch) == true)
             {
@@ -167,7 +182,7 @@ namespace GymAndFitness
 
         private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorHeight.Clear();
+            error.Clear();
             char ch = e.KeyChar;
             if (char.IsDigit(ch) == true)
             {
@@ -195,7 +210,7 @@ namespace GymAndFitness
                 MessageBox.Show("For Suggested Target weight range, Please input Height first!");
 
             }
-            errorWeight.Clear();
+            error.Clear();
             char ch = e.KeyChar;
             if (char.IsDigit(ch) == true)
             {
@@ -216,13 +231,9 @@ namespace GymAndFitness
         }
 
 
-
-
-
-
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorUsername.Clear();
+            error.Clear();
             char ch = e.KeyChar;
             if (char.IsLetter(ch) == true)
             {
@@ -236,7 +247,7 @@ namespace GymAndFitness
             {
                 e.Handled = false;
             }
-            else if(char.IsDigit(ch)==true)
+            else if (char.IsDigit(ch) == true)
             {
                 e.Handled = false;
             }
@@ -271,7 +282,7 @@ namespace GymAndFitness
 
         private void txtTargetWeight_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            errorTargetWeight.Clear();
+            error.Clear();
             char ch = e.KeyChar;
             if (char.IsDigit(ch) == true)
             {
@@ -294,31 +305,50 @@ namespace GymAndFitness
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("All the input data will be erased!");
-            txtUsername.Clear();
-            txtPassword.Clear();
-            txtConfirmPassword.Clear();
-            txtAge.Clear();
-            txtHeight.Clear();
-            txtWeight.Clear();
-            cmbFitnessGoal.SelectedItem = null;
-            cmbFitnessLevel.SelectedItem = null;
-            cmbGender.SelectedItem = null;
-            lblProfilePicturePath.Text = string.Empty;
-            txtTargetWeight.Clear();
+            DialogResult result = MessageBox.Show("All the input data will be erased!", "Warning", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
+            {
 
-            pbProfilePicture.Image = Properties.Resources.usernew;
+                txtUsername.Clear();
+                txtPassword.Clear();
+                txtConfirmPassword.Clear();
+                txtAge.Clear();
+                txtHeight.Clear();
+                txtWeight.Clear();
+                cmbFitnessGoal.SelectedItem = null;
+                cmbFitnessLevel.SelectedItem = null;
+                cmbGender.SelectedItem = null;
+                lblProfilePicturePath.Text = string.Empty;
+                txtTargetWeight.Clear();
 
-            //to clear erorrs
-            errorUsername.Clear();
-            errorConfirmPassword.Clear();
-            errorPassword.Clear();
-            errorAge.Clear();
-            errorWeight.Clear();
-            errorHeight.Clear();
-            errorBMI.Clear();
-            errorTargetWeight.Clear();
-            errorProfilePicturePath.Clear();
+
+                ////again k Set placeholder for TextBox b/c reset krne se remove hojate...
+                //Features.SetTextBoxPlaceholder(txtUsername, "Enter your name..");
+                //Features.SetTextBoxPlaceholder(txtAge, "Enter your Age..");
+                //Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
+                //Features.SetTextBoxPlaceholder(txtWeight, "Your weight in kg..");
+                //Features.SetTextBoxPlaceholder(txtPassword, "Enter your Password..");
+
+
+                //again Set placeholder for ComboBox b/c reset krne se remove hojate...
+                Features.SetComboBoxPlaceholder(cmbFitnessGoal, "Select an option...");
+                Features.SetComboBoxPlaceholder(cmbFitnessLevel, "Select an option...");
+                Features.SetComboBoxPlaceholder(cmbGender, "Select an option...");
+
+                pbProfilePicture.Image = Properties.Resources.usernew;
+
+                //to clear erorrs
+                error.Clear();
+                error.Clear();
+                error.Clear();
+                error.Clear();
+                error.Clear();
+                error.Clear();
+                error.Clear();
+                error.Clear();
+                error.Clear();
+            }
+
         }
 
 
@@ -328,18 +358,18 @@ namespace GymAndFitness
             if (txtConfirmPassword.Text != txtPassword.Text)
             {
                 txtConfirmPassword.Focus();
-                errorConfirmPassword.SetError(txtConfirmPassword, "Password must be same");
+                error.SetError(txtConfirmPassword, "Password must be same");
             }
             else
             {
-                errorConfirmPassword.Clear();
+                error.Clear();
             }
 
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorPassword.Clear();
+            error.Clear();
         }
 
 
@@ -349,7 +379,7 @@ namespace GymAndFitness
         {
             if (cmbGender.SelectedItem != null)
             {
-                errorGender.Clear();
+                error.Clear();
             }
         }
 
@@ -357,7 +387,7 @@ namespace GymAndFitness
         {
             if (cmbFitnessGoal.SelectedItem != null)
             {
-                errorFitnessGoal.Clear();
+                error.Clear();
             }
         }
 
@@ -365,27 +395,14 @@ namespace GymAndFitness
         {
             if (cmbFitnessLevel.SelectedItem != null)
             {
-                errorFitnessLevel.Clear();
+                error.Clear();
             }
         }
 
-        //private void lblProfilePicturePath_Click(object sender, EventArgs e)
-        //{
-        //    if (string.IsNullOrEmpty(lblProfilePicturePath.Text))
-        //    {
-        //        lblProfilePicturePath.Focus(); //isi pr focus!
-        //        errorProfilePicturePath.SetError(this.lblProfilePicturePath, "Please upload a Profile picture by clicking the Upload Button!");
-        //    }
-        //    else
-        //    {
-        //        errorProfilePicturePath.Clear();
-        //    }
-        //}
-
+      
         private void btnBackToLogin_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.Show();
+            features.OpenLoginForm();
             this.Close();
         }
 
@@ -399,23 +416,28 @@ namespace GymAndFitness
             {
                 height = double.Parse(txtHeight.Text);
             }
-            SuggestTargetWeightRange();
+            //SuggestTargetWeightRange();
 
         }
 
-        private void SuggestTargetWeightRange()
-        {
-            double lowerTargetWeight = 18.5 * Math.Pow((height / 100), 2); // BMI 18.5
-            double upperTargetWeight = 24.9 * Math.Pow((height / 100), 2); // BMI 24.9
-            targetWeightRange = $"{Math.Round(lowerTargetWeight)}kg - {Math.Round(upperTargetWeight)}kg";
-            lblTargetWeightRange.Text = targetWeightRange;
-        }
+       
 
         private void txtWeight_Leave(object sender, EventArgs e)
         {
-            SuggestTargetWeightRange();
+            lblTargetWeightRange.Text = features.SuggestTargetWeightRange(height);
         }
+
+        
+
+
+
+
+
+
 
 
     }
+
+
+
 }

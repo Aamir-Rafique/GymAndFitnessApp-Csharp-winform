@@ -12,6 +12,7 @@ namespace GymAndFitness
 
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
 
 
         private void btnFreePlan_Click(object sender, EventArgs e)
@@ -22,8 +23,7 @@ namespace GymAndFitness
                 userDataManager.UpdateMembershipInDatabase("Free");
                 MessageBox.Show("Membership updated to Free!", "Success");
                 this.Close();
-                ProfileForm profile = new ProfileForm();
-                profile.Show();
+                features.OpenProfileForm();
             }
             else
             {
@@ -44,8 +44,7 @@ namespace GymAndFitness
                 }
                 else
                 {
-                    PremiumForm premiumForm = new PremiumForm();
-                    premiumForm.Show();
+                    features.OpenPremiumForm();
                     this.Close();
                 }
             }

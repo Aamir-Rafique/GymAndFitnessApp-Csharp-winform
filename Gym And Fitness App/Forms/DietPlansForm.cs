@@ -17,6 +17,7 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
 
 
         //LOAD
@@ -247,12 +248,9 @@ namespace GymAndFitness
 
 
 
-
-
-
         //Data for offline food search
         private Dictionary<string, string> nutritionData = new Dictionary<string, string>
-{
+        {
         // Fruits
             { "apple", "Calories: 52, Carbs: 14g, Protein: 0.3g, Fat: 0.2g" },
             { "banana", "Calories: 89, Carbs: 23g, Protein: 1.1g, Fat: 0.3g" },
@@ -468,7 +466,6 @@ namespace GymAndFitness
             }
             else if (rbtnOnline.Checked)
             {
-
                 // Online search
                 lblNutritionInfo.Text = "Searching online, please wait...";
                 string nutritionInfo = await GetNutritionInfo(FoodItem);
@@ -482,9 +479,6 @@ namespace GymAndFitness
                     MessageBox.Show("Food item not found online or invalid.", "Search Error");
                     lblNutritionInfo.Text = "Nutrition information not available.";
                 }
-
-
-
             }
         }
 
@@ -874,69 +868,41 @@ namespace GymAndFitness
 
 
 
-
-
-
-
-        //profile button
+        //to open each form..
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            ProfileForm profile = new ProfileForm();
-            profile.Show();
+            features.OpenProfileForm();
             this.Hide();
         }
-
-
-        //home Button
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            MainForm home = new MainForm();
-            home.Show();
-            this.Hide();
-        }
-
-        //bmi calculator button
         private void btnBMICalculator_Click(object sender, EventArgs e)
         {
-
-            BMICalculatorForm bmiCalculator = new BMICalculatorForm();
-            bmiCalculator.Show();
+            features.OpenBMICalculatorForm();
+            this.Hide();
+        }
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            features.OpenMainForm();
             this.Hide();
         }
 
-
-
-        //WorkoutPlan form
         private void btnWorkoutPlans_Click(object sender, EventArgs e)
         {
-            WorkoutPlansForm workoutPlans = new WorkoutPlansForm();
-            workoutPlans.Show();
+            features.OpenWorkoutPlansForm();
             this.Hide();
         }
-
-
-        // About Form
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            AboutForm about = new AboutForm();
-            about.Show();
+            features.OpenAboutForm();
+            this.Hide();
+        }
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            features.OpenDashboardForm();
             this.Hide();
         }
 
 
 
-        //dashboard form
-        private void btnDashboard_Click_1(object sender, EventArgs e)
-        {
-            DashboardForm dashboard = new DashboardForm();
-            dashboard.Show();
-            this.Hide();
-        }
-
-        private void btnProfile_MouseEnter(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(btnProfilePicture, "Profile");
-        }
 
 
 
@@ -956,10 +922,6 @@ namespace GymAndFitness
                 MessageBox.Show("No user is logged in.");
             }
         }
-
-
-
-
 
 
 
@@ -997,6 +959,8 @@ namespace GymAndFitness
                 txtFoodItem.ForeColor = Color.Gray;
             }
         }
+
+
 
 
     }

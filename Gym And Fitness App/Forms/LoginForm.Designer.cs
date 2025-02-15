@@ -243,6 +243,8 @@
             this.Controls.Add(this.txtUsername);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(519, 391);
+            this.MinimumSize = new System.Drawing.Size(519, 391);
             this.Name = "LoginForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

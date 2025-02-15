@@ -288,6 +288,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Features.cs" />
     <Compile Include="Classes\RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -12,7 +12,15 @@ namespace GymAndFitness
 
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
 
+
+
+        private void PremiumForm_Load(object sender, EventArgs e)
+        {
+            // Set placeholder for TextBox
+            Features.SetTextBoxPlaceholder(txtLicenseKey, "Enter Licence key here...");
+        }
 
         private void btnVerifyKey_Click(object sender, EventArgs e)
         {
@@ -50,9 +58,7 @@ namespace GymAndFitness
             if (userDataManager.CurrentUser != null)
             {
                 MessageBox.Show($"Welcome, {userDataManager.CurrentUser.Username}!");
-                PaymentForm paymentForm = new PaymentForm();
-                paymentForm.ShowDialog();
-                paymentForm.Focus();
+                features.OpenPaymentForm();
 
             }
             else
@@ -74,5 +80,6 @@ namespace GymAndFitness
                 btnVerifyKey.PerformClick(); // Trigger the button's click event
             }
         }
+
     }
 }

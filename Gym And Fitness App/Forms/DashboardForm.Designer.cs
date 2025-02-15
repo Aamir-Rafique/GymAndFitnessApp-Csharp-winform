@@ -78,9 +78,8 @@
             this.timerQuote = new System.Windows.Forms.Timer(this.components);
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.waterResetTimer = new System.Windows.Forms.Timer(this.components);
-            this.toolTipProgressWeight = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -454,7 +453,7 @@
             this.btnChallenge.Size = new System.Drawing.Size(147, 28);
             this.btnChallenge.TabIndex = 1;
             this.btnChallenge.Text = "Get your Challenge";
-            this.toolTip1.SetToolTip(this.btnChallenge, "Task");
+            this.toolTip.SetToolTip(this.btnChallenge, "Task");
             this.btnChallenge.UseVisualStyleBackColor = false;
             this.btnChallenge.Click += new System.EventHandler(this.btnChallenge_Click_1);
             // 
@@ -655,7 +654,7 @@
             this.btnAddWater.TabIndex = 2;
             this.btnAddWater.Text = "Add 1 Glass";
             this.btnAddWater.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.toolTip1.SetToolTip(this.btnAddWater, "Add a glass of water");
+            this.toolTip.SetToolTip(this.btnAddWater, "Add a glass of water");
             this.btnAddWater.UseVisualStyleBackColor = false;
             this.btnAddWater.Click += new System.EventHandler(this.btnAddWater_Click);
             // 
@@ -663,9 +662,9 @@
             // 
             this.progressBarWater.Location = new System.Drawing.Point(5, 127);
             this.progressBarWater.Name = "progressBarWater";
-            this.progressBarWater.Size = new System.Drawing.Size(233, 42);
+            this.progressBarWater.Size = new System.Drawing.Size(233, 34);
             this.progressBarWater.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.progressBarWater, "Water Intake");
+            this.progressBarWater.MouseEnter += new System.EventHandler(this.progressBarWater_MouseEnter);
             // 
             // pictureBox6
             // 
@@ -710,9 +709,9 @@
             // 
             // progressBarWeight
             // 
-            this.progressBarWeight.Location = new System.Drawing.Point(29, 48);
+            this.progressBarWeight.Location = new System.Drawing.Point(29, 52);
             this.progressBarWeight.Name = "progressBarWeight";
-            this.progressBarWeight.Size = new System.Drawing.Size(445, 41);
+            this.progressBarWeight.Size = new System.Drawing.Size(445, 35);
             this.progressBarWeight.TabIndex = 12;
             this.progressBarWeight.MouseEnter += new System.EventHandler(this.progressBarWeight_MouseEnter);
             // 
@@ -732,12 +731,12 @@
             this.slideTimer.Interval = 1;
             this.slideTimer.Tick += new System.EventHandler(this.slideTimer_Tick_1);
             // 
-            // toolTip1
+            // toolTip
             // 
-            this.toolTip1.AutoPopDelay = 5000;
-            this.toolTip1.InitialDelay = 200;
-            this.toolTip1.ReshowDelay = 100;
-            this.toolTip1.ShowAlways = true;
+            this.toolTip.AutoPopDelay = 5000;
+            this.toolTip.InitialDelay = 200;
+            this.toolTip.ReshowDelay = 100;
+            this.toolTip.ShowAlways = true;
             // 
             // waterResetTimer
             // 
@@ -754,6 +753,8 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(850, 650);
+            this.MinimumSize = new System.Drawing.Size(850, 650);
             this.Name = "DashboardForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -820,7 +821,7 @@
         private System.Windows.Forms.ProgressBar progressBarWater;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAddWater;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ProgressBar progressBarWeight;
@@ -828,7 +829,6 @@
         private System.Windows.Forms.Label lblWaterIntake;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Timer waterResetTimer;
-        private System.Windows.Forms.ToolTip toolTipProgressWeight;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label11;

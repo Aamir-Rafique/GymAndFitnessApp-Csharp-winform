@@ -12,6 +12,7 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -60,8 +61,7 @@ namespace GymAndFitness
                         // Open main form
 
                         // Navigate to MainForm
-                        MainForm mainForm = new MainForm();
-                        mainForm.Show();
+                        features.OpenMainForm();
                         this.Close();
                     }
 
@@ -77,8 +77,7 @@ namespace GymAndFitness
 
         private void lblCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            SignupForm signup = new SignupForm();
-            signup.Show();
+            features.OpenSignUpForm();
             this.Hide();
         }
 
@@ -94,8 +93,7 @@ namespace GymAndFitness
 
         private void lblGuest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            features.OpenMainForm();
             this.Close();
         }
 

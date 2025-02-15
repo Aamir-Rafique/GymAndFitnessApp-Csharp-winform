@@ -11,7 +11,10 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
+        UserDataManager userDataManager = new UserDataManager();  //Instance of the class: (UserDataManager)
+        Features features = new Features(); //instance of the class: (Features)
+
 
 
         private void AboutForm_Load(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace GymAndFitness
 
 
         //slide  panel timer 
-        private void slideTimer_Tick(object sender, EventArgs e)
+        private void slideTimer_Tick_1(object sender, EventArgs e)
         {
             if (isPanelCollapsed)
             {
@@ -63,6 +66,7 @@ namespace GymAndFitness
             }
         }
 
+
         //menu
         private void btnToggle_Click_1(object sender, EventArgs e)
         {
@@ -72,14 +76,11 @@ namespace GymAndFitness
 
 
 
-
-
         //YOutube
         private void pbGmail_Click(object sender, EventArgs e)
         {
             // The URL to open when the PictureBox is clicked
             string url = "https://www.example.com";
-
             try
             {
                 // Open the URL in the default web browser
@@ -183,55 +184,38 @@ namespace GymAndFitness
         }
 
 
-        //profile button
+        //for opening each form...
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            ProfileForm profile = new ProfileForm();
-            profile.Show();
+            features.OpenProfileForm();
             this.Hide();
         }
-
-
-
-        //home Button
         private void btnHome_Click_1(object sender, EventArgs e)
         {
-            MainForm home = new MainForm();
-            home.Show();
+            features.OpenMainForm();
             this.Hide();
         }
 
-        //bmi calculator button
         private void btnBMICalculator_Click_1(object sender, EventArgs e)
         {
-            BMICalculatorForm bmiCalculator = new BMICalculatorForm();
-            bmiCalculator.Show();
+            features.OpenBMICalculatorForm();
             this.Hide();
         }
 
-        //dietplan form
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-            DietPlansForm dietPlans = new DietPlansForm();
-            dietPlans.Show();
+           features.OpenDietPlansForm();
             this.Hide();
         }
-
-        //WorkoutPlan form
         private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
         {
-            WorkoutPlansForm workoutPlans = new WorkoutPlansForm();
-            workoutPlans.Show();
+            features.OpenWorkoutPlansForm();
             this.Hide();
         }
-
-        //Settings Form
-
-
+        
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            DashboardForm dashboard = new DashboardForm();
-            dashboard.Show();
+            features.OpenDashboardForm();
             this.Hide();
         }
 
@@ -239,7 +223,6 @@ namespace GymAndFitness
         {
             toolTip1.SetToolTip(btnProfilePicture, "Profile");
         }
-
 
 
 
@@ -255,8 +238,7 @@ namespace GymAndFitness
             }
         }
 
-
-
-
+       
+    
     }
 }

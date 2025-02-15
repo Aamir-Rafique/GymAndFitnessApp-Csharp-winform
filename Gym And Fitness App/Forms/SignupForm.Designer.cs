@@ -54,44 +54,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnUploadPicture = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.errorUsername = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorPassword = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorHeight = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorWeight = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorGender = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorAge = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorFitnessGoal = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorFitnessLevel = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorUploadPic = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorTargetWeight = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorBMI = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
-            this.errorConfirmPassword = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProfilePicturePath = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTargetWeight = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.lblTargetWeightRange = new System.Windows.Forms.Label();
             this.lblProfilePicturePath = new System.Windows.Forms.Label();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorWeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorGender)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorAge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorFitnessGoal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorFitnessLevel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUploadPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorTargetWeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorBMI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorConfirmPassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProfilePicturePath)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,9 +88,9 @@
             this.btnBackToLogin.BackgroundImage = global::GymAndFitness.Properties.Resources.previous;
             this.btnBackToLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBackToLogin.Location = new System.Drawing.Point(31, 15);
+            this.btnBackToLogin.Location = new System.Drawing.Point(31, 12);
             this.btnBackToLogin.Name = "btnBackToLogin";
-            this.btnBackToLogin.Size = new System.Drawing.Size(42, 49);
+            this.btnBackToLogin.Size = new System.Drawing.Size(57, 49);
             this.btnBackToLogin.TabIndex = 1;
             this.btnBackToLogin.TabStop = false;
             this.toolTip1.SetToolTip(this.btnBackToLogin, "Back to Login");
@@ -124,12 +100,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DarkBlue;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 17.82178F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(392, 24);
+            this.label1.Location = new System.Drawing.Point(408, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 31);
+            this.label1.Size = new System.Drawing.Size(107, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign Up";
             // 
@@ -168,6 +144,7 @@
             this.cmbFitnessLevel.Name = "cmbFitnessLevel";
             this.cmbFitnessLevel.Size = new System.Drawing.Size(148, 26);
             this.cmbFitnessLevel.TabIndex = 10;
+            this.cmbFitnessLevel.Text = "Select an option...";
             this.cmbFitnessLevel.SelectedIndexChanged += new System.EventHandler(this.cmbFitnessLevel_SelectedIndexChanged);
             this.cmbFitnessLevel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbFitnessLevel_KeyPress);
             // 
@@ -192,6 +169,7 @@
             this.cmbFitnessGoal.Name = "cmbFitnessGoal";
             this.cmbFitnessGoal.Size = new System.Drawing.Size(149, 26);
             this.cmbFitnessGoal.TabIndex = 9;
+            this.cmbFitnessGoal.Text = "Select an option...";
             this.cmbFitnessGoal.SelectedIndexChanged += new System.EventHandler(this.cmbFitnessGoal_SelectedIndexChanged);
             this.cmbFitnessGoal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbFitnessGoal_KeyPress);
             // 
@@ -256,20 +234,21 @@
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
-            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // cmbGender
             // 
+            this.cmbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbGender.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female",
             "Other"});
-            this.cmbGender.Location = new System.Drawing.Point(218, 273);
+            this.cmbGender.Location = new System.Drawing.Point(218, 274);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(148, 26);
+            this.cmbGender.Size = new System.Drawing.Size(148, 27);
             this.cmbGender.TabIndex = 3;
+            this.cmbGender.Text = "Select an option...";
             this.cmbGender.SelectedIndexChanged += new System.EventHandler(this.cmbGender_SelectedIndexChanged);
             this.cmbGender.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGender_KeyPress);
             // 
@@ -377,50 +356,6 @@
             this.label13.TabIndex = 71;
             this.label13.Text = "Upload Profile Picture";
             // 
-            // errorUsername
-            // 
-            this.errorUsername.ContainerControl = this;
-            // 
-            // errorPassword
-            // 
-            this.errorPassword.ContainerControl = this;
-            // 
-            // errorHeight
-            // 
-            this.errorHeight.ContainerControl = this;
-            // 
-            // errorWeight
-            // 
-            this.errorWeight.ContainerControl = this;
-            // 
-            // errorGender
-            // 
-            this.errorGender.ContainerControl = this;
-            // 
-            // errorAge
-            // 
-            this.errorAge.ContainerControl = this;
-            // 
-            // errorFitnessGoal
-            // 
-            this.errorFitnessGoal.ContainerControl = this;
-            // 
-            // errorFitnessLevel
-            // 
-            this.errorFitnessLevel.ContainerControl = this;
-            // 
-            // errorUploadPic
-            // 
-            this.errorUploadPic.ContainerControl = this;
-            // 
-            // errorTargetWeight
-            // 
-            this.errorTargetWeight.ContainerControl = this;
-            // 
-            // errorBMI
-            // 
-            this.errorBMI.ContainerControl = this;
-            // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -459,36 +394,12 @@
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // errorConfirmPassword
-            // 
-            this.errorConfirmPassword.ContainerControl = this;
-            // 
-            // errorProfilePicturePath
-            // 
-            this.errorProfilePicturePath.ContainerControl = this;
-            // 
             // toolTip1
             // 
             this.toolTip1.AutoPopDelay = 5000;
             this.toolTip1.InitialDelay = 200;
             this.toolTip1.ReshowDelay = 100;
             this.toolTip1.ShowAlways = true;
-            // 
-            // pbProfilePicture
-            // 
-            this.pbProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbProfilePicture.BorderColor = System.Drawing.Color.Aqua;
-            this.pbProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
-            this.pbProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pbProfilePicture.BorderSize = 2;
-            this.pbProfilePicture.GradientAngle = 50F;
-            this.pbProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.pbProfilePicture.Location = new System.Drawing.Point(751, 143);
-            this.pbProfilePicture.Name = "pbProfilePicture";
-            this.pbProfilePicture.Size = new System.Drawing.Size(150, 150);
-            this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbProfilePicture.TabIndex = 76;
-            this.pbProfilePicture.TabStop = false;
             // 
             // label12
             // 
@@ -517,18 +428,18 @@
             this.label17.ForeColor = System.Drawing.Color.DarkBlue;
             this.label17.Location = new System.Drawing.Point(415, 234);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(150, 17);
+            this.label17.Size = new System.Drawing.Size(169, 17);
             this.label17.TabIndex = 79;
-            this.label17.Text = "Target Weight Range(kg):";
+            this.label17.Text = "Suggested Weight Range(kg):";
             // 
             // lblTargetWeightRange
             // 
             this.lblTargetWeightRange.AutoSize = true;
-            this.lblTargetWeightRange.Font = new System.Drawing.Font("Segoe UI", 9.267326F, System.Drawing.FontStyle.Italic);
+            this.lblTargetWeightRange.Font = new System.Drawing.Font("Cascadia Code", 9.267326F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTargetWeightRange.ForeColor = System.Drawing.Color.Purple;
-            this.lblTargetWeightRange.Location = new System.Drawing.Point(567, 234);
+            this.lblTargetWeightRange.Location = new System.Drawing.Point(584, 234);
             this.lblTargetWeightRange.Name = "lblTargetWeightRange";
-            this.lblTargetWeightRange.Size = new System.Drawing.Size(61, 17);
+            this.lblTargetWeightRange.Size = new System.Drawing.Size(88, 17);
             this.lblTargetWeightRange.TabIndex = 80;
             this.lblTargetWeightRange.Text = "Loading...";
             // 
@@ -542,6 +453,26 @@
             this.lblProfilePicturePath.Size = new System.Drawing.Size(26, 17);
             this.lblProfilePicturePath.TabIndex = 81;
             this.lblProfilePicturePath.Text = "gfd";
+            // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
+            // pbProfilePicture
+            // 
+            this.pbProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbProfilePicture.BorderColor = System.Drawing.Color.Aqua;
+            this.pbProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pbProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pbProfilePicture.BorderSize = 2;
+            this.pbProfilePicture.GradientAngle = 50F;
+            this.pbProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
+            this.pbProfilePicture.Location = new System.Drawing.Point(751, 143);
+            this.pbProfilePicture.Name = "pbProfilePicture";
+            this.pbProfilePicture.Size = new System.Drawing.Size(150, 150);
+            this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProfilePicture.TabIndex = 76;
+            this.pbProfilePicture.TabStop = false;
             // 
             // SignupForm
             // 
@@ -587,22 +518,11 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
+            this.Load += new System.EventHandler(this.SignupForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorWeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorGender)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorAge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorFitnessGoal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorFitnessLevel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUploadPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorTargetWeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorBMI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorConfirmPassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProfilePicturePath)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -634,22 +554,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnUploadPicture;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ErrorProvider errorUsername;
-        private System.Windows.Forms.ErrorProvider errorPassword;
-        private System.Windows.Forms.ErrorProvider errorHeight;
-        private System.Windows.Forms.ErrorProvider errorWeight;
-        private System.Windows.Forms.ErrorProvider errorGender;
-        private System.Windows.Forms.ErrorProvider errorAge;
-        private System.Windows.Forms.ErrorProvider errorFitnessGoal;
-        private System.Windows.Forms.ErrorProvider errorFitnessLevel;
-        private System.Windows.Forms.ErrorProvider errorUploadPic;
-        private System.Windows.Forms.ErrorProvider errorTargetWeight;
-        private System.Windows.Forms.ErrorProvider errorBMI;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.ErrorProvider errorConfirmPassword;
-        private System.Windows.Forms.ErrorProvider errorProfilePicturePath;
         private System.Windows.Forms.ToolTip toolTip1;
         private Classes.RoundPictureBox pbProfilePicture;
         private System.Windows.Forms.PictureBox btnBackToLogin;
@@ -658,5 +565,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lblTargetWeightRange;
         private System.Windows.Forms.Label lblProfilePicturePath;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }

@@ -57,15 +57,13 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pbBMIChart = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.errorHeight = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorWeight = new System.Windows.Forms.ErrorProvider(this.components);
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.slidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorWeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -151,11 +149,12 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.DarkBlue;
             this.label4.Location = new System.Drawing.Point(70, 97);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(363, 23);
+            this.label4.Size = new System.Drawing.Size(383, 23);
             this.label4.TabIndex = 5;
             this.label4.Text = "Enter Height and weight to calculate your BMI";
             // 
@@ -166,7 +165,7 @@
             this.txtHeight.Location = new System.Drawing.Point(164, 165);
             this.txtHeight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(144, 30);
+            this.txtHeight.Size = new System.Drawing.Size(176, 30);
             this.txtHeight.TabIndex = 1;
             this.txtHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHeight_KeyPress);
@@ -178,7 +177,7 @@
             this.txtWeight.Location = new System.Drawing.Point(164, 219);
             this.txtWeight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(144, 30);
+            this.txtWeight.Size = new System.Drawing.Size(176, 30);
             this.txtWeight.TabIndex = 2;
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWeight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWeight_KeyDown);
@@ -208,17 +207,17 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnCalculate.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCalculate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCalculate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
             this.btnCalculate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.841584F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculate.ForeColor = System.Drawing.Color.White;
-            this.btnCalculate.Location = new System.Drawing.Point(164, 284);
+            this.btnCalculate.Location = new System.Drawing.Point(200, 281);
             this.btnCalculate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(80, 25);
+            this.btnCalculate.Size = new System.Drawing.Size(84, 29);
             this.btnCalculate.TabIndex = 3;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = false;
@@ -460,13 +459,9 @@
             this.label7.TabIndex = 34;
             this.label7.Text = "Target Weight Range:";
             // 
-            // errorHeight
+            // error
             // 
-            this.errorHeight.ContainerControl = this;
-            // 
-            // errorWeight
-            // 
-            this.errorWeight.ContainerControl = this;
+            this.error.ContainerControl = this;
             // 
             // BMICalculatorForm
             // 
@@ -494,6 +489,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "BMICalculatorForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -505,8 +502,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.slidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorWeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,8 +534,7 @@
         private System.Windows.Forms.Timer slideTimer;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ErrorProvider errorHeight;
-        private System.Windows.Forms.ErrorProvider errorWeight;
+        private System.Windows.Forms.ErrorProvider error;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.PictureBox pbBMIChart;

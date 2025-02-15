@@ -12,6 +12,9 @@ namespace GymAndFitness
 
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
+
+
 
         //LOAD
         private void DashboardForm_Load(object sender, EventArgs e)
@@ -315,65 +318,37 @@ namespace GymAndFitness
         }
 
 
-        //profile button
+        //to open each form..
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            ProfileForm profile = new ProfileForm();
-            profile.Show();
+            features.OpenProfileForm();
             this.Hide();
         }
-
-
-
-        //home Button
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            MainForm home = new MainForm();
-            home.Show();
-            this.Hide();
-        }
-
-        //bmi calculator button
         private void btnBMICalculator_Click(object sender, EventArgs e)
         {
-            BMICalculatorForm bmiCalculator = new BMICalculatorForm();
-            bmiCalculator.Show();
+            features.OpenBMICalculatorForm();
             this.Hide();
         }
-
-        //dietplan form
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            features.OpenMainForm();
+            this.Hide();
+        }
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-            DietPlansForm dietPlans = new DietPlansForm();
-            dietPlans.Show();
+            features.OpenDietPlansForm();
             this.Hide();
         }
-
-        //WorkoutPlan form
         private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
         {
-            WorkoutPlansForm workoutPlans = new WorkoutPlansForm();
-            workoutPlans.Show();
+            features.OpenWorkoutPlansForm();
             this.Hide();
         }
-
-
-
-
-        // About Form
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            AboutForm about = new AboutForm();
-            about.Show();
+            features.OpenAboutForm();
             this.Hide();
         }
-
-        private void btnProfile_MouseEnter(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(btnProfilePicture, "Profile");
-        }
-
-
 
 
         private void btnAddWater_Click(object sender, EventArgs e)
@@ -442,27 +417,25 @@ namespace GymAndFitness
         {
             if (userDataManager.CurrentUser != null)
             {
-                toolTipProgressWeight.SetToolTip(progressBarWeight, $"Current Weight: {userDataManager.CurrentUser.CurrentWeight} kg\nTarget Weight: {userDataManager.CurrentUser.TargetWeight} kg");
+                toolTip.SetToolTip(progressBarWeight, $"Current Weight: {userDataManager.CurrentUser.CurrentWeight} kg\nTarget Weight: {userDataManager.CurrentUser.TargetWeight} kg");
             }
             else
             {
-                toolTipProgressWeight.SetToolTip(progressBarWeight, $"Login krle bhai");
+                toolTip.SetToolTip(progressBarWeight, $"Login to view your progress!");
             }
         }
 
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.Show();
+            features.OpenLoginForm();
             this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             userDataManager.CurrentUser = null;
-            LoginForm login = new LoginForm();
-            login.Show();
+            features.OpenLoginForm();
             this.Close();
         }
 
@@ -470,19 +443,24 @@ namespace GymAndFitness
         {
             if (userDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
+                toolTip.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {
-                toolTip1.SetToolTip(btnProfilePicture, "Profile");
+                toolTip.SetToolTip(btnProfilePicture, "Profile");
             }
         }
 
-
-
-
-
-
-
+        private void progressBarWater_MouseEnter(object sender, EventArgs e)
+        {
+            if (userDataManager.CurrentUser != null)
+            {
+                toolTip.SetToolTip(progressBarWater, $"Current Intake: {userDataManager.CurrentUser.DailyWaterIntake} glass\nTarget Weight: {userDataManager.CurrentUser.TargetWeight} kg");
+            }
+            else
+            {
+                toolTip.SetToolTip(progressBarWeight, $"Login to view your progress!");
+            }
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
 
 
 
@@ -289,65 +290,37 @@ namespace GymAndFitness
         }
 
 
-
-        //profile button
+        //to open each form...
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            ProfileForm profile = new ProfileForm();
-            profile.Show();
+            features.OpenProfileForm();
             this.Hide();
         }
-
-
-
-        //home Button
         private void btnHome_Click(object sender, EventArgs e)
         {
-            MainForm home = new MainForm();
-            home.Show();
+            features.OpenMainForm();
             this.Hide();
         }
-
-        //bmi calculator button
         private void btnBMICalculator_Click(object sender, EventArgs e)
         {
-            BMICalculatorForm bmiCalculator = new BMICalculatorForm();
-            bmiCalculator.Show();
+            features.OpenBMICalculatorForm();
             this.Hide();
         }
-
-        //dietplan form
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-            DietPlansForm dietPlans = new DietPlansForm();
-            dietPlans.Show();
+            features.OpenDietPlansForm();
             this.Hide();
         }
-
-
-
-        // About Form
         private void btnAbout_Click_1(object sender, EventArgs e)
         {
-            AboutForm about = new AboutForm();
-            about.Show();
+            features.OpenAboutForm();
             this.Hide();
         }
-
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            DashboardForm dashboard = new DashboardForm();
-            dashboard.Show();
+            features.OpenDashboardForm();
             this.Hide();
         }
-
-        //tooltip
-        private void btnProfile_MouseEnter(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(btnProfilePicture, "Profile");
-        }
-
-
 
         private void btnSaveWorkoutPlan_Click(object sender, EventArgs e)
         {

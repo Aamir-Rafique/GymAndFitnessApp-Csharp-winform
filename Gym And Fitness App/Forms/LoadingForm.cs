@@ -10,6 +10,9 @@ namespace GymAndFitness.Forms
             InitializeComponent();
         }
 
+        Features features = new Features(); //instance of the class: (Features)
+
+
         private int elapsedTime = 0;
 
         // Constants for timing events
@@ -73,8 +76,7 @@ namespace GymAndFitness.Forms
 
                 // Open LoginForm and close LoadingForm
                 this.Hide();
-                LoginForm login = new LoginForm();
-                login.Show();
+                features.OpenLoginForm();
             }
         }
 

@@ -12,7 +12,16 @@ namespace GymAndFitness
 
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+        Features features = new Features(); //instance of the class: (Features)
 
+
+
+        private void PaymentForm_Load(object sender, EventArgs e)
+        {
+            // Set placeholder for TextBox
+            Features.SetTextBoxPlaceholder(txtEmail, "Enter Your Email...");
+            Features.SetTextBoxPlaceholder(txtGeneratedKey, "Your Key Appears here...");
+        }
 
         private void btnGenerateKey_Click(object sender, EventArgs e)
         {
@@ -105,6 +114,7 @@ namespace GymAndFitness
                 btnGenerateKey.PerformClick(); // Trigger the button's click event
             }
         }
+
     }
 
 }

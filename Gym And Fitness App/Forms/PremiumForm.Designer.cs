@@ -172,10 +172,13 @@
             this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(418, 279);
+            this.MinimumSize = new System.Drawing.Size(418, 279);
             this.Name = "PremiumForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.PremiumForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorLicenseKey)).EndInit();

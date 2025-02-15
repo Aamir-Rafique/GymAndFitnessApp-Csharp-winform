@@ -78,6 +78,9 @@
             this.btnCalculateTotalNutrition = new System.Windows.Forms.Button();
             this.lblTotalNutrition = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblNutritionInfo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -86,12 +89,9 @@
             this.rbtnOffline = new System.Windows.Forms.RadioButton();
             this.rbtnOnline = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblNutritionInfo = new System.Windows.Forms.Label();
             this.txtFoodItem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabDietPlan = new System.Windows.Forms.TabControl();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -103,10 +103,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbDiet)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBoxRadioButtons.SuspendLayout();
             this.tabDietPlan.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -345,7 +345,7 @@
             this.btnDashboard.TabIndex = 11;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click_1);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // Calories
             // 
@@ -615,6 +615,7 @@
             // 
             // richTextBoxNotesInput
             // 
+            this.richTextBoxNotesInput.ImeMode = System.Windows.Forms.ImeMode.On;
             this.richTextBoxNotesInput.Location = new System.Drawing.Point(480, 267);
             this.richTextBoxNotesInput.Name = "richTextBoxNotesInput";
             this.richTextBoxNotesInput.Size = new System.Drawing.Size(215, 144);
@@ -763,6 +764,40 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "   Search   ";
             // 
+            // panel3
+            // 
+            this.panel3.AutoSize = true;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.lblNutritionInfo);
+            this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(20, 250);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(429, 157);
+            this.panel3.TabIndex = 73;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label9.Location = new System.Drawing.Point(7, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(126, 23);
+            this.label9.TabIndex = 70;
+            this.label9.Text = "Nutrition Info:";
+            // 
+            // lblNutritionInfo
+            // 
+            this.lblNutritionInfo.AutoSize = true;
+            this.lblNutritionInfo.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNutritionInfo.Location = new System.Drawing.Point(16, 45);
+            this.lblNutritionInfo.MaximumSize = new System.Drawing.Size(390, 0);
+            this.lblNutritionInfo.Name = "lblNutritionInfo";
+            this.lblNutritionInfo.Size = new System.Drawing.Size(249, 23);
+            this.lblNutritionInfo.TabIndex = 3;
+            this.lblNutritionInfo.Text = "Nutrition info is displayed here!";
+            // 
             // panel2
             // 
             this.panel2.AutoSize = true;
@@ -857,17 +892,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Search for any food item to get its Nutrition value:";
             // 
-            // lblNutritionInfo
-            // 
-            this.lblNutritionInfo.AutoSize = true;
-            this.lblNutritionInfo.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNutritionInfo.Location = new System.Drawing.Point(16, 45);
-            this.lblNutritionInfo.MaximumSize = new System.Drawing.Size(390, 0);
-            this.lblNutritionInfo.Name = "lblNutritionInfo";
-            this.lblNutritionInfo.Size = new System.Drawing.Size(249, 23);
-            this.lblNutritionInfo.TabIndex = 3;
-            this.lblNutritionInfo.Text = "Nutrition info is displayed here!";
-            // 
             // txtFoodItem
             // 
             this.txtFoodItem.Font = new System.Drawing.Font("Calibri", 14.25743F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -906,29 +930,6 @@
             this.tabDietPlan.TabIndex = 3;
             this.tabDietPlan.Tag = "";
             // 
-            // panel3
-            // 
-            this.panel3.AutoSize = true;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.lblNutritionInfo);
-            this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(20, 250);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(429, 157);
-            this.panel3.TabIndex = 73;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(7, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 23);
-            this.label9.TabIndex = 70;
-            this.label9.Text = "Nutrition Info:";
-            // 
             // DietPlansForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -941,6 +942,8 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "DietPlansForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -962,13 +965,13 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBoxRadioButtons.ResumeLayout(false);
             this.groupBoxRadioButtons.PerformLayout();
             this.tabDietPlan.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

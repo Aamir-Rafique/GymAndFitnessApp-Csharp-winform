@@ -132,9 +132,9 @@
             this.label4.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(387, 274);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 17);
+            this.label4.Size = new System.Drawing.Size(105, 17);
             this.label4.TabIndex = 50;
-            this.label4.Text = "Your Key Appears here:";
+            this.label4.Text = "Activation Key:";
             // 
             // errorGroupBoxRadioButtons
             // 
@@ -272,10 +272,13 @@
             this.Controls.Add(this.label3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(616, 389);
+            this.MinimumSize = new System.Drawing.Size(616, 389);
             this.Name = "PaymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.PaymentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorGroupBoxRadioButtons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).EndInit();
             this.groupBoxRadioButtons.ResumeLayout(false);
