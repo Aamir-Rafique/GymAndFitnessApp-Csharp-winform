@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kEPFi0ZzuFypFLq+G0u0HSif8PJMYnT0CaUViHscbHs=</dsig:DigestValue>
+        <dsig:DigestValue>u32S2x8xnIgoKKLH/GLEVFSw3xZPAqBRgAFPKJpT/Fc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -534,7 +534,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Li3buSITuiqVsO+b8SSTdA8hmR+KlSHZvju1e/W4yis=</dsig:DigestValue>
+      <dsig:DigestValue>1tQ35zbldPB0U3zwpFTYeYqVjr51IGNTjdvIE2yTsKc=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ILLink\ILLink.Descriptors.LibraryBuild.xml" size="297" writeableType="applicationData">

@@ -573,6 +573,8 @@
   <ItemGroup>
     <Content Include="fitness.ico" />
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+    <None Include="Resources\Icons\Logo_2.png" />
+    <None Include="Resources\Icons\Logo_1.png" />
     <None Include="Resources\Icons\minus2.png" />
     <None Include="Resources\Icons\remove.png" />
     <None Include="Resources\Images\bmiChartUnderW8.PNG" />
