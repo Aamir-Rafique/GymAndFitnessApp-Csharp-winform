@@ -12,7 +12,6 @@ namespace GymAndFitness
 
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-        Features features = new Features(); //instance of the class: (Features)
 
 
 
@@ -35,7 +34,7 @@ namespace GymAndFitness
 
 
             //  accessing current user 
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
 
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
@@ -49,14 +48,14 @@ namespace GymAndFitness
                 // Weight Progress
 
                 // Get user data
-                double startingWeight = userDataManager.CurrentUser.StartingWeight;
-                double currentWeight = userDataManager.CurrentUser.CurrentWeight;
-                double targetWeight = userDataManager.CurrentUser.TargetWeight;
+                double startingWeight = UserDataManager.CurrentUser.StartingWeight;
+                double currentWeight = UserDataManager.CurrentUser.CurrentWeight;
+                double targetWeight = UserDataManager.CurrentUser.TargetWeight;
 
                 double weightProgressPercentage = 0;
 
                 // Calculate progress based on fitness goal
-                if (userDataManager.CurrentUser.FitnessGoal == "Muscle Gain")
+                if (UserDataManager.CurrentUser.FitnessGoal == "Muscle Gain")
                 {
                     // Ensure calculation is valid
                     if (currentWeight >= startingWeight && currentWeight <= targetWeight)
@@ -64,7 +63,7 @@ namespace GymAndFitness
                         weightProgressPercentage = ((currentWeight - startingWeight) / (targetWeight - startingWeight)) * 100;
                     }
                 }
-                else if (userDataManager.CurrentUser.FitnessGoal == "Fat Loss")
+                else if (UserDataManager.CurrentUser.FitnessGoal == "Fat Loss")
                 {
                     // Ensure calculation is valid
                     if (currentWeight <= startingWeight && currentWeight >= targetWeight)
@@ -82,13 +81,13 @@ namespace GymAndFitness
 
 
                 // Water Intake Progress
-                lblWaterIntake.Text = $"{userDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
-                progressBarWater.Value = (int)((userDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
+                lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
+                progressBarWater.Value = (int)((UserDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
 
                 //lblWaterIntake.Text = $"{waterProgressPercentage}%";
 
-                Console.WriteLine($"Height: {userDataManager.CurrentUser.Height}");
-                Console.WriteLine($"Weight: {userDataManager.CurrentUser.CurrentWeight}");
+                Console.WriteLine($"Height: {UserDataManager.CurrentUser.Height}");
+                Console.WriteLine($"Weight: {UserDataManager.CurrentUser.CurrentWeight}");
                 Console.WriteLine($"Progress Percentage: {weightProgressPercentage}");
 
 
@@ -321,51 +320,51 @@ namespace GymAndFitness
         //to open each form..
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            features.OpenProfileForm();
+            Features.OpenProfileForm();
             this.Hide();
         }
         private void btnBMICalculator_Click(object sender, EventArgs e)
         {
-            features.OpenBMICalculatorForm();
+            Features.OpenBMICalculatorForm();
             this.Hide();
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            features.OpenMainForm();
+            Features.OpenMainForm();
             this.Hide();
         }
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-            features.OpenDietPlansForm();
+            Features.OpenDietPlansForm();
             this.Hide();
         }
         private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
         {
-            features.OpenWorkoutPlansForm();
+            Features.OpenWorkoutPlansForm();
             this.Hide();
         }
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            features.OpenAboutForm();
+            Features.OpenAboutForm();
             this.Hide();
         }
 
 
         private void btnAddWater_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
 
 
                 // Add one glass
-                if (userDataManager.CurrentUser.DailyWaterIntake < 8) // Ensure limit is not exceeded
+                if (UserDataManager.CurrentUser.DailyWaterIntake < 8) // Ensure limit is not exceeded
                 {
-                    userDataManager.CurrentUser.DailyWaterIntake++;
+                    UserDataManager.CurrentUser.DailyWaterIntake++;
 
                     userDataManager.UpdateDailyWaterIntake();
                     //refresh
-                    lblWaterIntake.Text = $"{userDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
-                    progressBarWater.Value = (int)((userDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
+                    lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
+                    progressBarWater.Value = (int)((UserDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
 
                 }
                 else
@@ -387,7 +386,7 @@ namespace GymAndFitness
 
         private void ResetDailyWaterIntake()
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 // Reset DailyWaterIntake in UserDataManager
                 userDataManager.ResetDailyWaterIntake();
@@ -415,9 +414,9 @@ namespace GymAndFitness
 
         private void progressBarWeight_MouseEnter(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                toolTip.SetToolTip(progressBarWeight, $"Current Weight: {userDataManager.CurrentUser.CurrentWeight} kg\nTarget Weight: {userDataManager.CurrentUser.TargetWeight} kg");
+                toolTip.SetToolTip(progressBarWeight, $"Current Weight: {UserDataManager.CurrentUser.CurrentWeight} kg\nTarget Weight: {UserDataManager.CurrentUser.TargetWeight} kg");
             }
             else
             {
@@ -428,22 +427,22 @@ namespace GymAndFitness
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            features.OpenLoginForm();
+            Features.OpenLoginForm();
             this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            userDataManager.CurrentUser = null;
-            features.OpenLoginForm();
+            UserDataManager.CurrentUser = null;
+            Features.OpenLoginForm();
             this.Close();
         }
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                toolTip.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
+                toolTip.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {
@@ -453,9 +452,9 @@ namespace GymAndFitness
 
         private void progressBarWater_MouseEnter(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                toolTip.SetToolTip(progressBarWater, $"Current Intake: {userDataManager.CurrentUser.DailyWaterIntake} glass\nTarget Weight: {userDataManager.CurrentUser.TargetWeight} kg");
+                toolTip.SetToolTip(progressBarWater, $"Current Intake: {UserDataManager.CurrentUser.DailyWaterIntake} glass\nTarget Weight: {UserDataManager.CurrentUser.TargetWeight} kg");
             }
             else
             {

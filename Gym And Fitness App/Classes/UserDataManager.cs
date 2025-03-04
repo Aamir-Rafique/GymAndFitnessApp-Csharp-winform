@@ -11,7 +11,7 @@ namespace GymAndFitness
 
     public class UserDataManager
     {
-        public User CurrentUser { get; set; }
+        public static User CurrentUser { get; set; }
 
         private string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
@@ -60,6 +60,8 @@ namespace GymAndFitness
                 }
             }
         }
+
+
 
         // Verify login
         public bool IsValidLogin(string username, string password)

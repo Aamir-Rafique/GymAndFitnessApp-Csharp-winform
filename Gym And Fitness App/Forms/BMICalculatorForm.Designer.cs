@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMICalculatorForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,12 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtHeight = new System.Windows.Forms.TextBox();
             this.txtWeight = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblBMI = new System.Windows.Forms.Label();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.lblBMICategory = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblTargetWeightRange = new System.Windows.Forms.Label();
             this.slidePanel = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
@@ -56,14 +50,23 @@
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pbBMIChart = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblTargetWeightRange = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblBMICategory = new System.Windows.Forms.Label();
+            this.lblBMI = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.slidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,26 +81,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(784, 74);
             this.panel1.TabIndex = 1;
-            // 
-            // btnProfilePicture
-            // 
-            this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.btnProfilePicture.BorderColor = System.Drawing.Color.Lime;
-            this.btnProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
-            this.btnProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.btnProfilePicture.BorderSize = 2;
-            this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfilePicture.GradientAngle = 50F;
-            this.btnProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.btnProfilePicture.Location = new System.Drawing.Point(713, 11);
-            this.btnProfilePicture.Name = "btnProfilePicture";
-            this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
-            this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProfilePicture.TabIndex = 40;
-            this.btnProfilePicture.TabStop = false;
-            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click_1);
-            this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter_1);
             // 
             // pictureBox2
             // 
@@ -183,28 +166,6 @@
             this.txtWeight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWeight_KeyDown);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(71, 355);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 21);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "BMI";
-            // 
-            // lblBMI
-            // 
-            this.lblBMI.AutoSize = true;
-            this.lblBMI.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblBMI.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBMI.Location = new System.Drawing.Point(137, 355);
-            this.lblBMI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBMI.Name = "lblBMI";
-            this.lblBMI.Size = new System.Drawing.Size(0, 21);
-            this.lblBMI.TabIndex = 9;
-            // 
             // btnCalculate
             // 
             this.btnCalculate.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -222,39 +183,6 @@
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = false;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
-            // 
-            // lblBMICategory
-            // 
-            this.lblBMICategory.AutoSize = true;
-            this.lblBMICategory.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblBMICategory.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBMICategory.Location = new System.Drawing.Point(192, 397);
-            this.lblBMICategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBMICategory.Name = "lblBMICategory";
-            this.lblBMICategory.Size = new System.Drawing.Size(0, 21);
-            this.lblBMICategory.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(70, 397);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 21);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "BMI Category:";
-            // 
-            // lblTargetWeightRange
-            // 
-            this.lblTargetWeightRange.AutoSize = true;
-            this.lblTargetWeightRange.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblTargetWeightRange.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTargetWeightRange.Location = new System.Drawing.Point(239, 504);
-            this.lblTargetWeightRange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTargetWeightRange.Name = "lblTargetWeightRange";
-            this.lblTargetWeightRange.Size = new System.Drawing.Size(0, 21);
-            this.lblTargetWeightRange.TabIndex = 32;
             // 
             // slidePanel
             // 
@@ -448,20 +376,124 @@
             this.pbBMIChart.TabStop = false;
             this.toolTip1.SetToolTip(this.pbBMIChart, "BMI Scale");
             // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
+            // panel3
+            // 
+            this.panel3.AutoSize = true;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.lblTargetWeightRange);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.lblBMICategory);
+            this.panel3.Controls.Add(this.lblBMI);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Location = new System.Drawing.Point(24, 322);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(354, 193);
+            this.panel3.TabIndex = 74;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label9.Location = new System.Drawing.Point(7, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 23);
+            this.label9.TabIndex = 70;
+            this.label9.Text = "Physique Info:";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(74, 503);
+            this.label7.Location = new System.Drawing.Point(28, 139);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(161, 21);
-            this.label7.TabIndex = 34;
+            this.label7.TabIndex = 76;
             this.label7.Text = "Target Weight Range:";
             // 
-            // error
+            // lblTargetWeightRange
             // 
-            this.error.ContainerControl = this;
+            this.lblTargetWeightRange.AutoSize = true;
+            this.lblTargetWeightRange.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lblTargetWeightRange.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTargetWeightRange.ForeColor = System.Drawing.Color.Lime;
+            this.lblTargetWeightRange.Location = new System.Drawing.Point(193, 140);
+            this.lblTargetWeightRange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTargetWeightRange.Name = "lblTargetWeightRange";
+            this.lblTargetWeightRange.Size = new System.Drawing.Size(0, 21);
+            this.lblTargetWeightRange.TabIndex = 75;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(30, 88);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 21);
+            this.label6.TabIndex = 74;
+            this.label6.Text = "BMI Category:";
+            // 
+            // lblBMICategory
+            // 
+            this.lblBMICategory.AutoSize = true;
+            this.lblBMICategory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lblBMICategory.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBMICategory.Location = new System.Drawing.Point(152, 88);
+            this.lblBMICategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBMICategory.Name = "lblBMICategory";
+            this.lblBMICategory.Size = new System.Drawing.Size(0, 21);
+            this.lblBMICategory.TabIndex = 73;
+            // 
+            // lblBMI
+            // 
+            this.lblBMI.AutoSize = true;
+            this.lblBMI.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lblBMI.Font = new System.Drawing.Font("Calibri", 14.11881F, System.Drawing.FontStyle.Bold);
+            this.lblBMI.Location = new System.Drawing.Point(97, 45);
+            this.lblBMI.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBMI.Name = "lblBMI";
+            this.lblBMI.Size = new System.Drawing.Size(0, 24);
+            this.lblBMI.TabIndex = 72;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(31, 46);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 21);
+            this.label5.TabIndex = 71;
+            this.label5.Text = "BMI";
+            // 
+            // btnProfilePicture
+            // 
+            this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.btnProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.btnProfilePicture.BorderColor = System.Drawing.Color.Lime;
+            this.btnProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
+            this.btnProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.btnProfilePicture.BorderSize = 2;
+            this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfilePicture.GradientAngle = 50F;
+            this.btnProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
+            this.btnProfilePicture.Location = new System.Drawing.Point(713, 11);
+            this.btnProfilePicture.Name = "btnProfilePicture";
+            this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
+            this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnProfilePicture.TabIndex = 40;
+            this.btnProfilePicture.TabStop = false;
+            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click_1);
+            this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter_1);
             // 
             // BMICalculatorForm
             // 
@@ -470,13 +502,8 @@
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(784, 560);
             this.Controls.Add(this.slidePanel);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblTargetWeightRange);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.lblBMICategory);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.lblBMI);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtWeight);
             this.Controls.Add(this.txtHeight);
             this.Controls.Add(this.label4);
@@ -498,11 +525,13 @@
             this.Load += new System.EventHandler(this.BMICalculatorForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.slidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,12 +546,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.TextBox txtWeight;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblBMI;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.Label lblBMICategory;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblTargetWeightRange;
         public System.Windows.Forms.Panel slidePanel;
         public System.Windows.Forms.Button btnHome;
         public System.Windows.Forms.Button btnAbout;
@@ -533,10 +557,17 @@
         public System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Timer slideTimer;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider error;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.PictureBox pbBMIChart;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTargetWeightRange;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblBMICategory;
+        private System.Windows.Forms.Label lblBMI;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
     }
 }

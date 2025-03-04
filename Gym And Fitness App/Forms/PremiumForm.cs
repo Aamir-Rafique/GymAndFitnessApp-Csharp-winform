@@ -10,11 +10,7 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-        Features features = new Features(); //instance of the class: (Features)
-
-
 
         private void PremiumForm_Load(object sender, EventArgs e)
         {
@@ -32,10 +28,10 @@ namespace GymAndFitness
             else
             {
 
-                if (userDataManager.CurrentUser != null)
+                if (UserDataManager.CurrentUser != null)
                 {
 
-                    string username = userDataManager.CurrentUser.Username; // Replace with the logged-in user's username
+                    string username = UserDataManager.CurrentUser.Username; // Replace with the logged-in user's username
                     string enteredKey = txtLicenseKey.Text;
 
                     userDataManager.VerifyLicenseKey(username, enteredKey);
@@ -55,10 +51,10 @@ namespace GymAndFitness
 
         private void btnGetNewKey_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                MessageBox.Show($"Welcome, {userDataManager.CurrentUser.Username}!");
-                features.OpenPaymentForm();
+                MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!");
+                Features.OpenPaymentForm();
 
             }
             else

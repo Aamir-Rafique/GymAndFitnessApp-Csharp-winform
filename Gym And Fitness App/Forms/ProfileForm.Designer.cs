@@ -811,7 +811,7 @@
             this.lblFitnessLevel.AutoSize = true;
             this.lblFitnessLevel.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFitnessLevel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblFitnessLevel.Location = new System.Drawing.Point(43, 47);
+            this.lblFitnessLevel.Location = new System.Drawing.Point(43, 46);
             this.lblFitnessLevel.Name = "lblFitnessLevel";
             this.lblFitnessLevel.Size = new System.Drawing.Size(83, 23);
             this.lblFitnessLevel.TabIndex = 38;

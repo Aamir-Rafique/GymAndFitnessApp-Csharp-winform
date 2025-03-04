@@ -50,7 +50,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 24.93762F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(155, 53);
+            this.label2.Location = new System.Drawing.Point(155, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(293, 46);
             this.label2.TabIndex = 2;
@@ -96,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(398, 93);
+            this.label1.Location = new System.Drawing.Point(398, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 19);
             this.label1.TabIndex = 7;
@@ -107,18 +107,17 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 16.25743F, System.Drawing.FontStyle.Bold);
             this.lblWelcome.ForeColor = System.Drawing.Color.White;
-            this.lblWelcome.Location = new System.Drawing.Point(208, 148);
+            this.lblWelcome.Location = new System.Drawing.Point(208, 137);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(121, 31);
+            this.lblWelcome.Size = new System.Drawing.Size(0, 31);
             this.lblWelcome.TabIndex = 9;
-            this.lblWelcome.Text = "Welcome!";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // progressBarLoading
             // 
             this.progressBarLoading.Location = new System.Drawing.Point(0, 222);
             this.progressBarLoading.Name = "progressBarLoading";
-            this.progressBarLoading.Size = new System.Drawing.Size(537, 7);
+            this.progressBarLoading.Size = new System.Drawing.Size(537, 11);
             this.progressBarLoading.TabIndex = 1;
             // 
             // pictureBox1

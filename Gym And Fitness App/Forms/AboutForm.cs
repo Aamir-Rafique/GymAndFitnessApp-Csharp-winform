@@ -13,7 +13,6 @@ namespace GymAndFitness
 
 
         UserDataManager userDataManager = new UserDataManager();  //Instance of the class: (UserDataManager)
-        Features features = new Features(); //instance of the class: (Features)
 
 
 
@@ -28,7 +27,7 @@ namespace GymAndFitness
 
 
             //  accessing current user 
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
             }
@@ -122,7 +121,7 @@ namespace GymAndFitness
         private void pbLinkedin_Click(object sender, EventArgs e)
         {
             // The URL to open when the PictureBox is clicked
-            string url = "https://www.example.com";
+            string url = "https://www.linkedin.com/in/aamir-rafique-7a5bb1336/";
 
             try
             {
@@ -165,7 +164,7 @@ namespace GymAndFitness
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             // The URL to open when the PictureBox is clicked
-            string url = "https://www.example.com";
+            string url = "https://github.com/Aamir-Rafique";
 
             try
             {
@@ -187,35 +186,35 @@ namespace GymAndFitness
         //for opening each form...
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            features.OpenProfileForm();
+            Features.OpenProfileForm();
             this.Hide();
         }
         private void btnHome_Click_1(object sender, EventArgs e)
         {
-            features.OpenMainForm();
+            Features.OpenMainForm();
             this.Hide();
         }
 
         private void btnBMICalculator_Click_1(object sender, EventArgs e)
         {
-            features.OpenBMICalculatorForm();
+            Features.OpenBMICalculatorForm();
             this.Hide();
         }
 
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-           features.OpenDietPlansForm();
+            Features.OpenDietPlansForm();
             this.Hide();
         }
         private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
         {
-            features.OpenWorkoutPlansForm();
+            Features.OpenWorkoutPlansForm();
             this.Hide();
         }
-        
+
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            features.OpenDashboardForm();
+            Features.OpenDashboardForm();
             this.Hide();
         }
 
@@ -228,9 +227,9 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {
@@ -238,7 +237,7 @@ namespace GymAndFitness
             }
         }
 
-       
-    
+
+
     }
 }

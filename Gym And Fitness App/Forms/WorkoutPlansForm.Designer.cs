@@ -71,6 +71,13 @@
             this.btnDietPlans = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.timerForPics = new System.Windows.Forms.Timer(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbExercise = new System.Windows.Forms.ComboBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblExerciseInfo = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +96,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.slidePanel.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -220,6 +230,7 @@
             // tabWorkoutPlan
             // 
             this.tabWorkoutPlan.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.tabWorkoutPlan.Controls.Add(this.tabPage1);
             this.tabWorkoutPlan.Controls.Add(this.tabPage2);
             this.tabWorkoutPlan.Controls.Add(this.tabPage3);
             this.tabWorkoutPlan.Controls.Add(this.tabPage4);
@@ -402,10 +413,10 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(200, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(781, 74);
+            this.panel1.Size = new System.Drawing.Size(581, 74);
             this.panel1.TabIndex = 5;
             // 
             // btnProfilePicture
@@ -463,9 +474,9 @@
             this.slidePanel.Controls.Add(this.btnDietPlans);
             this.slidePanel.Controls.Add(this.btnDashboard);
             this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.slidePanel.Location = new System.Drawing.Point(0, 74);
+            this.slidePanel.Location = new System.Drawing.Point(0, 0);
             this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(200, 526);
+            this.slidePanel.Size = new System.Drawing.Size(200, 600);
             this.slidePanel.TabIndex = 35;
             // 
             // btnHome
@@ -623,15 +634,96 @@
             this.timerForPics.Interval = 4500;
             this.timerForPics.Tick += new System.EventHandler(this.timerForPics_Tick);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.LightGreen;
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(720, 490);
+            this.tabPage1.TabIndex = 7;
+            this.tabPage1.Text = "Search Exercises";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel6);
+            this.panel2.Controls.Add(this.cmbExercise);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(720, 490);
+            this.panel2.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label3.Location = new System.Drawing.Point(48, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 23);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Browse for Exercises:";
+            // 
+            // cmbExercise
+            // 
+            this.cmbExercise.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbExercise.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbExercise.FormattingEnabled = true;
+            this.cmbExercise.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Other"});
+            this.cmbExercise.Location = new System.Drawing.Point(86, 96);
+            this.cmbExercise.Name = "cmbExercise";
+            this.cmbExercise.Size = new System.Drawing.Size(158, 27);
+            this.cmbExercise.TabIndex = 4;
+            this.cmbExercise.Text = "Select the Exercise...";
+            // 
+            // panel6
+            // 
+            this.panel6.AutoSize = true;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.lblExerciseInfo);
+            this.panel6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel6.Location = new System.Drawing.Point(86, 188);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(429, 264);
+            this.panel6.TabIndex = 74;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label4.Location = new System.Drawing.Point(7, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 23);
+            this.label4.TabIndex = 70;
+            this.label4.Text = "Nutrition Info:";
+            // 
+            // lblExerciseInfo
+            // 
+            this.lblExerciseInfo.AutoSize = true;
+            this.lblExerciseInfo.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExerciseInfo.Location = new System.Drawing.Point(16, 45);
+            this.lblExerciseInfo.MaximumSize = new System.Drawing.Size(390, 0);
+            this.lblExerciseInfo.Name = "lblExerciseInfo";
+            this.lblExerciseInfo.Size = new System.Drawing.Size(249, 23);
+            this.lblExerciseInfo.TabIndex = 3;
+            this.lblExerciseInfo.Text = "Nutrition info is displayed here!";
+            // 
             // WorkoutPlansForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(781, 600);
-            this.Controls.Add(this.slidePanel);
             this.Controls.Add(this.tabWorkoutPlan);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.slidePanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -665,6 +757,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.slidePanel.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -711,5 +808,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pbWorkout;
         private System.Windows.Forms.Timer timerForPics;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbExercise;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblExerciseInfo;
     }
 }

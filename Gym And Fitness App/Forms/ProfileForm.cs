@@ -12,9 +12,6 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-        Features features = new Features(); //instance of the class: (Features)
-
-
 
         //LOAD
         private void ProfileForm_Load(object sender, EventArgs e)
@@ -25,35 +22,35 @@ namespace GymAndFitness
 
 
 
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 userDataManager.ApplyProfilePicture(pbProfilePicture);
 
-                nudCurrentHeight.Value = (decimal)userDataManager.CurrentUser.Height;
-                nudCurrentWeight.Value = (decimal)userDataManager.CurrentUser.CurrentWeight;
+                nudCurrentHeight.Value = (decimal)UserDataManager.CurrentUser.Height;
+                nudCurrentWeight.Value = (decimal)UserDataManager.CurrentUser.CurrentWeight;
 
                 btnLogout.Visible = true;
                 btnLogout.Enabled = true;
                 btnLogin.Visible = false;
                 btnLogin.Enabled = false;
 
-                if (userDataManager.CurrentUser != null)
+                if (UserDataManager.CurrentUser != null)
                 {
-                    lblUsername.Text = userDataManager.CurrentUser.Username;
-                    lblAge.Text = userDataManager.CurrentUser.Age.ToString();
-                    lblGender.Text = userDataManager.CurrentUser.Gender;
-                    lblHeight.Text = $"{userDataManager.CurrentUser.Height} cm";
-                    lblStartingWeight.Text = $"{userDataManager.CurrentUser.StartingWeight} kg";
+                    lblUsername.Text = UserDataManager.CurrentUser.Username;
+                    lblAge.Text = UserDataManager.CurrentUser.Age.ToString();
+                    lblGender.Text = UserDataManager.CurrentUser.Gender;
+                    lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
+                    lblStartingWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
                     lblCurrentWeight.Text = lblStartingWeight.Text;
-                    lblBMI.Text = userDataManager.CurrentUser.BMI.ToString("F2");
-                    lblTargetWeight.Text = $"{userDataManager.CurrentUser.TargetWeight} kg";
-                    lblFitnessGoal.Text = userDataManager.CurrentUser.FitnessGoal;
-                    lblFitnessLevel.Text = userDataManager.CurrentUser.FitnessLevel;
-                    lblTargetWeightRange.Text = userDataManager.CurrentUser.TargetWeightRange;
+                    lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
+                    lblTargetWeight.Text = $"{UserDataManager.CurrentUser.TargetWeight} kg";
+                    lblFitnessGoal.Text = UserDataManager.CurrentUser.FitnessGoal;
+                    lblFitnessLevel.Text = UserDataManager.CurrentUser.FitnessLevel;
+                    lblTargetWeightRange.Text = UserDataManager.CurrentUser.TargetWeightRange;
 
 
                     //membership status
-                    lblMembershipStatus.Text = $"{userDataManager.CurrentUser.MembershipStatus}";
+                    lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
                 }
                 else
                 {
@@ -137,49 +134,49 @@ namespace GymAndFitness
 
         private void btnBackToDashboard_Click(object sender, EventArgs e)
         {
-            features.OpenDashboardForm();
+            Features.OpenDashboardForm();
             this.Hide();
         }
         private void btnHome_Click_1(object sender, EventArgs e)
         {
-            features.OpenMainForm();
+            Features.OpenMainForm();
             this.Hide();
         }
         private void btnBMICalculator_Click_1(object sender, EventArgs e)
         {
-            features.OpenBMICalculatorForm();
+            Features.OpenBMICalculatorForm();
             this.Hide();
         }
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-            features.OpenDietPlansForm();
+            Features.OpenDietPlansForm();
             this.Hide();
         }
         private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
         {
-            features.OpenWorkoutPlansForm();
+            Features.OpenWorkoutPlansForm();
             this.Hide();
         }
         private void btnAbout_Click_1(object sender, EventArgs e)
         {
-            features.OpenAboutForm();
+            Features.OpenAboutForm();
             this.Hide();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            features.OpenDashboardForm();
+            Features.OpenDashboardForm();
             this.Hide();
         }
 
         private void btnGetMembershipPlan_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 this.Close();
 
-                features.OpenMembershipForm();
-                lblMembershipStatus.Text = $"{userDataManager.CurrentUser.MembershipStatus}";
+                Features.OpenMembershipForm();
+                lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
 
                 //membership pln pic
                 //load membership plan pics
@@ -209,7 +206,7 @@ namespace GymAndFitness
 
         private void btnChangeProfilePicture_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 userDataManager.ChangeProfilePicture(pbProfilePicture);
             }
@@ -220,28 +217,28 @@ namespace GymAndFitness
         }
 
 
-      
+
         private void lblBMI_TextChanged(object sender, EventArgs e)
         {
             double bmi = Double.Parse(lblBMI.Text);
-            lblBMI.ForeColor = features.GetBMIColor(bmi);
-            lblBMICategory.Text = features.GetBMICategory(bmi);
+            lblBMI.ForeColor = Features.GetBMIColor(bmi);
+            lblBMICategory.Text = Features.GetBMICategory(bmi);
         }
 
         private void btnSaveCurrentHeightAndWeight_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 if ((nudCurrentWeight.Value >= 0 && nudCurrentWeight.Value <= 250) && (nudCurrentHeight.Value >= 0 && nudCurrentHeight.Value <= 270))
                 {
-                    userDataManager.CurrentUser.CurrentWeight = (double)nudCurrentWeight.Value;
-                    userDataManager.CurrentUser.Height = (double)nudCurrentHeight.Value;
+                    UserDataManager.CurrentUser.CurrentWeight = (double)nudCurrentWeight.Value;
+                    UserDataManager.CurrentUser.Height = (double)nudCurrentHeight.Value;
 
                     double height = (double)nudCurrentHeight.Value;
                     double weight = (double)nudCurrentWeight.Value;
 
-                    userDataManager.CurrentUser.BMI = features.CalculateBMI(height, weight);
-                    userDataManager.UpdateHeightAndWeight(userDataManager.CurrentUser.Height, userDataManager.CurrentUser.CurrentWeight, userDataManager.CurrentUser.BMI);
+                    UserDataManager.CurrentUser.BMI = Features.CalculateBMI(height, weight);
+                    userDataManager.UpdateHeightAndWeight(UserDataManager.CurrentUser.Height, UserDataManager.CurrentUser.CurrentWeight, UserDataManager.CurrentUser.BMI);
                     MessageBox.Show("Height and weight updated successfully!", "Success!");
                 }
                 else
@@ -258,12 +255,12 @@ namespace GymAndFitness
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                lblHeight.Text = $"{userDataManager.CurrentUser.Height} cm";
-                lblCurrentWeight.Text = $"{userDataManager.CurrentUser.CurrentWeight} kg";
-                lblBMI.Text = userDataManager.CurrentUser.BMI.ToString("F2");
-                lblMembershipStatus.Text = $"{userDataManager.CurrentUser.MembershipStatus}";
+                lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
+                lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
+                lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
+                lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
 
             }
         }
@@ -275,20 +272,20 @@ namespace GymAndFitness
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            features.OpenLoginForm();
+            Features.OpenLoginForm();
             this.Close();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            userDataManager.CurrentUser = null;
-            features.OpenLoginForm();
+            UserDataManager.CurrentUser = null;
+            Features.OpenLoginForm();
             this.Close();
         }
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 // Confirmation dialog
                 DialogResult confirmResult = MessageBox.Show(
@@ -298,12 +295,12 @@ namespace GymAndFitness
                     MessageBoxIcon.Warning);
                 if (confirmResult == DialogResult.Yes)
                 {
-                    if (userDataManager.DeleteAccount(userDataManager.CurrentUser.UserID))
+                    if (userDataManager.DeleteAccount(UserDataManager.CurrentUser.UserID))
                     {
                         MessageBox.Show("Your account has been deleted successfully.", "Account Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         this.Hide();
-                        features.OpenLoginForm();
+                        Features.OpenLoginForm();
                     }
                     else
                     {

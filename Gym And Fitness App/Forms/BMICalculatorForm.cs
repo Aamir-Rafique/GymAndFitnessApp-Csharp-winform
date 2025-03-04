@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -12,7 +11,6 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-        Features features = new Features(); //instance of the class: (Features)
 
 
 
@@ -32,7 +30,7 @@ namespace GymAndFitness
 
 
             //  accessing current user 
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
             }
@@ -71,7 +69,7 @@ namespace GymAndFitness
 
 
 
-      
+
 
 
 
@@ -95,12 +93,12 @@ namespace GymAndFitness
                 {
                     double weight = double.Parse(txtWeight.Text);
                     height = double.Parse(txtHeight.Text);
-                    double bmi = features.CalculateBMI(weight, height);
+                    double bmi = Features.CalculateBMI(weight, height);
                     lblBMI.Text = $"Your BMI is {bmi:F2}";
-                    lblBMI.ForeColor = features.GetBMIColor(bmi);
-                    lblBMICategory.Text = features.GetBMICategory(bmi);
-                    pbBMIChart.Image = features.GetBMIChartUpdate(bmi);
-                    lblTargetWeightRange.Text = features.SuggestTargetWeightRange(height);
+                    lblBMI.ForeColor = Features.GetBMIColor(bmi);
+                    lblBMICategory.Text = Features.GetBMICategory(bmi);
+                    pbBMIChart.Image = Features.GetBMIChartUpdate(bmi);
+                    lblTargetWeightRange.Text = Features.SuggestTargetWeightRange(height);
                 }
                 catch (FormatException ex) { MessageBox.Show("Please enter valid numeric values for height and weight: " + ex.Message); }
                 catch (Exception ex) { MessageBox.Show("An error occurred while calculating BMI: " + ex.Message); }
@@ -121,32 +119,32 @@ namespace GymAndFitness
         //to open each form..
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            features.OpenProfileForm();
+            Features.OpenProfileForm();
             this.Hide();
         }
         private void btnHome_Click_1(object sender, EventArgs e)
         {
-            features.OpenMainForm();
+            Features.OpenMainForm();
             this.Hide();
         }
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-            features.OpenDietPlansForm();
+            Features.OpenDietPlansForm();
             this.Hide();
         }
         private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
         {
-            features.OpenWorkoutPlansForm();
+            Features.OpenWorkoutPlansForm();
             this.Hide();
         }
         private void btnAbout_Click_1(object sender, EventArgs e)
         {
-            features.OpenAboutForm();
+            Features.OpenAboutForm();
             this.Hide();
         }
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            features.OpenDashboardForm();
+            Features.OpenDashboardForm();
             this.Hide();
         }
 
@@ -198,9 +196,9 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {

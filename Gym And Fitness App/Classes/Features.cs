@@ -7,8 +7,6 @@ namespace GymAndFitness
 {
     public class Features
     {
-
-       
         // Method to set a placeholder for ComboBox
         public static void SetComboBoxPlaceholder(ComboBox comboBox, string placeholder)
         {
@@ -69,7 +67,7 @@ namespace GymAndFitness
 
 
         //Suggested target weight range..
-        public string SuggestTargetWeightRange(double height)
+        public static string SuggestTargetWeightRange(double height)
         {
             double lowerTargetWeight = 18.5 * Math.Pow((height / 100), 2); // BMI 18.5
             double upperTargetWeight = 24.9 * Math.Pow((height / 100), 2); // BMI 24.9
@@ -78,7 +76,7 @@ namespace GymAndFitness
 
 
         //bmi chart needle control
-        public Image GetBMIChartUpdate(double bmi)
+        public static Image GetBMIChartUpdate(double bmi)
         {
             if (bmi < 18.5)
             {
@@ -104,14 +102,14 @@ namespace GymAndFitness
         }
 
         //calculate bmi
-        public double CalculateBMI(double weight, double height)
+        public static double CalculateBMI(double weight, double height)
         {
             height = height / 100; // Convert height from cm to meters
             return weight / (height * height);
         }
 
         //BMI color code
-        public Color GetBMIColor(double bmi)
+        public static Color GetBMIColor(double bmi)
         {
             if (bmi < 18.5)
                 return Color.Blue;
@@ -127,7 +125,7 @@ namespace GymAndFitness
 
 
         //BMI category..
-        public string GetBMICategory(double bmi)
+        public static string GetBMICategory(double bmi)
         {
             if (bmi < 18.5)
             {
@@ -155,68 +153,68 @@ namespace GymAndFitness
 
 
         //To open each form...
-        public void OpenAboutForm()
+        public static void OpenAboutForm()
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.Show();
         }
 
-        public void OpenBMICalculatorForm()
+        public static void OpenBMICalculatorForm()
         {
             BMICalculatorForm bmiCalculator = new BMICalculatorForm();
             bmiCalculator.Show();
         }
 
-        public void OpenDashboardForm()
+        public static void OpenDashboardForm()
         {
             DashboardForm dashboard = new DashboardForm();
             dashboard.Show();
         }
 
-        public void OpenDietPlansForm()
+        public static void OpenDietPlansForm()
         {
             DietPlansForm dietPlans = new DietPlansForm();
             dietPlans.Show();
         }
 
-        public void OpenLoginForm()
+        public static void OpenLoginForm()
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             loginForm.Focus();
         }
-        public void OpenMainForm()
+        public static void OpenMainForm()
         {
             MainForm mainForm = new MainForm();
             mainForm.Show();
         }
-        public void OpenMembershipForm()
+        public static void OpenMembershipForm()
         {
             MembershipForm membershipForm = new MembershipForm();
             membershipForm.Show();
         }
-        public void OpenPaymentForm()
+        public static void OpenPaymentForm()
         {
             PaymentForm paymentForm = new PaymentForm();
             paymentForm.Show();
             paymentForm.Focus();
         }
-        public void OpenPremiumForm()
+        public static void OpenPremiumForm()
         {
             PremiumForm premiumForm = new PremiumForm();
             premiumForm.Show();
         }
-        public void OpenProfileForm()
+        public static void OpenProfileForm()
         {
             ProfileForm profile = new ProfileForm();
             profile.Show();
         }
-        public void OpenSignUpForm()
+        public static void OpenSignUpForm()
         {
             SignupForm signupForm = new SignupForm();
             signupForm.Show();
         }
-        public void OpenWorkoutPlansForm()
+        public static void OpenWorkoutPlansForm()
         {
             WorkoutPlansForm workoutPlans = new WorkoutPlansForm();
             workoutPlans.Show();

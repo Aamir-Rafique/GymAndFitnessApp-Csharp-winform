@@ -1,6 +1,4 @@
-﻿using GymAndFitness.Classes;
-using System;
-using System.Drawing;
+﻿using System;
 using System.IO;
 using System.Windows.Forms;
 
@@ -14,11 +12,6 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-        Features features = new Features(); //instance of the class: (Features)
-
-
-
-
         //Load
         private void SignupForm_Load(object sender, EventArgs e)
         {
@@ -33,7 +26,7 @@ namespace GymAndFitness
             Features.AlignComboBoxTextCenter(cmbFitnessLevel);
 
             // Set placeholder for TextBox
-        
+
 
         }
 
@@ -123,7 +116,7 @@ namespace GymAndFitness
                 double weight = double.Parse(txtWeight.Text);
                 double bmi = weight / ((height / 100) * (height / 100)); // Assuming height is in cm
                 double targetWeight = double.Parse(txtTargetWeight.Text);
-                string targetWeightRange =lblTargetWeightRange.Text;
+                string targetWeightRange = lblTargetWeightRange.Text;
                 string fitnessGoal = cmbFitnessGoal.SelectedItem.ToString();
                 string fitnessLevel = cmbFitnessLevel.SelectedItem.ToString();
 
@@ -161,7 +154,7 @@ namespace GymAndFitness
 
 
         //jab textbox leave krne lage
-      
+
         private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
         {
             error.Clear();
@@ -399,10 +392,10 @@ namespace GymAndFitness
             }
         }
 
-      
+
         private void btnBackToLogin_Click(object sender, EventArgs e)
         {
-            features.OpenLoginForm();
+            Features.OpenLoginForm();
             this.Close();
         }
 
@@ -420,14 +413,14 @@ namespace GymAndFitness
 
         }
 
-       
+
 
         private void txtWeight_Leave(object sender, EventArgs e)
         {
-            lblTargetWeightRange.Text = features.SuggestTargetWeightRange(height);
+            lblTargetWeightRange.Text = Features.SuggestTargetWeightRange(height);
         }
 
-        
+
 
 
 

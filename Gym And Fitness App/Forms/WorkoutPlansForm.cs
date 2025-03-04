@@ -13,9 +13,6 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-        Features features = new Features(); //instance of the class: (Features)
-
-
 
         //load
         private void WorkoutPlansForm_Load(object sender, EventArgs e)
@@ -28,10 +25,10 @@ namespace GymAndFitness
             timerForPics.Start();
 
             //  accessing current user 
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
-                int userId = userDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
+                int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
                 userDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
             }
         }
@@ -293,39 +290,39 @@ namespace GymAndFitness
         //to open each form...
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            features.OpenProfileForm();
+            Features.OpenProfileForm();
             this.Hide();
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            features.OpenMainForm();
+            Features.OpenMainForm();
             this.Hide();
         }
         private void btnBMICalculator_Click(object sender, EventArgs e)
         {
-            features.OpenBMICalculatorForm();
+            Features.OpenBMICalculatorForm();
             this.Hide();
         }
         private void btnDietPlans_Click_1(object sender, EventArgs e)
         {
-            features.OpenDietPlansForm();
+            Features.OpenDietPlansForm();
             this.Hide();
         }
         private void btnAbout_Click_1(object sender, EventArgs e)
         {
-            features.OpenAboutForm();
+            Features.OpenAboutForm();
             this.Hide();
         }
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            features.OpenDashboardForm();
+            Features.OpenDashboardForm();
             this.Hide();
         }
 
         private void btnSaveWorkoutPlan_Click(object sender, EventArgs e)
         {
             // Validate user
-            if (userDataManager.CurrentUser == null || userDataManager.CurrentUser.UserID <= 0)
+            if (UserDataManager.CurrentUser == null || UserDataManager.CurrentUser.UserID <= 0)
             {
                 MessageBox.Show("No user is logged in or User ID is invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -339,9 +336,9 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {
@@ -349,5 +346,44 @@ namespace GymAndFitness
             }
         }
 
+        private void btnAddToBreakfast_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddToSnacks_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddToLunch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddToDinner_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearchFoodItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFoodItem_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIngredient_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtFoodItem_Leave(object sender, EventArgs e)
+        {
+
+        }
     }
 }

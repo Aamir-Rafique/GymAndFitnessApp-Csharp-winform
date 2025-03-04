@@ -39,17 +39,17 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.slidePanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // slideTimer
@@ -216,6 +216,26 @@
             this.panel1.Size = new System.Drawing.Size(784, 74);
             this.panel1.TabIndex = 1;
             // 
+            // btnProfilePicture
+            // 
+            this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.btnProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.btnProfilePicture.BorderColor = System.Drawing.Color.Lime;
+            this.btnProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
+            this.btnProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.btnProfilePicture.BorderSize = 2;
+            this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfilePicture.GradientAngle = 50F;
+            this.btnProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
+            this.btnProfilePicture.Location = new System.Drawing.Point(712, 10);
+            this.btnProfilePicture.Name = "btnProfilePicture";
+            this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
+            this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnProfilePicture.TabIndex = 40;
+            this.btnProfilePicture.TabStop = false;
+            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click);
+            this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter);
+            // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.Highlight;
@@ -305,26 +325,6 @@
             this.toolTip1.ReshowDelay = 100;
             this.toolTip1.ShowAlways = true;
             // 
-            // btnProfilePicture
-            // 
-            this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.btnProfilePicture.BorderColor = System.Drawing.Color.Lime;
-            this.btnProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
-            this.btnProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.btnProfilePicture.BorderSize = 2;
-            this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfilePicture.GradientAngle = 50F;
-            this.btnProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.btnProfilePicture.Location = new System.Drawing.Point(712, 10);
-            this.btnProfilePicture.Name = "btnProfilePicture";
-            this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
-            this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProfilePicture.TabIndex = 40;
-            this.btnProfilePicture.TabStop = false;
-            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click);
-            this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,8 +350,8 @@
             this.slidePanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

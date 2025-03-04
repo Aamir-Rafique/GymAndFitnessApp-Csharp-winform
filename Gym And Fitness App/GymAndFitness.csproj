@@ -381,6 +381,9 @@
     <Compile Include="Forms\WorkoutPlansForm.Designer.cs">
       <DependentUpon>WorkoutPlansForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Classes\RoundPictureBox.resx">
+      <DependentUpon>RoundPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>

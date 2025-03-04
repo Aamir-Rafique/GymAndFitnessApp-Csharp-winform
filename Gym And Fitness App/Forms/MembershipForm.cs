@@ -12,18 +12,17 @@ namespace GymAndFitness
 
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-        Features features = new Features(); //instance of the class: (Features)
 
 
         private void btnFreePlan_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                userDataManager.CurrentUser.MembershipStatus = "Free";
+                UserDataManager.CurrentUser.MembershipStatus = "Free";
                 userDataManager.UpdateMembershipInDatabase("Free");
                 MessageBox.Show("Membership updated to Free!", "Success");
                 this.Close();
-                features.OpenProfileForm();
+                Features.OpenProfileForm();
             }
             else
             {
@@ -33,18 +32,18 @@ namespace GymAndFitness
 
         private void btnPremiumPlan_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 ProfileForm profile = new ProfileForm();
                 profile.Close();
-                if (userDataManager.CurrentUser.MembershipStatus == "Premium")
+                if (UserDataManager.CurrentUser.MembershipStatus == "Premium")
                 {
                     MessageBox.Show("You are already a Premium member!");
 
                 }
                 else
                 {
-                    features.OpenPremiumForm();
+                    Features.OpenPremiumForm();
                     this.Close();
                 }
             }

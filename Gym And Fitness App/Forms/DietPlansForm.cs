@@ -17,8 +17,6 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-        Features features = new Features(); //instance of the class: (Features)
-
 
         //LOAD
         private void DietPlansForm_Load(object sender, EventArgs e)
@@ -31,12 +29,12 @@ namespace GymAndFitness
             timerForPics.Start();
 
             //  accessing current user 
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
 
                 //database...
-                int userId = userDataManager.CurrentUser.UserID;
+                int userId = UserDataManager.CurrentUser.UserID;
                 // Replace with actual logic to get the current user ID
                 userDataManager.LoadDietPlans(userId, lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, richTextBoxNotesInput);
             }
@@ -612,7 +610,7 @@ namespace GymAndFitness
         // Breakfast
         private async void btnAddToBreakfast_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
                 {
@@ -633,7 +631,7 @@ namespace GymAndFitness
         // Lunch
         private async void btnAddToLunch_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
                 {
@@ -653,7 +651,7 @@ namespace GymAndFitness
         // Snacks
         private async void btnAddToSnacks_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
                 {
@@ -673,7 +671,7 @@ namespace GymAndFitness
         // Dinner
         private async void btnAddToDinner_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 if (txtFoodItem.Text.Contains("Type here") || string.IsNullOrEmpty(txtFoodItem.Text))
                 {
@@ -871,33 +869,33 @@ namespace GymAndFitness
         //to open each form..
         private void btnProfilePicture_Click_1(object sender, EventArgs e)
         {
-            features.OpenProfileForm();
+            Features.OpenProfileForm();
             this.Hide();
         }
         private void btnBMICalculator_Click(object sender, EventArgs e)
         {
-            features.OpenBMICalculatorForm();
+            Features.OpenBMICalculatorForm();
             this.Hide();
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            features.OpenMainForm();
+            Features.OpenMainForm();
             this.Hide();
         }
 
         private void btnWorkoutPlans_Click(object sender, EventArgs e)
         {
-            features.OpenWorkoutPlansForm();
+            Features.OpenWorkoutPlansForm();
             this.Hide();
         }
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            features.OpenAboutForm();
+            Features.OpenAboutForm();
             this.Hide();
         }
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            features.OpenDashboardForm();
+            Features.OpenDashboardForm();
             this.Hide();
         }
 
@@ -910,9 +908,9 @@ namespace GymAndFitness
 
         private void btnSaveDietPlan_Click(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                int userId = userDataManager.CurrentUser.UserID; // Replace with actual logic to get the current user ID
+                int userId = UserDataManager.CurrentUser.UserID; // Replace with actual logic to get the current user ID
                 string notes = richTextBoxNotesInput.Text; // Get the notes from the RichTextBox
 
                 userDataManager.SaveDietPlan(lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, notes);
@@ -933,9 +931,9 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {

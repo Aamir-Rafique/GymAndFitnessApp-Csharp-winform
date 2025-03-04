@@ -11,7 +11,6 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-        Features features = new Features(); //instance of the class: (Features)
 
 
         //for slide panel
@@ -54,7 +53,7 @@ namespace GymAndFitness
             slidePanel.Width = 45; // Start collapsed
 
             //  accessing current user 
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
                 btnLogout.Visible = true;
@@ -65,16 +64,17 @@ namespace GymAndFitness
             else
             {
                 MessageBox.Show("No user is logged in.");
-
                 btnLogout.Visible = false;
                 btnLogout.Enabled = false;
                 btnLogin.Visible = true;
                 btnLogin.Enabled = true;
 
+
             }
 
         }
 
+       
         private void btnToggle_Click_1(object sender, EventArgs e)
         {
             slideTimer.Start(); // Start the sliding animation
@@ -87,34 +87,34 @@ namespace GymAndFitness
         //to open each form..
         private void btnDashboard_Click_1(object sender, EventArgs e)
         {
-            features.OpenDashboardForm();
+            Features.OpenDashboardForm();
             this.Hide();
         }
 
         private void btnBMICalculator_Click(object sender, EventArgs e)
         {
-            features.OpenBMICalculatorForm();           
+            Features.OpenBMICalculatorForm();
             this.Hide();
         }
 
         private void btnDietPlans_Click(object sender, EventArgs e)
         {
-            features.OpenDietPlansForm();
+            Features.OpenDietPlansForm();
             this.Hide();
         }
         private void btnWorkoutPlans_Click(object sender, EventArgs e)
         {
-            features.OpenWorkoutPlansForm();
+            Features.OpenWorkoutPlansForm();
             this.Hide();
         }
         private void btnProfilePicture_Click(object sender, EventArgs e)
         {
-            features.OpenProfileForm();
+            Features.OpenProfileForm();
             this.Hide();
         }
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            features.OpenAboutForm();
+            Features.OpenAboutForm();
             this.Hide();
         }
 
@@ -122,9 +122,9 @@ namespace GymAndFitness
         //hovering message
         private void btnProfilePicture_MouseEnter(object sender, EventArgs e)
         {
-            if (userDataManager.CurrentUser != null)
+            if (UserDataManager.CurrentUser != null)
             {
-                toolTip1.SetToolTip(btnProfilePicture, $"{userDataManager.CurrentUser.Username}'s Profile");
+                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
             }
             else
             {
@@ -134,16 +134,19 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            userDataManager.CurrentUser = null;
-            features.OpenLoginForm();
+            UserDataManager.CurrentUser = null;
+            Features.OpenLoginForm();
             this.Close();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            features.OpenLoginForm();
+            Features.OpenLoginForm();
             this.Close();
         }
+
+
+
 
 
     }

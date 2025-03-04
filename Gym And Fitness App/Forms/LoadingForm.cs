@@ -10,9 +10,6 @@ namespace GymAndFitness.Forms
             InitializeComponent();
         }
 
-        Features features = new Features(); //instance of the class: (Features)
-
-
         private int elapsedTime = 0;
 
         // Constants for timing events
@@ -76,7 +73,7 @@ namespace GymAndFitness.Forms
 
                 // Open LoginForm and close LoadingForm
                 this.Hide();
-                features.OpenLoginForm();
+                Features.OpenLoginForm();
             }
         }
 
@@ -86,6 +83,6 @@ namespace GymAndFitness.Forms
             progressBarLoading.Value = Math.Min(progressBarLoading.Value + increment, max);
         }
 
-       
+
     }
 }
