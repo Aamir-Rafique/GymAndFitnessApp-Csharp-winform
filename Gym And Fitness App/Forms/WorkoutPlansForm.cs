@@ -1,6 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -31,6 +36,16 @@ namespace GymAndFitness
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
                 userDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
             }
+
+            //set combobox place HOlder
+            Features.SetComboBoxPlaceholder(cmbExercise, "Select the Exercise...");
+            Features.SetComboBoxPlaceholder(cmbWorkoutType, "Select Workout Type...");
+
+            //combobox text align center..
+            Features.AlignComboBoxTextCenter(cmbExercise);
+            Features.AlignComboBoxTextCenter(cmbWorkoutType);
+
+
         }
 
 
@@ -346,44 +361,190 @@ namespace GymAndFitness
             }
         }
 
-        private void btnAddToBreakfast_Click(object sender, EventArgs e)
-        {
 
+
+        private async void cmbExercise_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbExercise.SelectedItem == null)
+                return;
+
+            string targetMuscle = cmbExercise.SelectedItem.ToString().ToLower(); // Ensure lowercase for API compatibility
+            lblExerciseInfo.Text = "Searching online, please wait...";
+
+            try
+            {
+                string muscleExerciseInfo = await GetExerciseInfo(targetMuscle);
+
+                if (!string.IsNullOrEmpty(muscleExerciseInfo) && !muscleExerciseInfo.StartsWith("Error"))
+                {
+                    lblExerciseInfo.Text = muscleExerciseInfo;
+                    
+                    //switch (targetMuscle)
+                    //{
+                    //    case "Abdominals (Abs)":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Adductors":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "biceps":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Calves":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Deltoids (Shoulders)":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Forearms":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Glutes":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Hamstrings":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Lats":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Lower Back":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Middle Back":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Neck":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Chest":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Quadriceps (Quads)":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Serratus Anterior":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Traps (Trapezius)":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    case "Triceps":
+                    //        pbExerciseGif.Image = Properties.Resources.;
+                    //        break;
+                    //    default:
+                    //        pbExerciseGif.Image = Properties.Resources.Loading; // Default placeholder
+                    //        break;
+                    //}
+
+                }
+                else
+                {
+                    lblExerciseInfo.Text = "No exercise data found.";
+                    //pbExerciseGif.Image = null;  // Clear image if no data
+                }
+            }
+            catch (Exception ex)
+            {
+                lblExerciseInfo.Text = $"Error: {ex.Message}";
+            }
         }
 
-        private void btnAddToSnacks_Click(object sender, EventArgs e)
-        {
 
+
+        //ExerciseDB API..
+
+
+        private async Task<string> GetExerciseInfo(string targetMuscle)
+        {
+            // Dictionary to map user-friendly muscle names to API-expected format
+            var muscleMapping = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+    {
+        { "Lower Back", "spine" },
+        { "Middle Back", "upper back" },
+        { "Neck", "levator scapulae" },
+        { "Chest", "pectorals" },
+        { "Quadriceps (Quads)", "quads"}, // API might accept "quads"
+        { "Serratus Anterior", "serratus anterior" },
+        { "Traps (Trapezius)", "traps" },//working
+        { "Deltoids (Shoulders)", "delts" }, // API might accept "delts" instead of "deltoids"//working
+        { "Abdominals (Abs)", "abs" } // API might accept "abs"
+    };
+
+            // Convert selected muscle name to API-friendly format
+            if (muscleMapping.ContainsKey(targetMuscle))
+            {
+                targetMuscle = muscleMapping[targetMuscle];
+            }
+
+            using (var client = new HttpClient())
+            {
+                var request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Get,
+                    RequestUri = new Uri($"https://exercisedb.p.rapidapi.com/exercises/target/{targetMuscle}"),
+                    Headers =
+            {
+                { "x-rapidapi-key", "38f96468b6mshb087ba14b2972dfp172ae1jsn5d0c94ebf973" },
+                { "x-rapidapi-host", "exercisedb.p.rapidapi.com" },
+            },
+                };
+
+                try
+                {
+                    using (var response = await client.SendAsync(request))
+                    {
+                        response.EnsureSuccessStatusCode();
+                        var jsonResponse = await response.Content.ReadAsStringAsync();
+
+                        // Parse JSON and format output
+                        return FormatExerciseInfo(jsonResponse);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return $"Error: {ex.Message}";
+                }
+            }
         }
 
-        private void btnAddToLunch_Click(object sender, EventArgs e)
-        {
 
+
+        //for formatted json output
+        private string FormatExerciseInfo(string jsonResponse)
+        {
+            var exercises = JsonConvert.DeserializeObject<JArray>(jsonResponse);
+            if (exercises == null || exercises.Count == 0)
+                return "No exercises found for this muscle group.";
+
+            StringBuilder formattedOutput = new StringBuilder();
+
+            foreach (var exercise in exercises)
+            {
+                string name = exercise["name"]?.ToString() ?? "Unknown Exercise";
+                string instructions = exercise["instructions"]?.ToString() ?? "No instructions available.";
+                //string gifUrl = exercise["gifUrl"]?.ToString();
+
+                formattedOutput.AppendLine($"🔹 **{name.ToUpper()}**\n");
+                formattedOutput.AppendLine($"📖 Instructions: {instructions}\n");
+
+                //if (!string.IsNullOrEmpty(gifUrl))
+                //{
+                //    formattedOutput.AppendLine($"🖼️ Image: {gifUrl}\n");
+                //}
+
+                formattedOutput.AppendLine("----------------------\n");
+            }
+
+            return formattedOutput.ToString();
         }
 
-        private void btnAddToDinner_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void btnSearchFoodItem_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void txtFoodItem_Enter(object sender, EventArgs e)
-        {
 
-        }
 
-        private void txtIngredient_KeyDown(object sender, KeyEventArgs e)
-        {
 
-        }
-
-        private void txtFoodItem_Leave(object sender, EventArgs e)
-        {
-
-        }
     }
 }

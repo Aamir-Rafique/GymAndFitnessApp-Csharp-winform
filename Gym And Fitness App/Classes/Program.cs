@@ -15,7 +15,7 @@ namespace GymAndFitness
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoadingForm());
+            Application.Run(new WorkoutPlansForm());
         }
     }
 }

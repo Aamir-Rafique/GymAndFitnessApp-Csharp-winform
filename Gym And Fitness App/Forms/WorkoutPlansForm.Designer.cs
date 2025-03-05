@@ -42,6 +42,12 @@
             this.pnlExercises = new System.Windows.Forms.Panel();
             this.pbWorkout = new System.Windows.Forms.PictureBox();
             this.tabWorkoutPlan = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlExerciseInfo = new System.Windows.Forms.Panel();
+            this.lblExerciseInfo = new System.Windows.Forms.Label();
+            this.cmbExercise = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -71,13 +77,7 @@
             this.btnDietPlans = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.timerForPics = new System.Windows.Forms.Timer(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbExercise = new System.Windows.Forms.ComboBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblExerciseInfo = new System.Windows.Forms.Label();
+            this.pbExerciseGif = new System.Windows.Forms.PictureBox();
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +86,9 @@
             this.pnlExercises.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWorkout)).BeginInit();
             this.tabWorkoutPlan.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.pnlExerciseInfo.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,9 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.slidePanel.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExerciseGif)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -182,14 +183,15 @@
             // cmbWorkoutType
             // 
             this.cmbWorkoutType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbWorkoutType.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbWorkoutType.FormattingEnabled = true;
             this.cmbWorkoutType.Items.AddRange(new object[] {
             "Gym Workout",
             "Home Workout",
             "Yoga"});
-            this.cmbWorkoutType.Location = new System.Drawing.Point(330, 8);
+            this.cmbWorkoutType.Location = new System.Drawing.Point(327, 8);
             this.cmbWorkoutType.Name = "cmbWorkoutType";
-            this.cmbWorkoutType.Size = new System.Drawing.Size(145, 26);
+            this.cmbWorkoutType.Size = new System.Drawing.Size(184, 25);
             this.cmbWorkoutType.TabIndex = 1;
             this.cmbWorkoutType.Text = "  ";
             this.cmbWorkoutType.SelectedIndexChanged += new System.EventHandler(this.cmbWorkoutType_SelectedIndexChanged);
@@ -243,6 +245,92 @@
             this.tabWorkoutPlan.Size = new System.Drawing.Size(728, 526);
             this.tabWorkoutPlan.TabIndex = 6;
             this.tabWorkoutPlan.Tag = "";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.LightGreen;
+            this.tabPage1.Controls.Add(this.panel2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(720, 490);
+            this.tabPage1.TabIndex = 7;
+            this.tabPage1.Text = "Search Exercises";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pnlExerciseInfo);
+            this.panel2.Controls.Add(this.cmbExercise);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(720, 490);
+            this.panel2.TabIndex = 0;
+            // 
+            // pnlExerciseInfo
+            // 
+            this.pnlExerciseInfo.AutoScroll = true;
+            this.pnlExerciseInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlExerciseInfo.Controls.Add(this.pbExerciseGif);
+            this.pnlExerciseInfo.Controls.Add(this.lblExerciseInfo);
+            this.pnlExerciseInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pnlExerciseInfo.Location = new System.Drawing.Point(19, 48);
+            this.pnlExerciseInfo.Name = "pnlExerciseInfo";
+            this.pnlExerciseInfo.Size = new System.Drawing.Size(676, 434);
+            this.pnlExerciseInfo.TabIndex = 74;
+            // 
+            // lblExerciseInfo
+            // 
+            this.lblExerciseInfo.AutoSize = true;
+            this.lblExerciseInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblExerciseInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblExerciseInfo.Font = new System.Drawing.Font("Segoe UI", 11.11881F);
+            this.lblExerciseInfo.Location = new System.Drawing.Point(0, 0);
+            this.lblExerciseInfo.MaximumSize = new System.Drawing.Size(500, 0);
+            this.lblExerciseInfo.Name = "lblExerciseInfo";
+            this.lblExerciseInfo.Size = new System.Drawing.Size(221, 21);
+            this.lblExerciseInfo.TabIndex = 3;
+            this.lblExerciseInfo.Text = "Exercise Info is displayed here!";
+            // 
+            // cmbExercise
+            // 
+            this.cmbExercise.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbExercise.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbExercise.FormattingEnabled = true;
+            this.cmbExercise.Items.AddRange(new object[] {
+            "Abdominals (Abs)",
+            "Adductors",
+            "biceps",
+            "Calves",
+            "Deltoids (Shoulders)",
+            "Forearms",
+            "Glutes",
+            "Hamstrings",
+            "Lats ",
+            "Lower Back",
+            "Middle Back",
+            "Neck",
+            "Chest",
+            "Quadriceps (Quads)",
+            "Serratus Anterior",
+            "Traps (Trapezius)",
+            "Triceps"});
+            this.cmbExercise.Location = new System.Drawing.Point(204, 14);
+            this.cmbExercise.Name = "cmbExercise";
+            this.cmbExercise.Size = new System.Drawing.Size(204, 27);
+            this.cmbExercise.TabIndex = 4;
+            this.cmbExercise.SelectedIndexChanged += new System.EventHandler(this.cmbExercise_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label3.Location = new System.Drawing.Point(21, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 23);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Browse for Exercises:";
             // 
             // tabPage3
             // 
@@ -634,86 +722,15 @@
             this.timerForPics.Interval = 4500;
             this.timerForPics.Tick += new System.EventHandler(this.timerForPics_Tick);
             // 
-            // tabPage1
+            // pbExerciseGif
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.LightGreen;
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(720, 490);
-            this.tabPage1.TabIndex = 7;
-            this.tabPage1.Text = "Search Exercises";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.panel6);
-            this.panel2.Controls.Add(this.cmbExercise);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(720, 490);
-            this.panel2.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label3.Location = new System.Drawing.Point(48, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Browse for Exercises:";
-            // 
-            // cmbExercise
-            // 
-            this.cmbExercise.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbExercise.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbExercise.FormattingEnabled = true;
-            this.cmbExercise.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
-            this.cmbExercise.Location = new System.Drawing.Point(86, 96);
-            this.cmbExercise.Name = "cmbExercise";
-            this.cmbExercise.Size = new System.Drawing.Size(158, 27);
-            this.cmbExercise.TabIndex = 4;
-            this.cmbExercise.Text = "Select the Exercise...";
-            // 
-            // panel6
-            // 
-            this.panel6.AutoSize = true;
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.lblExerciseInfo);
-            this.panel6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel6.Location = new System.Drawing.Point(86, 188);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(429, 264);
-            this.panel6.TabIndex = 74;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(7, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 23);
-            this.label4.TabIndex = 70;
-            this.label4.Text = "Nutrition Info:";
-            // 
-            // lblExerciseInfo
-            // 
-            this.lblExerciseInfo.AutoSize = true;
-            this.lblExerciseInfo.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExerciseInfo.Location = new System.Drawing.Point(16, 45);
-            this.lblExerciseInfo.MaximumSize = new System.Drawing.Size(390, 0);
-            this.lblExerciseInfo.Name = "lblExerciseInfo";
-            this.lblExerciseInfo.Size = new System.Drawing.Size(249, 23);
-            this.lblExerciseInfo.TabIndex = 3;
-            this.lblExerciseInfo.Text = "Nutrition info is displayed here!";
+            this.pbExerciseGif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbExerciseGif.Location = new System.Drawing.Point(494, 0);
+            this.pbExerciseGif.Name = "pbExerciseGif";
+            this.pbExerciseGif.Size = new System.Drawing.Size(179, 164);
+            this.pbExerciseGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbExerciseGif.TabIndex = 4;
+            this.pbExerciseGif.TabStop = false;
             // 
             // WorkoutPlansForm
             // 
@@ -743,6 +760,11 @@
             this.pnlExercises.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbWorkout)).EndInit();
             this.tabWorkoutPlan.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.pnlExerciseInfo.ResumeLayout(false);
+            this.pnlExerciseInfo.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -757,11 +779,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.slidePanel.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExerciseGif)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -812,8 +830,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbExercise;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel pnlExerciseInfo;
         private System.Windows.Forms.Label lblExerciseInfo;
+        private System.Windows.Forms.PictureBox pbExerciseGif;
     }
 }

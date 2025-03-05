@@ -12,6 +12,7 @@ namespace GymAndFitness
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
+
         //Load
         private void SignupForm_Load(object sender, EventArgs e)
         {
