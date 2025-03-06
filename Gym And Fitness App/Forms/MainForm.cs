@@ -74,7 +74,7 @@ namespace GymAndFitness
 
         }
 
-       
+
         private void btnToggle_Click_1(object sender, EventArgs e)
         {
             slideTimer.Start(); // Start the sliding animation

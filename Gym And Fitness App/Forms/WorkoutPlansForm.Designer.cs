@@ -77,7 +77,6 @@
             this.btnDietPlans = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.timerForPics = new System.Windows.Forms.Timer(this.components);
-            this.pbExerciseGif = new System.Windows.Forms.PictureBox();
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,7 +98,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.slidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExerciseGif)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -232,8 +230,8 @@
             // tabWorkoutPlan
             // 
             this.tabWorkoutPlan.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabWorkoutPlan.Controls.Add(this.tabPage1);
             this.tabWorkoutPlan.Controls.Add(this.tabPage2);
+            this.tabWorkoutPlan.Controls.Add(this.tabPage1);
             this.tabWorkoutPlan.Controls.Add(this.tabPage3);
             this.tabWorkoutPlan.Controls.Add(this.tabPage4);
             this.tabWorkoutPlan.Controls.Add(this.tabPage5);
@@ -271,7 +269,6 @@
             // 
             this.pnlExerciseInfo.AutoScroll = true;
             this.pnlExerciseInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnlExerciseInfo.Controls.Add(this.pbExerciseGif);
             this.pnlExerciseInfo.Controls.Add(this.lblExerciseInfo);
             this.pnlExerciseInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnlExerciseInfo.Location = new System.Drawing.Point(19, 48);
@@ -286,7 +283,7 @@
             this.lblExerciseInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblExerciseInfo.Font = new System.Drawing.Font("Segoe UI", 11.11881F);
             this.lblExerciseInfo.Location = new System.Drawing.Point(0, 0);
-            this.lblExerciseInfo.MaximumSize = new System.Drawing.Size(500, 0);
+            this.lblExerciseInfo.MaximumSize = new System.Drawing.Size(650, 0);
             this.lblExerciseInfo.Name = "lblExerciseInfo";
             this.lblExerciseInfo.Size = new System.Drawing.Size(221, 21);
             this.lblExerciseInfo.TabIndex = 3;
@@ -501,10 +498,10 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(200, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(581, 74);
+            this.panel1.Size = new System.Drawing.Size(781, 74);
             this.panel1.TabIndex = 5;
             // 
             // btnProfilePicture
@@ -562,9 +559,9 @@
             this.slidePanel.Controls.Add(this.btnDietPlans);
             this.slidePanel.Controls.Add(this.btnDashboard);
             this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.slidePanel.Location = new System.Drawing.Point(0, 0);
+            this.slidePanel.Location = new System.Drawing.Point(0, 74);
             this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(200, 600);
+            this.slidePanel.Size = new System.Drawing.Size(200, 526);
             this.slidePanel.TabIndex = 35;
             // 
             // btnHome
@@ -722,25 +719,15 @@
             this.timerForPics.Interval = 4500;
             this.timerForPics.Tick += new System.EventHandler(this.timerForPics_Tick);
             // 
-            // pbExerciseGif
-            // 
-            this.pbExerciseGif.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbExerciseGif.Location = new System.Drawing.Point(494, 0);
-            this.pbExerciseGif.Name = "pbExerciseGif";
-            this.pbExerciseGif.Size = new System.Drawing.Size(179, 164);
-            this.pbExerciseGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbExerciseGif.TabIndex = 4;
-            this.pbExerciseGif.TabStop = false;
-            // 
             // WorkoutPlansForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(781, 600);
+            this.Controls.Add(this.slidePanel);
             this.Controls.Add(this.tabWorkoutPlan);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.slidePanel);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -779,7 +766,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.slidePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbExerciseGif)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -832,6 +818,5 @@
         private System.Windows.Forms.ComboBox cmbExercise;
         private System.Windows.Forms.Panel pnlExerciseInfo;
         private System.Windows.Forms.Label lblExerciseInfo;
-        private System.Windows.Forms.PictureBox pbExerciseGif;
     }
 }

@@ -43,6 +43,7 @@ namespace GymAndFitness
             txtFoodItem.ForeColor = Color.Gray;
         }
 
+
         //for slide panel
         private bool isPanelCollapsed = true; // Track panel state
         private int panelWidth; // Store the panel's default width
@@ -486,7 +487,7 @@ namespace GymAndFitness
         {
             string apiKey = "c71c93c9ef026c9c018df7285e7b660e";
             string appId = "f2cd5f94";
-            string apiUrl = $"https://trackapi.nutritionix.com/v2/natural/nutrients";
+            string apiUrl = "https://trackapi.nutritionix.com/v2/natural/nutrients";
 
             try
             {
@@ -495,10 +496,7 @@ namespace GymAndFitness
                     client.DefaultRequestHeaders.Add("x-app-id", appId);
                     client.DefaultRequestHeaders.Add("x-app-key", apiKey);
 
-                    var requestBody = new
-                    {
-                        query = foodItem
-                    };
+                    var requestBody = new { query = foodItem };
 
                     var jsonRequestBody = new StringContent(
                         Newtonsoft.Json.JsonConvert.SerializeObject(requestBody),
@@ -518,30 +516,40 @@ namespace GymAndFitness
                             JToken firstFood = json["foods"][0];
 
                             string foodName = firstFood["food_name"]?.ToString() ?? "Unknown";
+                            string servingQty = firstFood["serving_qty"]?.ToString() ?? "1";
+                            string servingUnit = firstFood["serving_unit"]?.ToString() ?? "unit";
+                            string servingWeight = firstFood["serving_weight_grams"]?.ToString() ?? "N/A";
+
                             string calories = firstFood["nf_calories"]?.ToString() ?? "0";
                             string carbs = firstFood["nf_total_carbohydrate"]?.ToString() ?? "0";
                             string protein = firstFood["nf_protein"]?.ToString() ?? "0";
                             string fat = firstFood["nf_total_fat"]?.ToString() ?? "0";
 
-                            return $"Food: {foodName}, Calories: {calories}, Carbs: {carbs}g, Protein: {protein}g, Fat: {fat}g";
+                            return $"🍽 **{foodName.ToUpper()}**\n"
+                                + $"📏 Quantity: {servingQty} {servingUnit} ({servingWeight}g)\n"
+                                + $"🔥 Calories: {calories} kcal\n"
+                                + $"🥖 Carbs: {carbs}g\n"
+                                + $"💪 Protein: {protein}g\n"
+                                + $"🧈 Fat: {fat}g";
                         }
 
-                        return "No valid food item found.";
+                        return "⚠ No valid food item found.";
                     }
                     else
                     {
-                        return $"Error: {response.ReasonPhrase}";
+                        return $"❌ Error: {response.ReasonPhrase}";
                     }
                 }
             }
             catch (Exception ex)
             {
-                return $"An error occurred: {ex.Message}";
+                return $"⚠ An error occurred: {ex.Message}";
             }
         }
 
 
-        
+
+
 
 
 
@@ -703,7 +711,7 @@ namespace GymAndFitness
                 // Check if the item already exists in the dictionary
                 if (!nutritionData.ContainsKey(foodItem))
                 {
-                    // Fetch nutrition info from the USDA API
+                    // Fetch nutrition info from the Nutritionix API
                     string nutritionInfo = await GetNutritionInfo(foodItem);
 
                     if (!string.IsNullOrEmpty(nutritionInfo) && !nutritionInfo.StartsWith("Error") && !nutritionInfo.StartsWith("An error occurred") && nutritionInfo != "No results found for the FoodItem.")
@@ -768,21 +776,30 @@ namespace GymAndFitness
 
         private async void btnCalculateTotalNutrition_Click(object sender, EventArgs e)
         {
-            var breakfastNutrition = await CalculateMealNutritionAsync(lstBreakfastInput.Items);
-            var lunchNutrition = await CalculateMealNutritionAsync(lstLunchInput.Items);
-            var snacksNutrition = await CalculateMealNutritionAsync(lstSnacksInput.Items);
-            var dinnerNutrition = await CalculateMealNutritionAsync(lstDinnerInput.Items);
+            try
+            {
+                var breakfastNutrition = await CalculateMealNutritionAsync(lstBreakfastInput.Items);
+                var lunchNutrition = await CalculateMealNutritionAsync(lstLunchInput.Items);
+                var snacksNutrition = await CalculateMealNutritionAsync(lstSnacksInput.Items);
+                var dinnerNutrition = await CalculateMealNutritionAsync(lstDinnerInput.Items);
 
-            int totalCalories = breakfastNutrition.Calories + lunchNutrition.Calories + snacksNutrition.Calories + dinnerNutrition.Calories;
-            double totalCarbs = breakfastNutrition.Carbs + lunchNutrition.Carbs + snacksNutrition.Carbs + dinnerNutrition.Carbs;
-            double totalProtein = breakfastNutrition.Protein + lunchNutrition.Protein + snacksNutrition.Protein + dinnerNutrition.Protein;
-            double totalFat = breakfastNutrition.Fat + lunchNutrition.Fat + snacksNutrition.Fat + dinnerNutrition.Fat;
+                int totalCalories = breakfastNutrition.Calories + lunchNutrition.Calories + snacksNutrition.Calories + dinnerNutrition.Calories;
+                double totalCarbs = breakfastNutrition.Carbs + lunchNutrition.Carbs + snacksNutrition.Carbs + dinnerNutrition.Carbs;
+                double totalProtein = breakfastNutrition.Protein + lunchNutrition.Protein + snacksNutrition.Protein + dinnerNutrition.Protein;
+                double totalFat = breakfastNutrition.Fat + lunchNutrition.Fat + snacksNutrition.Fat + dinnerNutrition.Fat;
 
-            lblTotalNutrition.Text = $"Total Nutrition Values:\n" +
-                                     $"Calories: {totalCalories}\n" +
-                                     $"Carbs: {totalCarbs}g\n" +
-                                     $"Protein: {totalProtein}g\n" +
-                                     $"Fat: {totalFat}g";
+                // Display formatted nutrition summary
+                lblTotalNutrition.Text = $"📊 **Total Nutrition Values:**\n\n" +
+                                         $"🔥 Calories: **{totalCalories} kcal**\n" +
+                                         $"🥖 Carbs: **{totalCarbs}g**\n" +
+                                         $"💪 Protein: **{totalProtein}g**\n" +
+                                         $"🧈 Fat: **{totalFat}g**";
+            }
+
+            catch (Exception ex)
+            {
+                lblTotalNutrition.Text = $"⚠ An error occurred: {ex.Message}";
+            }
         }
 
 

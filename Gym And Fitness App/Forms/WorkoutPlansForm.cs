@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -378,7 +378,7 @@ namespace GymAndFitness
                 if (!string.IsNullOrEmpty(muscleExerciseInfo) && !muscleExerciseInfo.StartsWith("Error"))
                 {
                     lblExerciseInfo.Text = muscleExerciseInfo;
-                    
+
                     //switch (targetMuscle)
                     //{
                     //    case "Abdominals (Abs)":
@@ -538,13 +538,6 @@ namespace GymAndFitness
 
             return formattedOutput.ToString();
         }
-
-
-
-
-
-
-
 
     }
 }

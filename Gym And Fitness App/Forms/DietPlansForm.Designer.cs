@@ -479,9 +479,9 @@
             this.btnSaveDietPlan.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold);
             this.btnSaveDietPlan.Image = global::GymAndFitness.Properties.Resources.save1;
             this.btnSaveDietPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveDietPlan.Location = new System.Drawing.Point(190, 367);
+            this.btnSaveDietPlan.Location = new System.Drawing.Point(316, 396);
             this.btnSaveDietPlan.Name = "btnSaveDietPlan";
-            this.btnSaveDietPlan.Size = new System.Drawing.Size(127, 44);
+            this.btnSaveDietPlan.Size = new System.Drawing.Size(127, 46);
             this.btnSaveDietPlan.TabIndex = 28;
             this.btnSaveDietPlan.Text = "Save Plan";
             this.btnSaveDietPlan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -618,7 +618,7 @@
             this.richTextBoxNotesInput.ImeMode = System.Windows.Forms.ImeMode.On;
             this.richTextBoxNotesInput.Location = new System.Drawing.Point(480, 267);
             this.richTextBoxNotesInput.Name = "richTextBoxNotesInput";
-            this.richTextBoxNotesInput.Size = new System.Drawing.Size(215, 144);
+            this.richTextBoxNotesInput.Size = new System.Drawing.Size(215, 175);
             this.richTextBoxNotesInput.TabIndex = 26;
             this.richTextBoxNotesInput.Text = "";
             // 
@@ -771,7 +771,7 @@
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.lblNutritionInfo);
             this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(20, 250);
+            this.panel3.Location = new System.Drawing.Point(20, 234);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(429, 157);
             this.panel3.TabIndex = 73;
