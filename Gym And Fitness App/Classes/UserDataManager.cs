@@ -129,6 +129,15 @@ namespace GymAndFitness
                                     MembershipStatus = reader["MembershipStatus"].ToString(),
                                     LicenseKey = reader["LicenseKey"].ToString(),
                                 };
+                                // Reset Daily Water Intake if the date has changed
+                                DateTime? lastResetDate = reader["LastResetDate"] != DBNull.Value ? Convert.ToDateTime(reader["LastResetDate"]) : (DateTime?)null;
+                                DateTime currentDate = DateTime.Now.Date;
+
+                                if (lastResetDate == null || lastResetDate.Value.Date != currentDate)
+                                {
+                                    ResetDailyWaterIntake(user.UserID, currentDate);
+                                    user.DailyWaterIntake = 0; // Update the in-memory object
+                                }
                             }
                         }
                     }
@@ -142,6 +151,25 @@ namespace GymAndFitness
             CurrentUser = user;
             return user;
         }
+
+        //auto resetwaterintake helper method..
+        private void ResetDailyWaterIntake(int userId, DateTime currentDate)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string updateQuery = "UPDATE Users SET DailyWaterIntake = 0, LastResetDate = @LastResetDate WHERE UserID = @UserID";
+                using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection))
+                {
+                    updateCommand.Parameters.AddWithValue("@UserID", userId);
+                    updateCommand.Parameters.AddWithValue("@LastResetDate", currentDate);
+
+                    connection.Open();
+                    updateCommand.ExecuteNonQuery();
+                }
+            }
+        }
+
+
 
         // Verify and update license keys
         public void VerifyLicenseKey(string username, string enteredKey)

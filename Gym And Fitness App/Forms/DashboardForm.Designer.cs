@@ -80,7 +80,6 @@
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.waterResetTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -762,11 +761,6 @@
             this.toolTip.ReshowDelay = 100;
             this.toolTip.ShowAlways = true;
             // 
-            // waterResetTimer
-            // 
-            this.waterResetTimer.Enabled = true;
-            this.waterResetTimer.Tick += new System.EventHandler(this.waterResetTimer_Tick);
-            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -852,7 +846,6 @@
         private System.Windows.Forms.Label lblWeightProgess;
         private System.Windows.Forms.Label lblWaterIntake;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Timer waterResetTimer;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label11;

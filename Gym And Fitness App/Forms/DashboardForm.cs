@@ -112,7 +112,7 @@ namespace GymAndFitness
 
 
                 //water reset timer
-                waterResetTimer.Start();
+                //waterResetTimer.Start();
             }
 
             else
@@ -400,46 +400,6 @@ namespace GymAndFitness
             {
                 MessageBox.Show("No user is logged in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-
-
-        private void ResetDailyWaterIntake()
-        {
-            if (UserDataManager.CurrentUser != null)
-            {
-                // Reset DailyWaterIntake in UserDataManager
-                userDataManager.ResetDailyWaterIntake();
-
-                // Reset UI elements
-                lblWaterIntake.Text = "0 / 8 Glasses";
-                progressBarWater.Value = 0;
-            }
-            else
-            {
-                MessageBox.Show("No user is logged in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        private void waterResetTimer_Tick(object sender, EventArgs e)
-        {
-            DateTime lastResetDate = Properties.Settings.Default.LastResetDate; // Persistent storage
-            DateTime currentDate = DateTime.Now.Date;
-
-            if (lastResetDate != currentDate)
-            {
-                ResetDailyWaterIntake();
-                Properties.Settings.Default.LastResetDate = currentDate;
-                Properties.Settings.Default.Save();
-            }
-
-
-            //old logic..
-            //if (DateTime.Now.Hour == 0 && DateTime.Now.Minute == 0) // At midnight
-            //{
-            //    ResetDailyWaterIntake();
-            //}
         }
 
 
