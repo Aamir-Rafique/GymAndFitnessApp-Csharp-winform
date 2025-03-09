@@ -17,14 +17,13 @@
     <PublisherName>Aamir Rafique</PublisherName>
     <SuiteName>AR Tech</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
-    <BootstrapperComponentsUrl>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools</BootstrapperComponentsUrl>
+    <BootstrapperComponentsUrl>C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Prerequisites</BootstrapperComponentsUrl>
   </PropertyGroup>
   <PropertyGroup>
     <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC</SSDTPath>
@@ -275,6 +274,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -478,9 +478,6 @@
     <None Include="Resources\Icons\usernew.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Mar 2023.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icons\info.png" />
   </ItemGroup>
   <ItemGroup>
@@ -576,6 +573,9 @@
   <ItemGroup>
     <Content Include="fitness.ico" />
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
+    <None Include="Resources\Icons\userdfa.png" />
+    <None Include="Resources\Icons\user1234.png" />
+    <None Include="Resources\Icons\user_profilenew.png" />
     <None Include="Resources\Icons\Logo_2.png" />
     <None Include="Resources\Icons\Logo_1.png" />
     <None Include="Resources\Icons\minus2.png" />
@@ -659,15 +659,20 @@
     <None Include="Resources\Icons\profile.png" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.15.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2019 Express LocalDB</ProductName>
+      <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>

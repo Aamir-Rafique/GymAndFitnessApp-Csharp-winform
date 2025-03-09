@@ -41,7 +41,7 @@ namespace GymAndFitness
                     lblGender.Text = UserDataManager.CurrentUser.Gender;
                     lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
                     lblStartingWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
-                    lblCurrentWeight.Text = lblStartingWeight.Text;
+                    lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
                     lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
                     lblTargetWeight.Text = $"{UserDataManager.CurrentUser.TargetWeight} kg";
                     lblFitnessGoal.Text = UserDataManager.CurrentUser.FitnessGoal;
@@ -237,13 +237,13 @@ namespace GymAndFitness
                     double height = (double)nudCurrentHeight.Value;
                     double weight = (double)nudCurrentWeight.Value;
 
-                    UserDataManager.CurrentUser.BMI = Features.CalculateBMI(height, weight);
+                    UserDataManager.CurrentUser.BMI = Features.CalculateBMI(weight, height);
                     userDataManager.UpdateHeightAndWeight(UserDataManager.CurrentUser.Height, UserDataManager.CurrentUser.CurrentWeight, UserDataManager.CurrentUser.BMI);
-                    MessageBox.Show("Height and weight updated successfully!", "Success!");
+                    MessageBox.Show("Height and weight updated successfully! Click on the refresh icon to see the updated records. ", "Success!");
                 }
                 else
                 {
-                    MessageBox.Show("Aree Bhai height or weight ki correct values put karo!");
+                    MessageBox.Show("Please input correct values for height and weight!");
                 }
             }
             else

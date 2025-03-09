@@ -158,7 +158,7 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblGender.Location = new System.Drawing.Point(91, 118);
+            this.lblGender.Location = new System.Drawing.Point(91, 117);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(83, 23);
             this.lblGender.TabIndex = 21;
@@ -169,7 +169,7 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblUsername.Location = new System.Drawing.Point(91, 50);
+            this.lblUsername.Location = new System.Drawing.Point(91, 49);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(83, 23);
             this.lblUsername.TabIndex = 21;
@@ -180,7 +180,7 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAge.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblAge.Location = new System.Drawing.Point(91, 84);
+            this.lblAge.Location = new System.Drawing.Point(91, 83);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(83, 23);
             this.lblAge.TabIndex = 19;
@@ -243,7 +243,7 @@
             this.lblStartingWeight.AutoSize = true;
             this.lblStartingWeight.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStartingWeight.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblStartingWeight.Location = new System.Drawing.Point(186, 88);
+            this.lblStartingWeight.Location = new System.Drawing.Point(186, 87);
             this.lblStartingWeight.Name = "lblStartingWeight";
             this.lblStartingWeight.Size = new System.Drawing.Size(83, 23);
             this.lblStartingWeight.TabIndex = 16;
@@ -297,7 +297,7 @@
             this.lblCurrentWeight.AutoSize = true;
             this.lblCurrentWeight.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentWeight.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblCurrentWeight.Location = new System.Drawing.Point(187, 118);
+            this.lblCurrentWeight.Location = new System.Drawing.Point(187, 119);
             this.lblCurrentWeight.Name = "lblCurrentWeight";
             this.lblCurrentWeight.Size = new System.Drawing.Size(83, 23);
             this.lblCurrentWeight.TabIndex = 11;
@@ -418,7 +418,7 @@
             this.lblTargetWeight.AutoSize = true;
             this.lblTargetWeight.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTargetWeight.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTargetWeight.Location = new System.Drawing.Point(186, 109);
+            this.lblTargetWeight.Location = new System.Drawing.Point(185, 111);
             this.lblTargetWeight.Name = "lblTargetWeight";
             this.lblTargetWeight.Size = new System.Drawing.Size(97, 20);
             this.lblTargetWeight.TabIndex = 15;
@@ -663,7 +663,7 @@
             this.btnHome.ForeColor = System.Drawing.Color.Black;
             this.btnHome.Image = global::GymAndFitness.Properties.Resources.home_button;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(-1, 110);
+            this.btnHome.Location = new System.Drawing.Point(-1, 129);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(210, 47);
             this.btnHome.TabIndex = 10;
@@ -685,7 +685,7 @@
             this.btnAbout.ForeColor = System.Drawing.Color.Black;
             this.btnAbout.Image = global::GymAndFitness.Properties.Resources.info;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(0, 340);
+            this.btnAbout.Location = new System.Drawing.Point(-1, 359);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(210, 47);
             this.btnAbout.TabIndex = 9;
@@ -730,7 +730,7 @@
             this.btnWorkoutPlans.ForeColor = System.Drawing.Color.Black;
             this.btnWorkoutPlans.Image = global::GymAndFitness.Properties.Resources.workout;
             this.btnWorkoutPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWorkoutPlans.Location = new System.Drawing.Point(-1, 294);
+            this.btnWorkoutPlans.Location = new System.Drawing.Point(-1, 313);
             this.btnWorkoutPlans.Name = "btnWorkoutPlans";
             this.btnWorkoutPlans.Size = new System.Drawing.Size(210, 47);
             this.btnWorkoutPlans.TabIndex = 5;
@@ -752,7 +752,7 @@
             this.btnBMICalculator.ForeColor = System.Drawing.Color.Black;
             this.btnBMICalculator.Image = global::GymAndFitness.Properties.Resources.bmi;
             this.btnBMICalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBMICalculator.Location = new System.Drawing.Point(-1, 202);
+            this.btnBMICalculator.Location = new System.Drawing.Point(-1, 221);
             this.btnBMICalculator.Name = "btnBMICalculator";
             this.btnBMICalculator.Size = new System.Drawing.Size(210, 47);
             this.btnBMICalculator.TabIndex = 4;
@@ -775,7 +775,7 @@
             this.btnDietPlans.ForeColor = System.Drawing.Color.Black;
             this.btnDietPlans.Image = global::GymAndFitness.Properties.Resources.diet;
             this.btnDietPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDietPlans.Location = new System.Drawing.Point(-1, 248);
+            this.btnDietPlans.Location = new System.Drawing.Point(-1, 267);
             this.btnDietPlans.Name = "btnDietPlans";
             this.btnDietPlans.Size = new System.Drawing.Size(210, 47);
             this.btnDietPlans.TabIndex = 3;
@@ -798,7 +798,7 @@
             this.btnDashboard.ForeColor = System.Drawing.Color.Black;
             this.btnDashboard.Image = global::GymAndFitness.Properties.Resources.dashboardfinal;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(-1, 156);
+            this.btnDashboard.Location = new System.Drawing.Point(-1, 175);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(210, 47);
             this.btnDashboard.TabIndex = 2;
@@ -871,9 +871,9 @@
             this.panel7.Controls.Add(this.nudCurrentWeight);
             this.panel7.Controls.Add(this.label15);
             this.panel7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel7.Location = new System.Drawing.Point(47, 515);
+            this.panel7.Location = new System.Drawing.Point(51, 515);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(391, 86);
+            this.panel7.Size = new System.Drawing.Size(387, 86);
             this.panel7.TabIndex = 37;
             // 
             // nudCurrentHeight

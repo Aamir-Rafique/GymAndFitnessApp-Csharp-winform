@@ -37,9 +37,9 @@ namespace GymAndFitness
                 userDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
             }
 
-            //set combobox place HOlder
-            Features.SetComboBoxPlaceholder(cmbExercise, "Select the Exercise...");
-            Features.SetComboBoxPlaceholder(cmbWorkoutType, "Select Workout Type...");
+            ////set combobox place HOlder
+            //Features.SetComboBoxPlaceholder(cmbExercise, "Select the Exercise...");
+            //Features.SetComboBoxPlaceholder(cmbWorkoutType, "Select Workout Type...");
 
             //combobox text align center..
             Features.AlignComboBoxTextCenter(cmbExercise);
@@ -539,5 +539,10 @@ namespace GymAndFitness
             return formattedOutput.ToString();
         }
 
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
+        }
     }
 }

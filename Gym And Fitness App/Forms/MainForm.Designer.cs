@@ -36,6 +36,7 @@
             this.btnBMICalculator = new System.Windows.Forms.Button();
             this.btnWorkoutPlans = new System.Windows.Forms.Button();
             this.slidePanel = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -146,6 +147,7 @@
             // slidePanel
             // 
             this.slidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.slidePanel.Controls.Add(this.btnProfile);
             this.slidePanel.Controls.Add(this.btnAbout);
             this.slidePanel.Controls.Add(this.btnToggle);
             this.slidePanel.Controls.Add(this.btnWorkoutPlans);
@@ -157,6 +159,28 @@
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(200, 486);
             this.slidePanel.TabIndex = 0;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(-1, 304);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(210, 51);
+            this.btnProfile.TabIndex = 8;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnAbout
             // 
@@ -172,7 +196,7 @@
             this.btnAbout.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.Image = global::GymAndFitness.Properties.Resources.info;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(-2, 304);
+            this.btnAbout.Location = new System.Drawing.Point(-2, 354);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(210, 51);
             this.btnAbout.TabIndex = 7;
@@ -375,6 +399,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnLogout;
         private Classes.RoundPictureBox btnProfilePicture;
+        public System.Windows.Forms.Button btnProfile;
     }
 }
 

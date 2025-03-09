@@ -10,10 +10,7 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-
-
 
         //LOAD
         private void DashboardForm_Load(object sender, EventArgs e)
@@ -53,27 +50,50 @@ namespace GymAndFitness
                 double targetWeight = UserDataManager.CurrentUser.TargetWeight;
 
                 double weightProgressPercentage = 0;
+                string fitnessGoal = UserDataManager.CurrentUser.FitnessGoal?.ToLower(); // Handle potential null values
 
-                // Calculate progress based on fitness goal
-                if (UserDataManager.CurrentUser.FitnessGoal == "Muscle Gain")
+                // Validate target and starting weights to avoid division by zero
+                if (targetWeight != startingWeight)
                 {
-                    // Ensure calculation is valid
-                    if (currentWeight >= startingWeight && currentWeight <= targetWeight)
+                    double weightDifference = Math.Abs(targetWeight - startingWeight);
+                    bool isValidRange =
+                        (fitnessGoal == "muscle gain" && currentWeight >= startingWeight && currentWeight <= targetWeight) ||
+                        (fitnessGoal == "fat loss" && currentWeight <= startingWeight && currentWeight >= targetWeight);
+
+                    if (isValidRange)
                     {
-                        weightProgressPercentage = ((currentWeight - startingWeight) / (targetWeight - startingWeight)) * 100;
-                    }
-                }
-                else if (UserDataManager.CurrentUser.FitnessGoal == "Fat Loss")
-                {
-                    // Ensure calculation is valid
-                    if (currentWeight <= startingWeight && currentWeight >= targetWeight)
-                    {
-                        weightProgressPercentage = ((startingWeight - currentWeight) / (startingWeight - targetWeight)) * 100;
+                        double progress = Math.Abs(currentWeight - startingWeight);
+                        weightProgressPercentage = (progress / weightDifference) * 100;
                     }
                 }
 
-                // Ensure progress value is within bounds (0 to 100)
                 weightProgressPercentage = Math.Min(100, Math.Max(0, weightProgressPercentage));
+
+
+
+                //weight progress bar old logic...
+                //double weightProgressPercentage = 0;
+
+                //// Calculate progress based on fitness goal
+                //if (UserDataManager.CurrentUser.FitnessGoal == "Muscle Gain")
+                //{
+                //    // Ensure calculation is valid
+                //    if (currentWeight >= startingWeight && currentWeight <= targetWeight)
+                //    {
+                //        weightProgressPercentage = ((currentWeight - startingWeight) / (targetWeight - startingWeight)) * 100;
+                //    }
+                //}
+                //else if (UserDataManager.CurrentUser.FitnessGoal == "Fat Loss")
+                //{
+                //    // Ensure calculation is valid
+                //    if (currentWeight <= startingWeight && currentWeight >= targetWeight)
+                //    {
+                //        weightProgressPercentage = ((startingWeight - currentWeight) / (startingWeight - targetWeight)) * 100;
+                //    }
+                //}
+
+                //// Ensure progress value is within bounds (0 to 100)
+                //weightProgressPercentage = Math.Min(100, Math.Max(0, weightProgressPercentage));
 
                 // Update progress bar and label
                 progressBarWeight.Value = (int)weightProgressPercentage;
@@ -404,10 +424,22 @@ namespace GymAndFitness
 
         private void waterResetTimer_Tick(object sender, EventArgs e)
         {
-            if (DateTime.Now.Hour == 0 && DateTime.Now.Minute == 0) // At midnight
+            DateTime lastResetDate = Properties.Settings.Default.LastResetDate; // Persistent storage
+            DateTime currentDate = DateTime.Now.Date;
+
+            if (lastResetDate != currentDate)
             {
                 ResetDailyWaterIntake();
+                Properties.Settings.Default.LastResetDate = currentDate;
+                Properties.Settings.Default.Save();
             }
+
+
+            //old logic..
+            //if (DateTime.Now.Hour == 0 && DateTime.Now.Minute == 0) // At midnight
+            //{
+            //    ResetDailyWaterIntake();
+            //}
         }
 
 
@@ -460,6 +492,12 @@ namespace GymAndFitness
             {
                 toolTip.SetToolTip(progressBarWeight, $"Login to view your progress!");
             }
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
         }
     }
 }

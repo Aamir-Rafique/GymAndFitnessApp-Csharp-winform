@@ -14,8 +14,8 @@ namespace GymAndFitness
 
 
         //for slide panel
-        private bool isPanelCollapsed = true; // Track panel state
-        private int panelWidth; // Store the panel's default width
+        public bool isPanelCollapsed = true; // Track panel state
+        public int panelWidth; // Store the panel's default width
 
 
         //slide  panel timer 
@@ -145,9 +145,10 @@ namespace GymAndFitness
             this.Close();
         }
 
-
-
-
-
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
+        }
     }
 }

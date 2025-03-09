@@ -214,5 +214,11 @@ namespace GymAndFitness
                 btnCalculate.PerformClick(); // Trigger the button's click event
             }
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
+        }
     }
 }

@@ -237,7 +237,10 @@ namespace GymAndFitness
             }
         }
 
-
-
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
+        }
     }
 }

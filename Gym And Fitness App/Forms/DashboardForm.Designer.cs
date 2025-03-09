@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.slidePanel = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
@@ -219,6 +220,7 @@
             // slidePanel
             // 
             this.slidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.slidePanel.Controls.Add(this.btnProfile);
             this.slidePanel.Controls.Add(this.btnHome);
             this.slidePanel.Controls.Add(this.btnAbout);
             this.slidePanel.Controls.Add(this.btnToggle);
@@ -232,6 +234,28 @@
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(200, 540);
             this.slidePanel.TabIndex = 12;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(-1, 340);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(210, 51);
+            this.btnProfile.TabIndex = 13;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
             // 
@@ -268,7 +292,7 @@
             this.btnAbout.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.Image = global::GymAndFitness.Properties.Resources.info;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(0, 340);
+            this.btnAbout.Location = new System.Drawing.Point(-1, 390);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(210, 47);
             this.btnAbout.TabIndex = 11;
@@ -562,7 +586,7 @@
             this.panel2.Controls.Add(this.btnAddWater);
             this.panel2.Controls.Add(this.progressBarWater);
             this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Location = new System.Drawing.Point(568, 272);
+            this.panel2.Location = new System.Drawing.Point(578, 271);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(245, 262);
             this.panel2.TabIndex = 14;
@@ -682,7 +706,7 @@
             this.panel6.Controls.Add(this.lblWeightProgess);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.progressBarWeight);
-            this.panel6.Location = new System.Drawing.Point(62, 434);
+            this.panel6.Location = new System.Drawing.Point(61, 434);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(498, 101);
             this.panel6.TabIndex = 15;
@@ -690,9 +714,9 @@
             // lblWeightProgess
             // 
             this.lblWeightProgess.AutoSize = true;
-            this.lblWeightProgess.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeightProgess.Font = new System.Drawing.Font("Rockwell", 11.41881F, System.Drawing.FontStyle.Bold);
             this.lblWeightProgess.ForeColor = System.Drawing.Color.Blue;
-            this.lblWeightProgess.Location = new System.Drawing.Point(154, 12);
+            this.lblWeightProgess.Location = new System.Drawing.Point(153, 12);
             this.lblWeightProgess.Name = "lblWeightProgess";
             this.lblWeightProgess.Size = new System.Drawing.Size(0, 20);
             this.lblWeightProgess.TabIndex = 19;
@@ -701,7 +725,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 11);
+            this.label14.Location = new System.Drawing.Point(1, 11);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(145, 20);
             this.label14.TabIndex = 13;
@@ -835,5 +859,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.PictureBox pictureBox6;
+        public System.Windows.Forms.Button btnProfile;
     }
 }
