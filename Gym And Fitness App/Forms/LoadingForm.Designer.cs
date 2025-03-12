@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadingForm));
             this.timerLoading = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.lblLoading = new System.Windows.Forms.Label();
             this.lbl1Develop = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.progressBarLoading = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new GymAndFitness.Classes.RoundPictureBox();
@@ -91,16 +92,16 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Developed by";
             // 
-            // label1
+            // lblVersion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(398, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 19);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "v1.1";
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersion.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lblVersion.Location = new System.Drawing.Point(330, 98);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(118, 19);
+            this.lblVersion.TabIndex = 7;
+            this.lblVersion.Text = "version: Loading..";
             // 
             // lblWelcome
             // 
@@ -144,13 +145,14 @@
             this.ClientSize = new System.Drawing.Size(535, 284);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl1Develop);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBarLoading);
             this.Controls.Add(this.lblLoading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(535, 284);
             this.MinimumSize = new System.Drawing.Size(535, 284);
@@ -171,7 +173,7 @@
         private System.Windows.Forms.Label lblLoading;
         private System.Windows.Forms.Label lbl1Develop;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.ProgressBar progressBarLoading;
         private Classes.RoundPictureBox pictureBox1;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace GymAndFitness.Forms
@@ -23,6 +24,12 @@ namespace GymAndFitness.Forms
         private void LoadingForm_Load(object sender, EventArgs e)
         {
             timerLoading.Start();
+
+            // Get the version of the application
+            var version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            
+            // Assign the version to the label
+            lblVersion.Text = "Version: " + version;
         }
 
         private void timerLoading_Tick(object sender, EventArgs e)
