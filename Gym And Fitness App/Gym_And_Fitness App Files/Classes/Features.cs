@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Deployment.Application;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,6 +8,18 @@ namespace GymAndFitness
 {
     public class Features
     {
+
+        //method to fetch publish version of application (updates with each clickonce deployment)
+        public static string GetCurrentVersion()
+        {
+            if (ApplicationDeployment.IsNetworkDeployed)
+            {
+                return ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+            }
+            return "1.0.0.0";
+        }
+
+
         // Method to set a placeholder for ComboBox
         public static void SetComboBoxPlaceholder(ComboBox comboBox, string placeholder)
         {

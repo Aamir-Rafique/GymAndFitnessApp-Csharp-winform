@@ -18,7 +18,7 @@ namespace GymAndFitness
 
         private void AboutForm_Load(object sender, EventArgs e)
         {
-            lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals \nby providing personalized workout plans, nutritional guidance, \nand progress tracking. Whether you're looking to build muscle, \nlose weight, or improve overall fitness, this app offers a \ncomprehensive solution to support your journey.\n\nOur mission is to make fitness accessible, convenient, and enjoyable for everyone. \nStay fit, stay healthy!";
+            lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals by providing personalized workout plans, nutritional guidance, and progress tracking. Whether you're looking to build muscle, lose weight, or improve overall fitness, this app offers a comprehensive solution to support your journey. Our mission is to make fitness accessible, convenient, and enjoyable for everyone. Stay fit, stay healthy!";
 
             //slide panel
             panelWidth = slidePanel.Width;
@@ -33,6 +33,8 @@ namespace GymAndFitness
             }
 
 
+            // Assign the version to the label
+            lblVersion.Text =Features.GetCurrentVersion();
         }
 
         //for slide panel

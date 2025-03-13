@@ -33,11 +33,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblVer = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.slidePanel = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@
             this.pbGmail = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblPurpose = new System.Windows.Forms.Label();
-            this.btnProfile = new System.Windows.Forms.Button();
+            this.lblVersion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             this.slidePanel.SuspendLayout();
@@ -110,18 +111,18 @@
             this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click_1);
             this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter_1);
             // 
-            // label6
+            // lblVer
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(132, 99);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 23);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Version: 1.0.0";
+            this.lblVer.AutoSize = true;
+            this.lblVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblVer.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVer.ForeColor = System.Drawing.Color.Black;
+            this.lblVer.Location = new System.Drawing.Point(132, 97);
+            this.lblVer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVer.Name = "lblVer";
+            this.lblVer.Size = new System.Drawing.Size(71, 23);
+            this.lblVer.TabIndex = 1;
+            this.lblVer.Text = "Version:";
             // 
             // label2
             // 
@@ -178,6 +179,28 @@
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(200, 529);
             this.slidePanel.TabIndex = 35;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(-1, 340);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(210, 51);
+            this.btnProfile.TabIndex = 11;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
             // 
@@ -423,34 +446,25 @@
             // 
             this.lblPurpose.AutoSize = true;
             this.lblPurpose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lblPurpose.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPurpose.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPurpose.Location = new System.Drawing.Point(132, 243);
+            this.lblPurpose.MaximumSize = new System.Drawing.Size(450, 0);
             this.lblPurpose.Name = "lblPurpose";
-            this.lblPurpose.Size = new System.Drawing.Size(93, 21);
+            this.lblPurpose.Size = new System.Drawing.Size(0, 21);
             this.lblPurpose.TabIndex = 8;
-            this.lblPurpose.Text = "Discription...";
             // 
-            // btnProfile
+            // lblVersion
             // 
-            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
-            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.Location = new System.Drawing.Point(-1, 340);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(210, 51);
-            this.btnProfile.TabIndex = 11;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblVersion.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersion.ForeColor = System.Drawing.Color.Blue;
+            this.lblVersion.Location = new System.Drawing.Point(241, 97);
+            this.lblVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(140, 23);
+            this.lblVersion.TabIndex = 39;
+            this.lblVersion.Text = "Loading version..";
             // 
             // AboutForm
             // 
@@ -459,6 +473,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(782, 603);
             this.Controls.Add(this.slidePanel);
+            this.Controls.Add(this.lblVer);
+            this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
@@ -470,7 +486,6 @@
             this.Controls.Add(this.lblPurpose);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label6);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -496,7 +511,7 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblVer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pbGmail;
@@ -519,5 +534,6 @@
         private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.Label lblPurpose;
         public System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Label lblVersion;
     }
 }

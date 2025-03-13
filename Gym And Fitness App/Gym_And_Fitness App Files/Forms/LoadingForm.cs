@@ -27,19 +27,11 @@ namespace GymAndFitness.Forms
             timerLoading.Start();
 
             // Assign the version to the label
-            lblVersion.Text = "Version: " + GetCurrentVersion();
+            lblVersion.Text = "Version: " + Features.GetCurrentVersion();
         }
 
 
-        private string GetCurrentVersion()
-        {
-            if (ApplicationDeployment.IsNetworkDeployed)
-            {
-                return ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
-            }
-            return "1.0.0.0";
-        }
-
+        
         private void timerLoading_Tick(object sender, EventArgs e)
         {
             elapsedTime += timerLoading.Interval;
