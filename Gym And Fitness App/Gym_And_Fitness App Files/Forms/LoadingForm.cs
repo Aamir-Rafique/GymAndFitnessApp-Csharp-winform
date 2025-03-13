@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Deployment.Application;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -25,11 +26,18 @@ namespace GymAndFitness.Forms
         {
             timerLoading.Start();
 
-            // Get the version of the application
-            var version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            
             // Assign the version to the label
-            lblVersion.Text = "Version: " + version;
+            lblVersion.Text = "Version: " + GetCurrentVersion();
+        }
+
+
+        private string GetCurrentVersion()
+        {
+            if (ApplicationDeployment.IsNetworkDeployed)
+            {
+                return ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+            }
+            return "1.0.0.0";
         }
 
         private void timerLoading_Tick(object sender, EventArgs e)

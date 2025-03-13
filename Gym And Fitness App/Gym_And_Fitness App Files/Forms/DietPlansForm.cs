@@ -37,6 +37,9 @@ namespace GymAndFitness
                 int userId = UserDataManager.CurrentUser.UserID;
                 // Replace with actual logic to get the current user ID
                 userDataManager.LoadDietPlans(userId, lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, richTextBoxNotesInput);
+
+                //allign centere cmb box items
+                Features.AlignComboBoxTextCenter(cmbDietType);
             }
 
             txtFoodItem.Text = "Type here";

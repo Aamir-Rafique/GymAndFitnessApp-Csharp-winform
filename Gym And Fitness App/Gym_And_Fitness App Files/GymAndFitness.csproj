@@ -2,7 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
-    <PublishUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\Public\Gym And Fitness App\Setup\</PublishUrl>
+    <PublishUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Setup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -12,8 +12,8 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\Public\Gym And Fitness App\Setup\</InstallUrl>
-    <UpdateUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\Public\Gym And Fitness App\Setup\</UpdateUrl>
+    <InstallUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Setup\</InstallUrl>
+    <UpdateUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Setup\</UpdateUrl>
     <TargetCulture>en-US</TargetCulture>
     <ProductName>Gym And Fitness</ProductName>
     <PublisherName>Aamir Rafique</PublisherName>
@@ -21,7 +21,7 @@
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -44,7 +44,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>GymAndFitness</RootNamespace>
     <AssemblyName>GymAndFitness</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -668,15 +668,20 @@
     <None Include="Resources\Icons\profile.png" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.DotNet.Framework.4.7.2">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlExpress.16.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2019 Express LocalDB</ProductName>
+      <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.15.0">
       <Visible>False</Visible>

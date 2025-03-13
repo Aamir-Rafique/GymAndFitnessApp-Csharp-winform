@@ -17,9 +17,9 @@ namespace GymAndFitness
         private void SignupForm_Load(object sender, EventArgs e)
         {
             // Set placeholder for ComboBox
-            Features.SetComboBoxPlaceholder(cmbFitnessGoal, "Select an option...");
-            Features.SetComboBoxPlaceholder(cmbFitnessLevel, "Select an option...");
-            Features.SetComboBoxPlaceholder(cmbGender, "Select an option...");
+            //Features.SetComboBoxPlaceholder(cmbFitnessGoal, "Select an option...");
+            //Features.SetComboBoxPlaceholder(cmbFitnessLevel, "Select an option...");
+            //Features.SetComboBoxPlaceholder(cmbGender, "Select an option...");
 
             // Align ComboBox text in center
             Features.AlignComboBoxTextCenter(cmbGender);

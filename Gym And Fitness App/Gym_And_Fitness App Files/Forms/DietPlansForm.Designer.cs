@@ -36,6 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.slidePanel = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
@@ -58,7 +59,6 @@
             this.timerForPics = new System.Windows.Forms.Timer(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pnlWorkoutSelection = new System.Windows.Forms.Panel();
-            this.cmbDietType = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlDietPlans = new System.Windows.Forms.Panel();
             this.pbDiet = new System.Windows.Forms.PictureBox();
@@ -92,7 +92,7 @@
             this.txtFoodItem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabDietPlan = new System.Windows.Forms.TabControl();
-            this.btnProfile = new System.Windows.Forms.Button();
+            this.cmbDietType = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -198,6 +198,28 @@
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(200, 486);
             this.slidePanel.TabIndex = 34;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(-1, 340);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(210, 51);
+            this.btnProfile.TabIndex = 16;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
             // 
@@ -517,26 +539,11 @@
             this.pnlWorkoutSelection.BackColor = System.Drawing.Color.LimeGreen;
             this.pnlWorkoutSelection.Controls.Add(this.cmbDietType);
             this.pnlWorkoutSelection.Controls.Add(this.label15);
-            this.pnlWorkoutSelection.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlWorkoutSelection.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlWorkoutSelection.Location = new System.Drawing.Point(3, 3);
             this.pnlWorkoutSelection.Name = "pnlWorkoutSelection";
             this.pnlWorkoutSelection.Size = new System.Drawing.Size(718, 41);
             this.pnlWorkoutSelection.TabIndex = 50;
-            // 
-            // cmbDietType
-            // 
-            this.cmbDietType.FormattingEnabled = true;
-            this.cmbDietType.Items.AddRange(new object[] {
-            "Weight Loss",
-            "Muscle Gain",
-            "Keto"});
-            this.cmbDietType.Location = new System.Drawing.Point(317, 7);
-            this.cmbDietType.Name = "cmbDietType";
-            this.cmbDietType.Size = new System.Drawing.Size(145, 28);
-            this.cmbDietType.TabIndex = 1;
-            this.cmbDietType.Text = "  ";
-            this.cmbDietType.SelectedIndexChanged += new System.EventHandler(this.cmbDietType_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -932,27 +939,20 @@
             this.tabDietPlan.TabIndex = 3;
             this.tabDietPlan.Tag = "";
             // 
-            // btnProfile
+            // cmbDietType
             // 
-            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
-            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.Location = new System.Drawing.Point(-1, 340);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(210, 51);
-            this.btnProfile.TabIndex = 16;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.cmbDietType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbDietType.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDietType.FormattingEnabled = true;
+            this.cmbDietType.Items.AddRange(new object[] {
+            "Weight Loss",
+            "Muscle Gain",
+            "Keto"});
+            this.cmbDietType.Location = new System.Drawing.Point(307, 9);
+            this.cmbDietType.Name = "cmbDietType";
+            this.cmbDietType.Size = new System.Drawing.Size(184, 25);
+            this.cmbDietType.TabIndex = 49;
+            this.cmbDietType.Text = "  ";
             // 
             // DietPlansForm
             // 
@@ -1056,7 +1056,6 @@
         private System.Windows.Forms.Label lblTotalNutrition;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel pnlWorkoutSelection;
-        private System.Windows.Forms.ComboBox cmbDietType;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel pnlDietPlans;
         private System.Windows.Forms.PictureBox pbDiet;
@@ -1065,5 +1064,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.ComboBox cmbDietType;
     }
 }

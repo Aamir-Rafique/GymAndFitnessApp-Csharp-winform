@@ -27,6 +27,8 @@ namespace GymAndFitness
             panelWidth = slidePanel.Width;
             slidePanel.Width = 45; // Start collapsed
 
+            //loading behaviour of bmi scale/chart
+            pbBMIChart.Image = Properties.Resources.bmiChartUnderW8;
 
 
             //  accessing current user 

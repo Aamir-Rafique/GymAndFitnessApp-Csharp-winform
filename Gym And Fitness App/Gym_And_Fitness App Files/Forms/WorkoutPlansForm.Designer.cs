@@ -52,6 +52,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSavedWorkoutPlan = new System.Windows.Forms.Label();
@@ -172,7 +173,6 @@
             this.pnlWorkoutSelection.BackColor = System.Drawing.Color.LimeGreen;
             this.pnlWorkoutSelection.Controls.Add(this.cmbWorkoutType);
             this.pnlWorkoutSelection.Controls.Add(this.label5);
-            this.pnlWorkoutSelection.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlWorkoutSelection.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlWorkoutSelection.Location = new System.Drawing.Point(3, 3);
             this.pnlWorkoutSelection.Name = "pnlWorkoutSelection";
@@ -257,6 +257,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LimeGreen;
             this.panel2.Controls.Add(this.pnlExerciseInfo);
             this.panel2.Controls.Add(this.cmbExercise);
             this.panel2.Controls.Add(this.label3);
@@ -265,6 +266,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(720, 490);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pnlExerciseInfo
             // 
@@ -292,8 +294,8 @@
             // 
             // cmbExercise
             // 
-            this.cmbExercise.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbExercise.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbExercise.BackColor = System.Drawing.SystemColors.Window;
+            this.cmbExercise.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Italic);
             this.cmbExercise.FormattingEnabled = true;
             this.cmbExercise.Items.AddRange(new object[] {
             "Abdominals (Abs)",
@@ -313,9 +315,9 @@
             "Serratus Anterior",
             "Traps (Trapezius)",
             "Triceps"});
-            this.cmbExercise.Location = new System.Drawing.Point(204, 14);
+            this.cmbExercise.Location = new System.Drawing.Point(204, 11);
             this.cmbExercise.Name = "cmbExercise";
-            this.cmbExercise.Size = new System.Drawing.Size(204, 27);
+            this.cmbExercise.Size = new System.Drawing.Size(204, 25);
             this.cmbExercise.TabIndex = 4;
             this.cmbExercise.SelectedIndexChanged += new System.EventHandler(this.cmbExercise_SelectedIndexChanged);
             // 
@@ -366,6 +368,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.LightGreen;
+            this.tabPage5.Controls.Add(this.label4);
             this.tabPage5.Controls.Add(this.panel5);
             this.tabPage5.Controls.Add(this.lblSavedWorkoutPlan);
             this.tabPage5.Controls.Add(this.dgvWorkoutPlan);
@@ -376,6 +379,17 @@
             this.tabPage5.Size = new System.Drawing.Size(720, 490);
             this.tabPage5.TabIndex = 6;
             this.tabPage5.Text = "  Custom Plan  ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label4.Location = new System.Drawing.Point(52, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(298, 23);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Set your custom workout preferences:";
             // 
             // panel5
             // 
@@ -390,10 +404,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Rockwell", 14.11881F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
             this.label2.Location = new System.Drawing.Point(49, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 20);
+            this.label2.Size = new System.Drawing.Size(277, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Your Custom Workout Plan";
             // 
@@ -416,10 +431,10 @@
             this.Duration,
             this.Intensity});
             this.dgvWorkoutPlan.GridColor = System.Drawing.Color.LimeGreen;
-            this.dgvWorkoutPlan.Location = new System.Drawing.Point(14, 74);
+            this.dgvWorkoutPlan.Location = new System.Drawing.Point(6, 96);
             this.dgvWorkoutPlan.Name = "dgvWorkoutPlan";
             this.dgvWorkoutPlan.RowHeadersWidth = 43;
-            this.dgvWorkoutPlan.Size = new System.Drawing.Size(694, 263);
+            this.dgvWorkoutPlan.Size = new System.Drawing.Size(694, 282);
             this.dgvWorkoutPlan.TabIndex = 0;
             // 
             // Day
@@ -455,7 +470,7 @@
             this.btnSaveWorkoutPlan.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold);
             this.btnSaveWorkoutPlan.Image = global::GymAndFitness.Properties.Resources.save1;
             this.btnSaveWorkoutPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveWorkoutPlan.Location = new System.Drawing.Point(274, 363);
+            this.btnSaveWorkoutPlan.Location = new System.Drawing.Point(275, 422);
             this.btnSaveWorkoutPlan.Name = "btnSaveWorkoutPlan";
             this.btnSaveWorkoutPlan.Size = new System.Drawing.Size(127, 44);
             this.btnSaveWorkoutPlan.TabIndex = 29;
@@ -843,5 +858,6 @@
         private System.Windows.Forms.Panel pnlExerciseInfo;
         private System.Windows.Forms.Label lblExerciseInfo;
         public System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Label label4;
     }
 }
