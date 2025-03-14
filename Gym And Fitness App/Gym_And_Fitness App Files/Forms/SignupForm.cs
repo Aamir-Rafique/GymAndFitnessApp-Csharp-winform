@@ -32,7 +32,7 @@ namespace GymAndFitness
         }
 
 
-        private string targetWeightRange = "";
+        //private string targetWeightRange = "";
         private double height = 0;
 
 

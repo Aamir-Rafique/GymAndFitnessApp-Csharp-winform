@@ -59,6 +59,7 @@
             this.timerForPics = new System.Windows.Forms.Timer(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pnlWorkoutSelection = new System.Windows.Forms.Panel();
+            this.cmbDietType = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlDietPlans = new System.Windows.Forms.Panel();
             this.pbDiet = new System.Windows.Forms.PictureBox();
@@ -92,7 +93,6 @@
             this.txtFoodItem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabDietPlan = new System.Windows.Forms.TabControl();
-            this.cmbDietType = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -536,7 +536,7 @@
             // 
             // pnlWorkoutSelection
             // 
-            this.pnlWorkoutSelection.BackColor = System.Drawing.Color.LimeGreen;
+            this.pnlWorkoutSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.pnlWorkoutSelection.Controls.Add(this.cmbDietType);
             this.pnlWorkoutSelection.Controls.Add(this.label15);
             this.pnlWorkoutSelection.Dock = System.Windows.Forms.DockStyle.Top;
@@ -544,6 +544,22 @@
             this.pnlWorkoutSelection.Name = "pnlWorkoutSelection";
             this.pnlWorkoutSelection.Size = new System.Drawing.Size(718, 41);
             this.pnlWorkoutSelection.TabIndex = 50;
+            // 
+            // cmbDietType
+            // 
+            this.cmbDietType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbDietType.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDietType.FormattingEnabled = true;
+            this.cmbDietType.Items.AddRange(new object[] {
+            "Weight Loss",
+            "Muscle Gain",
+            "Keto"});
+            this.cmbDietType.Location = new System.Drawing.Point(307, 9);
+            this.cmbDietType.Name = "cmbDietType";
+            this.cmbDietType.Size = new System.Drawing.Size(184, 25);
+            this.cmbDietType.TabIndex = 49;
+            this.cmbDietType.Text = "  ";
+            this.cmbDietType.SelectedIndexChanged += new System.EventHandler(this.cmbDietType_SelectedIndexChanged_1);
             // 
             // label15
             // 
@@ -560,8 +576,8 @@
             // 
             this.pnlDietPlans.AutoScroll = true;
             this.pnlDietPlans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlDietPlans.Controls.Add(this.pbDiet);
             this.pnlDietPlans.Controls.Add(this.lblMuscleGain);
+            this.pnlDietPlans.Controls.Add(this.pbDiet);
             this.pnlDietPlans.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlDietPlans.Location = new System.Drawing.Point(3, 44);
             this.pnlDietPlans.Name = "pnlDietPlans";
@@ -938,21 +954,6 @@
             this.tabDietPlan.Size = new System.Drawing.Size(732, 486);
             this.tabDietPlan.TabIndex = 3;
             this.tabDietPlan.Tag = "";
-            // 
-            // cmbDietType
-            // 
-            this.cmbDietType.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbDietType.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbDietType.FormattingEnabled = true;
-            this.cmbDietType.Items.AddRange(new object[] {
-            "Weight Loss",
-            "Muscle Gain",
-            "Keto"});
-            this.cmbDietType.Location = new System.Drawing.Point(307, 9);
-            this.cmbDietType.Name = "cmbDietType";
-            this.cmbDietType.Size = new System.Drawing.Size(184, 25);
-            this.cmbDietType.TabIndex = 49;
-            this.cmbDietType.Text = "  ";
             // 
             // DietPlansForm
             // 

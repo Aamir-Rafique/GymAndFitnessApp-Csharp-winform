@@ -87,7 +87,7 @@ namespace GymAndFitness
 
         //Diet types  recipes
 
-        private void cmbDietType_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbDietType_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             string selectedDietType = cmbDietType.SelectedItem.ToString();
             LoadDietPlans(selectedDietType);
@@ -985,5 +985,6 @@ namespace GymAndFitness
             Features.OpenProfileForm();
             this.Hide();
         }
+
     }
 }

@@ -32,7 +32,7 @@ namespace GymAndFitness
             //  accessing current user 
             if (UserDataManager.CurrentUser != null)
             {
-                userDataManager.ApplyProfilePicture(btnProfilePicture);
+                userDataManager.ApplyProfilePicture(btnProfilePicture1);
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
                 userDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
             }
@@ -60,7 +60,6 @@ namespace GymAndFitness
         {
             if (isPanelCollapsed)
             {
-                //pnlMain.BackColor = Color.LimeGreen; //change the color of main panel
                 slidePanel.Width += 7; // Expand the panel
                 if (slidePanel.Width >= panelWidth)
                 {
@@ -70,7 +69,6 @@ namespace GymAndFitness
             }
             else
             {
-                //pnlMain.BackColor = Color.LightGreen; //change the color of main panel
                 slidePanel.Width -= 7; // Collapse the panel
                 if (slidePanel.Width <= 45)
                 {
@@ -348,21 +346,6 @@ namespace GymAndFitness
 
 
 
-
-        private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
-        {
-            if (UserDataManager.CurrentUser != null)
-            {
-                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
-            }
-            else
-            {
-                toolTip1.SetToolTip(btnProfilePicture, "Profile");
-            }
-        }
-
-
-
         private async void cmbExercise_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbExercise.SelectedItem == null)
@@ -545,9 +528,23 @@ namespace GymAndFitness
             this.Hide();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void btnProfilePicture1_MouseEnter(object sender, EventArgs e)
+        {
+            if (UserDataManager.CurrentUser != null)
+            {
+                toolTip1.SetToolTip(btnProfilePicture1, $"{UserDataManager.CurrentUser.Username}'s Profile");
+            }
+            else
+            {
+                toolTip1.SetToolTip(btnProfilePicture1, "Profile");
+            }
+        }
+
+        private void btnProfilePicture1_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
         }
     }
 }

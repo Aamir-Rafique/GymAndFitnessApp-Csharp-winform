@@ -15,7 +15,7 @@ namespace GymAndFitness
 
 
         private string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
-
+       
         // Constructor
         public UserDataManager()
         {
@@ -53,6 +53,8 @@ namespace GymAndFitness
                         LoginForm loginForm = new LoginForm();
                         loginForm.Show();
                         Application.OpenForms["SignUpForm"].Close();
+
+                        //connection.Close();
                     }
                 }
                 catch (Exception ex)
@@ -518,6 +520,7 @@ namespace GymAndFitness
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+//@ method is used to prevent sql injection!!!
                 string query = "UPDATE Users SET DailyWaterIntake = @DailyWaterIntake WHERE Username = @Username";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

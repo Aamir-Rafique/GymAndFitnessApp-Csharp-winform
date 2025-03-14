@@ -65,7 +65,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
+            this.btnProfilePicture1 = new GymAndFitness.Classes.RoundPictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -97,7 +97,7 @@
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkoutPlan)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.slidePanel.SuspendLayout();
             this.SuspendLayout();
@@ -116,7 +116,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel3.Controls.Add(this.label13);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(3, 3);
@@ -170,7 +170,7 @@
             // 
             // pnlWorkoutSelection
             // 
-            this.pnlWorkoutSelection.BackColor = System.Drawing.Color.LimeGreen;
+            this.pnlWorkoutSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.pnlWorkoutSelection.Controls.Add(this.cmbWorkoutType);
             this.pnlWorkoutSelection.Controls.Add(this.label5);
             this.pnlWorkoutSelection.Dock = System.Windows.Forms.DockStyle.Top;
@@ -188,7 +188,7 @@
             "Gym Workout",
             "Home Workout",
             "Yoga"});
-            this.cmbWorkoutType.Location = new System.Drawing.Point(327, 8);
+            this.cmbWorkoutType.Location = new System.Drawing.Point(330, 8);
             this.cmbWorkoutType.Name = "cmbWorkoutType";
             this.cmbWorkoutType.Size = new System.Drawing.Size(184, 25);
             this.cmbWorkoutType.TabIndex = 1;
@@ -209,7 +209,7 @@
             // pnlExercises
             // 
             this.pnlExercises.AutoScroll = true;
-            this.pnlExercises.BackColor = System.Drawing.Color.LightGreen;
+            this.pnlExercises.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlExercises.Controls.Add(this.pbWorkout);
             this.pnlExercises.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlExercises.Location = new System.Drawing.Point(3, 43);
@@ -257,7 +257,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel2.Controls.Add(this.pnlExerciseInfo);
             this.panel2.Controls.Add(this.cmbExercise);
             this.panel2.Controls.Add(this.label3);
@@ -266,7 +266,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(720, 490);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pnlExerciseInfo
             // 
@@ -315,7 +314,7 @@
             "Serratus Anterior",
             "Traps (Trapezius)",
             "Triceps"});
-            this.cmbExercise.Location = new System.Drawing.Point(204, 11);
+            this.cmbExercise.Location = new System.Drawing.Point(207, 13);
             this.cmbExercise.Name = "cmbExercise";
             this.cmbExercise.Size = new System.Drawing.Size(204, 25);
             this.cmbExercise.TabIndex = 4;
@@ -346,7 +345,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel4.Controls.Add(this.label9);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(3, 3);
@@ -367,7 +366,7 @@
             // 
             // tabPage5
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.LightGreen;
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tabPage5.Controls.Add(this.label4);
             this.tabPage5.Controls.Add(this.panel5);
             this.tabPage5.Controls.Add(this.lblSavedWorkoutPlan);
@@ -393,7 +392,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(3, 3);
@@ -435,7 +434,7 @@
             this.dgvWorkoutPlan.Name = "dgvWorkoutPlan";
             this.dgvWorkoutPlan.RowHeadersWidth = 43;
             this.dgvWorkoutPlan.Size = new System.Drawing.Size(694, 282);
-            this.dgvWorkoutPlan.TabIndex = 0;
+            this.dgvWorkoutPlan.TabIndex = 52;
             // 
             // Day
             // 
@@ -509,7 +508,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
-            this.panel1.Controls.Add(this.btnProfilePicture);
+            this.panel1.Controls.Add(this.btnProfilePicture1);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
@@ -520,25 +519,25 @@
             this.panel1.Size = new System.Drawing.Size(781, 74);
             this.panel1.TabIndex = 5;
             // 
-            // btnProfilePicture
+            // btnProfilePicture1
             // 
-            this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.btnProfilePicture.BorderColor = System.Drawing.Color.Lime;
-            this.btnProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
-            this.btnProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.btnProfilePicture.BorderSize = 2;
-            this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfilePicture.GradientAngle = 50F;
-            this.btnProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.btnProfilePicture.Location = new System.Drawing.Point(708, 10);
-            this.btnProfilePicture.Name = "btnProfilePicture";
-            this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
-            this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProfilePicture.TabIndex = 40;
-            this.btnProfilePicture.TabStop = false;
-            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click_1);
-            this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter_1);
+            this.btnProfilePicture1.BackColor = System.Drawing.Color.Transparent;
+            this.btnProfilePicture1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.btnProfilePicture1.BorderColor = System.Drawing.Color.Lime;
+            this.btnProfilePicture1.BorderColor2 = System.Drawing.Color.HotPink;
+            this.btnProfilePicture1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.btnProfilePicture1.BorderSize = 2;
+            this.btnProfilePicture1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfilePicture1.GradientAngle = 50F;
+            this.btnProfilePicture1.Image = global::GymAndFitness.Properties.Resources.usernew;
+            this.btnProfilePicture1.Location = new System.Drawing.Point(701, 10);
+            this.btnProfilePicture1.Name = "btnProfilePicture1";
+            this.btnProfilePicture1.Size = new System.Drawing.Size(58, 58);
+            this.btnProfilePicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnProfilePicture1.TabIndex = 41;
+            this.btnProfilePicture1.TabStop = false;
+            this.btnProfilePicture1.Click += new System.EventHandler(this.btnProfilePicture1_Click);
+            this.btnProfilePicture1.MouseEnter += new System.EventHandler(this.btnProfilePicture1_MouseEnter);
             // 
             // pictureBox3
             // 
@@ -802,7 +801,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkoutPlan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.slidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -844,7 +843,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
         private System.Windows.Forms.DataGridViewTextBoxColumn Intensity;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Classes.RoundPictureBox btnProfilePicture;
+        //private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.Panel pnlExercises;
         private System.Windows.Forms.Panel pnlWorkoutSelection;
         private System.Windows.Forms.ComboBox cmbWorkoutType;
@@ -859,5 +858,6 @@
         private System.Windows.Forms.Label lblExerciseInfo;
         public System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Label label4;
+        private Classes.RoundPictureBox btnProfilePicture1;
     }
 }

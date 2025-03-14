@@ -198,7 +198,7 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.LightGreen;
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(199)))));
             this.pnlMain.Controls.Add(this.slidePanel);
             this.pnlMain.Controls.Add(this.pnlChallenge);
             this.pnlMain.Controls.Add(this.pictureBox3);
@@ -419,7 +419,7 @@
             // 
             // pnlChallenge
             // 
-            this.pnlChallenge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
+            this.pnlChallenge.BackColor = System.Drawing.Color.LightGreen;
             this.pnlChallenge.Controls.Add(this.lblChallenge);
             this.pnlChallenge.Controls.Add(this.pictureBox4);
             this.pnlChallenge.Controls.Add(this.lblwarning);
@@ -558,7 +558,7 @@
             this.lblQuote.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lblQuote.Location = new System.Drawing.Point(197, 144);
             this.lblQuote.Name = "lblQuote";
-            this.lblQuote.Size = new System.Drawing.Size(0, 38);
+            this.lblQuote.Size = new System.Drawing.Size(0, 41);
             this.lblQuote.TabIndex = 3;
             // 
             // label2
@@ -574,7 +574,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
+            this.panel2.BackColor = System.Drawing.Color.LightGreen;
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.lblWaterIntake);
             this.panel2.Controls.Add(this.label9);
@@ -701,7 +701,7 @@
             // panel6
             // 
             this.panel6.AutoSize = true;
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
+            this.panel6.BackColor = System.Drawing.Color.LightGreen;
             this.panel6.Controls.Add(this.lblWeightProgess);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.progressBarWeight);

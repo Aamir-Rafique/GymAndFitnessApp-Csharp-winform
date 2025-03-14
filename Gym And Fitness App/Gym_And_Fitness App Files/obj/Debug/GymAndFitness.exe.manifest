@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="GymAndFitness.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="GymAndFitness.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="fitness.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="32691112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="32691624">
       <assemblyIdentity name="GymAndFitness" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TMHsZVp4VSVEhOoNDKkeP/ouuUDuozadDpEcsy4hd8o=</dsig:DigestValue>
+        <dsig:DigestValue>93hPDQrwDfeoD9BA05vvXHUe001BB+7QVJ/0o8hR3po=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -519,13 +519,13 @@
       <dsig:DigestValue>IarMRdehvW5Mh2kAKLL13vw8dx51QHYSZ+yNHfEagq8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GymAndFitness.exe.config" size="5879">
+  <file name="GymAndFitness.exe.config" size="6205">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Ge/TSK/2UabmxlemeFv35+/qEkK+BM8DI7t1Wfe7+SQ=</dsig:DigestValue>
+      <dsig:DigestValue>x6pkWnCY1WHcpzTay38PMgj00sf7LGuHNPz4HPzbEzo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="GymAndFitness.pdb" size="376320">
@@ -534,7 +534,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Ayvv5avSy9ciujKG9v96VIMAbuCIwZVg8qvLgXOCyZM=</dsig:DigestValue>
+      <dsig:DigestValue>JRadc7AmmJoCqzqT7co0WKr/zB+c0Qnc8RgiMdlrEB8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ILLink\ILLink.Descriptors.LibraryBuild.xml" size="297" writeableType="applicationData">
