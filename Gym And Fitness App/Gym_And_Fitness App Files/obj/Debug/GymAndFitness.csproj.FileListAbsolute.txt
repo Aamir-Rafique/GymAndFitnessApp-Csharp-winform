@@ -1,3 +1,5 @@
+C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Database_files\GymAndFitness_DB.mdf
+C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Database_files\GymAndFitness_DB_log.ldf
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\GymAndFitness.exe.config
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\GymAndFitness.exe.manifest
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\GymAndFitness.application

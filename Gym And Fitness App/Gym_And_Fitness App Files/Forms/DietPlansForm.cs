@@ -32,6 +32,8 @@ namespace GymAndFitness
             if (UserDataManager.CurrentUser != null)
             {
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
+                //load membership plan pics
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
 
                 //database...
                 int userId = UserDataManager.CurrentUser.UserID;
@@ -40,6 +42,13 @@ namespace GymAndFitness
 
                 //allign centere cmb box items
                 Features.AlignComboBoxTextCenter(cmbDietType);
+
+                //disabling online food search feature for free members... 
+                if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+                {
+                    rbtnOnline.BackColor = Color.Gainsboro;
+                    rbtnOnline.ForeColor = Color.Gray;
+                }
             }
 
             txtFoodItem.Text = "Type here";
@@ -435,12 +444,12 @@ namespace GymAndFitness
             // Check if any radio button is selected
             if (!IsAnyRadioButtonChecked())
             {
-                errorGroupBoxRadioButtons.SetError(groupBoxRadioButtons, "Please select a Search method.");
+                error.SetError(groupBoxRadioButtons, "Please select a Search method.");
                 return;
             }
             else
             {
-                errorGroupBoxRadioButtons.Clear();
+                error.Clear();
             }
 
 
@@ -468,18 +477,34 @@ namespace GymAndFitness
             }
             else if (rbtnOnline.Checked)
             {
-                // Online search
-                lblNutritionInfo.Text = "Searching online, please wait...";
-                string nutritionInfo = await GetNutritionInfo(FoodItem);
 
-                if (!string.IsNullOrEmpty(nutritionInfo) && !nutritionInfo.StartsWith("Error"))
+                if (UserDataManager.CurrentUser != null)
                 {
-                    lblNutritionInfo.Text = nutritionInfo;
+                    //disabling this for free members:
+                    if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+                    {
+                        lblNutritionInfo.Text = "Upgrade to Premium to search online, for food items!";
+                    }
+                    else
+                    { 
+                        // Online search
+                        lblNutritionInfo.Text = "Searching online, please wait...";
+                        string nutritionInfo = await GetNutritionInfo(FoodItem);
+
+                        if (!string.IsNullOrEmpty(nutritionInfo) && !nutritionInfo.StartsWith("Error"))
+                        {
+                            lblNutritionInfo.Text = nutritionInfo;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Food item not found online or invalid.", "Search Error");
+                            lblNutritionInfo.Text = "Nutrition information not available.";
+                        }
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Food item not found online or invalid.", "Search Error");
-                    lblNutritionInfo.Text = "Nutrition information not available.";
+                    lblNutritionInfo.Text = "You have to login to search online!";
                 }
             }
         }

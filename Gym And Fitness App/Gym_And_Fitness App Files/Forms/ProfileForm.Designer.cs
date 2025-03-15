@@ -283,8 +283,9 @@
             // lblBMI
             // 
             this.lblBMI.AutoSize = true;
+            this.lblBMI.BackColor = System.Drawing.Color.White;
             this.lblBMI.Font = new System.Drawing.Font("Rockwell", 13.25743F, System.Drawing.FontStyle.Bold);
-            this.lblBMI.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblBMI.ForeColor = System.Drawing.Color.Gold;
             this.lblBMI.Location = new System.Drawing.Point(77, 151);
             this.lblBMI.Name = "lblBMI";
             this.lblBMI.Size = new System.Drawing.Size(108, 23);
@@ -554,7 +555,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = global::GymAndFitness.Properties.Resources.power_button;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(678, 20);
+            this.btnLogout.Location = new System.Drawing.Point(679, 20);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(103, 37);
             this.btnLogout.TabIndex = 16;

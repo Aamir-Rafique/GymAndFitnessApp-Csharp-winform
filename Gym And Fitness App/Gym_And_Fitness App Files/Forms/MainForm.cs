@@ -60,6 +60,9 @@ namespace GymAndFitness
                 btnLogout.Enabled = true;
                 btnLogin.Visible = false;
                 btnLogin.Enabled = false;
+
+                //load membership plan pics
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
             }
             else
             {
@@ -71,6 +74,9 @@ namespace GymAndFitness
 
 
             }
+
+          
+
 
         }
 

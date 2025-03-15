@@ -35,6 +35,9 @@ namespace GymAndFitness
             if (UserDataManager.CurrentUser != null)
             {
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
+                //load membership plan pics
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
+
             }
 
 
@@ -96,8 +99,9 @@ namespace GymAndFitness
                     double weight = double.Parse(txtWeight.Text);
                     height = double.Parse(txtHeight.Text);
                     double bmi = Features.CalculateBMI(weight, height);
-                    lblBMI.Text = $"Your BMI is {bmi:F2}";
+                    lblBMI.Text = $"{bmi:F2}";
                     lblBMI.ForeColor = Features.GetBMIColor(bmi);
+                    lblBMICategory.ForeColor = Features.GetBMIColor(bmi);
                     lblBMICategory.Text = Features.GetBMICategory(bmi);
                     pbBMIChart.Image = Features.GetBMIChartUpdate(bmi);
                     lblTargetWeightRange.Text = Features.SuggestTargetWeightRange(height);
@@ -221,6 +225,11 @@ namespace GymAndFitness
         {
             Features.OpenProfileForm();
             this.Hide();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

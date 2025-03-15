@@ -86,7 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 11.0802F);
-            this.label3.Location = new System.Drawing.Point(185, 112);
+            this.label3.Location = new System.Drawing.Point(184, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 19);
             this.label3.TabIndex = 4;
@@ -214,10 +214,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GymAndFitness.Properties.Resources.userlogin;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 97);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 87);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 151);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 177);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -232,7 +232,6 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblGuest);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.chkShowPassword);
             this.Controls.Add(this.lblCreateAccount);
             this.Controls.Add(this.label5);
@@ -241,6 +240,7 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(519, 391);

@@ -10,17 +10,11 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-
-
         private void btnFreePlan_Click(object sender, EventArgs e)
         {
             if (UserDataManager.CurrentUser != null)
             {
-                UserDataManager.CurrentUser.MembershipStatus = "Free";
-                userDataManager.UpdateMembershipInDatabase("Free");
-                MessageBox.Show("Membership updated to Free!", "Success");
+                MessageBox.Show("You are already using a free plan!", "Attention");
                 this.Close();
                 Features.OpenProfileForm();
             }
@@ -52,7 +46,6 @@ namespace GymAndFitness
                 MessageBox.Show("No user is logged in.");
             }
         }
-
 
     }
 }

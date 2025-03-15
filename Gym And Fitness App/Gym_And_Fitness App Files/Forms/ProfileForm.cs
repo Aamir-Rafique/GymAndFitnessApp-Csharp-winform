@@ -73,6 +73,10 @@ namespace GymAndFitness
                     pbMembershipStatus.Image = null;
                 }
 
+                if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+                {
+                    btnChangeProfilePicture.BackColor = Color.Gray;
+                }
 
             }
             else
@@ -208,7 +212,15 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
-                userDataManager.ChangeProfilePicture(pbProfilePicture);
+
+                if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+                {
+                    MessageBox.Show("Upgrade to Premium to set your desired Profile Picture!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+                else
+                {
+                    userDataManager.ChangeProfilePicture(pbProfilePicture);
+                }
             }
             else
             {

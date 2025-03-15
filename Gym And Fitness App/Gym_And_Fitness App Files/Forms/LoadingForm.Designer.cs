@@ -60,12 +60,12 @@
             // lblLoading
             // 
             this.lblLoading.AutoSize = true;
-            this.lblLoading.Font = new System.Drawing.Font("Cascadia Mono", 12.83168F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoading.Font = new System.Drawing.Font("Cascadia Mono", 13.83168F, System.Drawing.FontStyle.Bold);
             this.lblLoading.ForeColor = System.Drawing.Color.White;
-            this.lblLoading.Location = new System.Drawing.Point(4, 195);
+            this.lblLoading.Location = new System.Drawing.Point(2, 195);
             this.lblLoading.MaximumSize = new System.Drawing.Size(350, 0);
             this.lblLoading.Name = "lblLoading";
-            this.lblLoading.Size = new System.Drawing.Size(120, 24);
+            this.lblLoading.Size = new System.Drawing.Size(132, 27);
             this.lblLoading.TabIndex = 0;
             this.lblLoading.Text = "Loading...";
             this.lblLoading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,7 +88,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label4.Location = new System.Drawing.Point(437, 244);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 16);
+            this.label4.Size = new System.Drawing.Size(92, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Developed by";
             // 

@@ -140,7 +140,7 @@
             "Beginner",
             "Intermediate",
             "Advance"});
-            this.cmbFitnessLevel.Location = new System.Drawing.Point(524, 385);
+            this.cmbFitnessLevel.Location = new System.Drawing.Point(524, 395);
             this.cmbFitnessLevel.Name = "cmbFitnessLevel";
             this.cmbFitnessLevel.Size = new System.Drawing.Size(148, 26);
             this.cmbFitnessLevel.TabIndex = 10;
@@ -152,7 +152,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(415, 388);
+            this.label10.Location = new System.Drawing.Point(415, 398);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 19);
             this.label10.TabIndex = 58;
@@ -165,7 +165,7 @@
             this.cmbFitnessGoal.Items.AddRange(new object[] {
             "Muscle Gain",
             "Fat Loss"});
-            this.cmbFitnessGoal.Location = new System.Drawing.Point(523, 328);
+            this.cmbFitnessGoal.Location = new System.Drawing.Point(523, 338);
             this.cmbFitnessGoal.Name = "cmbFitnessGoal";
             this.cmbFitnessGoal.Size = new System.Drawing.Size(149, 26);
             this.cmbFitnessGoal.TabIndex = 9;
@@ -177,7 +177,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(415, 331);
+            this.label9.Location = new System.Drawing.Point(415, 341);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 19);
             this.label9.TabIndex = 56;
@@ -186,7 +186,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(218, 328);
+            this.txtPassword.Location = new System.Drawing.Point(218, 338);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(148, 26);
             this.txtPassword.TabIndex = 4;
@@ -313,7 +313,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 329);
+            this.label3.Location = new System.Drawing.Point(67, 339);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 19);
             this.label3.TabIndex = 44;
@@ -359,7 +359,7 @@
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(218, 384);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(218, 394);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(148, 26);
             this.txtConfirmPassword.TabIndex = 5;
@@ -371,7 +371,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(67, 389);
+            this.label14.Location = new System.Drawing.Point(67, 399);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(148, 19);
             this.label14.TabIndex = 75;
@@ -426,7 +426,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9.267326F, System.Drawing.FontStyle.Italic);
             this.label17.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label17.Location = new System.Drawing.Point(415, 234);
+            this.label17.Location = new System.Drawing.Point(415, 298);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(169, 17);
             this.label17.TabIndex = 79;
@@ -437,7 +437,7 @@
             this.lblTargetWeightRange.AutoSize = true;
             this.lblTargetWeightRange.Font = new System.Drawing.Font("Cascadia Code", 9.267326F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTargetWeightRange.ForeColor = System.Drawing.Color.Purple;
-            this.lblTargetWeightRange.Location = new System.Drawing.Point(584, 234);
+            this.lblTargetWeightRange.Location = new System.Drawing.Point(584, 298);
             this.lblTargetWeightRange.Name = "lblTargetWeightRange";
             this.lblTargetWeightRange.Size = new System.Drawing.Size(88, 17);
             this.lblTargetWeightRange.TabIndex = 80;
@@ -448,11 +448,10 @@
             this.lblProfilePicturePath.AutoSize = true;
             this.lblProfilePicturePath.Font = new System.Drawing.Font("Segoe UI", 9.267326F, System.Drawing.FontStyle.Italic);
             this.lblProfilePicturePath.ForeColor = System.Drawing.Color.Transparent;
-            this.lblProfilePicturePath.Location = new System.Drawing.Point(896, 568);
+            this.lblProfilePicturePath.Location = new System.Drawing.Point(875, 550);
             this.lblProfilePicturePath.Name = "lblProfilePicturePath";
-            this.lblProfilePicturePath.Size = new System.Drawing.Size(26, 17);
+            this.lblProfilePicturePath.Size = new System.Drawing.Size(0, 17);
             this.lblProfilePicturePath.TabIndex = 81;
-            this.lblProfilePicturePath.Text = "gfd";
             // 
             // error
             // 
@@ -511,7 +510,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SignupForm";

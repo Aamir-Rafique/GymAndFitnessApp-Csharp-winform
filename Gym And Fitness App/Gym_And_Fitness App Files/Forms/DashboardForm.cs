@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -36,6 +37,9 @@ namespace GymAndFitness
 
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
 
+                //load membership plan pics
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
+
                 //
                 btnLogout.Visible = true;
                 btnLogout.Enabled = true;
@@ -70,31 +74,6 @@ namespace GymAndFitness
                 weightProgressPercentage = Math.Min(100, Math.Max(0, weightProgressPercentage));
 
 
-
-                //weight progress bar old logic...
-                //double weightProgressPercentage = 0;
-
-                //// Calculate progress based on fitness goal
-                //if (UserDataManager.CurrentUser.FitnessGoal == "Muscle Gain")
-                //{
-                //    // Ensure calculation is valid
-                //    if (currentWeight >= startingWeight && currentWeight <= targetWeight)
-                //    {
-                //        weightProgressPercentage = ((currentWeight - startingWeight) / (targetWeight - startingWeight)) * 100;
-                //    }
-                //}
-                //else if (UserDataManager.CurrentUser.FitnessGoal == "Fat Loss")
-                //{
-                //    // Ensure calculation is valid
-                //    if (currentWeight <= startingWeight && currentWeight >= targetWeight)
-                //    {
-                //        weightProgressPercentage = ((startingWeight - currentWeight) / (startingWeight - targetWeight)) * 100;
-                //    }
-                //}
-
-                //// Ensure progress value is within bounds (0 to 100)
-                //weightProgressPercentage = Math.Min(100, Math.Max(0, weightProgressPercentage));
-
                 // Update progress bar and label
                 progressBarWeight.Value = (int)weightProgressPercentage;
                 lblWeightProgess.Text = $"Weight Progress: {Math.Round(weightProgressPercentage)}% ({currentWeight} kg out of {targetWeight} kg)";
@@ -111,18 +90,34 @@ namespace GymAndFitness
                 Console.WriteLine($"Progress Percentage: {weightProgressPercentage}");
 
 
-                //water reset timer
-                //waterResetTimer.Start();
+                //disabling water tracker feature for free members... 
+                if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+                {
+                    lblPremiumMembers.Text = "For Premium Members Only!";
+                    pnlWaterIntake.BackColor = Color.Gainsboro;
+                    pnlWaterIntake.ForeColor = Color.Gray;
+                    btnAddWater.BackColor = Color.Gainsboro;
+                    btnAddWater.Enabled = false;
+                    lblWaterIntake.ForeColor = Color.Gray;
+                    lblGlasses.ForeColor = Color.Gray;
+                    progressBarWater.Enabled = false;
+                    progressBarWater.Value = 0;
+                    toolTip.SetToolTip(pnlWaterIntake, $"Upgrade to Premium to access this feature!");
+                    toolTip.SetToolTip(pbwaterintake, $"Upgrade to Premium to access this feature!");
+                    pnlWaterIntake.Cursor = Cursors.Hand;
+                }
+
             }
 
             else
             {
-                //MessageBox.Show("No user is logged in.");
-
                 btnLogout.Visible = false;
                 btnLogout.Enabled = false;
                 btnLogin.Visible = true;
                 btnLogin.Enabled = true;
+
+                //
+
             }
 
         }
@@ -458,6 +453,11 @@ namespace GymAndFitness
         {
             Features.OpenProfileForm();
             this.Hide();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -2,7 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
-    <PublishUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Setup\</PublishUrl>
+    <PublishUrl>\\HP-PC\Users\Aamir\Desktop\Gym And Fitness App\Gym And Fitness app_Clickonce\Setup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -12,16 +12,16 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Setup\</InstallUrl>
-    <UpdateUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Setup\</UpdateUrl>
+    <UpdateUrl>\\HP-PC\Users\Aamir\Desktop\Gym And Fitness App\Gym And Fitness app_Clickonce\Setup\</UpdateUrl>
     <TargetCulture>en-US</TargetCulture>
     <ProductName>Gym And Fitness</ProductName>
     <PublisherName>Aamir Rafique</PublisherName>
     <SuiteName>AR Tech</SuiteName>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -60,7 +60,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
@@ -586,6 +586,13 @@
     <None Include="Resources\Icons\plus.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database_files\GymAndFitness_DB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database_files\GymAndFitness_DB_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>GymAndFitness_DB.mdf</DependentUpon>
+    </Content>
     <Content Include="fitness.ico" />
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
     <None Include="Resources\Icons\userdfa.png" />

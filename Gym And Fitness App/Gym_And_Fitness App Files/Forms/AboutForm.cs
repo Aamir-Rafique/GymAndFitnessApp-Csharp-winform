@@ -29,6 +29,8 @@ namespace GymAndFitness
             //  accessing current user 
             if (UserDataManager.CurrentUser != null)
             {
+                //load membership plan pics
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
                 userDataManager.ApplyProfilePicture(btnProfilePicture);
             }
 

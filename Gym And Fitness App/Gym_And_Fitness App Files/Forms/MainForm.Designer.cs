@@ -40,6 +40,7 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
             this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.slidePanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -230,6 +232,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Controls.Add(this.pbMembershipStatus);
             this.panel1.Controls.Add(this.btnProfilePicture);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label1);
@@ -239,6 +242,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(784, 74);
             this.panel1.TabIndex = 1;
+            // 
+            // pbMembershipStatus
+            // 
+            this.pbMembershipStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbMembershipStatus.Location = new System.Drawing.Point(429, 25);
+            this.pbMembershipStatus.Name = "pbMembershipStatus";
+            this.pbMembershipStatus.Size = new System.Drawing.Size(30, 26);
+            this.pbMembershipStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMembershipStatus.TabIndex = 22;
+            this.pbMembershipStatus.TabStop = false;
             // 
             // btnProfilePicture
             // 
@@ -374,6 +387,7 @@
             this.slidePanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -400,6 +414,7 @@
         private System.Windows.Forms.Button btnLogout;
         private Classes.RoundPictureBox btnProfilePicture;
         public System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.PictureBox pbMembershipStatus;
     }
 }
 

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
             this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.lblVer = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@
             this.lblPurpose = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             this.slidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,6 +84,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Controls.Add(this.pbMembershipStatus);
             this.panel1.Controls.Add(this.btnProfilePicture);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -90,6 +93,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(782, 74);
             this.panel1.TabIndex = 6;
+            // 
+            // pbMembershipStatus
+            // 
+            this.pbMembershipStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbMembershipStatus.Location = new System.Drawing.Point(427, 22);
+            this.pbMembershipStatus.Name = "pbMembershipStatus";
+            this.pbMembershipStatus.Size = new System.Drawing.Size(30, 26);
+            this.pbMembershipStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMembershipStatus.TabIndex = 40;
+            this.pbMembershipStatus.TabStop = false;
             // 
             // btnProfilePicture
             // 
@@ -114,7 +127,7 @@
             // lblVer
             // 
             this.lblVer.AutoSize = true;
-            this.lblVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblVer.BackColor = System.Drawing.Color.PaleGreen;
             this.lblVer.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVer.ForeColor = System.Drawing.Color.Black;
             this.lblVer.Location = new System.Drawing.Point(132, 97);
@@ -127,7 +140,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label2.BackColor = System.Drawing.Color.PaleGreen;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(132, 141);
@@ -140,7 +153,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label3.BackColor = System.Drawing.Color.PaleGreen;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
             this.label3.Location = new System.Drawing.Point(327, 458);
@@ -174,7 +187,6 @@
             this.slidePanel.Controls.Add(this.btnBMICalculator);
             this.slidePanel.Controls.Add(this.btnDietPlans);
             this.slidePanel.Controls.Add(this.btnDashboard);
-            this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidePanel.Location = new System.Drawing.Point(0, 74);
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(200, 529);
@@ -432,7 +444,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label8.BackColor = System.Drawing.Color.PaleGreen;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Blue;
             this.label8.Location = new System.Drawing.Point(256, 164);
@@ -445,7 +457,7 @@
             // lblPurpose
             // 
             this.lblPurpose.AutoSize = true;
-            this.lblPurpose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblPurpose.BackColor = System.Drawing.Color.PaleGreen;
             this.lblPurpose.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPurpose.Location = new System.Drawing.Point(132, 243);
             this.lblPurpose.MaximumSize = new System.Drawing.Size(450, 0);
@@ -456,7 +468,7 @@
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
-            this.lblVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblVersion.BackColor = System.Drawing.Color.PaleGreen;
             this.lblVersion.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersion.ForeColor = System.Drawing.Color.Blue;
             this.lblVersion.Location = new System.Drawing.Point(241, 97);
@@ -470,7 +482,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(782, 603);
             this.Controls.Add(this.slidePanel);
             this.Controls.Add(this.lblVer);
@@ -496,6 +508,7 @@
             this.Load += new System.EventHandler(this.AboutForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             this.slidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -535,5 +548,6 @@
         private System.Windows.Forms.Label lblPurpose;
         public System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.PictureBox pbMembershipStatus;
     }
 }

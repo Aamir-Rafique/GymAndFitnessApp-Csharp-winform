@@ -31,12 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
             this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.lblPremiumMembers = new System.Windows.Forms.Label();
             this.slidePanel = new System.Windows.Forms.Panel();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -52,7 +54,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblwarning = new System.Windows.Forms.Label();
             this.btnChallenge = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,8 +62,8 @@
             this.lblClock = new System.Windows.Forms.Label();
             this.lblQuote = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
+            this.pnlWaterIntake = new System.Windows.Forms.Panel();
+            this.lblGlasses = new System.Windows.Forms.Label();
             this.lblWaterIntake = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -71,7 +72,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnAddWater = new System.Windows.Forms.Button();
             this.progressBarWater = new System.Windows.Forms.ProgressBar();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pbwaterintake = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblWeightProgess = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnlMain.SuspendLayout();
@@ -90,14 +92,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.pnlWaterIntake.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbwaterintake)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Controls.Add(this.pbMembershipStatus);
             this.panel1.Controls.Add(this.btnProfilePicture);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.btnLogout);
@@ -108,6 +111,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 70);
             this.panel1.TabIndex = 0;
+            // 
+            // pbMembershipStatus
+            // 
+            this.pbMembershipStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbMembershipStatus.Location = new System.Drawing.Point(440, 22);
+            this.pbMembershipStatus.Name = "pbMembershipStatus";
+            this.pbMembershipStatus.Size = new System.Drawing.Size(30, 26);
+            this.pbMembershipStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMembershipStatus.TabIndex = 41;
+            this.pbMembershipStatus.TabStop = false;
             // 
             // btnProfilePicture
             // 
@@ -200,6 +213,7 @@
             // 
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(199)))));
             this.pnlMain.Controls.Add(this.slidePanel);
+            this.pnlMain.Controls.Add(this.lblPremiumMembers);
             this.pnlMain.Controls.Add(this.pnlChallenge);
             this.pnlMain.Controls.Add(this.pictureBox3);
             this.pnlMain.Controls.Add(this.pictureBox1);
@@ -208,13 +222,22 @@
             this.pnlMain.Controls.Add(this.lblClock);
             this.pnlMain.Controls.Add(this.lblQuote);
             this.pnlMain.Controls.Add(this.label2);
-            this.pnlMain.Controls.Add(this.panel2);
+            this.pnlMain.Controls.Add(this.pnlWaterIntake);
             this.pnlMain.Controls.Add(this.panel6);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 70);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(834, 540);
             this.pnlMain.TabIndex = 1;
+            // 
+            // lblPremiumMembers
+            // 
+            this.lblPremiumMembers.Font = new System.Drawing.Font("Segoe UI", 9.11881F, System.Drawing.FontStyle.Bold);
+            this.lblPremiumMembers.Location = new System.Drawing.Point(606, 245);
+            this.lblPremiumMembers.Name = "lblPremiumMembers";
+            this.lblPremiumMembers.Size = new System.Drawing.Size(197, 26);
+            this.lblPremiumMembers.TabIndex = 22;
+            this.lblPremiumMembers.Click += new System.EventHandler(this.label10_Click);
             // 
             // slidePanel
             // 
@@ -419,16 +442,15 @@
             // 
             // pnlChallenge
             // 
-            this.pnlChallenge.BackColor = System.Drawing.Color.LightGreen;
+            this.pnlChallenge.BackColor = System.Drawing.Color.PaleGreen;
             this.pnlChallenge.Controls.Add(this.lblChallenge);
             this.pnlChallenge.Controls.Add(this.pictureBox4);
             this.pnlChallenge.Controls.Add(this.lblwarning);
             this.pnlChallenge.Controls.Add(this.btnChallenge);
-            this.pnlChallenge.Controls.Add(this.label5);
             this.pnlChallenge.Controls.Add(this.label4);
             this.pnlChallenge.Location = new System.Drawing.Point(60, 270);
             this.pnlChallenge.Name = "pnlChallenge";
-            this.pnlChallenge.Size = new System.Drawing.Size(500, 150);
+            this.pnlChallenge.Size = new System.Drawing.Size(500, 138);
             this.pnlChallenge.TabIndex = 13;
             // 
             // lblChallenge
@@ -445,33 +467,33 @@
             // 
             this.pictureBox4.BackgroundImage = global::GymAndFitness.Properties.Resources.warning_sign;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(11, 101);
+            this.pictureBox4.Location = new System.Drawing.Point(14, 109);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(34, 36);
+            this.pictureBox4.Size = new System.Drawing.Size(30, 23);
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
             // 
             // lblwarning
             // 
             this.lblwarning.AutoSize = true;
-            this.lblwarning.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblwarning.Font = new System.Drawing.Font("Rockwell", 9.69307F, System.Drawing.FontStyle.Bold);
             this.lblwarning.ForeColor = System.Drawing.Color.Red;
-            this.lblwarning.Location = new System.Drawing.Point(50, 101);
+            this.lblwarning.Location = new System.Drawing.Point(54, 112);
             this.lblwarning.Name = "lblwarning";
-            this.lblwarning.Size = new System.Drawing.Size(124, 19);
+            this.lblwarning.Size = new System.Drawing.Size(147, 18);
             this.lblwarning.TabIndex = 16;
-            this.lblwarning.Text = "Do if you can!!";
+            this.lblwarning.Text = "Do at your own risk!";
             // 
             // btnChallenge
             // 
-            this.btnChallenge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnChallenge.BackColor = System.Drawing.Color.Cyan;
             this.btnChallenge.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChallenge.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnChallenge.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnChallenge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChallenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.841584F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChallenge.ForeColor = System.Drawing.Color.Black;
-            this.btnChallenge.Location = new System.Drawing.Point(16, 29);
+            this.btnChallenge.Location = new System.Drawing.Point(14, 31);
             this.btnChallenge.Name = "btnChallenge";
             this.btnChallenge.Size = new System.Drawing.Size(147, 28);
             this.btnChallenge.TabIndex = 1;
@@ -479,16 +501,6 @@
             this.toolTip.SetToolTip(this.btnChallenge, "Task");
             this.btnChallenge.UseVisualStyleBackColor = false;
             this.btnChallenge.Click += new System.EventHandler(this.btnChallenge_Click_1);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(56, 121);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 19);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Not For Loosers!!";
             // 
             // label4
             // 
@@ -572,34 +584,34 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Welcome to Gym && Fitness App!";
             // 
-            // panel2
+            // pnlWaterIntake
             // 
-            this.panel2.BackColor = System.Drawing.Color.LightGreen;
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.lblWaterIntake);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.btnAddWater);
-            this.panel2.Controls.Add(this.progressBarWater);
-            this.panel2.Controls.Add(this.pictureBox6);
-            this.panel2.Location = new System.Drawing.Point(578, 271);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(245, 262);
-            this.panel2.TabIndex = 14;
+            this.pnlWaterIntake.BackColor = System.Drawing.Color.PaleGreen;
+            this.pnlWaterIntake.Controls.Add(this.lblGlasses);
+            this.pnlWaterIntake.Controls.Add(this.lblWaterIntake);
+            this.pnlWaterIntake.Controls.Add(this.label9);
+            this.pnlWaterIntake.Controls.Add(this.label8);
+            this.pnlWaterIntake.Controls.Add(this.label7);
+            this.pnlWaterIntake.Controls.Add(this.label6);
+            this.pnlWaterIntake.Controls.Add(this.label3);
+            this.pnlWaterIntake.Controls.Add(this.btnAddWater);
+            this.pnlWaterIntake.Controls.Add(this.progressBarWater);
+            this.pnlWaterIntake.Controls.Add(this.pbwaterintake);
+            this.pnlWaterIntake.Location = new System.Drawing.Point(578, 271);
+            this.pnlWaterIntake.Name = "pnlWaterIntake";
+            this.pnlWaterIntake.Size = new System.Drawing.Size(245, 262);
+            this.pnlWaterIntake.TabIndex = 14;
             // 
-            // label10
+            // lblGlasses
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Blue;
-            this.label10.Location = new System.Drawing.Point(100, 62);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 20);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "8 Glass";
+            this.lblGlasses.AutoSize = true;
+            this.lblGlasses.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGlasses.ForeColor = System.Drawing.Color.Blue;
+            this.lblGlasses.Location = new System.Drawing.Point(100, 62);
+            this.lblGlasses.Name = "lblGlasses";
+            this.lblGlasses.Size = new System.Drawing.Size(70, 20);
+            this.lblGlasses.TabIndex = 21;
+            this.lblGlasses.Text = "8 Glass";
             // 
             // lblWaterIntake
             // 
@@ -671,7 +683,7 @@
             this.btnAddWater.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddWater.ForeColor = System.Drawing.Color.White;
             this.btnAddWater.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddWater.Location = new System.Drawing.Point(10, 180);
+            this.btnAddWater.Location = new System.Drawing.Point(53, 180);
             this.btnAddWater.Name = "btnAddWater";
             this.btnAddWater.Size = new System.Drawing.Size(136, 35);
             this.btnAddWater.TabIndex = 2;
@@ -689,25 +701,25 @@
             this.progressBarWater.TabIndex = 1;
             this.progressBarWater.MouseEnter += new System.EventHandler(this.progressBarWater_MouseEnter);
             // 
-            // pictureBox6
+            // pbwaterintake
             // 
-            this.pictureBox6.Image = global::GymAndFitness.Properties.Resources.drink_water;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 1);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(61, 65);
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.pbwaterintake.Image = global::GymAndFitness.Properties.Resources.drink_water;
+            this.pbwaterintake.Location = new System.Drawing.Point(0, 1);
+            this.pbwaterintake.Name = "pbwaterintake";
+            this.pbwaterintake.Size = new System.Drawing.Size(61, 65);
+            this.pbwaterintake.TabIndex = 0;
+            this.pbwaterintake.TabStop = false;
             // 
             // panel6
             // 
             this.panel6.AutoSize = true;
-            this.panel6.BackColor = System.Drawing.Color.LightGreen;
+            this.panel6.BackColor = System.Drawing.Color.PaleGreen;
             this.panel6.Controls.Add(this.lblWeightProgess);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.progressBarWeight);
-            this.panel6.Location = new System.Drawing.Point(61, 434);
+            this.panel6.Location = new System.Drawing.Point(61, 416);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(498, 101);
+            this.panel6.Size = new System.Drawing.Size(498, 115);
             this.panel6.TabIndex = 15;
             // 
             // lblWeightProgess
@@ -715,7 +727,7 @@
             this.lblWeightProgess.AutoSize = true;
             this.lblWeightProgess.Font = new System.Drawing.Font("Rockwell", 11.41881F, System.Drawing.FontStyle.Bold);
             this.lblWeightProgess.ForeColor = System.Drawing.Color.Blue;
-            this.lblWeightProgess.Location = new System.Drawing.Point(153, 12);
+            this.lblWeightProgess.Location = new System.Drawing.Point(29, 34);
             this.lblWeightProgess.Name = "lblWeightProgess";
             this.lblWeightProgess.Size = new System.Drawing.Size(0, 20);
             this.lblWeightProgess.TabIndex = 19;
@@ -724,7 +736,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(1, 11);
+            this.label14.Location = new System.Drawing.Point(1, 4);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(145, 20);
             this.label14.TabIndex = 13;
@@ -732,7 +744,7 @@
             // 
             // progressBarWeight
             // 
-            this.progressBarWeight.Location = new System.Drawing.Point(29, 52);
+            this.progressBarWeight.Location = new System.Drawing.Point(29, 64);
             this.progressBarWeight.Name = "progressBarWeight";
             this.progressBarWeight.Size = new System.Drawing.Size(445, 35);
             this.progressBarWeight.TabIndex = 12;
@@ -780,6 +792,7 @@
             this.Load += new System.EventHandler(this.DashboardForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnlMain.ResumeLayout(false);
@@ -792,9 +805,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.pnlWaterIntake.ResumeLayout(false);
+            this.pnlWaterIntake.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbwaterintake)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.ResumeLayout(false);
@@ -824,14 +837,13 @@
         public System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel pnlChallenge;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblwarning;
         private System.Windows.Forms.Button btnChallenge;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblChallenge;
         public System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlWaterIntake;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -845,13 +857,15 @@
         private System.Windows.Forms.ProgressBar progressBarWeight;
         private System.Windows.Forms.Label lblWeightProgess;
         private System.Windows.Forms.Label lblWaterIntake;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblGlasses;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private Classes.RoundPictureBox btnProfilePicture;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pbwaterintake;
         public System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.PictureBox pbMembershipStatus;
+        private System.Windows.Forms.Label lblPremiumMembers;
     }
 }

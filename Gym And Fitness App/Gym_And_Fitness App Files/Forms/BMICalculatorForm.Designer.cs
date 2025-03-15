@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMICalculatorForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
             this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +42,7 @@
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.slidePanel = new System.Windows.Forms.Panel();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnToggle = new System.Windows.Forms.Button();
@@ -60,8 +62,8 @@
             this.lblBMI = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnProfile = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.slidePanel.SuspendLayout();
@@ -73,6 +75,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Controls.Add(this.pbMembershipStatus);
             this.panel1.Controls.Add(this.btnProfilePicture);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
@@ -82,6 +85,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(784, 74);
             this.panel1.TabIndex = 1;
+            // 
+            // pbMembershipStatus
+            // 
+            this.pbMembershipStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbMembershipStatus.Location = new System.Drawing.Point(317, 26);
+            this.pbMembershipStatus.Name = "pbMembershipStatus";
+            this.pbMembershipStatus.Size = new System.Drawing.Size(30, 26);
+            this.pbMembershipStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMembershipStatus.TabIndex = 41;
+            this.pbMembershipStatus.TabStop = false;
             // 
             // btnProfilePicture
             // 
@@ -221,6 +234,28 @@
             this.slidePanel.Name = "slidePanel";
             this.slidePanel.Size = new System.Drawing.Size(200, 486);
             this.slidePanel.TabIndex = 33;
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(-1, 340);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(210, 51);
+            this.btnProfile.TabIndex = 12;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
             // 
@@ -418,6 +453,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(325, 193);
             this.panel3.TabIndex = 74;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label7
             // 
@@ -434,12 +470,12 @@
             // 
             this.lblTargetWeightRange.AutoSize = true;
             this.lblTargetWeightRange.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblTargetWeightRange.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTargetWeightRange.ForeColor = System.Drawing.Color.Lime;
-            this.lblTargetWeightRange.Location = new System.Drawing.Point(193, 140);
+            this.lblTargetWeightRange.Font = new System.Drawing.Font("Calibri", 13.11881F, System.Drawing.FontStyle.Bold);
+            this.lblTargetWeightRange.ForeColor = System.Drawing.Color.Green;
+            this.lblTargetWeightRange.Location = new System.Drawing.Point(195, 140);
             this.lblTargetWeightRange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTargetWeightRange.Name = "lblTargetWeightRange";
-            this.lblTargetWeightRange.Size = new System.Drawing.Size(0, 21);
+            this.lblTargetWeightRange.Size = new System.Drawing.Size(0, 23);
             this.lblTargetWeightRange.TabIndex = 75;
             // 
             // label6
@@ -456,17 +492,19 @@
             // lblBMICategory
             // 
             this.lblBMICategory.AutoSize = true;
+            this.lblBMICategory.BackColor = System.Drawing.Color.White;
             this.lblBMICategory.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lblBMICategory.Font = new System.Drawing.Font("Calibri", 12.11881F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBMICategory.Font = new System.Drawing.Font("Calibri", 12.83168F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBMICategory.Location = new System.Drawing.Point(152, 88);
             this.lblBMICategory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBMICategory.Name = "lblBMICategory";
-            this.lblBMICategory.Size = new System.Drawing.Size(0, 21);
+            this.lblBMICategory.Size = new System.Drawing.Size(0, 22);
             this.lblBMICategory.TabIndex = 73;
             // 
             // lblBMI
             // 
             this.lblBMI.AutoSize = true;
+            this.lblBMI.BackColor = System.Drawing.Color.White;
             this.lblBMI.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblBMI.Font = new System.Drawing.Font("Calibri", 14.11881F, System.Drawing.FontStyle.Bold);
             this.lblBMI.Location = new System.Drawing.Point(97, 45);
@@ -482,9 +520,9 @@
             this.label5.Location = new System.Drawing.Point(31, 46);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 21);
+            this.label5.Size = new System.Drawing.Size(49, 21);
             this.label5.TabIndex = 71;
-            this.label5.Text = "BMI";
+            this.label5.Text = "BMI: ";
             // 
             // label9
             // 
@@ -496,28 +534,6 @@
             this.label9.Size = new System.Drawing.Size(123, 23);
             this.label9.TabIndex = 70;
             this.label9.Text = "Physique Info:";
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
-            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.Location = new System.Drawing.Point(-1, 340);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(210, 51);
-            this.btnProfile.TabIndex = 12;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // BMICalculatorForm
             // 
@@ -535,7 +551,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -549,6 +564,7 @@
             this.Load += new System.EventHandler(this.BMICalculatorForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.slidePanel.ResumeLayout(false);
@@ -594,5 +610,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.PictureBox pbMembershipStatus;
     }
 }

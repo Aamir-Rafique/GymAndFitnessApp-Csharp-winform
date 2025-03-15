@@ -32,14 +32,20 @@ namespace GymAndFitness
             //  accessing current user 
             if (UserDataManager.CurrentUser != null)
             {
+                //load membership plan pics
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
+
                 userDataManager.ApplyProfilePicture(btnProfilePicture1);
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
                 userDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
+
+                if (UserDataManager.CurrentUser.MembershipStatus == "Free")
+                {
+                    btnSaveWorkoutPlan.BackColor = Color.Gray;
+                }
             }
 
-            ////set combobox place HOlder
-            //Features.SetComboBoxPlaceholder(cmbExercise, "Select the Exercise...");
-            //Features.SetComboBoxPlaceholder(cmbWorkoutType, "Select Workout Type...");
+
 
             //combobox text align center..
             Features.AlignComboBoxTextCenter(cmbExercise);
@@ -335,13 +341,22 @@ namespace GymAndFitness
         private void btnSaveWorkoutPlan_Click(object sender, EventArgs e)
         {
             // Validate user
-            if (UserDataManager.CurrentUser == null || UserDataManager.CurrentUser.UserID <= 0)
+            if (UserDataManager.CurrentUser != null)
+            {
+                if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+                {
+                    MessageBox.Show("Upgrade to premium to save your custom workout plan!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    userDataManager.SaveWorkoutPlan(dgvWorkoutPlan);
+                }
+            }
+            else
             {
                 MessageBox.Show("No user is logged in or User ID is invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
             }
 
-            userDataManager.SaveWorkoutPlan(dgvWorkoutPlan);
         }
 
 

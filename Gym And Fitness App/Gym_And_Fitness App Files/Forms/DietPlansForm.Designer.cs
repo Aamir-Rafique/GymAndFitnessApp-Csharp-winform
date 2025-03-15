@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DietPlansForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
             this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,15 +56,15 @@
             this.btnAddToSnacks = new System.Windows.Forms.Button();
             this.btnAddToBreakfast = new System.Windows.Forms.Button();
             this.btnSaveDietPlan = new System.Windows.Forms.Button();
-            this.errorGroupBoxRadioButtons = new System.Windows.Forms.ErrorProvider(this.components);
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.timerForPics = new System.Windows.Forms.Timer(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.pnlWorkoutSelection = new System.Windows.Forms.Panel();
             this.cmbDietType = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.pnlDietPlans = new System.Windows.Forms.Panel();
-            this.pbDiet = new System.Windows.Forms.PictureBox();
             this.lblMuscleGain = new System.Windows.Forms.Label();
+            this.pbDiet = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.richTextBoxNotesInput = new System.Windows.Forms.RichTextBox();
@@ -94,10 +95,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabDietPlan = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.slidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorGroupBoxRadioButtons)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.pnlWorkoutSelection.SuspendLayout();
             this.pnlDietPlans.SuspendLayout();
@@ -113,6 +115,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Controls.Add(this.pbMembershipStatus);
             this.panel1.Controls.Add(this.btnProfilePicture);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label6);
@@ -123,6 +126,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(784, 74);
             this.panel1.TabIndex = 2;
+            // 
+            // pbMembershipStatus
+            // 
+            this.pbMembershipStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbMembershipStatus.Location = new System.Drawing.Point(272, 16);
+            this.pbMembershipStatus.Name = "pbMembershipStatus";
+            this.pbMembershipStatus.Size = new System.Drawing.Size(30, 26);
+            this.pbMembershipStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMembershipStatus.TabIndex = 41;
+            this.pbMembershipStatus.TabStop = false;
             // 
             // btnProfilePicture
             // 
@@ -513,9 +526,9 @@
             this.btnSaveDietPlan.UseVisualStyleBackColor = false;
             this.btnSaveDietPlan.Click += new System.EventHandler(this.btnSaveDietPlan_Click);
             // 
-            // errorGroupBoxRadioButtons
+            // error
             // 
-            this.errorGroupBoxRadioButtons.ContainerControl = this;
+            this.error.ContainerControl = this;
             // 
             // timerForPics
             // 
@@ -584,6 +597,15 @@
             this.pnlDietPlans.Size = new System.Drawing.Size(718, 403);
             this.pnlDietPlans.TabIndex = 2;
             // 
+            // lblMuscleGain
+            // 
+            this.lblMuscleGain.AutoSize = true;
+            this.lblMuscleGain.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMuscleGain.Location = new System.Drawing.Point(11, 7);
+            this.lblMuscleGain.Name = "lblMuscleGain";
+            this.lblMuscleGain.Size = new System.Drawing.Size(0, 23);
+            this.lblMuscleGain.TabIndex = 0;
+            // 
             // pbDiet
             // 
             this.pbDiet.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -594,15 +616,6 @@
             this.pbDiet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDiet.TabIndex = 51;
             this.pbDiet.TabStop = false;
-            // 
-            // lblMuscleGain
-            // 
-            this.lblMuscleGain.AutoSize = true;
-            this.lblMuscleGain.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMuscleGain.Location = new System.Drawing.Point(11, 7);
-            this.lblMuscleGain.Name = "lblMuscleGain";
-            this.lblMuscleGain.Size = new System.Drawing.Size(0, 23);
-            this.lblMuscleGain.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -863,6 +876,7 @@
             // 
             // groupBoxRadioButtons
             // 
+            this.groupBoxRadioButtons.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBoxRadioButtons.Controls.Add(this.label5);
             this.groupBoxRadioButtons.Controls.Add(this.rbtnOffline);
             this.groupBoxRadioButtons.Controls.Add(this.rbtnOnline);
@@ -976,10 +990,11 @@
             this.Load += new System.EventHandler(this.DietPlansForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.slidePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorGroupBoxRadioButtons)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.pnlWorkoutSelection.ResumeLayout(false);
             this.pnlWorkoutSelection.PerformLayout();
@@ -1019,7 +1034,7 @@
         public System.Windows.Forms.Button btnDietPlans;
         public System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ErrorProvider errorGroupBoxRadioButtons;
+        private System.Windows.Forms.ErrorProvider error;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.Timer timerForPics;
@@ -1066,5 +1081,6 @@
         private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.ComboBox cmbDietType;
+        private System.Windows.Forms.PictureBox pbMembershipStatus;
     }
 }

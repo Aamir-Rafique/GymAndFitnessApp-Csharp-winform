@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 
@@ -26,11 +27,7 @@ namespace GymAndFitness
             Features.AlignComboBoxTextCenter(cmbFitnessGoal);
             Features.AlignComboBoxTextCenter(cmbFitnessLevel);
 
-            // Set placeholder for TextBox
-
-
         }
-
 
         //private string targetWeightRange = "";
         private double height = 0;
@@ -88,23 +85,33 @@ namespace GymAndFitness
                 txtTargetWeight.Focus(); //isi pr focus!
                 error.SetError(this.txtTargetWeight, "Please Enter your Weight");
             }
-
             else if (cmbFitnessGoal.SelectedItem == null)
             {
                 cmbFitnessGoal.Focus(); //isi pr focus!
                 error.SetError(this.cmbFitnessGoal, "Please Enter your Fitness Goal ");
             }
+            else if (cmbFitnessGoal.SelectedItem.ToString() =="Muscle Gain")
+            {
+                if (double.Parse(txtWeight.Text) > double.Parse(txtTargetWeight.Text))
+                {
+                    MessageBox.Show("For muscle gain, Target Weight must be greater than Current Weight.");
+                    txtWeight.Focus();
+                }
+            }
+            else if (cmbFitnessGoal.SelectedItem.ToString() == "Fat Loss")
+            {
+                if (double.Parse(txtWeight.Text) < double.Parse(txtTargetWeight.Text))
+                {
+                    MessageBox.Show("For Fat loss, Target Weight must be smaller than Current Weight.");
+                    txtWeight.Focus();
+                }
+            }
+
             else if (cmbFitnessLevel.SelectedItem == null)
             {
                 cmbFitnessLevel.Focus(); //isi pr focus!
                 error.SetError(this.cmbFitnessLevel, "Please Enter your Fitness Level");
             }
-
-            //else if (string.IsNullOrEmpty(lblProfilePicturePath.Text))
-            //{
-            //    lblProfilePicturePath.Focus(); //isi pr focus!
-            //    error.SetError(this.lblProfilePicturePath, "Please upload a Profile picture by clicking the Upload Button!");
-            //}
 
             else
             {
@@ -120,6 +127,7 @@ namespace GymAndFitness
                 string targetWeightRange = lblTargetWeightRange.Text;
                 string fitnessGoal = cmbFitnessGoal.SelectedItem.ToString();
                 string fitnessLevel = cmbFitnessLevel.SelectedItem.ToString();
+                string membershipStatus = "Free";
 
                 // Handle profile picture // Convert Profile Picture to byte array
                 byte[] profilePicture = null;
@@ -127,8 +135,17 @@ namespace GymAndFitness
                 {
                     profilePicture = File.ReadAllBytes(lblProfilePicturePath.Text);
                 }
+                //else
+                //{
+                //    // Convert the resource image to a byte array
+                //    using (MemoryStream ms = new MemoryStream())
+                //    {
+                //        Properties.Resources.usernew.Save(ms, ImageFormat.Png); // Save the image to a memory stream
+                //        profilePicture = ms.ToArray(); // Convert the memory stream to a byte array
+                //    }
+                //}
 
-                userDataManager.SignUpUser(username, password, age, gender, height, weight, bmi, targetWeight, targetWeightRange, fitnessGoal, fitnessLevel, profilePicture);
+                userDataManager.SignUpUser(username, password, age, gender, height, weight, bmi, targetWeight, targetWeightRange, fitnessGoal, fitnessLevel, profilePicture, membershipStatus);
 
             }
         }
@@ -315,19 +332,6 @@ namespace GymAndFitness
                 lblProfilePicturePath.Text = string.Empty;
                 txtTargetWeight.Clear();
 
-
-                ////again k Set placeholder for TextBox b/c reset krne se remove hojate...
-                //Features.SetTextBoxPlaceholder(txtUsername, "Enter your name..");
-                //Features.SetTextBoxPlaceholder(txtAge, "Enter your Age..");
-                //Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
-                //Features.SetTextBoxPlaceholder(txtWeight, "Your weight in kg..");
-                //Features.SetTextBoxPlaceholder(txtPassword, "Enter your Password..");
-
-
-                //again Set placeholder for ComboBox b/c reset krne se remove hojate...
-                Features.SetComboBoxPlaceholder(cmbFitnessGoal, "Select an option...");
-                Features.SetComboBoxPlaceholder(cmbFitnessLevel, "Select an option...");
-                Features.SetComboBoxPlaceholder(cmbGender, "Select an option...");
 
                 pbProfilePicture.Image = Properties.Resources.usernew;
 

@@ -20,6 +20,25 @@ namespace GymAndFitness
         }
 
 
+        //Method to load membership plan status picture
+
+        public static Image MembershipStatusPic()
+        {
+            if (UserDataManager.CurrentUser.MembershipStatus == "Free")
+            {
+                return Properties.Resources.free3;
+            }
+            else if (UserDataManager.CurrentUser.MembershipStatus == "Premium")
+            {
+                return Properties.Resources.crown1;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
         // Method to set a placeholder for ComboBox
         public static void SetComboBoxPlaceholder(ComboBox comboBox, string placeholder)
         {
@@ -125,11 +144,11 @@ namespace GymAndFitness
         public static Color GetBMIColor(double bmi)
         {
             if (bmi < 18.5)
-                return Color.Blue;
+                return Color.DeepSkyBlue;
             else if (bmi >= 18.5 && bmi <= 24.9)
-                return Color.Green;
+                return Color.SpringGreen;
             else if (bmi >= 25 && bmi <= 29.9)
-                return Color.Yellow;
+                return Color.Gold;
             else if (bmi >= 30 && bmi <= 35)
                 return Color.Orange;
             else
