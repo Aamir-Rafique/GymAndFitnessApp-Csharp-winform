@@ -13,7 +13,6 @@ namespace GymAndFitness
     {
         public static User CurrentUser { get; set; }  //declared static so that the same value is passed for all the forms/classes.. i.e. current user =1;  single copy of this CurrentUser attribute..
 
-
         private string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
        
         // Constructor
