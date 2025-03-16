@@ -14,7 +14,7 @@ namespace GymAndFitness
         public static User CurrentUser { get; set; }  //declared static so that the same value is passed for all the forms/classes.. i.e. current user =1;  single copy of this CurrentUser attribute..
 
         private string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
-       
+
         // Constructor
         public UserDataManager()
         {
@@ -47,7 +47,7 @@ namespace GymAndFitness
                         command.Parameters.AddWithValue("@ProfilePicture", profilePicture ?? (object)DBNull.Value);
                         command.Parameters.AddWithValue("@MembershipStatus", membershipStatus);
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Sign-Up Successful!", "Success");
+                        MessageBox.Show("Sign-Up Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Open the login form and close the current form
                         LoginForm loginForm = new LoginForm();
@@ -520,7 +520,7 @@ namespace GymAndFitness
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-//@ method is used to prevent sql injection!!!
+                //@ method is used to prevent sql injection!!!
                 string query = "UPDATE Users SET DailyWaterIntake = @DailyWaterIntake WHERE Username = @Username";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

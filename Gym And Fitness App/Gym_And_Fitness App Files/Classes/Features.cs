@@ -40,17 +40,17 @@ namespace GymAndFitness
 
 
         // Method to set a placeholder for ComboBox
-        public static void SetComboBoxPlaceholder(ComboBox comboBox, string placeholder)
-        {
-            comboBox.Items.Insert(0, placeholder);
-            comboBox.SelectedIndex = 0;
-            comboBox.ForeColor = Color.Gray;
+        //public static void SetComboBoxPlaceholder(ComboBox comboBox, string placeholder)
+        //{
+        //    comboBox.Items.Insert(0, placeholder);
+        //    comboBox.SelectedIndex = 0;
+        //    comboBox.ForeColor = Color.Gray;
 
-            comboBox.SelectedIndexChanged += (s, e) =>
-            {
-                comboBox.ForeColor = comboBox.SelectedIndex == 0 ? Color.Gray : Color.Black;
-            };
-        }
+        //    comboBox.SelectedIndexChanged += (s, e) =>
+        //    {
+        //        comboBox.ForeColor = comboBox.SelectedIndex == 0 ? Color.Gray : Color.Black;
+        //    };
+        //}
 
         // Method to align ComboBox text in center
         public static void AlignComboBoxTextCenter(ComboBox comboBox)

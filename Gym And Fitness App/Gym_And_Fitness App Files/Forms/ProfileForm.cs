@@ -81,7 +81,7 @@ namespace GymAndFitness
             }
             else
             {
-                MessageBox.Show("No user is logged in.");
+                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 btnLogout.Visible = false;
                 btnLogout.Enabled = false;
@@ -200,7 +200,7 @@ namespace GymAndFitness
             }
             else
             {
-                MessageBox.Show("No user is logged in.");
+                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
@@ -215,7 +215,7 @@ namespace GymAndFitness
 
                 if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
                 {
-                    MessageBox.Show("Upgrade to Premium to set your desired Profile Picture!","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("Upgrade to Premium to set your desired Profile Picture!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -224,7 +224,7 @@ namespace GymAndFitness
             }
             else
             {
-                MessageBox.Show("You need to login First !");
+                MessageBox.Show("You need to login First !", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -255,12 +255,12 @@ namespace GymAndFitness
                 }
                 else
                 {
-                    MessageBox.Show("Please input correct values for height and weight!");
+                    MessageBox.Show("Please input correct values for height and weight!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("You need to login First !");
+                MessageBox.Show("You need to login First !", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -299,37 +299,114 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
-                // Confirmation dialog
-                DialogResult confirmResult = MessageBox.Show(
-                    "Are you sure you want to delete your account? This action cannot be undone.",
-                    "Delete Account",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Warning);
-                if (confirmResult == DialogResult.Yes)
+                string userInput = ShowInputDialog("Confirmation", "Type the word 'Confirm' to confirm account deletion:");
+                if (userInput == "Confirm")
                 {
-                    if (userDataManager.DeleteAccount(UserDataManager.CurrentUser.UserID))
+                    DialogResult result = MessageBox.Show("Are you sure you want to delete your account? This action cannot be undone.", "Delete Account", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
                     {
-                        MessageBox.Show("Your account has been deleted successfully.", "Account Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        this.Hide();
-                        Features.OpenLoginForm();
+                        if (userDataManager.DeleteAccount(UserDataManager.CurrentUser.UserID))
+                        {
+                            MessageBox.Show("Your account has been deleted successfully.", "Account Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            Features.OpenLoginForm();
+                        }
+                        else
+                        {
+                            MessageBox.Show("An error occurred while deleting your account. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("An error occurred while deleting your account. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // User canceled password input
+                        MessageBox.Show("Account deletion aborted.", "Operation Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
                 }
                 else
                 {
-                    // User canceled password input
-                    MessageBox.Show("Account deletion aborted.", "Operation Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Action canceled or incorrect input.");
                 }
+
             }
             else
             {
-                MessageBox.Show("Wah bhai Login kia nahi, or chle account ko delete krne 😒");
+                MessageBox.Show("You need to login first!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+
+        //dialog box for account delete confirmation..
+        public static string ShowInputDialog(string title, string message)
+        {
+            // Create a new form for the input dialog
+            Form prompt = new Form()
+            {
+                Width = 400,
+                Height = 180,
+                Text = title,
+                StartPosition = FormStartPosition.CenterScreen,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                MaximizeBox = false,
+                MinimizeBox = false
+            };
+
+            // Add label to display the message
+            Label textLabel = new Label()
+            {
+                Left = 20,
+                Top = 20,
+                Width = 340,
+                Text = message,
+                AutoSize = true
+            };
+
+            // Add textbox for user input
+            TextBox inputBox = new TextBox()
+            {
+                Left = 20,
+                Top = 50,
+                Width = 340
+            };
+
+            // Create OK button with DialogResult.OK
+            Button confirmationButton = new Button()
+            {
+                Text = "OK",
+                Left = 120,
+                Top = 90,
+                Width = 80,
+                DialogResult = DialogResult.OK
+            };
+
+            // Create Cancel button with DialogResult.Cancel
+            Button cancelButton = new Button()
+            {
+                Text = "Cancel",
+                Left = 220,
+                Top = 90,
+                Width = 80,
+                DialogResult = DialogResult.Cancel
+            };
+
+            // Add event handlers to close the dialog
+            confirmationButton.Click += (sender, e) => { prompt.DialogResult = DialogResult.OK; prompt.Close(); };
+            cancelButton.Click += (sender, e) => { prompt.DialogResult = DialogResult.Cancel; prompt.Close(); };
+
+            // Add controls to the form
+            prompt.Controls.Add(textLabel);
+            prompt.Controls.Add(inputBox);
+            prompt.Controls.Add(confirmationButton);
+            prompt.Controls.Add(cancelButton);
+
+            // Set AcceptButton and CancelButton for keyboard interactions
+            prompt.AcceptButton = confirmationButton;
+            prompt.CancelButton = cancelButton;
+
+            // Show the dialog and return user input or an empty string if canceled
+            return prompt.ShowDialog() == DialogResult.OK ? inputBox.Text : string.Empty;
+        }
+
 
         private void nudCurrentWeight_KeyDown(object sender, KeyEventArgs e)
         {

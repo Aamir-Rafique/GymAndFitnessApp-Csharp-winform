@@ -486,7 +486,7 @@ namespace GymAndFitness
                         lblNutritionInfo.Text = "Upgrade to Premium to search online, for food items!";
                     }
                     else
-                    { 
+                    {
                         // Online search
                         lblNutritionInfo.Text = "Searching online, please wait...";
                         string nutritionInfo = await GetNutritionInfo(FoodItem);

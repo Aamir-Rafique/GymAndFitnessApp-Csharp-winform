@@ -38,7 +38,6 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.lblPremiumMembers = new System.Windows.Forms.Label();
             this.slidePanel = new System.Windows.Forms.Panel();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -49,6 +48,7 @@
             this.btnDietPlans = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.lblPremiumMembers = new System.Windows.Forms.Label();
             this.pnlChallenge = new System.Windows.Forms.Panel();
             this.lblChallenge = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -229,15 +229,6 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(834, 540);
             this.pnlMain.TabIndex = 1;
-            // 
-            // lblPremiumMembers
-            // 
-            this.lblPremiumMembers.Font = new System.Drawing.Font("Segoe UI", 9.11881F, System.Drawing.FontStyle.Bold);
-            this.lblPremiumMembers.Location = new System.Drawing.Point(606, 245);
-            this.lblPremiumMembers.Name = "lblPremiumMembers";
-            this.lblPremiumMembers.Size = new System.Drawing.Size(197, 26);
-            this.lblPremiumMembers.TabIndex = 22;
-            this.lblPremiumMembers.Click += new System.EventHandler(this.label10_Click);
             // 
             // slidePanel
             // 
@@ -439,6 +430,15 @@
             this.label11.Size = new System.Drawing.Size(332, 30);
             this.label11.TabIndex = 0;
             this.label11.Text = "Welcome to Gym && Fitness App!";
+            // 
+            // lblPremiumMembers
+            // 
+            this.lblPremiumMembers.Font = new System.Drawing.Font("Segoe UI", 9.11881F, System.Drawing.FontStyle.Bold);
+            this.lblPremiumMembers.Location = new System.Drawing.Point(606, 245);
+            this.lblPremiumMembers.Name = "lblPremiumMembers";
+            this.lblPremiumMembers.Size = new System.Drawing.Size(197, 26);
+            this.lblPremiumMembers.TabIndex = 22;
+            this.lblPremiumMembers.Click += new System.EventHandler(this.label10_Click);
             // 
             // pnlChallenge
             // 

@@ -36,7 +36,7 @@ namespace GymAndFitness
 
 
             // Assign the version to the label
-            lblVersion.Text =Features.GetCurrentVersion();
+            lblVersion.Text = Features.GetCurrentVersion();
         }
 
         //for slide panel

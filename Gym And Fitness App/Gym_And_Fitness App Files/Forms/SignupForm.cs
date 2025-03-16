@@ -17,11 +17,6 @@ namespace GymAndFitness
         //Load
         private void SignupForm_Load(object sender, EventArgs e)
         {
-            // Set placeholder for ComboBox
-            //Features.SetComboBoxPlaceholder(cmbFitnessGoal, "Select an option...");
-            //Features.SetComboBoxPlaceholder(cmbFitnessLevel, "Select an option...");
-            //Features.SetComboBoxPlaceholder(cmbGender, "Select an option...");
-
             // Align ComboBox text in center
             Features.AlignComboBoxTextCenter(cmbGender);
             Features.AlignComboBoxTextCenter(cmbFitnessGoal);
@@ -46,7 +41,10 @@ namespace GymAndFitness
                 txtAge.Focus(); //isi pr focus!
                 error.SetError(this.txtAge, "Please Enter your Age");
             }
-
+            else if ((int.Parse(txtAge.Text) < 14) || (int.Parse(txtAge.Text) > 100))
+            {
+                error.SetError(this.txtAge, "Incorrect age value!");
+            }
             else if (cmbGender.SelectedItem == null)
             {
                 cmbGender.Focus(); //isi pr focus!
@@ -75,10 +73,18 @@ namespace GymAndFitness
                 txtHeight.Focus(); //isi pr focus!
                 error.SetError(this.txtHeight, "Please Enter your height");
             }
+            else if ((double.Parse(txtHeight.Text) < 54.64) || (double.Parse(txtHeight.Text) > 272))
+            {
+                error.SetError(this.txtHeight, "Incorrect Height info!");
+            }
             else if (string.IsNullOrEmpty(txtWeight.Text))
             {
                 txtWeight.Focus(); //isi pr focus!
                 error.SetError(this.txtWeight, "Please Enter your Weight");
+            }
+            else if ((double.Parse(txtWeight.Text) < 10) || (double.Parse(txtWeight.Text) > 600))
+            {
+                error.SetError(this.txtWeight, "Incorrect Weight info!");
             }
             else if (string.IsNullOrEmpty(txtTargetWeight.Text))
             {
@@ -90,21 +96,17 @@ namespace GymAndFitness
                 cmbFitnessGoal.Focus(); //isi pr focus!
                 error.SetError(this.cmbFitnessGoal, "Please Enter your Fitness Goal ");
             }
-            else if (cmbFitnessGoal.SelectedItem.ToString() =="Muscle Gain")
+
+            else if ((cmbFitnessGoal.SelectedItem.ToString() == "Muscle Gain") && (double.Parse(txtWeight.Text) > double.Parse(txtTargetWeight.Text)))
             {
-                if (double.Parse(txtWeight.Text) > double.Parse(txtTargetWeight.Text))
-                {
-                    MessageBox.Show("For muscle gain, Target Weight must be greater than Current Weight.");
-                    txtWeight.Focus();
-                }
+                MessageBox.Show("For muscle gain, Target Weight must be greater than Current Weight.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtWeight.Focus();
             }
-            else if (cmbFitnessGoal.SelectedItem.ToString() == "Fat Loss")
+
+            else if ((cmbFitnessGoal.SelectedItem.ToString() == "Fat Loss") && (double.Parse(txtWeight.Text) < double.Parse(txtTargetWeight.Text)))
             {
-                if (double.Parse(txtWeight.Text) < double.Parse(txtTargetWeight.Text))
-                {
-                    MessageBox.Show("For Fat loss, Target Weight must be smaller than Current Weight.");
-                    txtWeight.Focus();
-                }
+                MessageBox.Show("For Fat loss, Target Weight must be smaller than Current Weight.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtWeight.Focus();
             }
 
             else if (cmbFitnessLevel.SelectedItem == null)
@@ -135,15 +137,24 @@ namespace GymAndFitness
                 {
                     profilePicture = File.ReadAllBytes(lblProfilePicturePath.Text);
                 }
-                //else
-                //{
-                //    // Convert the resource image to a byte array
-                //    using (MemoryStream ms = new MemoryStream())
-                //    {
-                //        Properties.Resources.usernew.Save(ms, ImageFormat.Png); // Save the image to a memory stream
-                //        profilePicture = ms.ToArray(); // Convert the memory stream to a byte array
-                //    }
-                //}
+                else
+                {
+                    DialogResult result = MessageBox.Show("Do you want to upload profile picture?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        btnUploadPicture.Focus();
+                        return;
+                    }
+                    else
+                    {
+                        // Convert the resource image to a byte array
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            Properties.Resources.usernew.Save(ms, ImageFormat.Png); // Save the image to a memory stream
+                            profilePicture = ms.ToArray(); // Convert the memory stream to a byte array
+                        }
+                    }
+                }
 
                 userDataManager.SignUpUser(username, password, age, gender, height, weight, bmi, targetWeight, targetWeightRange, fitnessGoal, fitnessLevel, profilePicture, membershipStatus);
 
@@ -316,7 +327,7 @@ namespace GymAndFitness
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("All the input data will be erased!", "Warning", MessageBoxButtons.OKCancel);
+            DialogResult result = MessageBox.Show("All the input data will be erased!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.OK)
             {
 
@@ -345,6 +356,8 @@ namespace GymAndFitness
                 error.Clear();
                 error.Clear();
                 error.Clear();
+
+                txtUsername.Focus();
             }
 
         }

@@ -17,11 +17,12 @@ namespace GymAndFitness
         //load
         private void BMICalculatorForm_Load(object sender, EventArgs e)
         {
-            this.Focus();
+            btnToggle.Focus();
 
             // Set placeholder for TextBox
             Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
             Features.SetTextBoxPlaceholder(txtWeight, "Your weight in kg..");
+
 
             //slide panel
             panelWidth = slidePanel.Width;

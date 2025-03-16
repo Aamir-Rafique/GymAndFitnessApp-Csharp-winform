@@ -183,7 +183,7 @@
             this.txtHeight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(176, 30);
-            this.txtHeight.TabIndex = 1;
+            this.txtHeight.TabIndex = 2;
             this.txtHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHeight_KeyPress);
             // 
@@ -195,7 +195,7 @@
             this.txtWeight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(176, 30);
-            this.txtWeight.TabIndex = 2;
+            this.txtWeight.TabIndex = 3;
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWeight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWeight_KeyDown);
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
@@ -213,7 +213,7 @@
             this.btnCalculate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(84, 29);
-            this.btnCalculate.TabIndex = 3;
+            this.btnCalculate.TabIndex = 4;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = false;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
@@ -317,7 +317,7 @@
             this.btnToggle.Location = new System.Drawing.Point(-1, 12);
             this.btnToggle.Name = "btnToggle";
             this.btnToggle.Size = new System.Drawing.Size(210, 51);
-            this.btnToggle.TabIndex = 4;
+            this.btnToggle.TabIndex = 1;
             this.btnToggle.Text = "Menu";
             this.btnToggle.UseVisualStyleBackColor = false;
             this.btnToggle.Click += new System.EventHandler(this.btnToggle_Click);

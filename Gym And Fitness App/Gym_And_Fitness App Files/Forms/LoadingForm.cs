@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Deployment.Application;
-using System.Reflection;
 using System.Windows.Forms;
 
 namespace GymAndFitness.Forms
@@ -31,7 +29,7 @@ namespace GymAndFitness.Forms
         }
 
 
-        
+
         private void timerLoading_Tick(object sender, EventArgs e)
         {
             elapsedTime += timerLoading.Interval;
