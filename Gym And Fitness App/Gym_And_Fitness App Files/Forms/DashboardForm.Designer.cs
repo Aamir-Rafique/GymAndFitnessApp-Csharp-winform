@@ -462,6 +462,7 @@
             this.lblChallenge.Name = "lblChallenge";
             this.lblChallenge.Size = new System.Drawing.Size(0, 20);
             this.lblChallenge.TabIndex = 18;
+            this.lblChallenge.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox4
             // 
@@ -597,7 +598,7 @@
             this.pnlWaterIntake.Controls.Add(this.btnAddWater);
             this.pnlWaterIntake.Controls.Add(this.progressBarWater);
             this.pnlWaterIntake.Controls.Add(this.pbwaterintake);
-            this.pnlWaterIntake.Location = new System.Drawing.Point(578, 271);
+            this.pnlWaterIntake.Location = new System.Drawing.Point(578, 270);
             this.pnlWaterIntake.Name = "pnlWaterIntake";
             this.pnlWaterIntake.Size = new System.Drawing.Size(245, 262);
             this.pnlWaterIntake.TabIndex = 14;

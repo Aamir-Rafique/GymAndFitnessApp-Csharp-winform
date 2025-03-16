@@ -2,7 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
-    <PublishUrl>\\HP-PC\Users\Aamir\Desktop\Gym And Fitness App\Gym And Fitness app_Clickonce\Setup\</PublishUrl>
+    <PublishUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Gym And Fitness app_Clickonce\Setup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -12,8 +12,8 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\HP-PC\Users\Aamir\Desktop\Gym And Fitness App\Gym And Fitness app_Clickonce\Setup\</InstallUrl>
-    <UpdateUrl>\\HP-PC\Users\Aamir\Desktop\Gym And Fitness App\Gym And Fitness app_Clickonce\Setup\</UpdateUrl>
+    <InstallUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Gym And Fitness app_Clickonce\Setup\</InstallUrl>
+    <UpdateUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Gym And Fitness app_Clickonce\Setup\</UpdateUrl>
     <TargetCulture>en-US</TargetCulture>
     <ProductName>Gym And Fitness</ProductName>
     <PublisherName>Aamir Rafique</PublisherName>
@@ -22,7 +22,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

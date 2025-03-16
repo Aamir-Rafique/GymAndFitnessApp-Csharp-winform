@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="32751016">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="32751528">
       <assemblyIdentity name="GymAndFitness" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QzcZqOt1rhGWsNkMKm2alnkwi5KN9Y79sCLQ1JfVmMI=</dsig:DigestValue>
+        <dsig:DigestValue>A/TncJffneyFVfhbd8NRD50GI0ecwPMz569V19tK7vY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -516,7 +516,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>MZLiQb+NRBPWbjX69l4c5v2wT9PouJbmZ0oNv+0Kv9A=</dsig:DigestValue>
+      <dsig:DigestValue>G0Q1NKranKxurMlORzAgzs18enXA8pWu4Hj7s9zRbAU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Database_files\GymAndFitness_DB_log.ldf" size="75497472" writeableType="applicationData">
@@ -525,7 +525,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Zld7xm7EAVfLROYI+KmbUpuIuQ3czInoPJGuwSUx/oE=</dsig:DigestValue>
+      <dsig:DigestValue>Dto4LKjFpMalX9iQ3QxfXol2kFSA2ERHdCRCzPWwmpE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="fitness.ico" size="191033">
@@ -552,7 +552,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ebjU93UdrHaBiytZjSn39ieaAfjXz+WNlLtr3KuKyV0=</dsig:DigestValue>
+      <dsig:DigestValue>mLNo8CKr55TSZnQc9AN8bLRwwK5Lxx5dfletj6P8pRU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ILLink\ILLink.Descriptors.LibraryBuild.xml" size="297" writeableType="applicationData">

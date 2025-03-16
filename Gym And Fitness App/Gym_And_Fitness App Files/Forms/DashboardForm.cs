@@ -197,7 +197,11 @@ namespace GymAndFitness
                 "Tomorrow never comes!",
                 "Love what you do.",
                 "Don't limit your challenges",
-                "Challenge your limits!"
+                "Challenge your limits!",
+               "Sweat, sacrifice, and success.",
+                "Train insane or remain the same.",
+                "No excuses, just results.",
+                "Winners never quit, and quitters never win."
 
         };
 

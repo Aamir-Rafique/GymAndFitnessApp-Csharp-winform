@@ -41,7 +41,14 @@ namespace GymAndFitness
                     lblGender.Text = UserDataManager.CurrentUser.Gender;
                     lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
                     lblStartingWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
-                    lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
+                    if (UserDataManager.CurrentUser.CurrentWeight.ToString() == null)
+                    {
+                        lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
+                    }
+                    else
+                    {
+                        lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
+                    }
                     lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
                     lblTargetWeight.Text = $"{UserDataManager.CurrentUser.TargetWeight} kg";
                     lblFitnessGoal.Text = UserDataManager.CurrentUser.FitnessGoal;
@@ -234,6 +241,7 @@ namespace GymAndFitness
         {
             double bmi = Double.Parse(lblBMI.Text);
             lblBMI.ForeColor = Features.GetBMIColor(bmi);
+            lblBMICategory.ForeColor = Features.GetBMIColor(bmi);
             lblBMICategory.Text = Features.GetBMICategory(bmi);
         }
 

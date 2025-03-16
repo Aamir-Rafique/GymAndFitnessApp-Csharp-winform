@@ -8,7 +8,7 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="file://hp-pc/Users/Aamir/Desktop/Gym%20And%20Fitness%20App/Gym%20And%20Fitness%20app_Clickonce/Setup/GymAndFitness.application" />
+    <deploymentProvider codebase="file://hp-pc/Users/Aamir/Desktop/Github%20Repos/PROJECTS-Public/Gym%20And%20Fitness%20App/Gym%20And%20Fitness%20app_Clickonce/Setup/GymAndFitness.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t78urBL36N+4wbm6OB76T9kBP8ZCWd7p1x0/FUHX7qU=</dsig:DigestValue>
+        <dsig:DigestValue>FT/29oBey7KYzRvLDsAt/MtpxrCk/Jz2w9M0Bj++Ai0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

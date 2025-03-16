@@ -272,11 +272,12 @@
             // lblBMICategory
             // 
             this.lblBMICategory.AutoSize = true;
-            this.lblBMICategory.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBMICategory.BackColor = System.Drawing.Color.White;
+            this.lblBMICategory.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBMICategory.ForeColor = System.Drawing.Color.DarkGreen;
             this.lblBMICategory.Location = new System.Drawing.Point(134, 182);
             this.lblBMICategory.Name = "lblBMICategory";
-            this.lblBMICategory.Size = new System.Drawing.Size(83, 23);
+            this.lblBMICategory.Size = new System.Drawing.Size(90, 23);
             this.lblBMICategory.TabIndex = 13;
             this.lblBMICategory.Text = "Loading...";
             // 
@@ -406,11 +407,11 @@
             // lblFitnessGoal
             // 
             this.lblFitnessGoal.AutoSize = true;
-            this.lblFitnessGoal.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFitnessGoal.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold);
             this.lblFitnessGoal.ForeColor = System.Drawing.Color.DarkGreen;
             this.lblFitnessGoal.Location = new System.Drawing.Point(54, 42);
             this.lblFitnessGoal.Name = "lblFitnessGoal";
-            this.lblFitnessGoal.Size = new System.Drawing.Size(83, 23);
+            this.lblFitnessGoal.Size = new System.Drawing.Size(90, 23);
             this.lblFitnessGoal.TabIndex = 20;
             this.lblFitnessGoal.Text = "Loading...";
             // 
@@ -810,11 +811,11 @@
             // lblFitnessLevel
             // 
             this.lblFitnessLevel.AutoSize = true;
-            this.lblFitnessLevel.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFitnessLevel.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold);
             this.lblFitnessLevel.ForeColor = System.Drawing.Color.DarkGreen;
             this.lblFitnessLevel.Location = new System.Drawing.Point(43, 46);
             this.lblFitnessLevel.Name = "lblFitnessLevel";
-            this.lblFitnessLevel.Size = new System.Drawing.Size(83, 23);
+            this.lblFitnessLevel.Size = new System.Drawing.Size(90, 23);
             this.lblFitnessLevel.TabIndex = 38;
             this.lblFitnessLevel.Text = "Loading...";
             // 
