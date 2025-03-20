@@ -100,7 +100,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(12, 115);
+            this.label5.Location = new System.Drawing.Point(13, 115);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 21);
             this.label5.TabIndex = 18;
@@ -113,9 +113,9 @@
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
             this.label1.Location = new System.Drawing.Point(12, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 21);
+            this.label1.Size = new System.Drawing.Size(181, 21);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Please Enter Your License Key:";
+            this.label1.Text = "Enter Your License Key";
             // 
             // errorLicenseKey
             // 

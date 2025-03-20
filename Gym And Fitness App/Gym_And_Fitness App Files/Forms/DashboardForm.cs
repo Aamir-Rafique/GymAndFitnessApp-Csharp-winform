@@ -116,8 +116,10 @@ namespace GymAndFitness
                 btnLogin.Visible = true;
                 btnLogin.Enabled = true;
 
-                //
-
+                //initializing progressbar values.. for user interaction when no login..
+                progressBarWater.Value = 15;
+                progressBarWeight.Value = 26;
+                lblWeightProgess.Text = "Login to view your progress..";
             }
 
         }

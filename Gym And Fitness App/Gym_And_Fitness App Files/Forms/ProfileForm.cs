@@ -184,25 +184,32 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
-                this.Close();
-
-                Features.OpenMembershipForm();
-                lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
-
-                //membership pln pic
-                //load membership plan pics
-                if (lblMembershipStatus.Text == "Free")
+                if (UserDataManager.CurrentUser.MembershipStatus.ToString() == "Premium")
                 {
-                    pbMembershipStatus.Image = Properties.Resources.free3;
-                }
-                else if (lblMembershipStatus.Text == "Premium")
-                {
-                    pbMembershipStatus.Image = Properties.Resources.crown1;
-                    lblMembershipStatus.ForeColor = Color.Purple;
+                    MessageBox.Show("You are already a premium Member!", "Attention",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
-                    pbMembershipStatus.Image = null;
+                    this.Close();
+
+                    Features.OpenMembershipForm();
+                    lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
+
+                    //membership pln pic
+                    //load membership plan pics
+                    if (lblMembershipStatus.Text == "Free")
+                    {
+                        pbMembershipStatus.Image = Properties.Resources.free3;
+                    }
+                    else if (lblMembershipStatus.Text == "Premium")
+                    {
+                        pbMembershipStatus.Image = Properties.Resources.crown1;
+                        lblMembershipStatus.ForeColor = Color.Purple;
+                    }
+                    else
+                    {
+                        pbMembershipStatus.Image = null;
+                    }
                 }
             }
             else

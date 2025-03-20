@@ -435,6 +435,7 @@
             // 
             this.btnAddToDinner.BackColor = System.Drawing.Color.Cyan;
             this.btnAddToDinner.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddToDinner.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddToDinner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnAddToDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToDinner.Font = new System.Drawing.Font("Calibri", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -454,6 +455,7 @@
             // 
             this.btnAddToLunch.BackColor = System.Drawing.Color.Cyan;
             this.btnAddToLunch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddToLunch.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddToLunch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnAddToLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToLunch.Font = new System.Drawing.Font("Calibri", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -473,6 +475,7 @@
             // 
             this.btnAddToSnacks.BackColor = System.Drawing.Color.Cyan;
             this.btnAddToSnacks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddToSnacks.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddToSnacks.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnAddToSnacks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToSnacks.Font = new System.Drawing.Font("Calibri", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -492,6 +495,7 @@
             // 
             this.btnAddToBreakfast.BackColor = System.Drawing.Color.Cyan;
             this.btnAddToBreakfast.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddToBreakfast.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddToBreakfast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnAddToBreakfast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToBreakfast.Font = new System.Drawing.Font("Calibri", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -514,6 +518,7 @@
             this.btnSaveDietPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnSaveDietPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveDietPlan.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold);
+            this.btnSaveDietPlan.ForeColor = System.Drawing.Color.White;
             this.btnSaveDietPlan.Image = global::GymAndFitness.Properties.Resources.save1;
             this.btnSaveDietPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaveDietPlan.Location = new System.Drawing.Point(316, 396);
@@ -760,6 +765,7 @@
             // btnCalculateTotalNutrition
             // 
             this.btnCalculateTotalNutrition.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCalculateTotalNutrition.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCalculateTotalNutrition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btnCalculateTotalNutrition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
             this.btnCalculateTotalNutrition.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -787,6 +793,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightGreen;
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.groupBoxRadioButtons);
@@ -839,7 +846,7 @@
             // panel2
             // 
             this.panel2.AutoSize = true;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.btnAddToBreakfast);
@@ -876,7 +883,7 @@
             // 
             // groupBoxRadioButtons
             // 
-            this.groupBoxRadioButtons.BackColor = System.Drawing.Color.PaleGreen;
+            this.groupBoxRadioButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.groupBoxRadioButtons.Controls.Add(this.label5);
             this.groupBoxRadioButtons.Controls.Add(this.rbtnOffline);
             this.groupBoxRadioButtons.Controls.Add(this.rbtnOnline);
@@ -889,10 +896,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 15);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.9802F);
+            this.label5.Location = new System.Drawing.Point(14, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(201, 19);
+            this.label5.Size = new System.Drawing.Size(227, 21);
             this.label5.TabIndex = 13;
             this.label5.Text = "Select the method of searching:";
             // 
@@ -948,7 +955,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(39, 16);
+            this.label2.Location = new System.Drawing.Point(39, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 23);
             this.label2.TabIndex = 0;

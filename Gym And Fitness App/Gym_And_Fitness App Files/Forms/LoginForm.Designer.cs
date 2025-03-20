@@ -86,7 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 11.0802F);
-            this.label3.Location = new System.Drawing.Point(184, 112);
+            this.label3.Location = new System.Drawing.Point(183, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 19);
             this.label3.TabIndex = 4;

@@ -83,10 +83,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Rockwell", 10.9802F);
             this.label2.Location = new System.Drawing.Point(73, 243);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.Size = new System.Drawing.Size(55, 19);
             this.label2.TabIndex = 45;
             this.label2.Text = "Email:";
             // 
@@ -105,7 +105,7 @@
             // 
             this.btnGenerateKey.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnGenerateKey.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnGenerateKey.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.btnGenerateKey.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.btnGenerateKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateKey.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateKey.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -119,6 +119,7 @@
             // 
             // txtGeneratedKey
             // 
+            this.txtGeneratedKey.BackColor = System.Drawing.SystemColors.HighlightText;
             this.txtGeneratedKey.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGeneratedKey.Location = new System.Drawing.Point(384, 294);
             this.txtGeneratedKey.Name = "txtGeneratedKey";
@@ -146,6 +147,7 @@
             // 
             // groupBoxRadioButtons
             // 
+            this.groupBoxRadioButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.groupBoxRadioButtons.Controls.Add(this.pictureBox4);
             this.groupBoxRadioButtons.Controls.Add(this.pictureBox3);
             this.groupBoxRadioButtons.Controls.Add(this.pictureBox1);

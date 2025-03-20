@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xrml="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <assemblyIdentity name="GymAndFitness.application" version="1.0.0.2" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="x86" xmlns="urn:schemas-microsoft-com:asm.v1" />
-  <description asmv2:publisher="Aamir Rafique" co.v1:suiteName="AR Tech" asmv2:product="Gym And Fitness" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <assemblyIdentity name="GymAndFitness.application" version="1.0.0.3" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="x86" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <description asmv2:publisher="AR FitTech" co.v1:suiteName="AR Tech" asmv2:product="Gym And Fitness" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" co.v1:createDesktopShortcut="true">
     <subscription>
       <update>
@@ -15,13 +15,13 @@
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="GymAndFitness.exe.manifest" size="34187">
-      <assemblyIdentity name="GymAndFitness.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="x86" type="win32" />
+      <assemblyIdentity name="GymAndFitness.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FT/29oBey7KYzRvLDsAt/MtpxrCk/Jz2w9M0Bj++Ai0=</dsig:DigestValue>
+        <dsig:DigestValue>G6utyirP0hYrua57EGyl/6xAQJYo1I/Jx2SoFfJbfTo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

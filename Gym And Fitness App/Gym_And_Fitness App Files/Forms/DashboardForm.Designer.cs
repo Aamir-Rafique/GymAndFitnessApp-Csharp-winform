@@ -211,7 +211,7 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(199)))));
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlMain.Controls.Add(this.slidePanel);
             this.pnlMain.Controls.Add(this.lblPremiumMembers);
             this.pnlMain.Controls.Add(this.pnlChallenge);
@@ -442,7 +442,7 @@
             // 
             // pnlChallenge
             // 
-            this.pnlChallenge.BackColor = System.Drawing.Color.PaleGreen;
+            this.pnlChallenge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.pnlChallenge.Controls.Add(this.lblChallenge);
             this.pnlChallenge.Controls.Add(this.pictureBox4);
             this.pnlChallenge.Controls.Add(this.lblwarning);
@@ -489,6 +489,7 @@
             // 
             this.btnChallenge.BackColor = System.Drawing.Color.Cyan;
             this.btnChallenge.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChallenge.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnChallenge.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnChallenge.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnChallenge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -587,7 +588,7 @@
             // 
             // pnlWaterIntake
             // 
-            this.pnlWaterIntake.BackColor = System.Drawing.Color.PaleGreen;
+            this.pnlWaterIntake.BackColor = System.Drawing.Color.Turquoise;
             this.pnlWaterIntake.Controls.Add(this.lblGlasses);
             this.pnlWaterIntake.Controls.Add(this.lblWaterIntake);
             this.pnlWaterIntake.Controls.Add(this.label9);

@@ -16,13 +16,13 @@
     <UpdateUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\PROJECTS-Public\Gym And Fitness App\Gym And Fitness app_Clickonce\Setup\</UpdateUrl>
     <TargetCulture>en-US</TargetCulture>
     <ProductName>Gym And Fitness</ProductName>
-    <PublisherName>Aamir Rafique</PublisherName>
+    <PublisherName>AR FitTech</PublisherName>
     <SuiteName>AR Tech</SuiteName>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

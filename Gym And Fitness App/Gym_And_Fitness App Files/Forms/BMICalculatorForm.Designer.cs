@@ -440,7 +440,7 @@
             // panel3
             // 
             this.panel3.AutoSize = true;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.lblTargetWeightRange);
             this.panel3.Controls.Add(this.label6);

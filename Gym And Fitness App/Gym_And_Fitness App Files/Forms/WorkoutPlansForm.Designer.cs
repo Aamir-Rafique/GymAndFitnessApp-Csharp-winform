@@ -424,7 +424,7 @@
             // 
             // dgvWorkoutPlan
             // 
-            this.dgvWorkoutPlan.BackgroundColor = System.Drawing.Color.Aqua;
+            this.dgvWorkoutPlan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dgvWorkoutPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvWorkoutPlan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Day,
@@ -469,6 +469,7 @@
             this.btnSaveWorkoutPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnSaveWorkoutPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveWorkoutPlan.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold);
+            this.btnSaveWorkoutPlan.ForeColor = System.Drawing.Color.White;
             this.btnSaveWorkoutPlan.Image = global::GymAndFitness.Properties.Resources.save1;
             this.btnSaveWorkoutPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaveWorkoutPlan.Location = new System.Drawing.Point(275, 422);
