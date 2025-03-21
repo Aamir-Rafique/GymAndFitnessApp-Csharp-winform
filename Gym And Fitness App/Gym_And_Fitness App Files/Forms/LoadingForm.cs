@@ -88,6 +88,12 @@ namespace GymAndFitness.Forms
             progressBarLoading.Value = Math.Min(progressBarLoading.Value + increment, max);
         }
 
-
+        private void LoadingForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms.Count == 0) // Check if all forms are closed
+            {
+                Application.Exit(); // Exit the entire application
+            }
+        }
     }
 }

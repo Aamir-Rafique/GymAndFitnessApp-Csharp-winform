@@ -788,6 +788,7 @@
             this.Name = "WorkoutPlansForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WorkoutPlansForm_FormClosed);
             this.Load += new System.EventHandler(this.WorkoutPlansForm_Load);
             this.tabPage4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

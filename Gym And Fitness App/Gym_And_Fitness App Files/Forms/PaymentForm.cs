@@ -114,6 +114,13 @@ namespace GymAndFitness
             }
         }
 
+        private void PaymentForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms.Count == 0) // Check if all forms are closed
+            {
+                Application.Exit(); // Exit the entire application
+            }
+        }
     }
 
 }
