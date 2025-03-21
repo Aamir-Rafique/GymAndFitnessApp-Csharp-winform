@@ -22,15 +22,15 @@ namespace GymAndFitness
         }
 
         // Save user details
-        public void SignUpUser(string username, string password, int age, string gender, double height, double weight, double bmi, double targetWeight, string targetWeightRange, string fitnessGoal, string fitnessLevel, byte[] profilePicture, string membershipStatus)
+        public void SignUpUser(string username, string password, int age, string gender, double height, double weight, double bmi, double targetWeight, string targetWeightRange, string fitnessGoal, string fitnessLevel, byte[] profilePicture, string membershipStatus, double currentWeight)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    string query = "INSERT INTO Users ([Username], [Password], [Age], [Gender], [Height], [StartingWeight], [BMI], [TargetWeight], [TargetWeightRange], [FitnessGoal], [FitnessLevel], [ProfilePicture], [MembershipStatus]) " +
-                                   "VALUES (@Username, @Password, @Age, @Gender, @Height, @StartingWeight, @BMI, @TargetWeight, @TargetWeightRange, @FitnessGoal, @FitnessLevel, @ProfilePicture, @MembershipStatus)";
+                    string query = "INSERT INTO Users ([Username], [Password], [Age], [Gender], [Height], [StartingWeight], [BMI], [TargetWeight], [TargetWeightRange], [FitnessGoal], [FitnessLevel], [ProfilePicture], [MembershipStatus], [CurrentWeight]) " +
+                                   "VALUES (@Username, @Password, @Age, @Gender, @Height, @StartingWeight, @BMI, @TargetWeight, @TargetWeightRange, @FitnessGoal, @FitnessLevel, @ProfilePicture, @MembershipStatus, @CurrentWeight)";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Username", username);
@@ -46,6 +46,7 @@ namespace GymAndFitness
                         command.Parameters.AddWithValue("@FitnessLevel", fitnessLevel);
                         command.Parameters.AddWithValue("@ProfilePicture", profilePicture ?? (object)DBNull.Value);
                         command.Parameters.AddWithValue("@MembershipStatus", membershipStatus);
+                        command.Parameters.AddWithValue("@CurrentWeight", currentWeight);
                         command.ExecuteNonQuery();
                         MessageBox.Show("Sign-Up Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

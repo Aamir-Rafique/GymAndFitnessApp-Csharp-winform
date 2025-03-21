@@ -130,6 +130,7 @@ namespace GymAndFitness
                 string fitnessGoal = cmbFitnessGoal.SelectedItem.ToString();
                 string fitnessLevel = cmbFitnessLevel.SelectedItem.ToString();
                 string membershipStatus = "Free";
+                double currentWeight = weight;
 
                 // Handle profile picture // Convert Profile Picture to byte array
                 byte[] profilePicture = null;
@@ -156,7 +157,7 @@ namespace GymAndFitness
                     }
                 }
 
-                userDataManager.SignUpUser(username, password, age, gender, height, weight, bmi, targetWeight, targetWeightRange, fitnessGoal, fitnessLevel, profilePicture, membershipStatus);
+                userDataManager.SignUpUser(username, password, age, gender, height, weight, bmi, targetWeight, targetWeightRange, fitnessGoal, fitnessLevel, profilePicture, membershipStatus, currentWeight);
 
             }
         }

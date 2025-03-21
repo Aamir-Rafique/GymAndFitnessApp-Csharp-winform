@@ -41,14 +41,7 @@ namespace GymAndFitness
                     lblGender.Text = UserDataManager.CurrentUser.Gender;
                     lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
                     lblStartingWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
-                    if (UserDataManager.CurrentUser.CurrentWeight.ToString() == null)
-                    {
-                        lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
-                    }
-                    else
-                    {
-                        lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
-                    }
+                    lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
                     lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
                     lblTargetWeight.Text = $"{UserDataManager.CurrentUser.TargetWeight} kg";
                     lblFitnessGoal.Text = UserDataManager.CurrentUser.FitnessGoal;
@@ -186,7 +179,7 @@ namespace GymAndFitness
             {
                 if (UserDataManager.CurrentUser.MembershipStatus.ToString() == "Premium")
                 {
-                    MessageBox.Show("You are already a premium Member!", "Attention",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("You are already a premium Member!", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -266,7 +259,7 @@ namespace GymAndFitness
 
                     UserDataManager.CurrentUser.BMI = Features.CalculateBMI(weight, height);
                     userDataManager.UpdateHeightAndWeight(UserDataManager.CurrentUser.Height, UserDataManager.CurrentUser.CurrentWeight, UserDataManager.CurrentUser.BMI);
-                    MessageBox.Show("Height and weight updated successfully! Click on the refresh icon to see the updated records. ", "Success!");
+                    MessageBox.Show("Height and weight updated successfully! Click on the refresh icon to see the updated records.", "Success!",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
                 else
                 {

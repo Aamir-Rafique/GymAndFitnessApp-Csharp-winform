@@ -95,6 +95,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
