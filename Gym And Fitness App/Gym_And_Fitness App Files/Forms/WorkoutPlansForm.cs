@@ -12,9 +12,18 @@ namespace GymAndFitness
 {
     public partial class WorkoutPlansForm : Form
     {
+        private static WorkoutPlansForm instance;
         public WorkoutPlansForm()
         {
             InitializeComponent();
+        }
+        public static WorkoutPlansForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new WorkoutPlansForm();
+            }
+            return instance;
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)

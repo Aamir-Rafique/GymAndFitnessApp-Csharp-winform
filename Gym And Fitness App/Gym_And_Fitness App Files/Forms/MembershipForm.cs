@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 
 namespace GymAndFitness
-{
+{ 
     public partial class MembershipForm : Form
     {
         public MembershipForm()
@@ -28,8 +28,6 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
-                ProfileForm profile = new ProfileForm();
-                profile.Close();
                 if (UserDataManager.CurrentUser.MembershipStatus == "Premium")
                 {
                     MessageBox.Show("You are already a Premium member!");

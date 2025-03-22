@@ -1,15 +1,25 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace GymAndFitness
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private static MainForm instance;
+        private MainForm()
         {
             InitializeComponent();
         }
 
+        public static MainForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new MainForm();
+            }
+            return instance;
+        }
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
 
@@ -74,10 +84,6 @@ namespace GymAndFitness
 
 
             }
-
-
-
-
         }
 
 
@@ -140,9 +146,7 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            UserDataManager.CurrentUser = null;
-            Features.OpenLoginForm();
-            this.Close();
+            Features.LogoutNow();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -164,5 +168,9 @@ namespace GymAndFitness
                 Application.Exit(); // Exit the entire application
             }
         }
+
+       
+
+
     }
 }

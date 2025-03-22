@@ -187,64 +187,65 @@ namespace GymAndFitness
         //To open each form...
         public static void OpenAboutForm()
         {
-            AboutForm aboutForm = new AboutForm();
-            aboutForm.Show();
+            //AboutForm aboutForm = new AboutForm();
+            //aboutForm.Show();
+
+            AboutForm.GetInstance().Show();
+            AboutForm.GetInstance().BringToFront();
         }
 
         public static void OpenBMICalculatorForm()
         {
-            BMICalculatorForm bmiCalculator = new BMICalculatorForm();
-            bmiCalculator.Show();
+            BMICalculatorForm.GetInstance().Show();
+            BMICalculatorForm.GetInstance().BringToFront();
         }
 
         public static void OpenDashboardForm()
         {
-            DashboardForm dashboard = new DashboardForm();
-            dashboard.Show();
+            DashboardForm.GetInstance().Show();
+            DashboardForm.GetInstance().BringToFront();
         }
 
         public static void OpenDietPlansForm()
         {
-            DietPlansForm dietPlans = new DietPlansForm();
-            dietPlans.Show();
+            DietPlansForm.GetInstance().Show();
+            DietPlansForm.GetInstance().BringToFront();
         }
 
         public static void OpenLoginForm()
         {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            loginForm.Focus();
+            LoginForm.GetInstance().Show();
+            LoginForm.GetInstance().BringToFront();
         }
         public static void OpenMainForm()
         {
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
+            MainForm.GetInstance().Show();
+            MainForm.GetInstance().BringToFront();
         }
         public static void OpenMembershipForm()
         {
             MembershipForm membershipForm = new MembershipForm();
-            membershipForm.Show();
+            membershipForm.ShowDialog();
         }
         public static void OpenPaymentForm()
         {
             PaymentForm paymentForm = new PaymentForm();
-            paymentForm.Show();
-            paymentForm.Focus();
+            paymentForm.ShowDialog();
         }
         public static void OpenPremiumForm()
         {
             PremiumForm premiumForm = new PremiumForm();
-            premiumForm.Show();
+            premiumForm.ShowDialog();
         }
         public static void OpenProfileForm()
         {
-            ProfileForm profile = new ProfileForm();
-            profile.Show();
+            ProfileForm.GetInstance().Show();
+            ProfileForm.GetInstance().BringToFront();
         }
         public static void OpenSignUpForm()
         {
             SignupForm signupForm = new SignupForm();
-            signupForm.Show();
+            signupForm.ShowDialog();
         }
         public static void OpenWorkoutPlansForm()
         {
@@ -252,6 +253,160 @@ namespace GymAndFitness
             workoutPlans.Show();
         }
 
+        public static void LogoutNow()
+        {
+            UserDataManager.CurrentUser = null;
+            Application.Restart(); // Restarts the entire application
+        }
+
+        //this code ensures, only one instance of the form is created at a time..
+
+        //private static AboutForm _aboutForm;
+        //private static BMICalculatorForm _bmiCalculatorForm;
+        //private static DashboardForm _dashboardForm;
+        //private static DietPlansForm _dietPlansForm;
+        //private static LoginForm _loginForm;
+        //private static MainForm _mainForm;
+        //private static MembershipForm _membershipForm;
+        //private static PaymentForm _paymentForm;
+        //private static PremiumForm _premiumForm;
+        //private static ProfileForm _profileForm;
+        //private static SignupForm _signupForm;
+        //private static WorkoutPlansForm _workoutPlansForm;
+
+        //public static void OpenAboutForm()
+        //{
+        //    if (_aboutForm == null || _aboutForm.IsDisposed)
+        //    {
+        //        _aboutForm = new AboutForm();
+        //        _aboutForm.FormClosed += (s, e) => _aboutForm = null; // Reset instance when closed
+        //    }
+        //    _aboutForm.Show();
+        //    _aboutForm.Focus();
+        //}
+
+
+        //public static void OpenBMICalculatorForm()
+        //{
+        //    if (_bmiCalculatorForm == null || _bmiCalculatorForm.IsDisposed)
+        //    {
+        //        _bmiCalculatorForm = new BMICalculatorForm();
+        //        _bmiCalculatorForm.FormClosed += (s, e) => _bmiCalculatorForm = null;
+        //    }
+        //    _bmiCalculatorForm.Show();
+        //    _bmiCalculatorForm.Focus();
+        //}
+
+        //public static void OpenDashboardForm()
+        //{
+        //    if (_dashboardForm == null || _dashboardForm.IsDisposed)
+        //    {
+        //        _dashboardForm = new DashboardForm();
+        //        _dashboardForm.FormClosed += (s, e) => _dashboardForm = null;
+        //    }
+        //    _dashboardForm.Show();
+        //    _dashboardForm.Focus();
+        //}
+
+        //public static void OpenDietPlansForm()
+        //{
+        //    if (_dietPlansForm == null || _dietPlansForm.IsDisposed)
+        //    {
+        //        _dietPlansForm = new DietPlansForm();
+        //        _dietPlansForm.FormClosed += (s, e) => _dietPlansForm = null;
+        //    }
+        //    _dietPlansForm.Show();
+        //    _dietPlansForm.Focus();
+        //}
+
+        //public static void OpenLoginForm()
+        //{
+        //    if (_loginForm == null || _loginForm.IsDisposed)
+        //    {
+        //        _loginForm = new LoginForm();
+        //        _loginForm.FormClosed += (s, e) => _loginForm = null;
+        //    }
+        //    _loginForm.Show();
+        //    _loginForm.Focus();
+        //}
+
+        //public static void OpenMainForm()
+        //{
+        //    if (_mainForm == null || _mainForm.IsDisposed)
+        //    {
+        //        _mainForm = new MainForm();
+        //        _mainForm.FormClosed += (s, e) => _mainForm = null;
+        //    }
+        //    _mainForm.Show();
+        //    _mainForm.Focus();
+        //}
+
+        //public static void OpenMembershipForm()
+        //{
+        //    if (_membershipForm == null || _membershipForm.IsDisposed)
+        //    {
+        //        _membershipForm = new MembershipForm();
+        //        _membershipForm.FormClosed += (s, e) => _membershipForm = null;
+        //    }
+        //    _membershipForm.Show();
+        //    _membershipForm.Focus();
+        //}
+
+        //public static void OpenPaymentForm()
+        //{
+        //    if (_paymentForm == null || _paymentForm.IsDisposed)
+        //    {
+        //        _paymentForm = new PaymentForm();
+        //        _paymentForm.FormClosed += (s, e) => _paymentForm = null;
+        //    }
+        //    _paymentForm.Show();
+        //    _paymentForm.Focus();
+        //}
+
+        //public static void OpenPremiumForm()
+        //{
+        //    if (_premiumForm == null || _premiumForm.IsDisposed)
+        //    {
+        //        _premiumForm = new PremiumForm();
+        //        _premiumForm.FormClosed += (s, e) => _premiumForm = null;
+        //    }
+        //    _premiumForm.Show();
+        //    _premiumForm.Focus();
+        //}
+
+
+        //public static void OpenProfileForm()
+        //{
+        //    if (_profileForm == null || _profileForm.IsDisposed)
+        //    {
+        //        _profileForm = new ProfileForm();
+        //        _profileForm.FormClosed += (s, e) => _profileForm = null;
+        //    }
+        //    _profileForm.Show();
+        //    _profileForm.Focus();
+        //}
+
+        //public static void OpenSignUpForm()
+        //{
+        //    if (_signupForm == null || _signupForm.IsDisposed)
+        //    {
+        //        _signupForm = new SignupForm();
+        //        _signupForm.FormClosed += (s, e) => _signupForm = null;
+        //    }
+        //    _signupForm.Show();
+        //    _signupForm.Focus();
+        //}
+
+        //public static void OpenWorkoutPlansForm()
+        //{
+        //    if (_workoutPlansForm == null || _workoutPlansForm.IsDisposed)
+        //    {
+        //        _workoutPlansForm = new WorkoutPlansForm();
+        //        _workoutPlansForm.FormClosed += (s, e) => _workoutPlansForm = null;
+        //    }
+        //    _workoutPlansForm.Show();
+        //    _workoutPlansForm.Focus();
+        //}
 
 
 

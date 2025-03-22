@@ -6,11 +6,19 @@ namespace GymAndFitness
 {
     public partial class ProfileForm : Form
     {
-        public ProfileForm()
+        private static ProfileForm instance;
+        private ProfileForm()
         {
             InitializeComponent();
         }
-
+        public static ProfileForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new ProfileForm();
+            }
+            return instance;
+        }
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
         //LOAD
@@ -259,7 +267,7 @@ namespace GymAndFitness
 
                     UserDataManager.CurrentUser.BMI = Features.CalculateBMI(weight, height);
                     userDataManager.UpdateHeightAndWeight(UserDataManager.CurrentUser.Height, UserDataManager.CurrentUser.CurrentWeight, UserDataManager.CurrentUser.BMI);
-                    MessageBox.Show("Height and weight updated successfully! Click on the refresh icon to see the updated records.", "Success!",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Height and weight updated successfully! Click on the refresh icon to see the updated records.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -298,9 +306,7 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            UserDataManager.CurrentUser = null;
-            Features.OpenLoginForm();
-            this.Close();
+            Features.LogoutNow();
         }
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)

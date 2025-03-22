@@ -6,9 +6,20 @@ namespace GymAndFitness
 {
     public partial class AboutForm : Form
     {
-        public AboutForm()
+        private static AboutForm instance;
+
+        private AboutForm()
         {
             InitializeComponent();
+        }
+
+        public static AboutForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new AboutForm();
+            }
+            return instance;
         }
 
 
@@ -188,7 +199,7 @@ namespace GymAndFitness
 
 
         //for opening each form...
-        private void btnProfilePicture_Click_1(object sender, EventArgs e)
+        private void btnProfilePicture_Click(object sender, EventArgs e)
         {
             Features.OpenProfileForm();
             this.Hide();
@@ -254,5 +265,7 @@ namespace GymAndFitness
                 Application.Exit(); // Exit the entire application
             }
         }
+
+       
     }
 }

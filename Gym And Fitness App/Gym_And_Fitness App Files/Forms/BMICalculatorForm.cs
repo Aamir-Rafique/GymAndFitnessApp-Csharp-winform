@@ -5,9 +5,19 @@ namespace GymAndFitness
 {
     public partial class BMICalculatorForm : Form
     {
-        public BMICalculatorForm()
+        private static BMICalculatorForm instance;
+        private BMICalculatorForm()
         {
             InitializeComponent();
+        }
+
+        public static BMICalculatorForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new BMICalculatorForm();
+            }
+            return instance;
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)

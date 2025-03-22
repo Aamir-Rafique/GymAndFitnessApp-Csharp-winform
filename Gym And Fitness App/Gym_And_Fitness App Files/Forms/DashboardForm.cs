@@ -6,9 +6,18 @@ namespace GymAndFitness
 {
     public partial class DashboardForm : Form
     {
-        public DashboardForm()
+        private static DashboardForm instance;
+        private DashboardForm()
         {
             InitializeComponent();
+        }
+        public static DashboardForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new DashboardForm();
+            }
+            return instance;
         }
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
@@ -426,9 +435,7 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            UserDataManager.CurrentUser = null;
-            Features.OpenLoginForm();
-            this.Close();
+            Features.LogoutNow();
         }
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
@@ -473,5 +480,7 @@ namespace GymAndFitness
                 Application.Exit(); // Exit the entire application
             }
         }
+
+       
     }
 }

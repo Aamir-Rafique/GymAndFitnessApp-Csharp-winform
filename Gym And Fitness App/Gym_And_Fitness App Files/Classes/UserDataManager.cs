@@ -51,8 +51,7 @@ namespace GymAndFitness
                         MessageBox.Show("Sign-Up Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Open the login form and close the current form
-                        LoginForm loginForm = new LoginForm();
-                        loginForm.Show();
+                        Features.OpenLoginForm();
                         Application.OpenForms["SignUpForm"].Close();
 
                         //connection.Close();
@@ -194,8 +193,7 @@ namespace GymAndFitness
                         CurrentUser.MembershipStatus = "Premium";
                         UpdateMembershipInDatabase("Premium");
 
-                        ProfileForm profile = new ProfileForm();
-                        profile.Show();
+                        Features.OpenProfileForm();
                         Application.OpenForms["PremiumForm"].Close();
                     }
                     else

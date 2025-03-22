@@ -38,16 +38,6 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.slidePanel = new System.Windows.Forms.Panel();
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnAbout = new System.Windows.Forms.Button();
-            this.btnToggle = new System.Windows.Forms.Button();
-            this.btnWorkoutPlans = new System.Windows.Forms.Button();
-            this.btnBMICalculator = new System.Windows.Forms.Button();
-            this.btnDietPlans = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
             this.lblPremiumMembers = new System.Windows.Forms.Label();
             this.pnlChallenge = new System.Windows.Forms.Panel();
             this.lblChallenge = new System.Windows.Forms.Label();
@@ -61,7 +51,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblClock = new System.Windows.Forms.Label();
             this.lblQuote = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlWaterIntake = new System.Windows.Forms.Panel();
             this.lblGlasses = new System.Windows.Forms.Label();
             this.lblWaterIntake = new System.Windows.Forms.Label();
@@ -81,12 +70,22 @@
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnDietPlans = new System.Windows.Forms.Button();
+            this.btnBMICalculator = new System.Windows.Forms.Button();
+            this.btnWorkoutPlans = new System.Windows.Forms.Button();
+            this.btnToggle = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.slidePanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnlMain.SuspendLayout();
-            this.slidePanel.SuspendLayout();
             this.pnlChallenge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -95,6 +94,7 @@
             this.pnlWaterIntake.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbwaterintake)).BeginInit();
             this.panel6.SuspendLayout();
+            this.slidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -227,214 +227,13 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 70);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(834, 540);
+            this.pnlMain.Size = new System.Drawing.Size(834, 510);
             this.pnlMain.TabIndex = 1;
-            // 
-            // slidePanel
-            // 
-            this.slidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.slidePanel.Controls.Add(this.btnProfile);
-            this.slidePanel.Controls.Add(this.btnHome);
-            this.slidePanel.Controls.Add(this.btnAbout);
-            this.slidePanel.Controls.Add(this.btnToggle);
-            this.slidePanel.Controls.Add(this.btnWorkoutPlans);
-            this.slidePanel.Controls.Add(this.btnBMICalculator);
-            this.slidePanel.Controls.Add(this.btnDietPlans);
-            this.slidePanel.Controls.Add(this.btnDashboard);
-            this.slidePanel.Controls.Add(this.label11);
-            this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.slidePanel.Location = new System.Drawing.Point(0, 0);
-            this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(200, 540);
-            this.slidePanel.TabIndex = 12;
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
-            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.Location = new System.Drawing.Point(-1, 340);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(210, 51);
-            this.btnProfile.TabIndex = 13;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnHome.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = global::GymAndFitness.Properties.Resources.home_button;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(-1, 110);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(210, 47);
-            this.btnHome.TabIndex = 5;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // btnAbout
-            // 
-            this.btnAbout.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAbout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnAbout.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbout.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbout.Image = global::GymAndFitness.Properties.Resources.info;
-            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(-1, 390);
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(210, 47);
-            this.btnAbout.TabIndex = 11;
-            this.btnAbout.Text = "About";
-            this.btnAbout.UseVisualStyleBackColor = false;
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
-            // 
-            // btnToggle
-            // 
-            this.btnToggle.BackColor = System.Drawing.Color.Lime;
-            this.btnToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnToggle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnToggle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnToggle.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnToggle.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnToggle.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnToggle.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToggle.Image = global::GymAndFitness.Properties.Resources.menu_bar;
-            this.btnToggle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnToggle.Location = new System.Drawing.Point(-1, 12);
-            this.btnToggle.Name = "btnToggle";
-            this.btnToggle.Size = new System.Drawing.Size(210, 51);
-            this.btnToggle.TabIndex = 4;
-            this.btnToggle.Text = "Menu";
-            this.btnToggle.UseVisualStyleBackColor = false;
-            this.btnToggle.Click += new System.EventHandler(this.btnToggle_Click);
-            // 
-            // btnWorkoutPlans
-            // 
-            this.btnWorkoutPlans.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnWorkoutPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnWorkoutPlans.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWorkoutPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnWorkoutPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnWorkoutPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnWorkoutPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnWorkoutPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWorkoutPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWorkoutPlans.Image = global::GymAndFitness.Properties.Resources.workout;
-            this.btnWorkoutPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWorkoutPlans.Location = new System.Drawing.Point(-1, 294);
-            this.btnWorkoutPlans.Name = "btnWorkoutPlans";
-            this.btnWorkoutPlans.Size = new System.Drawing.Size(210, 47);
-            this.btnWorkoutPlans.TabIndex = 9;
-            this.btnWorkoutPlans.Text = "Workout Plans";
-            this.btnWorkoutPlans.UseVisualStyleBackColor = false;
-            this.btnWorkoutPlans.Click += new System.EventHandler(this.btnWorkoutPlans_Click_1);
-            // 
-            // btnBMICalculator
-            // 
-            this.btnBMICalculator.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnBMICalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnBMICalculator.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBMICalculator.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnBMICalculator.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnBMICalculator.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnBMICalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnBMICalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBMICalculator.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBMICalculator.Image = global::GymAndFitness.Properties.Resources.bmi;
-            this.btnBMICalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBMICalculator.Location = new System.Drawing.Point(-1, 202);
-            this.btnBMICalculator.Name = "btnBMICalculator";
-            this.btnBMICalculator.Size = new System.Drawing.Size(210, 47);
-            this.btnBMICalculator.TabIndex = 7;
-            this.btnBMICalculator.Text = "BMI Calculator";
-            this.btnBMICalculator.UseVisualStyleBackColor = false;
-            this.btnBMICalculator.Click += new System.EventHandler(this.btnBMICalculator_Click);
-            // 
-            // btnDietPlans
-            // 
-            this.btnDietPlans.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnDietPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDietPlans.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDietPlans.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnDietPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnDietPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDietPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDietPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnDietPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDietPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDietPlans.Image = global::GymAndFitness.Properties.Resources.diet;
-            this.btnDietPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDietPlans.Location = new System.Drawing.Point(-1, 248);
-            this.btnDietPlans.Name = "btnDietPlans";
-            this.btnDietPlans.Size = new System.Drawing.Size(210, 47);
-            this.btnDietPlans.TabIndex = 8;
-            this.btnDietPlans.Text = "Diet Plans";
-            this.btnDietPlans.UseVisualStyleBackColor = false;
-            this.btnDietPlans.Click += new System.EventHandler(this.btnDietPlans_Click_1);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.BackColor = System.Drawing.Color.SpringGreen;
-            this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDashboard.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
-            this.btnDashboard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.Image = global::GymAndFitness.Properties.Resources.dashboardfinal;
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(-1, 156);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(210, 47);
-            this.btnDashboard.TabIndex = 6;
-            this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.UseVisualStyleBackColor = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(-141, 140);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(332, 30);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Welcome to Gym && Fitness App!";
             // 
             // lblPremiumMembers
             // 
             this.lblPremiumMembers.Font = new System.Drawing.Font("Segoe UI", 9.11881F, System.Drawing.FontStyle.Bold);
-            this.lblPremiumMembers.Location = new System.Drawing.Point(606, 245);
+            this.lblPremiumMembers.Location = new System.Drawing.Point(604, 205);
             this.lblPremiumMembers.Name = "lblPremiumMembers";
             this.lblPremiumMembers.Size = new System.Drawing.Size(197, 26);
             this.lblPremiumMembers.TabIndex = 22;
@@ -448,7 +247,7 @@
             this.pnlChallenge.Controls.Add(this.lblwarning);
             this.pnlChallenge.Controls.Add(this.btnChallenge);
             this.pnlChallenge.Controls.Add(this.label4);
-            this.pnlChallenge.Location = new System.Drawing.Point(60, 270);
+            this.pnlChallenge.Location = new System.Drawing.Point(58, 230);
             this.pnlChallenge.Name = "pnlChallenge";
             this.pnlChallenge.Size = new System.Drawing.Size(500, 138);
             this.pnlChallenge.TabIndex = 13;
@@ -518,7 +317,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::GymAndFitness.Properties.Resources.quote;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(132, 136);
+            this.pictureBox3.Location = new System.Drawing.Point(117, 113);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 48);
             this.pictureBox3.TabIndex = 11;
@@ -568,23 +367,13 @@
             // 
             this.lblQuote.AutoSize = true;
             this.lblQuote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblQuote.Font = new System.Drawing.Font("Rockwell", 22.09901F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuote.Font = new System.Drawing.Font("Rockwell", 24.09901F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblQuote.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblQuote.Location = new System.Drawing.Point(197, 144);
+            this.lblQuote.Location = new System.Drawing.Point(182, 121);
+            this.lblQuote.MaximumSize = new System.Drawing.Size(621, 0);
             this.lblQuote.Name = "lblQuote";
-            this.lblQuote.Size = new System.Drawing.Size(0, 41);
+            this.lblQuote.Size = new System.Drawing.Size(0, 42);
             this.lblQuote.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(157, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 30);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Welcome to Gym && Fitness App!";
             // 
             // pnlWaterIntake
             // 
@@ -599,7 +388,7 @@
             this.pnlWaterIntake.Controls.Add(this.btnAddWater);
             this.pnlWaterIntake.Controls.Add(this.progressBarWater);
             this.pnlWaterIntake.Controls.Add(this.pbwaterintake);
-            this.pnlWaterIntake.Location = new System.Drawing.Point(578, 270);
+            this.pnlWaterIntake.Location = new System.Drawing.Point(576, 230);
             this.pnlWaterIntake.Name = "pnlWaterIntake";
             this.pnlWaterIntake.Size = new System.Drawing.Size(245, 262);
             this.pnlWaterIntake.TabIndex = 14;
@@ -719,7 +508,7 @@
             this.panel6.Controls.Add(this.lblWeightProgess);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.progressBarWeight);
-            this.panel6.Location = new System.Drawing.Point(61, 416);
+            this.panel6.Location = new System.Drawing.Point(59, 376);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(498, 115);
             this.panel6.TabIndex = 15;
@@ -775,18 +564,230 @@
             this.toolTip.ReshowDelay = 100;
             this.toolTip.ShowAlways = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label2.Location = new System.Drawing.Point(157, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(332, 30);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Welcome to Gym && Fitness App!";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label11.Location = new System.Drawing.Point(-141, 140);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(332, 30);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Welcome to Gym && Fitness App!";
+            // 
+            // btnDashboard
+            // 
+            this.btnDashboard.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDashboard.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDashboard.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnDashboard.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Image = global::GymAndFitness.Properties.Resources.dashboardfinal;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(-1, 156);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Size = new System.Drawing.Size(210, 47);
+            this.btnDashboard.TabIndex = 6;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            // 
+            // btnDietPlans
+            // 
+            this.btnDietPlans.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnDietPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDietPlans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDietPlans.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnDietPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnDietPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDietPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDietPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnDietPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDietPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDietPlans.Image = global::GymAndFitness.Properties.Resources.diet;
+            this.btnDietPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDietPlans.Location = new System.Drawing.Point(-1, 248);
+            this.btnDietPlans.Name = "btnDietPlans";
+            this.btnDietPlans.Size = new System.Drawing.Size(210, 47);
+            this.btnDietPlans.TabIndex = 8;
+            this.btnDietPlans.Text = "Diet Plans";
+            this.btnDietPlans.UseVisualStyleBackColor = false;
+            this.btnDietPlans.Click += new System.EventHandler(this.btnDietPlans_Click_1);
+            // 
+            // btnBMICalculator
+            // 
+            this.btnBMICalculator.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnBMICalculator.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnBMICalculator.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBMICalculator.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnBMICalculator.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnBMICalculator.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBMICalculator.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnBMICalculator.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBMICalculator.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBMICalculator.Image = global::GymAndFitness.Properties.Resources.bmi;
+            this.btnBMICalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBMICalculator.Location = new System.Drawing.Point(-1, 202);
+            this.btnBMICalculator.Name = "btnBMICalculator";
+            this.btnBMICalculator.Size = new System.Drawing.Size(210, 47);
+            this.btnBMICalculator.TabIndex = 7;
+            this.btnBMICalculator.Text = "BMI Calculator";
+            this.btnBMICalculator.UseVisualStyleBackColor = false;
+            this.btnBMICalculator.Click += new System.EventHandler(this.btnBMICalculator_Click);
+            // 
+            // btnWorkoutPlans
+            // 
+            this.btnWorkoutPlans.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnWorkoutPlans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnWorkoutPlans.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWorkoutPlans.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnWorkoutPlans.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnWorkoutPlans.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnWorkoutPlans.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnWorkoutPlans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWorkoutPlans.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWorkoutPlans.Image = global::GymAndFitness.Properties.Resources.workout;
+            this.btnWorkoutPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnWorkoutPlans.Location = new System.Drawing.Point(-1, 294);
+            this.btnWorkoutPlans.Name = "btnWorkoutPlans";
+            this.btnWorkoutPlans.Size = new System.Drawing.Size(210, 47);
+            this.btnWorkoutPlans.TabIndex = 9;
+            this.btnWorkoutPlans.Text = "Workout Plans";
+            this.btnWorkoutPlans.UseVisualStyleBackColor = false;
+            this.btnWorkoutPlans.Click += new System.EventHandler(this.btnWorkoutPlans_Click_1);
+            // 
+            // btnToggle
+            // 
+            this.btnToggle.BackColor = System.Drawing.Color.Lime;
+            this.btnToggle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnToggle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnToggle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnToggle.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnToggle.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnToggle.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToggle.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToggle.Image = global::GymAndFitness.Properties.Resources.menu_bar;
+            this.btnToggle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnToggle.Location = new System.Drawing.Point(-1, 12);
+            this.btnToggle.Name = "btnToggle";
+            this.btnToggle.Size = new System.Drawing.Size(210, 51);
+            this.btnToggle.TabIndex = 4;
+            this.btnToggle.Text = "Menu";
+            this.btnToggle.UseVisualStyleBackColor = false;
+            this.btnToggle.Click += new System.EventHandler(this.btnToggle_Click);
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAbout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAbout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnAbout.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAbout.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAbout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.Image = global::GymAndFitness.Properties.Resources.info;
+            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.Location = new System.Drawing.Point(-1, 390);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(210, 47);
+            this.btnAbout.TabIndex = 11;
+            this.btnAbout.Text = "About";
+            this.btnAbout.UseVisualStyleBackColor = false;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnHome.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = global::GymAndFitness.Properties.Resources.home_button;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(-1, 110);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(210, 47);
+            this.btnHome.TabIndex = 5;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfile.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnProfile.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Highlight;
+            this.btnProfile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
+            this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfile.Location = new System.Drawing.Point(-1, 340);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(210, 51);
+            this.btnProfile.TabIndex = 13;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // slidePanel
+            // 
+            this.slidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.slidePanel.Controls.Add(this.btnProfile);
+            this.slidePanel.Controls.Add(this.btnHome);
+            this.slidePanel.Controls.Add(this.btnAbout);
+            this.slidePanel.Controls.Add(this.btnToggle);
+            this.slidePanel.Controls.Add(this.btnWorkoutPlans);
+            this.slidePanel.Controls.Add(this.btnBMICalculator);
+            this.slidePanel.Controls.Add(this.btnDietPlans);
+            this.slidePanel.Controls.Add(this.btnDashboard);
+            this.slidePanel.Controls.Add(this.label11);
+            this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.slidePanel.Location = new System.Drawing.Point(0, 0);
+            this.slidePanel.Name = "slidePanel";
+            this.slidePanel.Size = new System.Drawing.Size(200, 510);
+            this.slidePanel.TabIndex = 12;
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 610);
+            this.ClientSize = new System.Drawing.Size(834, 580);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(850, 650);
-            this.MinimumSize = new System.Drawing.Size(850, 650);
+            this.MaximumSize = new System.Drawing.Size(850, 620);
+            this.MinimumSize = new System.Drawing.Size(850, 620);
             this.Name = "DashboardForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -800,8 +801,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
-            this.slidePanel.ResumeLayout(false);
-            this.slidePanel.PerformLayout();
             this.pnlChallenge.ResumeLayout(false);
             this.pnlChallenge.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -813,6 +812,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbwaterintake)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.slidePanel.ResumeLayout(false);
+            this.slidePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -822,7 +823,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblQuote;
         private System.Windows.Forms.Label lblClock;
         private System.Windows.Forms.Timer timerQuote;
@@ -831,13 +831,6 @@
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Timer slideTimer;
-        public System.Windows.Forms.Panel slidePanel;
-        public System.Windows.Forms.Button btnAbout;
-        public System.Windows.Forms.Button btnToggle;
-        public System.Windows.Forms.Button btnWorkoutPlans;
-        public System.Windows.Forms.Button btnBMICalculator;
-        public System.Windows.Forms.Button btnDietPlans;
-        public System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel pnlChallenge;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblwarning;
@@ -845,7 +838,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblChallenge;
-        public System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel pnlWaterIntake;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -863,12 +855,21 @@
         private System.Windows.Forms.Label lblGlasses;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.PictureBox pbwaterintake;
-        public System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.PictureBox pbMembershipStatus;
         private System.Windows.Forms.Label lblPremiumMembers;
+        public System.Windows.Forms.Panel slidePanel;
+        public System.Windows.Forms.Button btnProfile;
+        public System.Windows.Forms.Button btnHome;
+        public System.Windows.Forms.Button btnAbout;
+        public System.Windows.Forms.Button btnToggle;
+        public System.Windows.Forms.Button btnWorkoutPlans;
+        public System.Windows.Forms.Button btnBMICalculator;
+        public System.Windows.Forms.Button btnDietPlans;
+        public System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label2;
     }
 }

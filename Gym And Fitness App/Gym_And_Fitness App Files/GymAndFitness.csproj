@@ -305,8 +305,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Features.cs" />
+    <Compile Include="Classes\RibbonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\RibbonControl.Designer.cs">
+      <DependentUpon>RibbonControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\RoundPictureBox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\SlidePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\SlidePanel.Designer.cs">
+      <DependentUpon>SlidePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AboutForm.cs">
       <SubType>Form</SubType>
@@ -397,8 +409,14 @@
     <Compile Include="Forms\WorkoutPlansForm.Designer.cs">
       <DependentUpon>WorkoutPlansForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Classes\RibbonControl.resx">
+      <DependentUpon>RibbonControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Classes\RoundPictureBox.resx">
       <DependentUpon>RoundPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\SlidePanel.resx">
+      <DependentUpon>SlidePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>

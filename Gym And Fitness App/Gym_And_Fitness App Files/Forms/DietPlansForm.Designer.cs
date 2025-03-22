@@ -124,7 +124,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 74);
+            this.panel1.Size = new System.Drawing.Size(800, 74);
             this.panel1.TabIndex = 2;
             // 
             // pbMembershipStatus
@@ -209,7 +209,7 @@
             this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidePanel.Location = new System.Drawing.Point(0, 74);
             this.slidePanel.Name = "slidePanel";
-            this.slidePanel.Size = new System.Drawing.Size(200, 486);
+            this.slidePanel.Size = new System.Drawing.Size(200, 526);
             this.slidePanel.TabIndex = 34;
             // 
             // btnProfile
@@ -805,7 +805,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(724, 450);
+            this.tabPage2.Size = new System.Drawing.Size(724, 490);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "   Search   ";
             // 
@@ -969,10 +969,10 @@
             this.tabDietPlan.Controls.Add(this.tabPage3);
             this.tabDietPlan.Dock = System.Windows.Forms.DockStyle.Right;
             this.tabDietPlan.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabDietPlan.Location = new System.Drawing.Point(52, 74);
+            this.tabDietPlan.Location = new System.Drawing.Point(68, 74);
             this.tabDietPlan.Name = "tabDietPlan";
             this.tabDietPlan.SelectedIndex = 0;
-            this.tabDietPlan.Size = new System.Drawing.Size(732, 486);
+            this.tabDietPlan.Size = new System.Drawing.Size(732, 526);
             this.tabDietPlan.TabIndex = 3;
             this.tabDietPlan.Tag = "";
             // 
@@ -986,6 +986,7 @@
             this.Controls.Add(this.tabDietPlan);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 600);

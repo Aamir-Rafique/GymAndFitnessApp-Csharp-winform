@@ -6,10 +6,20 @@ namespace GymAndFitness
     public partial class LoginForm : Form
     {
 
-        public LoginForm()
+        private static LoginForm instance;
+        private LoginForm()
         {
             InitializeComponent();
         }
+        public static LoginForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new LoginForm();
+            }
+            return instance;
+        }
+
 
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
