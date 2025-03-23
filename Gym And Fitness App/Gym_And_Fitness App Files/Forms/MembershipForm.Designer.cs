@@ -84,6 +84,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.ribbonControl1 = new GymAndFitness.Classes.RibbonControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -122,19 +123,18 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.BackColor = System.Drawing.Color.MediumBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(834, 74);
+            this.panel1.Size = new System.Drawing.Size(780, 74);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkBlue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(105, 9);
@@ -162,7 +162,7 @@
             this.btnFreePlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.btnFreePlan.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFreePlan.ForeColor = System.Drawing.Color.DarkGreen;
-            this.btnFreePlan.Location = new System.Drawing.Point(334, 601);
+            this.btnFreePlan.Location = new System.Drawing.Point(307, 636);
             this.btnFreePlan.Name = "btnFreePlan";
             this.btnFreePlan.Size = new System.Drawing.Size(125, 40);
             this.btnFreePlan.TabIndex = 1;
@@ -178,7 +178,7 @@
             this.btnPremiumPlan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
             this.btnPremiumPlan.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPremiumPlan.ForeColor = System.Drawing.Color.White;
-            this.btnPremiumPlan.Location = new System.Drawing.Point(569, 600);
+            this.btnPremiumPlan.Location = new System.Drawing.Point(542, 635);
             this.btnPremiumPlan.Name = "btnPremiumPlan";
             this.btnPremiumPlan.Size = new System.Drawing.Size(155, 40);
             this.btnPremiumPlan.TabIndex = 2;
@@ -191,7 +191,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.68317F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(321, 79);
+            this.label2.Location = new System.Drawing.Point(294, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 31);
             this.label2.TabIndex = 6;
@@ -202,7 +202,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 15.68317F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label4.Location = new System.Drawing.Point(555, 79);
+            this.label4.Location = new System.Drawing.Point(528, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(167, 31);
             this.label4.TabIndex = 7;
@@ -212,7 +212,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::GymAndFitness.Properties.Resources.free3;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(435, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(406, 114);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 29);
             this.pictureBox1.TabIndex = 11;
@@ -222,7 +222,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::GymAndFitness.Properties.Resources.crown1;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(723, 79);
+            this.pictureBox2.Location = new System.Drawing.Point(694, 114);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 27);
             this.pictureBox2.TabIndex = 10;
@@ -279,7 +279,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label18, 0, 13);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(84, 118);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(57, 153);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 15;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.982801F));
@@ -751,12 +751,23 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Account Creation";
             // 
+            // ribbonControl1
+            // 
+            this.ribbonControl1.AutoSize = true;
+            this.ribbonControl1.BackColor = System.Drawing.Color.DarkBlue;
+            this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Size = new System.Drawing.Size(780, 34);
+            this.ribbonControl1.TabIndex = 13;
+            // 
             // MembershipForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(834, 650);
+            this.ClientSize = new System.Drawing.Size(780, 690);
+            this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -765,10 +776,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(850, 690);
-            this.MinimumSize = new System.Drawing.Size(850, 690);
+            this.MinimumSize = new System.Drawing.Size(780, 690);
             this.Name = "MembershipForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
@@ -871,5 +883,6 @@
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.PictureBox pictureBox21;
+        private Classes.RibbonControl ribbonControl1;
     }
 }

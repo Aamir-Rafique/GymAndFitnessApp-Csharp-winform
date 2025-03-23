@@ -33,7 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBackToLogin = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbFitnessLevel = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -65,6 +64,7 @@
             this.lblProfilePicturePath = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
+            this.ribbonControl1 = new GymAndFitness.Classes.RibbonControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
@@ -73,14 +73,13 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.BackColor = System.Drawing.Color.MediumBlue;
             this.panel1.Controls.Add(this.btnBackToLogin);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(937, 75);
+            this.panel1.Size = new System.Drawing.Size(880, 68);
             this.panel1.TabIndex = 3;
             // 
             // btnBackToLogin
@@ -88,7 +87,7 @@
             this.btnBackToLogin.BackgroundImage = global::GymAndFitness.Properties.Resources.previous;
             this.btnBackToLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBackToLogin.Location = new System.Drawing.Point(31, 12);
+            this.btnBackToLogin.Location = new System.Drawing.Point(30, 10);
             this.btnBackToLogin.Name = "btnBackToLogin";
             this.btnBackToLogin.Size = new System.Drawing.Size(57, 49);
             this.btnBackToLogin.TabIndex = 1;
@@ -99,34 +98,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkBlue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18.82178F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(408, 23);
+            this.label1.Location = new System.Drawing.Point(393, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sign Up";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.267326F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(28, 525);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(622, 17);
-            this.label6.TabIndex = 67;
-            this.label6.Text = "*Your BMI and Target Weight Range will be automatically calculated based on your " +
-    "current height and weight.";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label15.Location = new System.Drawing.Point(55, 95);
+            this.label15.Location = new System.Drawing.Point(12, 130);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(461, 23);
             this.label15.TabIndex = 61;
@@ -140,7 +127,7 @@
             "Beginner",
             "Intermediate",
             "Advance"});
-            this.cmbFitnessLevel.Location = new System.Drawing.Point(524, 395);
+            this.cmbFitnessLevel.Location = new System.Drawing.Point(500, 424);
             this.cmbFitnessLevel.Name = "cmbFitnessLevel";
             this.cmbFitnessLevel.Size = new System.Drawing.Size(148, 26);
             this.cmbFitnessLevel.TabIndex = 10;
@@ -151,10 +138,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(415, 398);
+            this.label10.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label10.Location = new System.Drawing.Point(372, 427);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 19);
+            this.label10.Size = new System.Drawing.Size(120, 18);
             this.label10.TabIndex = 58;
             this.label10.Text = "Fitness Level:";
             // 
@@ -165,7 +152,7 @@
             this.cmbFitnessGoal.Items.AddRange(new object[] {
             "Muscle Gain",
             "Fat Loss"});
-            this.cmbFitnessGoal.Location = new System.Drawing.Point(523, 338);
+            this.cmbFitnessGoal.Location = new System.Drawing.Point(499, 367);
             this.cmbFitnessGoal.Name = "cmbFitnessGoal";
             this.cmbFitnessGoal.Size = new System.Drawing.Size(149, 26);
             this.cmbFitnessGoal.TabIndex = 9;
@@ -176,17 +163,17 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(415, 341);
+            this.label9.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label9.Location = new System.Drawing.Point(372, 370);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 19);
+            this.label9.Size = new System.Drawing.Size(112, 18);
             this.label9.TabIndex = 56;
             this.label9.Text = "Fitness Goal:";
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(218, 338);
+            this.txtPassword.Location = new System.Drawing.Point(175, 367);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(148, 26);
             this.txtPassword.TabIndex = 4;
@@ -196,7 +183,7 @@
             // txtAge
             // 
             this.txtAge.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(218, 210);
+            this.txtAge.Location = new System.Drawing.Point(175, 239);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(148, 26);
             this.txtAge.TabIndex = 2;
@@ -206,7 +193,7 @@
             // txtHeight
             // 
             this.txtHeight.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeight.Location = new System.Drawing.Point(523, 153);
+            this.txtHeight.Location = new System.Drawing.Point(499, 182);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(148, 26);
             this.txtHeight.TabIndex = 6;
@@ -217,7 +204,7 @@
             // txtWeight
             // 
             this.txtWeight.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeight.Location = new System.Drawing.Point(523, 207);
+            this.txtWeight.Location = new System.Drawing.Point(499, 236);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(148, 26);
             this.txtWeight.TabIndex = 7;
@@ -228,7 +215,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(218, 152);
+            this.txtUsername.Location = new System.Drawing.Point(175, 181);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(148, 26);
             this.txtUsername.TabIndex = 1;
@@ -244,7 +231,7 @@
             "Male",
             "Female",
             "Other"});
-            this.cmbGender.Location = new System.Drawing.Point(218, 274);
+            this.cmbGender.Location = new System.Drawing.Point(175, 300);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(148, 27);
             this.cmbGender.TabIndex = 3;
@@ -255,40 +242,40 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(67, 274);
+            this.label8.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label8.Location = new System.Drawing.Point(24, 300);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 19);
+            this.label8.Size = new System.Drawing.Size(64, 18);
             this.label8.TabIndex = 49;
             this.label8.Text = "Gender:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(67, 210);
+            this.label7.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label7.Location = new System.Drawing.Point(24, 239);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 19);
+            this.label7.Size = new System.Drawing.Size(40, 18);
             this.label7.TabIndex = 48;
             this.label7.Text = "Age:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(415, 156);
+            this.label5.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label5.Location = new System.Drawing.Point(372, 185);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 19);
+            this.label5.Size = new System.Drawing.Size(104, 18);
             this.label5.TabIndex = 47;
             this.label5.Text = "Height (cm):";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(415, 211);
+            this.label4.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label4.Location = new System.Drawing.Point(372, 240);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 19);
+            this.label4.Size = new System.Drawing.Size(104, 18);
             this.label4.TabIndex = 46;
             this.label4.Text = "Weight (kg):";
             // 
@@ -301,7 +288,7 @@
             this.btnSignup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignup.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignup.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSignup.Location = new System.Drawing.Point(310, 459);
+            this.btnSignup.Location = new System.Drawing.Point(267, 488);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(114, 34);
             this.btnSignup.TabIndex = 12;
@@ -312,20 +299,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 339);
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label3.Location = new System.Drawing.Point(24, 368);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 19);
+            this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 44;
             this.label3.Text = "Password:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 153);
+            this.label2.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label2.Location = new System.Drawing.Point(25, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 19);
+            this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 43;
             this.label2.Text = "Username:";
             // 
@@ -338,7 +325,7 @@
             this.btnUploadPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUploadPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUploadPicture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUploadPicture.Location = new System.Drawing.Point(797, 338);
+            this.btnUploadPicture.Location = new System.Drawing.Point(742, 367);
             this.btnUploadPicture.Name = "btnUploadPicture";
             this.btnUploadPicture.Size = new System.Drawing.Size(71, 29);
             this.btnUploadPicture.TabIndex = 11;
@@ -349,17 +336,17 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Rockwell", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(752, 310);
+            this.label13.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label13.Location = new System.Drawing.Point(687, 339);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(149, 17);
+            this.label13.Size = new System.Drawing.Size(184, 18);
             this.label13.TabIndex = 71;
             this.label13.Text = "Upload Profile Picture";
             // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(218, 394);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(175, 423);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(148, 26);
             this.txtConfirmPassword.TabIndex = 5;
@@ -370,10 +357,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(67, 399);
+            this.label14.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label14.Location = new System.Drawing.Point(24, 428);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(148, 19);
+            this.label14.Size = new System.Drawing.Size(144, 18);
             this.label14.TabIndex = 75;
             this.label14.Text = "Confirm Password:";
             // 
@@ -386,7 +373,7 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReset.Location = new System.Drawing.Point(464, 459);
+            this.btnReset.Location = new System.Drawing.Point(421, 488);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(114, 34);
             this.btnReset.TabIndex = 13;
@@ -404,19 +391,19 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Rockwell", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(414, 273);
+            this.label12.Font = new System.Drawing.Font("Cascadia Code", 9.693069F);
+            this.label12.Location = new System.Drawing.Point(371, 299);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(155, 19);
+            this.label12.Size = new System.Drawing.Size(160, 18);
             this.label12.TabIndex = 78;
             this.label12.Text = "Target Weight (kg):";
             // 
             // txtTargetWeight
             // 
             this.txtTargetWeight.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTargetWeight.Location = new System.Drawing.Point(576, 271);
+            this.txtTargetWeight.Location = new System.Drawing.Point(538, 297);
             this.txtTargetWeight.Name = "txtTargetWeight";
-            this.txtTargetWeight.Size = new System.Drawing.Size(94, 26);
+            this.txtTargetWeight.Size = new System.Drawing.Size(110, 26);
             this.txtTargetWeight.TabIndex = 8;
             this.txtTargetWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTargetWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTargetWeight_KeyPress_1);
@@ -426,7 +413,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 9.267326F, System.Drawing.FontStyle.Italic);
             this.label17.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label17.Location = new System.Drawing.Point(415, 298);
+            this.label17.Location = new System.Drawing.Point(372, 324);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(169, 17);
             this.label17.TabIndex = 79;
@@ -437,7 +424,7 @@
             this.lblTargetWeightRange.AutoSize = true;
             this.lblTargetWeightRange.Font = new System.Drawing.Font("Cascadia Code", 9.267326F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTargetWeightRange.ForeColor = System.Drawing.Color.Purple;
-            this.lblTargetWeightRange.Location = new System.Drawing.Point(584, 298);
+            this.lblTargetWeightRange.Location = new System.Drawing.Point(541, 324);
             this.lblTargetWeightRange.Name = "lblTargetWeightRange";
             this.lblTargetWeightRange.Size = new System.Drawing.Size(88, 17);
             this.lblTargetWeightRange.TabIndex = 80;
@@ -466,42 +453,52 @@
             this.pbProfilePicture.BorderSize = 2;
             this.pbProfilePicture.GradientAngle = 50F;
             this.pbProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.pbProfilePicture.Location = new System.Drawing.Point(751, 143);
+            this.pbProfilePicture.Location = new System.Drawing.Point(696, 172);
             this.pbProfilePicture.Name = "pbProfilePicture";
             this.pbProfilePicture.Size = new System.Drawing.Size(150, 150);
             this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProfilePicture.TabIndex = 76;
             this.pbProfilePicture.TabStop = false;
             // 
+            // ribbonControl1
+            // 
+            this.ribbonControl1.AutoSize = true;
+            this.ribbonControl1.BackColor = System.Drawing.Color.DarkBlue;
+            this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Size = new System.Drawing.Size(880, 34);
+            this.ribbonControl1.TabIndex = 82;
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(937, 551);
-            this.Controls.Add(this.lblProfilePicturePath);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.lblTargetWeightRange);
+            this.ClientSize = new System.Drawing.Size(880, 550);
             this.Controls.Add(this.txtTargetWeight);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.pbProfilePicture);
-            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.txtConfirmPassword);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.btnUploadPicture);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.cmbFitnessLevel);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.cmbFitnessGoal);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.txtHeight);
             this.Controls.Add(this.txtWeight);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.cmbGender);
+            this.Controls.Add(this.ribbonControl1);
+            this.Controls.Add(this.lblProfilePicturePath);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.lblTargetWeightRange);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.pbProfilePicture);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.btnUploadPicture);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -510,8 +507,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(880, 550);
+            this.MinimumSize = new System.Drawing.Size(880, 550);
             this.Name = "SignupForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -532,7 +532,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox cmbFitnessLevel;
         private System.Windows.Forms.Label label10;
@@ -565,5 +564,6 @@
         private System.Windows.Forms.Label lblTargetWeightRange;
         private System.Windows.Forms.Label lblProfilePicturePath;
         private System.Windows.Forms.ErrorProvider error;
+        private Classes.RibbonControl ribbonControl1;
     }
 }

@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ribbonControl1 = new GymAndFitness.Classes.RibbonControl();
             this.slidePanel1 = new GymAndFitness.Classes.SlidePanel();
+            this.ribbonControl1 = new GymAndFitness.Classes.RibbonControl();
             this.SuspendLayout();
+            // 
+            // slidePanel1
+            // 
+            this.slidePanel1.BackColor = System.Drawing.Color.MediumBlue;
+            this.slidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.slidePanel1.Location = new System.Drawing.Point(0, 34);
+            this.slidePanel1.Name = "slidePanel1";
+            this.slidePanel1.Size = new System.Drawing.Size(45, 573);
+            this.slidePanel1.TabIndex = 1;
             // 
             // ribbonControl1
             // 
@@ -42,19 +51,11 @@
             this.ribbonControl1.Size = new System.Drawing.Size(800, 34);
             this.ribbonControl1.TabIndex = 0;
             // 
-            // slidePanel1
-            // 
-            this.slidePanel1.BackColor = System.Drawing.Color.MediumBlue;
-            this.slidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.slidePanel1.Location = new System.Drawing.Point(0, 34);
-            this.slidePanel1.Name = "slidePanel1";
-            this.slidePanel1.Size = new System.Drawing.Size(210, 573);
-            this.slidePanel1.TabIndex = 1;
-            // 
             // BaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Cyan;
             this.ClientSize = new System.Drawing.Size(800, 607);
             this.Controls.Add(this.slidePanel1);
             this.Controls.Add(this.ribbonControl1);
@@ -62,14 +63,14 @@
             this.Name = "BaseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BaseForm";
+            this.Load += new System.EventHandler(this.BaseForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Classes.RibbonControl ribbonControl1;
         private Classes.SlidePanel slidePanel1;
+        private Classes.RibbonControl ribbonControl1;
     }
 }

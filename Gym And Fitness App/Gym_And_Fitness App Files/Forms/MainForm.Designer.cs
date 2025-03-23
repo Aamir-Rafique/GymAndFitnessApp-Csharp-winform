@@ -58,7 +58,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = global::GymAndFitness.Properties.Resources.power_button;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(534, 22);
+            this.btnLogout.Location = new System.Drawing.Point(534, 19);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(103, 37);
             this.btnLogout.TabIndex = 8;
@@ -95,6 +95,7 @@
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.toolTip1.SetToolTip(this.btnLogin, "Click to Login to your account");
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // panel1
             // 
@@ -105,9 +106,9 @@
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(45, 32);
+            this.panel1.Location = new System.Drawing.Point(45, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(759, 74);
+            this.panel1.Size = new System.Drawing.Size(759, 73);
             this.panel1.TabIndex = 2;
             // 
             // pbMembershipStatus
@@ -137,6 +138,7 @@
             this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnProfilePicture.TabIndex = 40;
             this.btnProfilePicture.TabStop = false;
+            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click);
             // 
             // label1
             // 

@@ -36,11 +36,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pnlExercises = new System.Windows.Forms.Panel();
+            this.pbWorkout = new System.Windows.Forms.PictureBox();
             this.pnlWorkoutSelection = new System.Windows.Forms.Panel();
             this.cmbWorkoutType = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pnlExercises = new System.Windows.Forms.Panel();
-            this.pbWorkout = new System.Windows.Forms.PictureBox();
             this.tabWorkoutPlan = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -74,9 +74,9 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            this.pnlWorkoutSelection.SuspendLayout();
             this.pnlExercises.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbWorkout)).BeginInit();
+            this.pnlWorkoutSelection.SuspendLayout();
             this.tabWorkoutPlan.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -159,6 +159,29 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "  Types  ";
             // 
+            // pnlExercises
+            // 
+            this.pnlExercises.AutoScroll = true;
+            this.pnlExercises.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlExercises.Controls.Add(this.pbWorkout);
+            this.pnlExercises.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlExercises.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlExercises.Location = new System.Drawing.Point(3, 44);
+            this.pnlExercises.Name = "pnlExercises";
+            this.pnlExercises.Size = new System.Drawing.Size(738, 444);
+            this.pnlExercises.TabIndex = 1;
+            // 
+            // pbWorkout
+            // 
+            this.pbWorkout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pbWorkout.Image = global::GymAndFitness.Properties.Resources.workout7;
+            this.pbWorkout.Location = new System.Drawing.Point(0, 0);
+            this.pbWorkout.Name = "pbWorkout";
+            this.pbWorkout.Size = new System.Drawing.Size(738, 444);
+            this.pbWorkout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbWorkout.TabIndex = 50;
+            this.pbWorkout.TabStop = false;
+            // 
             // pnlWorkoutSelection
             // 
             this.pnlWorkoutSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -196,29 +219,6 @@
             this.label5.Size = new System.Drawing.Size(295, 20);
             this.label5.TabIndex = 48;
             this.label5.Text = "Please Select the type of Workout:";
-            // 
-            // pnlExercises
-            // 
-            this.pnlExercises.AutoScroll = true;
-            this.pnlExercises.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnlExercises.Controls.Add(this.pbWorkout);
-            this.pnlExercises.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlExercises.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlExercises.Location = new System.Drawing.Point(3, 44);
-            this.pnlExercises.Name = "pnlExercises";
-            this.pnlExercises.Size = new System.Drawing.Size(738, 444);
-            this.pnlExercises.TabIndex = 1;
-            // 
-            // pbWorkout
-            // 
-            this.pbWorkout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pbWorkout.Image = global::GymAndFitness.Properties.Resources.workout7;
-            this.pbWorkout.Location = new System.Drawing.Point(0, 0);
-            this.pbWorkout.Name = "pbWorkout";
-            this.pbWorkout.Size = new System.Drawing.Size(738, 444);
-            this.pbWorkout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbWorkout.TabIndex = 50;
-            this.pbWorkout.TabStop = false;
             // 
             // tabWorkoutPlan
             // 
@@ -539,6 +539,7 @@
             this.btnProfilePicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnProfilePicture1.TabIndex = 41;
             this.btnProfilePicture1.TabStop = false;
+            this.btnProfilePicture1.Click += new System.EventHandler(this.btnProfilePicture1_Click);
             this.btnProfilePicture1.MouseEnter += new System.EventHandler(this.btnProfilePicture1_MouseEnter);
             // 
             // pictureBox3
@@ -589,10 +590,10 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            this.pnlWorkoutSelection.ResumeLayout(false);
-            this.pnlWorkoutSelection.PerformLayout();
             this.pnlExercises.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbWorkout)).EndInit();
+            this.pnlWorkoutSelection.ResumeLayout(false);
+            this.pnlWorkoutSelection.PerformLayout();
             this.tabWorkoutPlan.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 
 namespace GymAndFitness
-{ 
+{
     public partial class MembershipForm : Form
     {
         public MembershipForm()

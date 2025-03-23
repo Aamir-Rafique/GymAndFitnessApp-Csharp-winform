@@ -35,7 +35,7 @@ namespace GymAndFitness
             //date
             lblDate.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
 
-           
+
 
 
             //  accessing current user 
@@ -387,7 +387,7 @@ namespace GymAndFitness
             }
         }
 
-     
+
 
         private void DashboardForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -397,6 +397,10 @@ namespace GymAndFitness
             }
         }
 
-       
+        private void btnProfilePicture_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
+        }
     }
 }

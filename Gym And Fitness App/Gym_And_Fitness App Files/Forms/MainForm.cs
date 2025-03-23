@@ -1,6 +1,5 @@
 ﻿using GymAndFitness.Forms;
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -21,16 +20,12 @@ namespace GymAndFitness
             }
             return instance;
         }
+
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-
-
-       
-
 
         //form1 i.e. main
         private void Form1_Load(object sender, EventArgs e)
         {
-          
             //  accessing current user 
             if (UserDataManager.CurrentUser != null)
             {
@@ -50,16 +45,8 @@ namespace GymAndFitness
                 btnLogout.Enabled = false;
                 btnLogin.Visible = true;
                 btnLogin.Enabled = true;
-
-
             }
         }
-
-
-    
-
-      
-
 
         //hovering message
         private void btnProfilePicture_MouseEnter(object sender, EventArgs e)
@@ -79,13 +66,13 @@ namespace GymAndFitness
             Features.LogoutNow();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             Features.OpenLoginForm();
             this.Close();
         }
 
-       
+
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 0) // Check if all forms are closed
@@ -94,6 +81,12 @@ namespace GymAndFitness
             }
         }
 
-    
+        private void btnProfilePicture_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
+        }
+
+
     }
 }

@@ -32,7 +32,7 @@ namespace GymAndFitness
         {
             lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals by providing personalized workout plans, nutritional guidance, and progress tracking. Whether you're looking to build muscle, lose weight, or improve overall fitness, this app offers a comprehensive solution to support your journey. Our mission is to make fitness accessible, convenient, and enjoyable for everyone. Stay fit, stay healthy!";
 
-          
+
 
 
             //  accessing current user 
@@ -47,14 +47,6 @@ namespace GymAndFitness
             // Assign the version to the label
             lblVersion.Text = Features.GetCurrentVersion();
         }
-
-        //for slide panel
-        private bool isPanelCollapsed = true; // Track panel state
-        private int panelWidth; // Store the panel's default width
-
-
-       
-
 
         //YOutube
         private void pbGmail_Click(object sender, EventArgs e)
@@ -185,6 +177,10 @@ namespace GymAndFitness
             }
         }
 
-       
+        private void btnProfilePicture_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
+        }
     }
 }

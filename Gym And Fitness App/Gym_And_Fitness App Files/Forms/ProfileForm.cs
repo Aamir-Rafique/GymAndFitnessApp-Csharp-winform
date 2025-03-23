@@ -102,7 +102,7 @@ namespace GymAndFitness
 
 
 
-     
+
         private void btnGetMembershipPlan_Click(object sender, EventArgs e)
         {
             if (UserDataManager.CurrentUser != null)

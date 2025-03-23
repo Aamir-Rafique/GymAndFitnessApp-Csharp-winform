@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblGuest = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ribbonControl1 = new GymAndFitness.Classes.RibbonControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorPassword)).BeginInit();
@@ -55,7 +56,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(279, 109);
+            this.txtUsername.Location = new System.Drawing.Point(279, 145);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(179, 26);
             this.txtUsername.TabIndex = 1;
@@ -64,7 +65,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(279, 153);
+            this.txtPassword.Location = new System.Drawing.Point(279, 189);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(179, 26);
             this.txtPassword.TabIndex = 2;
@@ -76,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Rockwell", 11.0802F);
-            this.label2.Location = new System.Drawing.Point(185, 156);
+            this.label2.Location = new System.Drawing.Point(185, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 19);
             this.label2.TabIndex = 3;
@@ -86,7 +87,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 11.0802F);
-            this.label3.Location = new System.Drawing.Point(183, 112);
+            this.label3.Location = new System.Drawing.Point(183, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 19);
             this.label3.TabIndex = 4;
@@ -101,7 +102,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(281, 222);
+            this.btnLogin.Location = new System.Drawing.Point(281, 258);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(175, 30);
             this.btnLogin.TabIndex = 4;
@@ -111,25 +112,24 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.BackColor = System.Drawing.Color.MediumBlue;
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 34);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 40);
+            this.panel1.Size = new System.Drawing.Size(520, 40);
             this.panel1.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.DarkBlue;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 16.68317F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(203, 2);
+            this.label4.Location = new System.Drawing.Point(203, 3);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 31);
+            this.label4.Size = new System.Drawing.Size(94, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "Sign in";
             // 
@@ -139,7 +139,7 @@
             this.label6.BackColor = System.Drawing.Color.LightGreen;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(203, 277);
+            this.label6.Location = new System.Drawing.Point(203, 313);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(161, 19);
@@ -151,7 +151,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label5.Location = new System.Drawing.Point(12, 54);
+            this.label5.Location = new System.Drawing.Point(12, 90);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(297, 21);
             this.label5.TabIndex = 9;
@@ -161,7 +161,7 @@
             // 
             this.lblCreateAccount.AutoSize = true;
             this.lblCreateAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateAccount.Location = new System.Drawing.Point(362, 276);
+            this.lblCreateAccount.Location = new System.Drawing.Point(362, 312);
             this.lblCreateAccount.Name = "lblCreateAccount";
             this.lblCreateAccount.Size = new System.Drawing.Size(87, 19);
             this.lblCreateAccount.TabIndex = 5;
@@ -172,7 +172,7 @@
             // chkShowPassword
             // 
             this.chkShowPassword.AutoSize = true;
-            this.chkShowPassword.Location = new System.Drawing.Point(354, 185);
+            this.chkShowPassword.Location = new System.Drawing.Point(354, 221);
             this.chkShowPassword.Name = "chkShowPassword";
             this.chkShowPassword.Size = new System.Drawing.Size(114, 19);
             this.chkShowPassword.TabIndex = 3;
@@ -194,7 +194,7 @@
             this.label1.BackColor = System.Drawing.Color.LightGreen;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(39, 318);
+            this.label1.Location = new System.Drawing.Point(39, 354);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 19);
@@ -205,7 +205,7 @@
             // 
             this.lblGuest.AutoSize = true;
             this.lblGuest.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGuest.Location = new System.Drawing.Point(70, 318);
+            this.lblGuest.Location = new System.Drawing.Point(70, 354);
             this.lblGuest.Name = "lblGuest";
             this.lblGuest.Size = new System.Drawing.Size(123, 19);
             this.lblGuest.TabIndex = 12;
@@ -216,19 +216,30 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 87);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 123);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(196, 177);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // ribbonControl1
+            // 
+            this.ribbonControl1.AutoSize = true;
+            this.ribbonControl1.BackColor = System.Drawing.Color.DarkBlue;
+            this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Size = new System.Drawing.Size(519, 34);
+            this.ribbonControl1.TabIndex = 13;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
-            this.ClientSize = new System.Drawing.Size(503, 351);
+            this.ClientSize = new System.Drawing.Size(519, 391);
+            this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblGuest);
@@ -242,6 +253,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(519, 391);
@@ -279,5 +291,6 @@
         private System.Windows.Forms.ErrorProvider errorPassword;
         private System.Windows.Forms.LinkLabel lblGuest;
         private System.Windows.Forms.Label label1;
+        private Classes.RibbonControl ribbonControl1;
     }
 }

@@ -21,7 +21,7 @@ namespace GymAndFitness
         {
             if (instance == null || instance.IsDisposed)
             {
-                instance = new  DietPlansForm();
+                instance = new DietPlansForm();
             }
             return instance;
         }
@@ -31,7 +31,7 @@ namespace GymAndFitness
         //LOAD
         private void DietPlansForm_Load(object sender, EventArgs e)
         {
-           
+
             //Dietpics
             timerForPics.Start();
 
@@ -63,7 +63,7 @@ namespace GymAndFitness
         }
 
 
-      
+
         //Diet types  recipes
 
         private void cmbDietType_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -942,6 +942,12 @@ namespace GymAndFitness
             {
                 Application.Exit(); // Exit the entire application
             }
+        }
+
+        private void btnProfilePicture_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
         }
     }
 }

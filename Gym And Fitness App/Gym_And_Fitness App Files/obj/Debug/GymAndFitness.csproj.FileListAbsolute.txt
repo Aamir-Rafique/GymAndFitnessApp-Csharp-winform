@@ -10,8 +10,6 @@ C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.Bcl.TimeProvider.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.Data.Tools.Components.dll
-C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
-C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.Identity.Client.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
@@ -42,7 +40,6 @@ C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\System.Text.Json.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\System.ValueTuple.dll
-C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\EntityFramework.xml
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml

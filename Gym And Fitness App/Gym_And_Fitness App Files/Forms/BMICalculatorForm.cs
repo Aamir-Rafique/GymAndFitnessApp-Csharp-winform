@@ -94,7 +94,7 @@ namespace GymAndFitness
 
 
 
-    
+
 
         private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -169,6 +169,12 @@ namespace GymAndFitness
             {
                 Application.Exit(); // Exit the entire application
             }
+        }
+
+        private void btnProfilePicture_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
         }
     }
 }

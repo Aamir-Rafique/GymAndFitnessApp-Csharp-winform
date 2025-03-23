@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="33031592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="33032616">
       <assemblyIdentity name="GymAndFitness" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>QFdFR+J6yh89e5GqTCVvKVAl0OIKXngNbaYdD+W0QmI=</dsig:DigestValue>
+        <dsig:DigestValue>rCEAig4I73OIMLBhLMPeZPnB5Zx837XuvchTvN1NI8I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -111,30 +111,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>56fQ16F+me+yfEQTE++80r5mhiTrvtXm5u5UoAQ0tXM=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll" size="160800">
-      <assemblyIdentity name="Microsoft.Data.Tools.Schema.Sql.UnitTesting" version="17.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8tsQZzQle8a6fAxSdbx/C2LwPS0Q8uO0Cmp38c2eAtE=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll" size="16952">
-      <assemblyIdentity name="Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter" version="17.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mumy6/sP5tx7CL/7CEtgKUvBjPhreiZdbltO9/0kZqk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -231,18 +207,6 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>89L3yA3xvDOubl2TDDbjOWvxiA4VYBuKPHkuf1jeBIw=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" size="93792">
-      <assemblyIdentity name="Microsoft.VisualStudio.QualityTools.UnitTestFramework" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Q+DxeYbBWMP1at0SKemLigtOEpUu4zrNNMFf9Q4KxeM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -546,13 +510,13 @@
       <dsig:DigestValue>oL6Adro8kTAdk9snKOCHCqWtej2WLBeI3cZq6lvNrTs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GymAndFitness.pdb" size="382464">
+  <file name="GymAndFitness.pdb" size="384512">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>o2OUclOfmW93yLOfo8q9a9b5JVJVXd1XFG0HVqPKZMk=</dsig:DigestValue>
+      <dsig:DigestValue>B2iTB214X07jU2mQ5jRO6f46Aut8PMJ237l7YvLpWGk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ILLink\ILLink.Descriptors.LibraryBuild.xml" size="297" writeableType="applicationData">

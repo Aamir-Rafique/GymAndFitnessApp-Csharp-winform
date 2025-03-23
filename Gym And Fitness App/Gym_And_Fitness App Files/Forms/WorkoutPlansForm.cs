@@ -14,7 +14,7 @@ namespace GymAndFitness
     public partial class WorkoutPlansForm : BaseForm
     {
         private static WorkoutPlansForm instance;
-        public WorkoutPlansForm()
+        private WorkoutPlansForm()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace GymAndFitness
         //load
         private void WorkoutPlansForm_Load(object sender, EventArgs e)
         {
-          
+
             //workoutpics
             timerForPics.Start();
 
@@ -431,6 +431,11 @@ namespace GymAndFitness
             {
                 Application.Exit(); // Exit the entire application
             }
+        }
+
+        private void btnProfilePicture1_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
         }
     }
 }

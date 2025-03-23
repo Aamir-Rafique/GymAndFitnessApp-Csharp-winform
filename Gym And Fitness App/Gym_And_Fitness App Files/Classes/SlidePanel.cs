@@ -11,14 +11,13 @@ namespace GymAndFitness.Classes
             this.Width = collapsedWidth; // Start in collapsed state
             this.DoubleBuffered = true; // Prevent flickering
             this.Dock = DockStyle.Left; // Fix ribbon at the top
-            this.BringToFront();
         }
 
 
         private bool isPanelCollapsed = true; // Track panel state
         private int expandedWidth = 209; // Default expanded width
         private int collapsedWidth = 45; // Default collapsed width
-        private int slideSpeed =7; // Speed of animation (higher = faster)
+        private int slideSpeed = 7; // Speed of animation (higher = faster)
 
         private void slideTimer_Tick(object sender, EventArgs e)
         {

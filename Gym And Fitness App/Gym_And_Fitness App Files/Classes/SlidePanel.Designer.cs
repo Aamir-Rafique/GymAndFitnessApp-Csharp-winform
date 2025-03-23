@@ -122,7 +122,7 @@
             this.btnToggle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnToggle.Location = new System.Drawing.Point(0, 23);
             this.btnToggle.Name = "btnToggle";
-            this.btnToggle.Size = new System.Drawing.Size(210, 51);
+            this.btnToggle.Size = new System.Drawing.Size(211, 51);
             this.btnToggle.TabIndex = 15;
             this.btnToggle.Text = "Menu";
             this.btnToggle.UseVisualStyleBackColor = false;
