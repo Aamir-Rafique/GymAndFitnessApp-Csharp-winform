@@ -189,7 +189,7 @@ namespace GymAndFitness
         {
             //AboutForm aboutForm = new AboutForm();
             //aboutForm.Show();
-
+         
             AboutForm.GetInstance().Show();
             AboutForm.GetInstance().BringToFront();
         }

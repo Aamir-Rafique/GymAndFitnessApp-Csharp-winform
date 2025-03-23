@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GymAndFitness.Forms;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace GymAndFitness
 {
-    public partial class WorkoutPlansForm : Form
+    public partial class WorkoutPlansForm : BaseForm
     {
         private static WorkoutPlansForm instance;
         public WorkoutPlansForm()
@@ -31,10 +32,7 @@ namespace GymAndFitness
         //load
         private void WorkoutPlansForm_Load(object sender, EventArgs e)
         {
-            //slide panel
-            panelWidth = slidePanel.Width;
-            slidePanel.Width = 45; // Start collapsed
-
+          
             //workoutpics
             timerForPics.Start();
 
@@ -63,43 +61,6 @@ namespace GymAndFitness
 
         }
 
-
-
-        //for slide panel
-        private bool isPanelCollapsed = true; // Track panel state
-        private int panelWidth; // Store the panel's default width
-
-
-        //slide  panel timer 
-        private void slideTimer_Tick(object sender, EventArgs e)
-        {
-            if (isPanelCollapsed)
-            {
-                slidePanel.Width += 7; // Expand the panel
-                if (slidePanel.Width >= panelWidth)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = false; // Panel is now expanded
-                }
-            }
-            else
-            {
-                slidePanel.Width -= 7; // Collapse the panel
-                if (slidePanel.Width <= 45)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = true; // Panel is now collapsed
-                }
-            }
-        }
-
-
-        //menu
-        private void btnToggle_Click_1(object sender, EventArgs e)
-        {
-            slideTimer.Start(); // Start the sliding animation
-            slidePanel.BringToFront();  //to remove glitches while sliding
-        }
 
 
         private int imageIndex = 0;
@@ -315,38 +276,6 @@ namespace GymAndFitness
         }
 
 
-        //to open each form...
-        private void btnProfilePicture_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Features.OpenMainForm();
-            this.Hide();
-        }
-        private void btnBMICalculator_Click(object sender, EventArgs e)
-        {
-            Features.OpenBMICalculatorForm();
-            this.Hide();
-        }
-        private void btnDietPlans_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenDietPlansForm();
-            this.Hide();
-        }
-        private void btnAbout_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenAboutForm();
-            this.Hide();
-        }
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            Features.OpenDashboardForm();
-            this.Hide();
-        }
-
         private void btnSaveWorkoutPlan_Click(object sender, EventArgs e)
         {
             // Validate user
@@ -385,65 +314,6 @@ namespace GymAndFitness
                 if (!string.IsNullOrEmpty(muscleExerciseInfo) && !muscleExerciseInfo.StartsWith("Error"))
                 {
                     lblExerciseInfo.Text = muscleExerciseInfo;
-
-                    //switch (targetMuscle)
-                    //{
-                    //    case "Abdominals (Abs)":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Adductors":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "biceps":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Calves":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Deltoids (Shoulders)":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Forearms":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Glutes":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Hamstrings":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Lats":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Lower Back":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Middle Back":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Neck":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Chest":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Quadriceps (Quads)":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Serratus Anterior":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Traps (Trapezius)":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    case "Triceps":
-                    //        pbExerciseGif.Image = Properties.Resources.;
-                    //        break;
-                    //    default:
-                    //        pbExerciseGif.Image = Properties.Resources.Loading; // Default placeholder
-                    //        break;
-                    //}
-
                 }
                 else
                 {
@@ -457,11 +327,7 @@ namespace GymAndFitness
             }
         }
 
-
-
         //ExerciseDB API..
-
-
         private async Task<string> GetExerciseInfo(string targetMuscle)
         {
             // Dictionary to map user-friendly muscle names to API-expected format
@@ -546,12 +412,6 @@ namespace GymAndFitness
             return formattedOutput.ToString();
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
-
 
         private void btnProfilePicture1_MouseEnter(object sender, EventArgs e)
         {
@@ -563,12 +423,6 @@ namespace GymAndFitness
             {
                 toolTip1.SetToolTip(btnProfilePicture1, "Profile");
             }
-        }
-
-        private void btnProfilePicture1_Click(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
         }
 
         private void WorkoutPlansForm_FormClosed(object sender, FormClosedEventArgs e)

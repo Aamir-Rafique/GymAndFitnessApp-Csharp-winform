@@ -1,9 +1,10 @@
-﻿using System;
+﻿using GymAndFitness.Forms;
+using System;
 using System.Windows.Forms;
 
 namespace GymAndFitness
 {
-    public partial class BMICalculatorForm : Form
+    public partial class BMICalculatorForm : BaseForm
     {
         private static BMICalculatorForm instance;
         private BMICalculatorForm()
@@ -27,16 +28,10 @@ namespace GymAndFitness
         //load
         private void BMICalculatorForm_Load(object sender, EventArgs e)
         {
-            btnToggle.Focus();
 
             // Set placeholder for TextBox
             Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
             Features.SetTextBoxPlaceholder(txtWeight, "Your weight in kg..");
-
-
-            //slide panel
-            panelWidth = slidePanel.Width;
-            slidePanel.Width = 45; // Start collapsed
 
             //loading behaviour of bmi scale/chart
             pbBMIChart.Image = Properties.Resources.bmiChartUnderW8;
@@ -53,35 +48,8 @@ namespace GymAndFitness
 
 
         }
-        //for slide panel
-        private bool isPanelCollapsed = true; // Track panel state
-        private int panelWidth; // Store the panel's default width
 
 
-        //slide  panel timer 
-        private void slideTimer_Tick(object sender, EventArgs e)
-        {
-            if (isPanelCollapsed)
-            {
-                //pnlMain.BackColor = Color.LimeGreen; //change the color of main panel
-                slidePanel.Width += 7; // Expand the panel
-                if (slidePanel.Width >= panelWidth)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = false; // Panel is now expanded
-                }
-            }
-            else
-            {
-                //pnlMain.BackColor = Color.LightGreen; //change the color of main panel
-                slidePanel.Width -= 7; // Collapse the panel
-                if (slidePanel.Width <= 45)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = true; // Panel is now collapsed
-                }
-            }
-        }
 
 
 
@@ -125,46 +93,8 @@ namespace GymAndFitness
 
 
 
-        //menu
-        private void btnToggle_Click(object sender, EventArgs e)
-        {
-            slideTimer.Start(); // Start the sliding animation
-            slidePanel.BringToFront();  //to remove glitches while sliding
-        }
 
-
-        //to open each form..
-        private void btnProfilePicture_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
-        private void btnHome_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenMainForm();
-            this.Hide();
-        }
-        private void btnDietPlans_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenDietPlansForm();
-            this.Hide();
-        }
-        private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenWorkoutPlansForm();
-            this.Hide();
-        }
-        private void btnAbout_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenAboutForm();
-            this.Hide();
-        }
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            Features.OpenDashboardForm();
-            this.Hide();
-        }
-
+    
 
         private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -232,16 +162,6 @@ namespace GymAndFitness
             }
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void BMICalculatorForm_FormClosed(object sender, FormClosedEventArgs e)
         {

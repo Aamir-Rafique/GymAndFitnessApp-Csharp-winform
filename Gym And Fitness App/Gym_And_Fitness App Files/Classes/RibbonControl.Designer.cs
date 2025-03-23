@@ -33,19 +33,18 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pbAppIcon = new System.Windows.Forms.PictureBox();
             this.lblAppName = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
             // 
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnClose.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(41, 0);
@@ -60,7 +59,6 @@
             // btnMinimize
             // 
             this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMinimize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.Location = new System.Drawing.Point(5, 4);
             this.btnMinimize.Name = "btnMinimize";
@@ -70,16 +68,6 @@
             this.btnMinimize.TabStop = false;
             this.toolTip1.SetToolTip(this.btnMinimize, "Minimize");
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click_1);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(722, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(78, 34);
-            this.panel1.TabIndex = 0;
             // 
             // pbAppIcon
             // 
@@ -105,6 +93,16 @@
             this.lblAppName.Text = "Gym && Fitness";
             this.toolTip1.SetToolTip(this.lblAppName, "Gym & Fitness App");
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.btnMinimize);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(722, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(78, 34);
+            this.panel1.TabIndex = 0;
+            // 
             // RibbonControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -121,8 +119,8 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RibbonControl_MouseUp_1);
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAppIcon)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using GymAndFitness.Forms;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace GymAndFitness
 {
-    public partial class ProfileForm : Form
+    public partial class ProfileForm : BaseForm
     {
         private static ProfileForm instance;
         private ProfileForm()
@@ -24,11 +25,6 @@ namespace GymAndFitness
         //LOAD
         private void ProfileForm_Load(object sender, EventArgs e)
         {
-            //slide panel
-            panelWidth = slidePanel.Width;
-            slidePanel.Width = 45; // Start collapsed
-
-
 
             if (UserDataManager.CurrentUser != null)
             {
@@ -103,84 +99,10 @@ namespace GymAndFitness
 
 
 
-        //for slide panel
-        private bool isPanelCollapsed = true; // Track panel state
-        private int panelWidth; // Store the panel's default width
-
-
-        //slide  panel timer 
-        private void slideTimer_Tick(object sender, EventArgs e)
-        {
-            if (isPanelCollapsed)
-            {
-                //pnlMain.BackColor = Color.LimeGreen; //change the color of main panel
-                slidePanel.Width += 7; // Expand the panel
-                if (slidePanel.Width >= panelWidth)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = false; // Panel is now expanded
-                }
-            }
-            else
-            {
-                //pnlMain.BackColor = Color.LightGreen; //change the color of main panel
-                slidePanel.Width -= 7; // Collapse the panel
-                if (slidePanel.Width <= 45)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = true; // Panel is now collapsed
-                }
-            }
-        }
-
-        //menu
-        private void btnToggle_Click_1(object sender, EventArgs e)
-        {
-            slideTimer.Start(); // Start the sliding animation
-            slidePanel.BringToFront();  //to remove glitches while sliding
-        }
 
 
 
-
-
-        private void btnBackToDashboard_Click(object sender, EventArgs e)
-        {
-            Features.OpenDashboardForm();
-            this.Hide();
-        }
-        private void btnHome_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenMainForm();
-            this.Hide();
-        }
-        private void btnBMICalculator_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenBMICalculatorForm();
-            this.Hide();
-        }
-        private void btnDietPlans_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenDietPlansForm();
-            this.Hide();
-        }
-        private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenWorkoutPlansForm();
-            this.Hide();
-        }
-        private void btnAbout_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenAboutForm();
-            this.Hide();
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            Features.OpenDashboardForm();
-            this.Hide();
-        }
-
+     
         private void btnGetMembershipPlan_Click(object sender, EventArgs e)
         {
             if (UserDataManager.CurrentUser != null)

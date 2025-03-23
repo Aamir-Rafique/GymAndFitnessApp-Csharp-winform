@@ -54,7 +54,7 @@
             this.btnProfile.Font = new System.Drawing.Font("Calibri", 11.49307F);
             this.btnProfile.Image = global::GymAndFitness.Properties.Resources.userdfa;
             this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.Location = new System.Drawing.Point(0, 393);
+            this.btnProfile.Location = new System.Drawing.Point(0, 379);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(210, 51);
             this.btnProfile.TabIndex = 22;
@@ -76,7 +76,7 @@
             this.btnHome.Font = new System.Drawing.Font("Calibri", 11.49307F);
             this.btnHome.Image = global::GymAndFitness.Properties.Resources.home_button;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(0, 143);
+            this.btnHome.Location = new System.Drawing.Point(0, 129);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(210, 51);
             this.btnHome.TabIndex = 16;
@@ -97,7 +97,7 @@
             this.btnAbout.Font = new System.Drawing.Font("Calibri", 11.49307F);
             this.btnAbout.Image = global::GymAndFitness.Properties.Resources.info;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(0, 443);
+            this.btnAbout.Location = new System.Drawing.Point(0, 429);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(210, 51);
             this.btnAbout.TabIndex = 21;
@@ -114,13 +114,13 @@
             this.btnToggle.FlatAppearance.BorderColor = System.Drawing.SystemColors.Highlight;
             this.btnToggle.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnToggle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.btnToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
+            this.btnToggle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
             this.btnToggle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggle.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToggle.ForeColor = System.Drawing.Color.White;
             this.btnToggle.Image = global::GymAndFitness.Properties.Resources.menu_bar;
             this.btnToggle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnToggle.Location = new System.Drawing.Point(0, 22);
+            this.btnToggle.Location = new System.Drawing.Point(0, 23);
             this.btnToggle.Name = "btnToggle";
             this.btnToggle.Size = new System.Drawing.Size(210, 51);
             this.btnToggle.TabIndex = 15;
@@ -141,7 +141,7 @@
             this.btnWorkoutPlans.Font = new System.Drawing.Font("Calibri", 11.49307F);
             this.btnWorkoutPlans.Image = global::GymAndFitness.Properties.Resources.workout;
             this.btnWorkoutPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWorkoutPlans.Location = new System.Drawing.Point(0, 343);
+            this.btnWorkoutPlans.Location = new System.Drawing.Point(0, 329);
             this.btnWorkoutPlans.Name = "btnWorkoutPlans";
             this.btnWorkoutPlans.Size = new System.Drawing.Size(210, 51);
             this.btnWorkoutPlans.TabIndex = 20;
@@ -162,7 +162,7 @@
             this.btnBMICalculator.Font = new System.Drawing.Font("Calibri", 11.49307F);
             this.btnBMICalculator.Image = global::GymAndFitness.Properties.Resources.bmi;
             this.btnBMICalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBMICalculator.Location = new System.Drawing.Point(0, 243);
+            this.btnBMICalculator.Location = new System.Drawing.Point(0, 229);
             this.btnBMICalculator.Name = "btnBMICalculator";
             this.btnBMICalculator.Size = new System.Drawing.Size(210, 51);
             this.btnBMICalculator.TabIndex = 18;
@@ -184,7 +184,7 @@
             this.btnDietPlans.Font = new System.Drawing.Font("Calibri", 11.49307F);
             this.btnDietPlans.Image = global::GymAndFitness.Properties.Resources.diet;
             this.btnDietPlans.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDietPlans.Location = new System.Drawing.Point(0, 293);
+            this.btnDietPlans.Location = new System.Drawing.Point(0, 279);
             this.btnDietPlans.Name = "btnDietPlans";
             this.btnDietPlans.Size = new System.Drawing.Size(210, 51);
             this.btnDietPlans.TabIndex = 19;
@@ -206,7 +206,7 @@
             this.btnDashboard.Font = new System.Drawing.Font("Calibri", 11.49307F);
             this.btnDashboard.Image = global::GymAndFitness.Properties.Resources.dashboardfinal;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 193);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 179);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(210, 51);
             this.btnDashboard.TabIndex = 17;
@@ -234,7 +234,7 @@
             this.Controls.Add(this.btnDashboard);
             this.DoubleBuffered = true;
             this.Name = "SlidePanel";
-            this.Size = new System.Drawing.Size(210, 540);
+            this.Size = new System.Drawing.Size(210, 555);
             this.ResumeLayout(false);
 
         }

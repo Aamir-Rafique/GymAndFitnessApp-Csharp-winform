@@ -10,6 +10,8 @@ namespace GymAndFitness.Classes
             InitializeComponent();
             this.Width = collapsedWidth; // Start in collapsed state
             this.DoubleBuffered = true; // Prevent flickering
+            this.Dock = DockStyle.Left; // Fix ribbon at the top
+            this.BringToFront();
         }
 
 
@@ -49,36 +51,71 @@ namespace GymAndFitness.Classes
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            Form currentForm = this.FindForm(); // Get the parent form containing this panel
+            if (currentForm != null)
+            {
+                currentForm.Hide(); // Hide the current form
+            }
             Features.OpenMainForm();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            Form currentForm = this.FindForm(); // Get the parent form containing this panel
+            if (currentForm != null)
+            {
+                currentForm.Hide(); // Hide the current form
+            }
             Features.OpenDashboardForm();
         }
 
         private void btnBMICalculator_Click(object sender, EventArgs e)
         {
+            Form currentForm = this.FindForm(); // Get the parent form containing this panel
+            if (currentForm != null)
+            {
+                currentForm.Hide(); // Hide the current form
+            }
             Features.OpenBMICalculatorForm();
         }
 
         private void btnDietPlans_Click(object sender, EventArgs e)
         {
+            Form currentForm = this.FindForm(); // Get the parent form containing this panel
+            if (currentForm != null)
+            {
+                currentForm.Hide(); // Hide the current form
+            }
             Features.OpenDietPlansForm();
         }
 
         private void btnWorkoutPlans_Click(object sender, EventArgs e)
         {
+            Form currentForm = this.FindForm(); // Get the parent form containing this panel
+            if (currentForm != null)
+            {
+                currentForm.Hide(); // Hide the current form
+            }
             Features.OpenWorkoutPlansForm();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            Form currentForm = this.FindForm(); // Get the parent form containing this panel
+            if (currentForm != null)
+            {
+                currentForm.Hide(); // Hide the current form
+            }
             Features.OpenProfileForm();
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
+            Form currentForm = this.FindForm(); // Get the parent form containing this panel
+            if (currentForm != null)
+            {
+                currentForm.Hide(); // Hide the current form
+            }
             Features.OpenAboutForm();
         }
 

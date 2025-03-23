@@ -1,10 +1,11 @@
-﻿using System;
+﻿using GymAndFitness.Forms;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
 namespace GymAndFitness
 {
-    public partial class MainForm : Form
+    public partial class MainForm : BaseForm
     {
         private static MainForm instance;
         private MainForm()
@@ -23,45 +24,13 @@ namespace GymAndFitness
         UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
 
-        //for slide panel
-        public bool isPanelCollapsed = true; // Track panel state
-        public int panelWidth; // Store the panel's default width
-
-
-        //slide  panel timer 
-        private void slideTimer_Tick(object sender, EventArgs e)
-        {
-            if (isPanelCollapsed)
-            {
-                slidePanel.Width += 7; // Expand the panel
-                if (slidePanel.Width >= panelWidth)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = false; // Panel is now expanded
-                }
-            }
-            else
-            {
-                slidePanel.Width -= 7; // Collapse the panel
-                if (slidePanel.Width <= 45)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = true; // Panel is now collapsed
-                }
-            }
-        }
-
+       
 
 
         //form1 i.e. main
         private void Form1_Load(object sender, EventArgs e)
         {
-            //backgroundimages
-
-
-            panelWidth = slidePanel.Width;
-            slidePanel.Width = 45; // Start collapsed
-
+          
             //  accessing current user 
             if (UserDataManager.CurrentUser != null)
             {
@@ -87,48 +56,9 @@ namespace GymAndFitness
         }
 
 
-        private void btnToggle_Click_1(object sender, EventArgs e)
-        {
-            slideTimer.Start(); // Start the sliding animation
-            slidePanel.BringToFront();  //to remove glitches while sliding
+    
 
-        }
-        //slide panel ended..
-
-
-        //to open each form..
-        private void btnDashboard_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenDashboardForm();
-            this.Hide();
-        }
-
-        private void btnBMICalculator_Click(object sender, EventArgs e)
-        {
-            Features.OpenBMICalculatorForm();
-            this.Hide();
-        }
-
-        private void btnDietPlans_Click(object sender, EventArgs e)
-        {
-            Features.OpenDietPlansForm();
-            this.Hide();
-        }
-        private void btnWorkoutPlans_Click(object sender, EventArgs e)
-        {
-            Features.OpenWorkoutPlansForm();
-            this.Hide();
-        }
-        private void btnProfilePicture_Click(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
-        private void btnAbout_Click(object sender, EventArgs e)
-        {
-            Features.OpenAboutForm();
-            this.Hide();
-        }
+      
 
 
         //hovering message
@@ -155,12 +85,7 @@ namespace GymAndFitness
             this.Close();
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
-
+       
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 0) // Check if all forms are closed
@@ -169,8 +94,6 @@ namespace GymAndFitness
             }
         }
 
-       
-
-
+    
     }
 }

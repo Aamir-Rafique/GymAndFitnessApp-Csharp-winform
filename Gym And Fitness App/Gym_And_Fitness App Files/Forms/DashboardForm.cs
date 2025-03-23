@@ -1,10 +1,11 @@
-﻿using System;
+﻿using GymAndFitness.Forms;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace GymAndFitness
 {
-    public partial class DashboardForm : Form
+    public partial class DashboardForm : BaseForm
     {
         private static DashboardForm instance;
         private DashboardForm()
@@ -34,10 +35,7 @@ namespace GymAndFitness
             //date
             lblDate.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
 
-            //slide panel
-            panelWidth = slidePanel.Width;
-            slidePanel.Width = 45; // Start collapsed
-
+           
 
 
             //  accessing current user 
@@ -132,46 +130,6 @@ namespace GymAndFitness
             }
 
         }
-
-        //for slide panel
-        private bool isPanelCollapsed = true; // Track panel state
-        private int panelWidth; // Store the panel's default width
-
-
-        //slide  panel timer 
-        private void slideTimer_Tick_1(object sender, EventArgs e)
-        {
-            if (isPanelCollapsed)
-            {
-                //pnlMain.BackColor = Color.LimeGreen; //change the color of main panel
-                slidePanel.Width += 7; // Expand the panel
-                if (slidePanel.Width >= panelWidth)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = false; // Panel is now expanded
-                }
-            }
-            else
-            {
-                //pnlMain.BackColor = Color.LightGreen; //change the color of main panel
-                slidePanel.Width -= 7; // Collapse the panel
-                if (slidePanel.Width <= 45)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = true; // Panel is now collapsed
-                }
-            }
-        }
-
-        //menu
-        private void btnToggle_Click(object sender, EventArgs e)
-        {
-            slideTimer.Start(); // Start the sliding animation
-            slidePanel.BringToFront();  //to remove glitches while sliding
-
-        }
-
-
 
 
         //code for clock
@@ -347,39 +305,6 @@ namespace GymAndFitness
         }
 
 
-        //to open each form..
-        private void btnProfilePicture_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
-        private void btnBMICalculator_Click(object sender, EventArgs e)
-        {
-            Features.OpenBMICalculatorForm();
-            this.Hide();
-        }
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Features.OpenMainForm();
-            this.Hide();
-        }
-        private void btnDietPlans_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenDietPlansForm();
-            this.Hide();
-        }
-        private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenWorkoutPlansForm();
-            this.Hide();
-        }
-        private void btnAbout_Click(object sender, EventArgs e)
-        {
-            Features.OpenAboutForm();
-            this.Hide();
-        }
-
-
         private void btnAddWater_Click(object sender, EventArgs e)
         {
             if (UserDataManager.CurrentUser != null)
@@ -462,16 +387,7 @@ namespace GymAndFitness
             }
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void DashboardForm_FormClosed(object sender, FormClosedEventArgs e)
         {

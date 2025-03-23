@@ -1,10 +1,11 @@
-﻿using System;
+﻿using GymAndFitness.Forms;
+using System;
 using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace GymAndFitness
 {
-    public partial class AboutForm : Form
+    public partial class AboutForm : BaseForm
     {
         private static AboutForm instance;
 
@@ -31,10 +32,7 @@ namespace GymAndFitness
         {
             lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals by providing personalized workout plans, nutritional guidance, and progress tracking. Whether you're looking to build muscle, lose weight, or improve overall fitness, this app offers a comprehensive solution to support your journey. Our mission is to make fitness accessible, convenient, and enjoyable for everyone. Stay fit, stay healthy!";
 
-            //slide panel
-            panelWidth = slidePanel.Width;
-            slidePanel.Width = 45; // Start collapsed
-
+          
 
 
             //  accessing current user 
@@ -55,39 +53,7 @@ namespace GymAndFitness
         private int panelWidth; // Store the panel's default width
 
 
-        //slide  panel timer 
-        private void slideTimer_Tick_1(object sender, EventArgs e)
-        {
-            if (isPanelCollapsed)
-            {
-                //pnlMain.BackColor = Color.LimeGreen; //change the color of main panel
-                slidePanel.Width += 7; // Expand the panel
-                if (slidePanel.Width >= panelWidth)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = false; // Panel is now expanded
-                }
-            }
-            else
-            {
-                //pnlMain.BackColor = Color.LightGreen; //change the color of main panel
-                slidePanel.Width -= 7; // Collapse the panel
-                if (slidePanel.Width <= 45)
-                {
-                    slideTimer.Stop();
-                    isPanelCollapsed = true; // Panel is now collapsed
-                }
-            }
-        }
-
-
-        //menu
-        private void btnToggle_Click_1(object sender, EventArgs e)
-        {
-            slideTimer.Start(); // Start the sliding animation
-            slidePanel.BringToFront();  //to remove glitches while sliding
-        }
-
+       
 
 
         //YOutube
@@ -198,48 +164,6 @@ namespace GymAndFitness
         }
 
 
-        //for opening each form...
-        private void btnProfilePicture_Click(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
-        private void btnHome_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenMainForm();
-            this.Hide();
-        }
-
-        private void btnBMICalculator_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenBMICalculatorForm();
-            this.Hide();
-        }
-
-        private void btnDietPlans_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenDietPlansForm();
-            this.Hide();
-        }
-        private void btnWorkoutPlans_Click_1(object sender, EventArgs e)
-        {
-            Features.OpenWorkoutPlansForm();
-            this.Hide();
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            Features.OpenDashboardForm();
-            this.Hide();
-        }
-
-        private void btnProfile_MouseLeave(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(btnProfilePicture, "Profile");
-        }
-
-
-
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
             if (UserDataManager.CurrentUser != null)
@@ -252,11 +176,6 @@ namespace GymAndFitness
             }
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
 
         private void AboutForm_FormClosed(object sender, FormClosedEventArgs e)
         {

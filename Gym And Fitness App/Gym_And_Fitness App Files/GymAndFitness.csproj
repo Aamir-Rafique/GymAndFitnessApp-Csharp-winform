@@ -326,6 +326,12 @@
     <Compile Include="Forms\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BMICalculatorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -420,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BMICalculatorForm.resx">
       <DependentUpon>BMICalculatorForm.cs</DependentUpon>
