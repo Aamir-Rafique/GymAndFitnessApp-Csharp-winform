@@ -12,7 +12,6 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
         //Load
         private void SignupForm_Load(object sender, EventArgs e)
@@ -157,10 +156,12 @@ namespace GymAndFitness
                     }
                 }
 
-                userDataManager.SignUpUser(username, password, age, gender, height, weight, bmi, targetWeight, targetWeightRange, fitnessGoal, fitnessLevel, profilePicture, membershipStatus, currentWeight);
+                UserDataManager.SignUpUser(username, password, age, gender, height, weight, bmi, targetWeight, targetWeightRange, fitnessGoal, fitnessLevel, profilePicture, membershipStatus, currentWeight);
 
             }
         }
+
+
 
         //upload btn
         private void btnUploadPicture_Click(object sender, EventArgs e)
@@ -281,22 +282,22 @@ namespace GymAndFitness
         }
 
 
-        private void cmbGender_KeyPress(object sender, KeyPressEventArgs e)
-        {
 
-            e.Handled = true;
+
+        private void cmbGender_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            Features.ComboBoxValidation(sender, e);
         }
+
 
         private void cmbFitnessGoal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
-
+            Features.ComboBoxValidation(sender, e);
         }
 
         private void cmbFitnessLevel_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
-
+            Features.ComboBoxValidation(sender, e);
         }
         private void lblProfilePicturePath_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -412,7 +413,7 @@ namespace GymAndFitness
         }
 
 
-     
+
         private void txtHeight_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtHeight.Text))
@@ -445,10 +446,7 @@ namespace GymAndFitness
         private void btnBackToLogin_Click(object sender, EventArgs e)
         {
             Features.OpenLoginForm();
-            this.Hide();
+            this.Close();
         }
     }
-
-
-
 }

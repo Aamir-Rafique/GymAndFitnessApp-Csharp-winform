@@ -21,7 +21,6 @@ namespace GymAndFitness
         }
 
 
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -55,16 +54,16 @@ namespace GymAndFitness
                 string username = txtUsername.Text;
                 string password = txtPassword.Text;
 
-                if (userDataManager.IsValidLogin(username, password))
+                if (UserDataManager.IsValidLogin(username, password))
                 {
                     MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-                    User user = userDataManager.GetUserDetails(txtUsername.Text);
+                    User user = UserDataManager.GetUserDetails(txtUsername.Text);
                     if (user != null && user.Password == txtPassword.Text)
                     {
                         UserDataManager.CurrentUser = user;
-                        MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!");
+                        MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!"," ",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
 
                         // Open main form

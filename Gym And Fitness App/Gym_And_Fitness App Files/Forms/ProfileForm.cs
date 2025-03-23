@@ -1,6 +1,7 @@
 ﻿using GymAndFitness.Forms;
 using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -20,16 +21,92 @@ namespace GymAndFitness
             }
             return instance;
         }
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
         //LOAD
-        private void ProfileForm_Load(object sender, EventArgs e)
+        private async void ProfileForm_Load(object sender, EventArgs e)
         {
+            await ProfileFormLoadEvents();
 
+
+            //old logic..
+            //if (UserDataManager.CurrentUser != null)
+            //{
+            //    UserDataManager.ApplyProfilePicture(pbProfilePicture);
+
+            //    nudCurrentHeight.Value = (decimal)UserDataManager.CurrentUser.Height;
+            //    nudCurrentWeight.Value = (decimal)UserDataManager.CurrentUser.CurrentWeight;
+
+            //    btnLogout.Visible = true;
+            //    btnLogout.Enabled = true;
+            //    btnLogin.Visible = false;
+            //    btnLogin.Enabled = false;
+
+            //    if (UserDataManager.CurrentUser != null)
+            //    {
+            //        lblUsername.Text = UserDataManager.CurrentUser.Username;
+            //        lblAge.Text = UserDataManager.CurrentUser.Age.ToString();
+            //        lblGender.Text = UserDataManager.CurrentUser.Gender;
+            //        lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
+            //        lblStartingWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
+            //        lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
+            //        lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
+            //        lblTargetWeight.Text = $"{UserDataManager.CurrentUser.TargetWeight} kg";
+            //        lblFitnessGoal.Text = UserDataManager.CurrentUser.FitnessGoal;
+            //        lblFitnessLevel.Text = UserDataManager.CurrentUser.FitnessLevel;
+            //        lblTargetWeightRange.Text = UserDataManager.CurrentUser.TargetWeightRange;
+
+
+            //        //membership status
+            //        lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Error fetching user data.", "Error");
+            //    }
+
+
+            //    //load membership plan pics
+            //    if (lblMembershipStatus.Text == "Free")
+            //    {
+            //        pbMembershipStatus.Image = Properties.Resources.free3;
+            //    }
+            //    else if (lblMembershipStatus.Text == "Premium")
+            //    {
+            //        lblMembershipStatus.ForeColor = Color.Purple;
+            //        pbMembershipStatus.Image = Properties.Resources.crown1;
+            //    }
+            //    else
+            //    {
+            //        pbMembershipStatus.Image = null;
+            //    }
+
+            //    if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+            //    {
+            //        btnChangeProfilePicture.BackColor = Color.Gray;
+            //    }
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            //    btnLogout.Visible = false;
+            //    btnLogout.Enabled = false;
+            //    btnLogin.Visible = true;
+            //    btnLogin.Enabled = true;
+
+            //}
+
+        }
+
+        private async Task ProfileFormLoadEvents()
+        {
             if (UserDataManager.CurrentUser != null)
             {
-                userDataManager.ApplyProfilePicture(pbProfilePicture);
+                // Apply profile picture asynchronously
+                await Task.Run(() => UserDataManager.ApplyProfilePicture(pbProfilePicture));
 
+                // Update numeric controls and user-related UI elements
                 nudCurrentHeight.Value = (decimal)UserDataManager.CurrentUser.Height;
                 nudCurrentWeight.Value = (decimal)UserDataManager.CurrentUser.CurrentWeight;
 
@@ -38,66 +115,56 @@ namespace GymAndFitness
                 btnLogin.Visible = false;
                 btnLogin.Enabled = false;
 
-                if (UserDataManager.CurrentUser != null)
+                lblUsername.Text = UserDataManager.CurrentUser.Username;
+                lblAge.Text = UserDataManager.CurrentUser.Age.ToString();
+                lblGender.Text = UserDataManager.CurrentUser.Gender;
+                lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
+                lblStartingWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
+                lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
+                lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
+                lblTargetWeight.Text = $"{UserDataManager.CurrentUser.TargetWeight} kg";
+                lblFitnessGoal.Text = UserDataManager.CurrentUser.FitnessGoal;
+                lblFitnessLevel.Text = UserDataManager.CurrentUser.FitnessLevel;
+                lblTargetWeightRange.Text = UserDataManager.CurrentUser.TargetWeightRange;
+
+                // Membership status handling
+                lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
+
+                // Load membership plan pictures asynchronously
+                await Task.Run(() =>
                 {
-                    lblUsername.Text = UserDataManager.CurrentUser.Username;
-                    lblAge.Text = UserDataManager.CurrentUser.Age.ToString();
-                    lblGender.Text = UserDataManager.CurrentUser.Gender;
-                    lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
-                    lblStartingWeight.Text = $"{UserDataManager.CurrentUser.StartingWeight} kg";
-                    lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
-                    lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
-                    lblTargetWeight.Text = $"{UserDataManager.CurrentUser.TargetWeight} kg";
-                    lblFitnessGoal.Text = UserDataManager.CurrentUser.FitnessGoal;
-                    lblFitnessLevel.Text = UserDataManager.CurrentUser.FitnessLevel;
-                    lblTargetWeightRange.Text = UserDataManager.CurrentUser.TargetWeightRange;
+                    pbMembershipStatus.Image = UserDataManager.CurrentUser.MembershipStatus == "Free"
+                        ? Properties.Resources.free3
+                        : UserDataManager.CurrentUser.MembershipStatus == "Premium"
+                        ? Properties.Resources.crown1
+                        : null;
+                });
 
-
-                    //membership status
-                    lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
-                }
-                else
-                {
-                    MessageBox.Show("Error fetching user data.", "Error");
-                }
-
-
-                //load membership plan pics
-                if (lblMembershipStatus.Text == "Free")
-                {
-                    pbMembershipStatus.Image = Properties.Resources.free3;
-                }
-                else if (lblMembershipStatus.Text == "Premium")
+                if (UserDataManager.CurrentUser.MembershipStatus == "Premium")
                 {
                     lblMembershipStatus.ForeColor = Color.Purple;
-                    pbMembershipStatus.Image = Properties.Resources.crown1;
                 }
-                else
-                {
-                    pbMembershipStatus.Image = null;
-                }
-
-                if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+                else if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
                 {
                     btnChangeProfilePicture.BackColor = Color.Gray;
                 }
-
             }
             else
             {
-                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 btnLogout.Visible = false;
                 btnLogout.Enabled = false;
                 btnLogin.Visible = true;
                 btnLogin.Enabled = true;
 
+                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
         }
 
-
-
+        public async void ReloadProfileFormData()
+        {
+            await ProfileFormLoadEvents();
+        }
 
 
 
@@ -156,7 +223,7 @@ namespace GymAndFitness
                 }
                 else
                 {
-                    userDataManager.ChangeProfilePicture(pbProfilePicture);
+                    UserDataManager.ChangeProfilePicture(pbProfilePicture);
                 }
             }
             else
@@ -188,7 +255,7 @@ namespace GymAndFitness
                     double weight = (double)nudCurrentWeight.Value;
 
                     UserDataManager.CurrentUser.BMI = Features.CalculateBMI(weight, height);
-                    userDataManager.UpdateHeightAndWeight(UserDataManager.CurrentUser.Height, UserDataManager.CurrentUser.CurrentWeight, UserDataManager.CurrentUser.BMI);
+                    UserDataManager.UpdateHeightAndWeight(UserDataManager.CurrentUser.Height, UserDataManager.CurrentUser.CurrentWeight, UserDataManager.CurrentUser.BMI);
                     MessageBox.Show("Height and weight updated successfully! Click on the refresh icon to see the updated records.", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -211,7 +278,6 @@ namespace GymAndFitness
                 lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
                 lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
                 lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
-
             }
         }
 
@@ -228,7 +294,11 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Features.LogoutNow();
+            DialogResult result = MessageBox.Show("Are you sure you want to LOGOUT?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                Features.LogoutNow();
+            }
         }
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
@@ -241,7 +311,7 @@ namespace GymAndFitness
                     DialogResult result = MessageBox.Show("Are you sure you want to delete your account? This action cannot be undone.", "Delete Account", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
-                        if (userDataManager.DeleteAccount(UserDataManager.CurrentUser.UserID))
+                        if (UserDataManager.DeleteAccount(UserDataManager.CurrentUser.UserID))
                         {
                             MessageBox.Show("Your account has been deleted successfully.", "Account Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Hide();
@@ -374,6 +444,11 @@ namespace GymAndFitness
         {
             Features.OpenDashboardForm();
             this.Hide();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

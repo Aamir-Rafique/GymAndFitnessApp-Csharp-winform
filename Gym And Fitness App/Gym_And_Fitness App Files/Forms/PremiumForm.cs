@@ -10,7 +10,6 @@ namespace GymAndFitness
             InitializeComponent();
         }
 
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
         private void PremiumForm_Load(object sender, EventArgs e)
         {
@@ -34,7 +33,7 @@ namespace GymAndFitness
                     string username = UserDataManager.CurrentUser.Username; // Replace with the logged-in user's username
                     string enteredKey = txtLicenseKey.Text;
 
-                    userDataManager.VerifyLicenseKey(username, enteredKey);
+                    UserDataManager.VerifyLicenseKey(username, enteredKey);
 
                 }
                 else

@@ -371,8 +371,9 @@
             this.cmbDietType.Name = "cmbDietType";
             this.cmbDietType.Size = new System.Drawing.Size(184, 25);
             this.cmbDietType.TabIndex = 49;
-            this.cmbDietType.Text = "  ";
+            this.cmbDietType.Text = "    Select an option...";
             this.cmbDietType.SelectedIndexChanged += new System.EventHandler(this.cmbDietType_SelectedIndexChanged_1);
+            this.cmbDietType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbDietType_KeyPress);
             // 
             // label15
             // 

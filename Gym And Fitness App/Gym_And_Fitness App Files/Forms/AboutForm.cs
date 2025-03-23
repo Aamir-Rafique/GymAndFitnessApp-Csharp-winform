@@ -1,6 +1,7 @@
 ﻿using GymAndFitness.Forms;
 using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -23,30 +24,71 @@ namespace GymAndFitness
             return instance;
         }
 
-
-        UserDataManager userDataManager = new UserDataManager();  //Instance of the class: (UserDataManager)
-
-
+       
 
         private void AboutForm_Load(object sender, EventArgs e)
         {
+            AboutFormLoadEvents();
+        }
+        public void ReloadAboutFormData()
+        {
+            AboutFormLoadEvents();
+        }
+
+        private async void AboutFormLoadEvents()
+        {
             lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals by providing personalized workout plans, nutritional guidance, and progress tracking. Whether you're looking to build muscle, lose weight, or improve overall fitness, this app offers a comprehensive solution to support your journey. Our mission is to make fitness accessible, convenient, and enjoyable for everyone. Stay fit, stay healthy!";
-
-
-
-
-            //  accessing current user 
-            if (UserDataManager.CurrentUser != null)
-            {
-                //load membership plan pics
-                pbMembershipStatus.Image = Features.MembershipStatusPic();
-                userDataManager.ApplyProfilePicture(btnProfilePicture);
-            }
-
 
             // Assign the version to the label
             lblVersion.Text = Features.GetCurrentVersion();
+
+            // Accessing current user 
+            if (UserDataManager.CurrentUser != null)
+            {
+                // Load membership plan pics asynchronously
+                await LoadMembershipPictureAsync();
+
+                // Apply profile picture (assuming this method is lightweight)
+                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+            }
         }
+
+        // 🔹 Asynchronous method to load the membership status picture
+        private async Task LoadMembershipPictureAsync()
+        {
+            try
+            {
+                // Simulate loading time (if fetching from DB/API)
+                await Task.Delay(500);
+
+                // Load image in a separate thread to avoid UI freeze
+                pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load membership status image: " + ex.Message);
+            }
+        }
+
+
+
+            //old logic (without async..)
+        //private void AboutFormLoadEvents()
+        //{
+        //    lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals by providing personalized workout plans, nutritional guidance, and progress tracking. Whether you're looking to build muscle, lose weight, or improve overall fitness, this app offers a comprehensive solution to support your journey. Our mission is to make fitness accessible, convenient, and enjoyable for everyone. Stay fit, stay healthy!";
+
+        //    //  accessing current user 
+        //    if (UserDataManager.CurrentUser != null)
+        //    {
+        //        //load membership plan pics
+        //        pbMembershipStatus.Image = Features.MembershipStatusPic();
+        //        UserDataManager.ApplyProfilePicture(btnProfilePicture);
+        //    }
+
+
+        //    // Assign the version to the label
+        //    lblVersion.Text = Features.GetCurrentVersion();
+        //}
 
         //YOutube
         private void pbGmail_Click(object sender, EventArgs e)

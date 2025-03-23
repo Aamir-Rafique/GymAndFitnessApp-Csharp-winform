@@ -6,8 +6,25 @@ using System.Windows.Forms;
 
 namespace GymAndFitness
 {
-    public class Features
+    public static class Features
     {
+
+        //method for combo box.. so it could be selected using enter and arrow keys..
+        public static void ComboBoxValidation(object sender, KeyPressEventArgs e)
+        {
+            if (sender is ComboBox cmb)
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    cmb.DroppedDown = !cmb.DroppedDown; // Toggle dropdown
+                    e.Handled = true; // Prevent default behavior
+                }
+                else
+                {
+                    e.Handled = true; // Block typing
+                }
+            }
+        }
 
         //method to fetch publish version of application (updates with each clickonce deployment)
         public static string GetCurrentVersion()
@@ -130,7 +147,6 @@ namespace GymAndFitness
             {
                 return Properties.Resources.bmiChartExtremeObese;
             }
-
         }
 
         //calculate bmi
@@ -181,33 +197,53 @@ namespace GymAndFitness
             }
         }
 
-
-
-
         //To open each form...
+        private static bool hasDietPlanReloaded = false, hasMainReloaded = false, hasDashboardReloaded = false, hasWorkoutPlanReloaded = false, hasProfileReloaded = false, hasAboutReloaded = false, hasBMIReloaded = false;
+
         public static void OpenAboutForm()
         {
-            //AboutForm aboutForm = new AboutForm();
-            //aboutForm.Show();
-
+            if (UserDataManager.CurrentUser != null && !hasAboutReloaded)
+            {
+                AboutForm.GetInstance().ReloadAboutFormData();
+                hasAboutReloaded = true; // Set the flag to true after the method is called
+            }
             AboutForm.GetInstance().Show();
             AboutForm.GetInstance().BringToFront();
+
         }
 
         public static void OpenBMICalculatorForm()
         {
+            if (UserDataManager.CurrentUser != null && !hasBMIReloaded)
+            {
+                BMICalculatorForm.GetInstance().ReloadBMICalculatorFormData();
+                hasBMIReloaded = true; // Set the flag to true after the method is called
+            }
             BMICalculatorForm.GetInstance().Show();
             BMICalculatorForm.GetInstance().BringToFront();
         }
 
         public static void OpenDashboardForm()
         {
+            if (UserDataManager.CurrentUser != null && !hasDashboardReloaded)
+            {
+                DashboardForm.GetInstance().ReloadDashboardFormData();
+                hasDashboardReloaded = true; // Set the flag to true after the method is called
+            }
             DashboardForm.GetInstance().Show();
             DashboardForm.GetInstance().BringToFront();
         }
 
+        
+
         public static void OpenDietPlansForm()
         {
+            //using this condition so this method refreshes data in form load event only when the user is logged in ...
+            if (UserDataManager.CurrentUser != null && !hasDietPlanReloaded)
+            {
+                DietPlansForm.GetInstance().ReloadDietPlansFormData();
+                hasDietPlanReloaded = true; // Set the flag to true after the method is called
+            }
             DietPlansForm.GetInstance().Show();
             DietPlansForm.GetInstance().BringToFront();
         }
@@ -217,8 +253,14 @@ namespace GymAndFitness
             LoginForm.GetInstance().Show();
             LoginForm.GetInstance().BringToFront();
         }
+
         public static void OpenMainForm()
         {
+            if (UserDataManager.CurrentUser != null && !hasMainReloaded)
+            {
+                MainForm.GetInstance().ReloadMainFormData();
+                hasMainReloaded = true; // Set the flag to true after the method is called
+            }
             MainForm.GetInstance().Show();
             MainForm.GetInstance().BringToFront();
         }
@@ -239,6 +281,11 @@ namespace GymAndFitness
         }
         public static void OpenProfileForm()
         {
+            if (UserDataManager.CurrentUser != null && !hasProfileReloaded)
+            {
+                ProfileForm.GetInstance().ReloadProfileFormData();
+                hasProfileReloaded = true; // Set the flag to true after the method is called
+            }
             ProfileForm.GetInstance().Show();
             ProfileForm.GetInstance().BringToFront();
         }
@@ -249,6 +296,11 @@ namespace GymAndFitness
         }
         public static void OpenWorkoutPlansForm()
         {
+            if (UserDataManager.CurrentUser != null && !hasWorkoutPlanReloaded)
+            {
+                WorkoutPlansForm.GetInstance().ReloadWorkoutPlansData();
+                hasWorkoutPlanReloaded = true; // Set the flag to true after the method is called
+            }
             WorkoutPlansForm.GetInstance().Show();
             WorkoutPlansForm.GetInstance().BringToFront();
         }
@@ -258,157 +310,6 @@ namespace GymAndFitness
             UserDataManager.CurrentUser = null;
             Application.Restart(); // Restarts the entire application
         }
-
-        //this code ensures, only one instance of the form is created at a time..
-
-        //private static AboutForm _aboutForm;
-        //private static BMICalculatorForm _bmiCalculatorForm;
-        //private static DashboardForm _dashboardForm;
-        //private static DietPlansForm _dietPlansForm;
-        //private static LoginForm _loginForm;
-        //private static MainForm _mainForm;
-        //private static MembershipForm _membershipForm;
-        //private static PaymentForm _paymentForm;
-        //private static PremiumForm _premiumForm;
-        //private static ProfileForm _profileForm;
-        //private static SignupForm _signupForm;
-        //private static WorkoutPlansForm _workoutPlansForm;
-
-        //public static void OpenAboutForm()
-        //{
-        //    if (_aboutForm == null || _aboutForm.IsDisposed)
-        //    {
-        //        _aboutForm = new AboutForm();
-        //        _aboutForm.FormClosed += (s, e) => _aboutForm = null; // Reset instance when closed
-        //    }
-        //    _aboutForm.Show();
-        //    _aboutForm.Focus();
-        //}
-
-
-        //public static void OpenBMICalculatorForm()
-        //{
-        //    if (_bmiCalculatorForm == null || _bmiCalculatorForm.IsDisposed)
-        //    {
-        //        _bmiCalculatorForm = new BMICalculatorForm();
-        //        _bmiCalculatorForm.FormClosed += (s, e) => _bmiCalculatorForm = null;
-        //    }
-        //    _bmiCalculatorForm.Show();
-        //    _bmiCalculatorForm.Focus();
-        //}
-
-        //public static void OpenDashboardForm()
-        //{
-        //    if (_dashboardForm == null || _dashboardForm.IsDisposed)
-        //    {
-        //        _dashboardForm = new DashboardForm();
-        //        _dashboardForm.FormClosed += (s, e) => _dashboardForm = null;
-        //    }
-        //    _dashboardForm.Show();
-        //    _dashboardForm.Focus();
-        //}
-
-        //public static void OpenDietPlansForm()
-        //{
-        //    if (_dietPlansForm == null || _dietPlansForm.IsDisposed)
-        //    {
-        //        _dietPlansForm = new DietPlansForm();
-        //        _dietPlansForm.FormClosed += (s, e) => _dietPlansForm = null;
-        //    }
-        //    _dietPlansForm.Show();
-        //    _dietPlansForm.Focus();
-        //}
-
-        //public static void OpenLoginForm()
-        //{
-        //    if (_loginForm == null || _loginForm.IsDisposed)
-        //    {
-        //        _loginForm = new LoginForm();
-        //        _loginForm.FormClosed += (s, e) => _loginForm = null;
-        //    }
-        //    _loginForm.Show();
-        //    _loginForm.Focus();
-        //}
-
-        //public static void OpenMainForm()
-        //{
-        //    if (_mainForm == null || _mainForm.IsDisposed)
-        //    {
-        //        _mainForm = new MainForm();
-        //        _mainForm.FormClosed += (s, e) => _mainForm = null;
-        //    }
-        //    _mainForm.Show();
-        //    _mainForm.Focus();
-        //}
-
-        //public static void OpenMembershipForm()
-        //{
-        //    if (_membershipForm == null || _membershipForm.IsDisposed)
-        //    {
-        //        _membershipForm = new MembershipForm();
-        //        _membershipForm.FormClosed += (s, e) => _membershipForm = null;
-        //    }
-        //    _membershipForm.Show();
-        //    _membershipForm.Focus();
-        //}
-
-        //public static void OpenPaymentForm()
-        //{
-        //    if (_paymentForm == null || _paymentForm.IsDisposed)
-        //    {
-        //        _paymentForm = new PaymentForm();
-        //        _paymentForm.FormClosed += (s, e) => _paymentForm = null;
-        //    }
-        //    _paymentForm.Show();
-        //    _paymentForm.Focus();
-        //}
-
-        //public static void OpenPremiumForm()
-        //{
-        //    if (_premiumForm == null || _premiumForm.IsDisposed)
-        //    {
-        //        _premiumForm = new PremiumForm();
-        //        _premiumForm.FormClosed += (s, e) => _premiumForm = null;
-        //    }
-        //    _premiumForm.Show();
-        //    _premiumForm.Focus();
-        //}
-
-
-        //public static void OpenProfileForm()
-        //{
-        //    if (_profileForm == null || _profileForm.IsDisposed)
-        //    {
-        //        _profileForm = new ProfileForm();
-        //        _profileForm.FormClosed += (s, e) => _profileForm = null;
-        //    }
-        //    _profileForm.Show();
-        //    _profileForm.Focus();
-        //}
-
-        //public static void OpenSignUpForm()
-        //{
-        //    if (_signupForm == null || _signupForm.IsDisposed)
-        //    {
-        //        _signupForm = new SignupForm();
-        //        _signupForm.FormClosed += (s, e) => _signupForm = null;
-        //    }
-        //    _signupForm.Show();
-        //    _signupForm.Focus();
-        //}
-
-        //public static void OpenWorkoutPlansForm()
-        //{
-        //    if (_workoutPlansForm == null || _workoutPlansForm.IsDisposed)
-        //    {
-        //        _workoutPlansForm = new WorkoutPlansForm();
-        //        _workoutPlansForm.FormClosed += (s, e) => _workoutPlansForm = null;
-        //    }
-        //    _workoutPlansForm.Show();
-        //    _workoutPlansForm.Focus();
-        //}
-
-
 
 
     }

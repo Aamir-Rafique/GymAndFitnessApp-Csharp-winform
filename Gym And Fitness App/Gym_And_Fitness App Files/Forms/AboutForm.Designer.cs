@@ -85,12 +85,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Cascadia Code", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(218, 562);
+            this.label5.Location = new System.Drawing.Point(178, 569);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(425, 21);
+            this.label5.Size = new System.Drawing.Size(472, 18);
             this.label5.TabIndex = 16;
             this.label5.Text = "© AR FitTech  2025 Gym && Fitness App. All Rights Reserved.";
             // 
@@ -112,6 +112,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Github");
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pbLinkedin
@@ -125,6 +126,7 @@
             this.pbLinkedin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLinkedin.TabIndex = 13;
             this.pbLinkedin.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbLinkedin, "LinkedIn");
             this.pbLinkedin.Click += new System.EventHandler(this.pbLinkedin_Click);
             // 
             // pbFacebook
@@ -138,6 +140,7 @@
             this.pbFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFacebook.TabIndex = 12;
             this.pbFacebook.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbFacebook, "Facebook");
             this.pbFacebook.Click += new System.EventHandler(this.pbFacebook_Click);
             // 
             // pbTwitter
@@ -151,6 +154,7 @@
             this.pbTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTwitter.TabIndex = 11;
             this.pbTwitter.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbTwitter, "X (Twitter)");
             this.pbTwitter.Click += new System.EventHandler(this.pbTwitter_Click);
             // 
             // pbGmail
@@ -164,6 +168,7 @@
             this.pbGmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbGmail.TabIndex = 10;
             this.pbGmail.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbGmail, "Youtube");
             this.pbGmail.Click += new System.EventHandler(this.pbGmail_Click);
             // 
             // lblPurpose
@@ -172,11 +177,10 @@
             this.lblPurpose.BackColor = System.Drawing.Color.PaleGreen;
             this.lblPurpose.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPurpose.Location = new System.Drawing.Point(132, 197);
-            this.lblPurpose.MaximumSize = new System.Drawing.Size(560, 0);
+            this.lblPurpose.MaximumSize = new System.Drawing.Size(530, 0);
             this.lblPurpose.Name = "lblPurpose";
-            this.lblPurpose.Size = new System.Drawing.Size(560, 210);
+            this.lblPurpose.Size = new System.Drawing.Size(0, 21);
             this.lblPurpose.TabIndex = 8;
-            this.lblPurpose.Text = resources.GetString("lblPurpose.Text");
             // 
             // lblVersion
             // 

@@ -1,6 +1,7 @@
 ﻿using GymAndFitness.Forms;
 using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -21,116 +22,227 @@ namespace GymAndFitness
             return instance;
         }
 
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-
         //LOAD
-        private void DashboardForm_Load(object sender, EventArgs e)
+        private async void DashboardForm_Load(object sender, EventArgs e)
         {
-            //clock
+            await DasboardFormLoadEvents();
+
+            //old logic..
+
+            ////clock
+            //timerTime.Start();
+            ////quote
+            //timerQuote.Start(); // Start the timer
+            ////date
+            //lblDate.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
+
+
+            ////  accessing current user 
+            //if (UserDataManager.CurrentUser != null)
+            //{
+
+            //    UserDataManager.ApplyProfilePicture(btnProfilePicture);
+
+            //    //load membership plan pics
+            //    pbMembershipStatus.Image = Features.MembershipStatusPic();
+
+            //    //
+            //    btnLogout.Visible = true;
+            //    btnLogout.Enabled = true;
+            //    btnLogin.Visible = false;
+            //    btnLogin.Enabled = false;
+
+            //    // Weight Progress
+
+            //    // Get user data
+            //    double startingWeight = UserDataManager.CurrentUser.StartingWeight;
+            //    double currentWeight = UserDataManager.CurrentUser.CurrentWeight;
+            //    double targetWeight = UserDataManager.CurrentUser.TargetWeight;
+
+            //    double weightProgressPercentage = 0;
+            //    string fitnessGoal = UserDataManager.CurrentUser.FitnessGoal?.ToLower(); // Handle potential null values
+
+            //    // Validate target and starting weights to avoid division by zero
+            //    if (targetWeight != startingWeight)
+            //    {
+            //        double weightDifference = Math.Abs(targetWeight - startingWeight);
+            //        bool isValidRange =
+            //            (fitnessGoal == "muscle gain" && currentWeight >= startingWeight && currentWeight <= targetWeight) ||
+            //            (fitnessGoal == "fat loss" && currentWeight <= startingWeight && currentWeight >= targetWeight);
+
+            //        if (isValidRange)
+            //        {
+            //            double progress = Math.Abs(currentWeight - startingWeight);
+            //            weightProgressPercentage = (progress / weightDifference) * 100;
+            //        }
+            //    }
+
+            //    weightProgressPercentage = Math.Min(100, Math.Max(0, weightProgressPercentage));
+
+
+            //    // Update progress bar and label
+            //    progressBarWeight.Value = (int)weightProgressPercentage;
+            //    lblWeightProgess.Text = $"Weight Progress: {Math.Round(weightProgressPercentage)}% ({currentWeight} kg out of {targetWeight} kg)";
+
+
+            //    // Water Intake Progress
+            //    lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
+            //    progressBarWater.Value = (int)((UserDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
+
+            //    //lblWaterIntake.Text = $"{waterProgressPercentage}%";
+
+            //    Console.WriteLine($"Height: {UserDataManager.CurrentUser.Height}");
+            //    Console.WriteLine($"Weight: {UserDataManager.CurrentUser.CurrentWeight}");
+            //    Console.WriteLine($"Progress Percentage: {weightProgressPercentage}");
+
+
+            //    //disabling water tracker feature for free members... 
+            //    if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+            //    {
+            //        lblPremiumMembers.Text = "For Premium Members Only!";
+            //        pnlWaterIntake.BackColor = Color.Gainsboro;
+            //        pnlWaterIntake.ForeColor = Color.Gray;
+            //        btnAddWater.BackColor = Color.Gainsboro;
+            //        btnAddWater.Enabled = false;
+            //        lblWaterIntake.ForeColor = Color.Gray;
+            //        lblGlasses.ForeColor = Color.Gray;
+            //        progressBarWater.Enabled = false;
+            //        progressBarWater.Value = 0;
+            //        toolTip.SetToolTip(pnlWaterIntake, $"Upgrade to Premium to access this feature!");
+            //        toolTip.SetToolTip(pbwaterintake, $"Upgrade to Premium to access this feature!");
+            //        pnlWaterIntake.Cursor = Cursors.Hand;
+            //    }
+
+            //}
+
+            //else
+            //{
+            //    btnLogout.Visible = false;
+            //    btnLogout.Enabled = false;
+            //    btnLogin.Visible = true;
+            //    btnLogin.Enabled = true;
+
+            //    //initializing progressbar values.. for user interaction when no login..
+            //    progressBarWater.Value = 15;
+            //    progressBarWeight.Value = 26;
+            //    lblWeightProgess.Text = "Login to view your progress..";
+            //}
+
+        }
+
+        private async Task DasboardFormLoadEvents()
+        {
+            // Start timers
             timerTime.Start();
+            timerQuote.Start();
 
-            //quote
-            timerQuote.Start(); // Start the timer
-
-            //date
+            // Set the current date
             lblDate.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
 
-
-
-
-            //  accessing current user 
+            // Accessing current user
             if (UserDataManager.CurrentUser != null)
             {
+                // Apply profile picture asynchronously
+                await Task.Run(() => UserDataManager.ApplyProfilePicture(btnProfilePicture));
 
-                userDataManager.ApplyProfilePicture(btnProfilePicture);
+                // Load membership plan pictures asynchronously
+                pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
 
-                //load membership plan pics
-                pbMembershipStatus.Image = Features.MembershipStatusPic();
-
-                //
+                // Update buttons based on user status
                 btnLogout.Visible = true;
                 btnLogout.Enabled = true;
                 btnLogin.Visible = false;
                 btnLogin.Enabled = false;
 
                 // Weight Progress
-
-                // Get user data
                 double startingWeight = UserDataManager.CurrentUser.StartingWeight;
                 double currentWeight = UserDataManager.CurrentUser.CurrentWeight;
                 double targetWeight = UserDataManager.CurrentUser.TargetWeight;
-
-                double weightProgressPercentage = 0;
-                string fitnessGoal = UserDataManager.CurrentUser.FitnessGoal?.ToLower(); // Handle potential null values
-
-                // Validate target and starting weights to avoid division by zero
-                if (targetWeight != startingWeight)
-                {
-                    double weightDifference = Math.Abs(targetWeight - startingWeight);
-                    bool isValidRange =
-                        (fitnessGoal == "muscle gain" && currentWeight >= startingWeight && currentWeight <= targetWeight) ||
-                        (fitnessGoal == "fat loss" && currentWeight <= startingWeight && currentWeight >= targetWeight);
-
-                    if (isValidRange)
-                    {
-                        double progress = Math.Abs(currentWeight - startingWeight);
-                        weightProgressPercentage = (progress / weightDifference) * 100;
-                    }
-                }
-
-                weightProgressPercentage = Math.Min(100, Math.Max(0, weightProgressPercentage));
-
+                double weightProgressPercentage = CalculateWeightProgress(
+                    startingWeight, currentWeight, targetWeight, UserDataManager.CurrentUser.FitnessGoal
+                );
 
                 // Update progress bar and label
                 progressBarWeight.Value = (int)weightProgressPercentage;
                 lblWeightProgess.Text = $"Weight Progress: {Math.Round(weightProgressPercentage)}% ({currentWeight} kg out of {targetWeight} kg)";
 
-
                 // Water Intake Progress
                 lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
                 progressBarWater.Value = (int)((UserDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
 
-                //lblWaterIntake.Text = $"{waterProgressPercentage}%";
-
-                Console.WriteLine($"Height: {UserDataManager.CurrentUser.Height}");
-                Console.WriteLine($"Weight: {UserDataManager.CurrentUser.CurrentWeight}");
-                Console.WriteLine($"Progress Percentage: {weightProgressPercentage}");
-
-
-                //disabling water tracker feature for free members... 
-                if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+                // Disable water tracker for free members
+                if (IsFreeMember(UserDataManager.CurrentUser.MembershipStatus))
                 {
-                    lblPremiumMembers.Text = "For Premium Members Only!";
-                    pnlWaterIntake.BackColor = Color.Gainsboro;
-                    pnlWaterIntake.ForeColor = Color.Gray;
-                    btnAddWater.BackColor = Color.Gainsboro;
-                    btnAddWater.Enabled = false;
-                    lblWaterIntake.ForeColor = Color.Gray;
-                    lblGlasses.ForeColor = Color.Gray;
-                    progressBarWater.Enabled = false;
-                    progressBarWater.Value = 0;
-                    toolTip.SetToolTip(pnlWaterIntake, $"Upgrade to Premium to access this feature!");
-                    toolTip.SetToolTip(pbwaterintake, $"Upgrade to Premium to access this feature!");
-                    pnlWaterIntake.Cursor = Cursors.Hand;
+                    DisableWaterTrackerFeatures();
                 }
-
             }
-
             else
             {
+                // Handle case where no user is logged in
                 btnLogout.Visible = false;
                 btnLogout.Enabled = false;
                 btnLogin.Visible = true;
                 btnLogin.Enabled = true;
 
-                //initializing progressbar values.. for user interaction when no login..
+                // Initialize progress bar values for non-logged-in user interaction
                 progressBarWater.Value = 15;
                 progressBarWeight.Value = 26;
-                lblWeightProgess.Text = "Login to view your progress..";
+                lblWeightProgess.Text = "Login to view your progress...";
             }
-
         }
 
+
+        // Helper Method for Weight Progress Calculation
+        private double CalculateWeightProgress(double startingWeight, double currentWeight, double targetWeight, string fitnessGoal)
+        {
+            double weightProgressPercentage = 0;
+
+            // Handle null values and calculate progress
+            fitnessGoal = fitnessGoal?.ToLower();
+            if (targetWeight != startingWeight)
+            {
+                double weightDifference = Math.Abs(targetWeight - startingWeight);
+                bool isValidRange =
+                    (fitnessGoal == "muscle gain" && currentWeight >= startingWeight && currentWeight <= targetWeight) ||
+                    (fitnessGoal == "fat loss" && currentWeight <= startingWeight && currentWeight >= targetWeight);
+
+                if (isValidRange)
+                {
+                    double progress = Math.Abs(currentWeight - startingWeight);
+                    weightProgressPercentage = (progress / weightDifference) * 100;
+                }
+            }
+
+            return Math.Min(100, Math.Max(0, weightProgressPercentage));
+        }
+
+        // Helper Method to Check Membership Status
+        private bool IsFreeMember(string membershipStatus)
+        {
+            return membershipStatus == "Free" || string.IsNullOrEmpty(membershipStatus);
+        }
+
+        // Helper Method to Disable Water Tracker Features
+        private void DisableWaterTrackerFeatures()
+        {
+            lblPremiumMembers.Text = "For Premium Members Only!";
+            pnlWaterIntake.BackColor = Color.Gainsboro;
+            pnlWaterIntake.ForeColor = Color.Gray;
+            btnAddWater.BackColor = Color.Gainsboro;
+            btnAddWater.Enabled = false;
+            lblWaterIntake.ForeColor = Color.Gray;
+            lblGlasses.ForeColor = Color.Gray;
+            progressBarWater.Enabled = false;
+            progressBarWater.Value = 0;
+            toolTip.SetToolTip(pnlWaterIntake, "Upgrade to Premium to access this feature!");
+            toolTip.SetToolTip(pbwaterintake, "Upgrade to Premium to access this feature!");
+            pnlWaterIntake.Cursor = Cursors.Hand;
+        }
+
+        public async void ReloadDashboardFormData()
+        {
+            await DasboardFormLoadEvents();
+        }
 
         //code for clock
         private void timer1_Tick_1(object sender, EventArgs e)
@@ -316,7 +428,7 @@ namespace GymAndFitness
                 {
                     UserDataManager.CurrentUser.DailyWaterIntake++;
 
-                    userDataManager.UpdateDailyWaterIntake();
+                    UserDataManager.UpdateDailyWaterIntake();
                     //refresh
                     lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
                     progressBarWater.Value = (int)((UserDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
@@ -360,7 +472,11 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Features.LogoutNow();
+            DialogResult result = MessageBox.Show("Are you sure you want to LOGOUT?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                Features.LogoutNow();
+            }
         }
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)

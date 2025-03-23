@@ -27,40 +27,74 @@ namespace GymAndFitness
             return instance;
         }
 
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
         //load
-        private void WorkoutPlansForm_Load(object sender, EventArgs e)
+        private async void WorkoutPlansForm_Load(object sender, EventArgs e)
         {
+            await WorkoutPlansFormLoadEvents();
 
-            //workoutpics
+            //old logic..
+
+            ////workoutpics
+            //timerForPics.Start();
+
+            ////  accessing current user 
+            //if (UserDataManager.CurrentUser != null)
+            //{
+            //    //load membership plan pics
+            //    pbMembershipStatus.Image = Features.MembershipStatusPic();
+
+            //    UserDataManager.ApplyProfilePicture(btnProfilePicture1);
+            //    int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
+            //    UserDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
+
+            //    if (UserDataManager.CurrentUser.MembershipStatus == "Free")
+            //    {
+            //        btnSaveWorkoutPlan.BackColor = Color.Gray;
+            //    }
+            //}
+
+            ////combobox text align center..
+            //Features.AlignComboBoxTextCenter(cmbExercise);
+            //Features.AlignComboBoxTextCenter(cmbWorkoutType);
+
+
+        }
+
+        private async Task WorkoutPlansFormLoadEvents()
+        {
+            // Start the timer for workout pictures
             timerForPics.Start();
 
-            //  accessing current user 
+            // Access the current user
             if (UserDataManager.CurrentUser != null)
             {
-                //load membership plan pics
-                pbMembershipStatus.Image = Features.MembershipStatusPic();
+                // Load membership plan pictures asynchronously
+                pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
 
-                userDataManager.ApplyProfilePicture(btnProfilePicture1);
+                // Apply profile picture asynchronously
+                await Task.Run(() => UserDataManager.ApplyProfilePicture(btnProfilePicture1));
+
+                // Retrieve user ID and load workout plan asynchronously
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
-                userDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId);
+                await Task.Run(() => UserDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId));
 
+                // Update save workout plan button for free members
                 if (UserDataManager.CurrentUser.MembershipStatus == "Free")
                 {
                     btnSaveWorkoutPlan.BackColor = Color.Gray;
                 }
             }
 
-
-
-            //combobox text align center..
+            // Align combo box text to center
             Features.AlignComboBoxTextCenter(cmbExercise);
             Features.AlignComboBoxTextCenter(cmbWorkoutType);
-
-
         }
 
+        public async void ReloadWorkoutPlansData()
+        {
+            await WorkoutPlansFormLoadEvents();
+        }
 
 
         private int imageIndex = 0;
@@ -287,7 +321,7 @@ namespace GymAndFitness
                 }
                 else
                 {
-                    userDataManager.SaveWorkoutPlan(dgvWorkoutPlan);
+                    UserDataManager.SaveWorkoutPlan(dgvWorkoutPlan);
                 }
             }
             else
@@ -436,6 +470,17 @@ namespace GymAndFitness
         private void btnProfilePicture1_Click(object sender, EventArgs e)
         {
             Features.OpenProfileForm();
+        }
+
+        private void cmbWorkoutType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Features.ComboBoxValidation(sender, e);
+        }
+
+        private void cmbExercise_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Features.ComboBoxValidation(sender, e);
+
         }
     }
 }

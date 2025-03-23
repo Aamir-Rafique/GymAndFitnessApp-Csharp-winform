@@ -9,20 +9,20 @@ using System.Windows.Forms;
 namespace GymAndFitness
 {
 
-    public class UserDataManager
+    public static class UserDataManager
     {
         public static User CurrentUser { get; set; }  //declared static so that the same value is passed for all the forms/classes.. i.e. current user =1;  single copy of this CurrentUser attribute..
 
-        private string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
+        private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
         // Constructor
-        public UserDataManager()
-        {
-            // Initialize any necessary objects or properties here
-        }
+        //public UserDataManager()
+        //{
+        //    // Initialize any necessary objects or properties here
+        //}
 
         // Save user details
-        public void SignUpUser(string username, string password, int age, string gender, double height, double weight, double bmi, double targetWeight, string targetWeightRange, string fitnessGoal, string fitnessLevel, byte[] profilePicture, string membershipStatus, double currentWeight)
+        public static void SignUpUser(string username, string password, int age, string gender, double height, double weight, double bmi, double targetWeight, string targetWeightRange, string fitnessGoal, string fitnessLevel, byte[] profilePicture, string membershipStatus, double currentWeight)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -54,7 +54,8 @@ namespace GymAndFitness
                         Features.OpenLoginForm();
                         Application.OpenForms["SignUpForm"].Close();
 
-                        //connection.Close();
+                        //connection.Close(); 
+                        //no need to close connection if using "using" in method header..
                     }
                 }
                 catch (Exception ex)
@@ -67,7 +68,7 @@ namespace GymAndFitness
 
 
         // Verify login
-        public bool IsValidLogin(string username, string password)
+        public static bool IsValidLogin(string username, string password)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -93,7 +94,7 @@ namespace GymAndFitness
         }
 
         // Get user details
-        public User GetUserDetails(string username)
+        public static User GetUserDetails(string username)
         {
             User user = null;
 
@@ -155,7 +156,7 @@ namespace GymAndFitness
         }
 
         //auto resetwaterintake helper method..
-        private void ResetDailyWaterIntake(int userId, DateTime currentDate)
+        private static void ResetDailyWaterIntake(int userId, DateTime currentDate)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -174,7 +175,7 @@ namespace GymAndFitness
 
 
         // Verify and update license keys
-        public void VerifyLicenseKey(string username, string enteredKey)
+        public static void VerifyLicenseKey(string username, string enteredKey)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -205,7 +206,7 @@ namespace GymAndFitness
         }
 
         // Update membership status
-        public void UpdateMembershipInDatabase(string membershipStatus)
+        public static void UpdateMembershipInDatabase(string membershipStatus)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -222,7 +223,7 @@ namespace GymAndFitness
         }
 
         // Store license key
-        public void StoreLicenseKey(string licenseKey)
+        public static void StoreLicenseKey(string licenseKey)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -239,7 +240,7 @@ namespace GymAndFitness
         }
 
         // Save workout plan
-        public void SaveWorkoutPlan(DataGridView dgvWorkoutPlan)
+        public static void SaveWorkoutPlan(DataGridView dgvWorkoutPlan)
         {
             int userId = CurrentUser.UserID;
 
@@ -286,7 +287,7 @@ namespace GymAndFitness
         }
 
         // Load workout plan
-        public void LoadWorkoutPlan(DataGridView dgvWorkoutPlan, int userId)
+        public static void LoadWorkoutPlan(DataGridView dgvWorkoutPlan, int userId)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -318,7 +319,7 @@ namespace GymAndFitness
         }
 
         // Add diet plan
-        public void AddDietPlan(DietPlan dietPlan)
+        public static void AddDietPlan(DietPlan dietPlan)
         {
             if (CurrentUser == null)
             {
@@ -350,7 +351,7 @@ namespace GymAndFitness
         }
 
         // Save diet plan
-        public void SaveDietPlan(ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, string notes)
+        public static void SaveDietPlan(ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, string notes)
         {
             int userId = CurrentUser.UserID;
 
@@ -417,7 +418,7 @@ namespace GymAndFitness
         }
 
         // Remove workout plan
-        public void RemoveSelectedItem(ListBox listBox, string mealTime)
+        public static void RemoveSelectedItem(ListBox listBox, string mealTime)
         {
             if (listBox.SelectedItem != null)
             {
@@ -453,7 +454,7 @@ namespace GymAndFitness
         }
 
         // Load diet plans
-        public void LoadDietPlans(int userId, ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, RichTextBox richTextBoxNotesInput)
+        public static void LoadDietPlans(int userId, ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, RichTextBox richTextBoxNotesInput)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -515,7 +516,7 @@ namespace GymAndFitness
         }
 
         // Update water intake
-        public void UpdateDailyWaterIntake()
+        public static void UpdateDailyWaterIntake()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -536,7 +537,7 @@ namespace GymAndFitness
 
 
         //reset water
-        public void ResetDailyWaterIntake()
+        public static void ResetDailyWaterIntake()
         {
             if (CurrentUser != null)
             {
@@ -563,7 +564,7 @@ namespace GymAndFitness
         }
 
 
-        public void ApplyProfilePicture(PictureBox pictureBox)
+        public static void ApplyProfilePicture(PictureBox pictureBox)
         {
             if (CurrentUser != null && CurrentUser.ProfilePicture != null)
             {
@@ -580,7 +581,7 @@ namespace GymAndFitness
 
 
 
-        public void UpdateProfilePictureInDatabase(byte[] profilePicture)
+        public static void UpdateProfilePictureInDatabase(byte[] profilePicture)
         {
             if (CurrentUser != null)
             {
@@ -610,7 +611,7 @@ namespace GymAndFitness
 
 
         //update Height & weight
-        public void UpdateHeightAndWeight(double currentheight, double currentweight, double currentBMI)
+        public static void UpdateHeightAndWeight(double currentheight, double currentweight, double currentBMI)
         {
             if (CurrentUser != null)
             {
@@ -642,7 +643,7 @@ namespace GymAndFitness
 
         //change Profile Picture
 
-        public void ChangeProfilePicture(PictureBox pictureBox)
+        public static void ChangeProfilePicture(PictureBox pictureBox)
         {
             // Open file dialog to let user choose an image
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -672,7 +673,7 @@ namespace GymAndFitness
 
 
         //delete user account
-        public bool DeleteAccount(int userId)
+        public static bool DeleteAccount(int userId)
         {
             try
             {

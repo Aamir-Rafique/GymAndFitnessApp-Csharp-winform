@@ -26,43 +26,93 @@ namespace GymAndFitness
             return instance;
         }
 
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
         //LOAD
-        private void DietPlansForm_Load(object sender, EventArgs e)
+        private async void DietPlansForm_Load(object sender, EventArgs e)
         {
+            await DietPlansFormLoadEvents();
 
-            //Dietpics
+            //old logic ..
+
+            ////Dietpics
+            //timerForPics.Start();
+
+            ////  accessing current user 
+            //if (UserDataManager.CurrentUser != null)
+            //{
+            //    UserDataManager.ApplyProfilePicture(btnProfilePicture);
+            //    //load membership plan pics
+            //    pbMembershipStatus.Image = Features.MembershipStatusPic();
+
+            //    //database...
+            //    int userId = UserDataManager.CurrentUser.UserID;
+            //    // Replace with actual logic to get the current user ID
+            //    UserDataManager.LoadDietPlans(userId, lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, richTextBoxNotesInput);
+
+            //    //allign centere cmb box items
+            //    Features.AlignComboBoxTextCenter(cmbDietType);
+
+            //    //disabling online food search feature for free members... 
+            //    if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+            //    {
+            //        rbtnOnline.BackColor = Color.Gainsboro;
+            //        rbtnOnline.ForeColor = Color.Gray;
+            //    }
+            //}
+
+            //txtFoodItem.Text = "Type here";
+            //txtFoodItem.ForeColor = Color.Gray;
+        }
+
+
+        private async Task DietPlansFormLoadEvents()
+        {
+            // Start timer for diet pictures
             timerForPics.Start();
 
-            //  accessing current user 
+            // Accessing current user
             if (UserDataManager.CurrentUser != null)
             {
-                userDataManager.ApplyProfilePicture(btnProfilePicture);
-                //load membership plan pics
-                pbMembershipStatus.Image = Features.MembershipStatusPic();
+                // Apply profile picture asynchronously
+                await Task.Run(() => UserDataManager.ApplyProfilePicture(btnProfilePicture));
 
-                //database...
+                // Load membership plan pictures asynchronously
+                pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
+
+                // Retrieve user ID and load diet plans asynchronously
                 int userId = UserDataManager.CurrentUser.UserID;
-                // Replace with actual logic to get the current user ID
-                userDataManager.LoadDietPlans(userId, lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, richTextBoxNotesInput);
+                await Task.Run(() =>
+                    UserDataManager.LoadDietPlans(
+                        userId,
+                        lstBreakfastInput,
+                        lstLunchInput,
+                        lstSnacksInput,
+                        lstDinnerInput,
+                        richTextBoxNotesInput
+                    )
+                );
 
-                //allign centere cmb box items
+                // Align combo box items in the center
                 Features.AlignComboBoxTextCenter(cmbDietType);
 
-                //disabling online food search feature for free members... 
-                if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
+                // Disable online food search feature for free members
+                if (UserDataManager.CurrentUser.MembershipStatus == "Free" ||
+                    UserDataManager.CurrentUser.MembershipStatus == null)
                 {
                     rbtnOnline.BackColor = Color.Gainsboro;
                     rbtnOnline.ForeColor = Color.Gray;
                 }
             }
 
+            // Set default text and style for the food item textbox
             txtFoodItem.Text = "Type here";
             txtFoodItem.ForeColor = Color.Gray;
         }
 
-
+        public async void ReloadDietPlansFormData()
+        {
+            await DietPlansFormLoadEvents();
+        }
 
         //Diet types  recipes
 
@@ -751,19 +801,19 @@ namespace GymAndFitness
             // Check which ListBox has an item selected
             if (lstBreakfastInput.SelectedItem != null)
             {
-                userDataManager.RemoveSelectedItem(lstBreakfastInput, "Breakfast");
+                UserDataManager.RemoveSelectedItem(lstBreakfastInput, "Breakfast");
             }
             else if (lstLunchInput.SelectedItem != null)
             {
-                userDataManager.RemoveSelectedItem(lstLunchInput, "Lunch");
+                UserDataManager.RemoveSelectedItem(lstLunchInput, "Lunch");
             }
             else if (lstSnacksInput.SelectedItem != null)
             {
-                userDataManager.RemoveSelectedItem(lstSnacksInput, "Snacks");
+                UserDataManager.RemoveSelectedItem(lstSnacksInput, "Snacks");
             }
             else if (lstDinnerInput.SelectedItem != null)
             {
-                userDataManager.RemoveSelectedItem(lstDinnerInput, "Dinner");
+                UserDataManager.RemoveSelectedItem(lstDinnerInput, "Dinner");
             }
             else
             {
@@ -891,7 +941,7 @@ namespace GymAndFitness
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with actual logic to get the current user ID
                 string notes = richTextBoxNotesInput.Text; // Get the notes from the RichTextBox
 
-                userDataManager.SaveDietPlan(lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, notes);
+                UserDataManager.SaveDietPlan(lstBreakfastInput, lstLunchInput, lstSnacksInput, lstDinnerInput, notes);
             }
             else
             {
@@ -948,6 +998,11 @@ namespace GymAndFitness
         {
             Features.OpenProfileForm();
             this.Hide();
+        }
+
+        private void cmbDietType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Features.ComboBoxValidation(sender, e);
         }
     }
 }

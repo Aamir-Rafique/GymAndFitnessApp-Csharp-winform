@@ -227,6 +227,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(286, 210);
             this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblStartingWeight
             // 
@@ -546,7 +547,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = global::GymAndFitness.Properties.Resources.power_button;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(679, 20);
+            this.btnLogout.Location = new System.Drawing.Point(651, 20);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(103, 37);
             this.btnLogout.TabIndex = 16;
@@ -591,7 +592,7 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = global::GymAndFitness.Properties.Resources.enter7;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(679, 20);
+            this.btnLogin.Location = new System.Drawing.Point(655, 20);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(97, 37);
             this.btnLogin.TabIndex = 15;
@@ -610,7 +611,7 @@
             this.btnChangeProfilePicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeProfilePicture.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangeProfilePicture.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnChangeProfilePicture.Location = new System.Drawing.Point(694, 315);
+            this.btnChangeProfilePicture.Location = new System.Drawing.Point(688, 315);
             this.btnChangeProfilePicture.Name = "btnChangeProfilePicture";
             this.btnChangeProfilePicture.Size = new System.Drawing.Size(120, 31);
             this.btnChangeProfilePicture.TabIndex = 4;

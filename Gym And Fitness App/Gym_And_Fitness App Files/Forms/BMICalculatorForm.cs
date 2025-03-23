@@ -1,5 +1,6 @@
 ﻿using GymAndFitness.Forms;
 using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -21,34 +22,58 @@ namespace GymAndFitness
             return instance;
         }
 
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
-
-
 
         //load
-        private void BMICalculatorForm_Load(object sender, EventArgs e)
+        private async void BMICalculatorForm_Load(object sender, EventArgs e)
         {
 
+            await BMICalculatorFormLoadEvents();
+
+            //old logic..
+
+            //// Set placeholder for TextBox
+            //Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
+            //Features.SetTextBoxPlaceholder(txtWeight, "Your weight in kg..");
+
+            ////loading behaviour of bmi scale/chart
+            //pbBMIChart.Image = Properties.Resources.bmiChartUnderW8;
+
+
+            ////  accessing current user 
+            //if (UserDataManager.CurrentUser != null)
+            //{
+            //    UserDataManager.ApplyProfilePicture(btnProfilePicture);
+            //    //load membership plan pics
+            //    pbMembershipStatus.Image = Features.MembershipStatusPic();
+
+            //}
+        }
+
+
+        private async Task BMICalculatorFormLoadEvents()
+        {
             // Set placeholder for TextBox
             Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
             Features.SetTextBoxPlaceholder(txtWeight, "Your weight in kg..");
 
-            //loading behaviour of bmi scale/chart
+            // Loading behavior of BMI scale/chart
             pbBMIChart.Image = Properties.Resources.bmiChartUnderW8;
 
-
-            //  accessing current user 
+            // Accessing current user
             if (UserDataManager.CurrentUser != null)
             {
-                userDataManager.ApplyProfilePicture(btnProfilePicture);
-                //load membership plan pics
-                pbMembershipStatus.Image = Features.MembershipStatusPic();
+                // Load membership plan pics asynchronously
+                pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
 
+                // Apply profile picture asynchronously
+                await Task.Run(() => UserDataManager.ApplyProfilePicture(btnProfilePicture));
             }
-
-
         }
 
+        public async void ReloadBMICalculatorFormData()
+        {
+            await BMICalculatorFormLoadEvents();
+        }
 
 
 

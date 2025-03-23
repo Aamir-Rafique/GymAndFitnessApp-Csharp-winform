@@ -21,15 +21,40 @@ namespace GymAndFitness
             return instance;
         }
 
-        UserDataManager userDataManager = new UserDataManager();  //Instanse of the class: (userDataManager)
 
         //form1 i.e. main
         private void Form1_Load(object sender, EventArgs e)
         {
-            //  accessing current user 
+            MainFormLoadEvents();
+
+            //old logic..
+            ////  accessing current user 
+            //if (UserDataManager.CurrentUser != null)
+            //{
+            //    UserDataManager.ApplyProfilePicture(btnProfilePicture);
+            //    btnLogout.Visible = true;
+            //    btnLogout.Enabled = true;
+            //    btnLogin.Visible = false;
+            //    btnLogin.Enabled = false;
+
+            //    //load membership plan pics
+            //    pbMembershipStatus.Image = Features.MembershipStatusPic();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No user is logged in.");
+            //    btnLogout.Visible = false;
+            //    btnLogout.Enabled = false;
+            //    btnLogin.Visible = true;
+            //    btnLogin.Enabled = true;
+            //}
+        }
+
+        private void MainFormLoadEvents()
+        {
             if (UserDataManager.CurrentUser != null)
             {
-                userDataManager.ApplyProfilePicture(btnProfilePicture);
+                UserDataManager.ApplyProfilePicture(btnProfilePicture);
                 btnLogout.Visible = true;
                 btnLogout.Enabled = true;
                 btnLogin.Visible = false;
@@ -40,12 +65,18 @@ namespace GymAndFitness
             }
             else
             {
-                MessageBox.Show("No user is logged in.");
                 btnLogout.Visible = false;
                 btnLogout.Enabled = false;
                 btnLogin.Visible = true;
                 btnLogin.Enabled = true;
+
+                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        public void ReloadMainFormData()
+        {
+            MainFormLoadEvents();
         }
 
         //hovering message
@@ -63,7 +94,11 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Features.LogoutNow();
+            DialogResult result = MessageBox.Show("Are you sure you want to LOGOUT?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                Features.LogoutNow();
+            }
         }
 
         private void btnLogin_Click_1(object sender, EventArgs e)

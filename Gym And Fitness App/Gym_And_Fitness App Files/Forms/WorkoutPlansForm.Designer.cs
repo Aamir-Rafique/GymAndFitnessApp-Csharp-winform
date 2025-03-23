@@ -206,8 +206,9 @@
             this.cmbWorkoutType.Name = "cmbWorkoutType";
             this.cmbWorkoutType.Size = new System.Drawing.Size(184, 25);
             this.cmbWorkoutType.TabIndex = 1;
-            this.cmbWorkoutType.Text = "  ";
+            this.cmbWorkoutType.Text = "  Select an option...";
             this.cmbWorkoutType.SelectedIndexChanged += new System.EventHandler(this.cmbWorkoutType_SelectedIndexChanged);
+            this.cmbWorkoutType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbWorkoutType_KeyPress);
             // 
             // label5
             // 
@@ -309,7 +310,9 @@
             this.cmbExercise.Name = "cmbExercise";
             this.cmbExercise.Size = new System.Drawing.Size(204, 25);
             this.cmbExercise.TabIndex = 4;
+            this.cmbExercise.Text = "    Select an option...";
             this.cmbExercise.SelectedIndexChanged += new System.EventHandler(this.cmbExercise_SelectedIndexChanged);
+            this.cmbExercise.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbExercise_KeyPress);
             // 
             // label3
             // 
