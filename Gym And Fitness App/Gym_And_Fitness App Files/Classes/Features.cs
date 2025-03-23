@@ -235,7 +235,7 @@ namespace GymAndFitness
         public static void OpenPremiumForm()
         {
             PremiumForm premiumForm = new PremiumForm();
-            premiumForm.ShowDialog();
+            premiumForm.Show();
         }
         public static void OpenProfileForm()
         {

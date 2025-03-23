@@ -52,11 +52,11 @@ namespace GymAndFitness
                     // Store the license key in the database
                     userDataManager.StoreLicenseKey(licenseKey);
 
-                    MessageBox.Show("Your license key has been generated. Please copy it and close this this form, then paste it in license key feild! ", "Key Generated");
+                    MessageBox.Show("Your license key has been generated.\nPlease copy it and close this form, then paste it in license key feild! ", "Key Generated",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Please select a payment method.", "Payment Required");
+                    MessageBox.Show("Please select a payment method.", "Payment Required",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 }
             }
 

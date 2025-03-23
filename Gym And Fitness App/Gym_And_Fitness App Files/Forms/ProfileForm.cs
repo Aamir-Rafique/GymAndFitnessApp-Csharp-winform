@@ -369,5 +369,11 @@ namespace GymAndFitness
                 Application.Exit(); // Exit the entire application
             }
         }
+
+        private void btnBackToDashboard_Click(object sender, EventArgs e)
+        {
+            Features.OpenDashboardForm();
+            this.Hide();
+        }
     }
 }

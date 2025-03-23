@@ -31,7 +31,6 @@ namespace GymAndFitness
                 if (UserDataManager.CurrentUser.MembershipStatus == "Premium")
                 {
                     MessageBox.Show("You are already a Premium member!");
-
                 }
                 else
                 {

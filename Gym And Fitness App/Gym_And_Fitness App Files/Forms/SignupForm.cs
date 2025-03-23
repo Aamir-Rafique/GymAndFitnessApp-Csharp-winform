@@ -412,12 +412,7 @@ namespace GymAndFitness
         }
 
 
-        private void btnBackToLogin_Click(object sender, EventArgs e)
-        {
-            Features.OpenLoginForm();
-            this.Close();
-        }
-
+     
         private void txtHeight_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtHeight.Text))
@@ -445,6 +440,12 @@ namespace GymAndFitness
             {
                 Application.Exit(); // Exit the entire application
             }
+        }
+
+        private void btnBackToLogin_Click(object sender, EventArgs e)
+        {
+            Features.OpenLoginForm();
+            this.Hide();
         }
     }
 

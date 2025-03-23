@@ -565,6 +565,7 @@
             this.btnBackToDashboard.Size = new System.Drawing.Size(42, 49);
             this.btnBackToDashboard.TabIndex = 0;
             this.btnBackToDashboard.TabStop = false;
+            this.btnBackToDashboard.Click += new System.EventHandler(this.btnBackToDashboard_Click);
             // 
             // label9
             // 

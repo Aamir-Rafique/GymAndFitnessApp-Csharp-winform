@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rCEAig4I73OIMLBhLMPeZPnB5Zx837XuvchTvN1NI8I=</dsig:DigestValue>
+        <dsig:DigestValue>mdc7KBO1zu7XCSaZeW6mU4gjOK0T8t/OwuiIeiUFduw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -480,7 +480,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>xzu7yGMfHS41H6oYQWdCfNauVW8APBq6eL0a7xqt5E8=</dsig:DigestValue>
+      <dsig:DigestValue>nFvn/gZRBrx5orZRILUGl6OqZ2JqlWTOa6f7iKP+7WI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Database_files\GymAndFitness_DB_log.ldf" size="75497472" writeableType="applicationData">
@@ -489,7 +489,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>mB2hoXzUJovc8h0VP9mJ7/ftDktyStPKd+V4WGxNcic=</dsig:DigestValue>
+      <dsig:DigestValue>ol+3T2pnBE1CyMxeGzqdvzI5H/fhPtMdqk5cg+TsB1Q=</dsig:DigestValue>
     </hash>
   </file>
   <file name="fitness.ico" size="191033">
@@ -516,7 +516,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>B2iTB214X07jU2mQ5jRO6f46Aut8PMJ237l7YvLpWGk=</dsig:DigestValue>
+      <dsig:DigestValue>k7kMkLucYmS+NrX8gkyazGh8jvtN4epn6OEMgHqlZg8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ILLink\ILLink.Descriptors.LibraryBuild.xml" size="297" writeableType="applicationData">
