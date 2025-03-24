@@ -5,54 +5,75 @@ namespace GymAndFitness
 {
     public partial class PaymentForm : Form
     {
-        public PaymentForm() // Accept username as a parameter
+        private PaymentForm()
         {
             InitializeComponent();
         }
 
+
+        private static PaymentForm instance;
+        public static PaymentForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new PaymentForm();
+            }
+            return instance;
+        }
         private void PaymentForm_Load(object sender, EventArgs e)
         {
             // Set placeholder for TextBox
             Features.SetTextBoxPlaceholder(txtEmail, "Enter Your Email...");
-            Features.SetTextBoxPlaceholder(txtGeneratedKey, "Your Key Appears here...");
         }
 
-        private void btnGenerateKey_Click(object sender, EventArgs e)
+        private void btnActivatePremium_Click(object sender, EventArgs e)
         {
-            // Check if any radio button is selected
-            if (!IsAnyRadioButtonChecked())
+            if (UserDataManager.CurrentUser != null)
             {
-                errorGroupBoxRadioButtons.SetError(groupBoxRadioButtons, "Please select a payment method.");
-            }
 
-            // Check if email is empty or invalid
-            else if (string.IsNullOrEmpty(txtEmail.Text) || !txtEmail.Text.Contains("@"))
-            {
-                errorEmail.SetError(txtEmail, "Please enter a valid email address.");
-            }
-
-            else
-            {
-                // Determine the selected payment method
-                string paymentMethod = GetSelectedPaymentMethod();
-
-                if (!string.IsNullOrEmpty(paymentMethod))
+                // Check if any radio button is selected
+                if (!IsAnyRadioButtonChecked())
                 {
-                    // Generate a random license key
-                    string licenseKey = Guid.NewGuid().ToString().Substring(0, 8).ToUpper();
-
-                    // Display the license key to the user
-                    txtGeneratedKey.Text = licenseKey;
-
-                    // Store the license key in the database
-                    UserDataManager.StoreLicenseKey(licenseKey);
-
-                    MessageBox.Show("Your license key has been generated.\nPlease copy it and close this form, then paste it in license key feild! ", "Key Generated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    error.SetError(groupBoxRadioButtons, "Please select a payment method.");
                 }
+
+                // Check if email is empty or invalid
+                else if (string.IsNullOrEmpty(txtEmail.Text) || !txtEmail.Text.Contains("@"))
+                {
+                    error.SetError(txtEmail, "Please enter a valid email address. for eg. someone@gmail.com ");
+                }
+
                 else
                 {
-                    MessageBox.Show("Please select a payment method.", "Payment Required", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    // Determine the selected payment method
+                    string paymentMethod = GetSelectedPaymentMethod();
+
+                    if (!string.IsNullOrEmpty(paymentMethod))
+                    {
+                        string username = UserDataManager.CurrentUser.Username;
+                        // Generate a random license key
+                        string licenseKey = Guid.NewGuid().ToString().Substring(0, 8).ToUpper();
+
+                        // Store the license key in the database
+                        UserDataManager.StoreLicenseKey(licenseKey);
+
+                        //method to verify licensekey..
+                        UserDataManager.VerifyLicenseKey(username, licenseKey);
+
+                        MessageBox.Show("You have a Premium membership now!", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        Features.OpenProfileForm();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please select a payment method.", "Payment Required", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
 
@@ -97,7 +118,7 @@ namespace GymAndFitness
 
         private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorEmail.Clear();
+            error.Clear();
         }
 
         private void txtEmail_KeyDown(object sender, KeyEventArgs e)
@@ -105,7 +126,7 @@ namespace GymAndFitness
             if (e.KeyCode == Keys.Enter) // Check if Enter key was pressed
             {
                 e.SuppressKeyPress = true; // Prevent the default behavior (e.g., beep sound)
-                btnGenerateKey.PerformClick(); // Trigger the button's click event
+                btnActivatePremium.PerformClick(); // Trigger the button's click event
             }
         }
 
@@ -116,6 +137,20 @@ namespace GymAndFitness
                 Application.Exit(); // Exit the entire application
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Features.OpenMembershipForm();
+            this.Close();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Features.OpenMembershipForm();
+            this.Hide();
+        }
+
+
     }
 
 }

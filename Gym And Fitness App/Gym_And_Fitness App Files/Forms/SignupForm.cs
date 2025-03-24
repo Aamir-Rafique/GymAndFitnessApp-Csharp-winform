@@ -7,11 +7,21 @@ namespace GymAndFitness
 {
     public partial class SignupForm : Form
     {
+        private static SignupForm instance;
+
         public SignupForm()
         {
             InitializeComponent();
         }
 
+        public static SignupForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new SignupForm();
+            }
+            return instance;
+        }
 
         //Load
         private void SignupForm_Load(object sender, EventArgs e)
@@ -443,7 +453,7 @@ namespace GymAndFitness
             }
         }
 
-        private void btnBackToLogin_Click(object sender, EventArgs e)
+        private void btnBackToLogin_Click_1(object sender, EventArgs e)
         {
             Features.OpenLoginForm();
             this.Close();

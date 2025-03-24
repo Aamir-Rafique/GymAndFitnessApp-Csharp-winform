@@ -251,7 +251,7 @@ namespace GymAndFitness
         public static void OpenLoginForm()
         {
             LoginForm.GetInstance().Show();
-            LoginForm.GetInstance().BringToFront();
+            //LoginForm.GetInstance().BringToFront();
         }
 
         public static void OpenMainForm()
@@ -266,18 +266,11 @@ namespace GymAndFitness
         }
         public static void OpenMembershipForm()
         {
-            MembershipForm membershipForm = new MembershipForm();
-            membershipForm.ShowDialog();
+            MembershipForm.GetInstance().Show();
         }
         public static void OpenPaymentForm()
         {
-            PaymentForm paymentForm = new PaymentForm();
-            paymentForm.ShowDialog();
-        }
-        public static void OpenPremiumForm()
-        {
-            PremiumForm premiumForm = new PremiumForm();
-            premiumForm.Show();
+            PaymentForm.GetInstance().Show();
         }
         public static void OpenProfileForm()
         {
@@ -291,8 +284,7 @@ namespace GymAndFitness
         }
         public static void OpenSignUpForm()
         {
-            SignupForm signupForm = new SignupForm();
-            signupForm.ShowDialog();
+            SignupForm.GetInstance().Show();
         }
         public static void OpenWorkoutPlansForm()
         {

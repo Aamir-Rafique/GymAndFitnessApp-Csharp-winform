@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignupForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBackToLogin = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbFitnessLevel = new System.Windows.Forms.ComboBox();
@@ -65,10 +64,11 @@
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.ribbonControl1 = new GymAndFitness.Classes.RibbonControl();
+            this.btnBackToLogin = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,19 +81,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(880, 68);
             this.panel1.TabIndex = 3;
-            // 
-            // btnBackToLogin
-            // 
-            this.btnBackToLogin.BackgroundImage = global::GymAndFitness.Properties.Resources.previous;
-            this.btnBackToLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBackToLogin.Location = new System.Drawing.Point(30, 10);
-            this.btnBackToLogin.Name = "btnBackToLogin";
-            this.btnBackToLogin.Size = new System.Drawing.Size(57, 49);
-            this.btnBackToLogin.TabIndex = 1;
-            this.btnBackToLogin.TabStop = false;
-            this.toolTip1.SetToolTip(this.btnBackToLogin, "Back to Login");
-            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click);
             // 
             // label1
             // 
@@ -470,6 +457,18 @@
             this.ribbonControl1.Size = new System.Drawing.Size(880, 34);
             this.ribbonControl1.TabIndex = 82;
             // 
+            // btnBackToLogin
+            // 
+            this.btnBackToLogin.BackgroundImage = global::GymAndFitness.Properties.Resources.previous;
+            this.btnBackToLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackToLogin.Location = new System.Drawing.Point(23, 8);
+            this.btnBackToLogin.Name = "btnBackToLogin";
+            this.btnBackToLogin.Size = new System.Drawing.Size(42, 49);
+            this.btnBackToLogin.TabIndex = 3;
+            this.btnBackToLogin.TabStop = false;
+            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click_1);
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,9 +519,9 @@
             this.Load += new System.EventHandler(this.SignupForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,7 +556,6 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.ToolTip toolTip1;
         private Classes.RoundPictureBox pbProfilePicture;
-        private System.Windows.Forms.PictureBox btnBackToLogin;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtTargetWeight;
         private System.Windows.Forms.Label label17;
@@ -565,5 +563,6 @@
         private System.Windows.Forms.Label lblProfilePicturePath;
         private System.Windows.Forms.ErrorProvider error;
         private Classes.RibbonControl ribbonControl1;
+        private System.Windows.Forms.PictureBox btnBackToLogin;
     }
 }

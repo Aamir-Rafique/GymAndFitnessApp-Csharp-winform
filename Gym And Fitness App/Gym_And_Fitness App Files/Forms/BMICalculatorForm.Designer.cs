@@ -52,6 +52,7 @@
             this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.panel3.SuspendLayout();
@@ -329,12 +330,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "BMI Calculator";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(802, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(10, 26);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.Visible = false;
+            // 
             // BMICalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pbBMIChart);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
@@ -364,6 +376,7 @@
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.pbBMIChart, 0);
+            this.Controls.SetChildIndex(this.textBox1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -401,5 +414,6 @@
         private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

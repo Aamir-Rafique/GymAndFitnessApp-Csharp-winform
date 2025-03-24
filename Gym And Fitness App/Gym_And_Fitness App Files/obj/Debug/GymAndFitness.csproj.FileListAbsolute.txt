@@ -88,7 +88,6 @@ C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.DietPlansForm.resources
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.Forms.LoadingForm.resources
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.PaymentForm.resources
-C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.PremiumForm.resources
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.LoginForm.resources
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.MainForm.resources
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.MembershipForm.resources

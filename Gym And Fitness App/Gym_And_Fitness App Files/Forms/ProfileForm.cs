@@ -180,12 +180,11 @@ namespace GymAndFitness
                 }
                 else
                 {
-                    this.Close();
-
                     Features.OpenMembershipForm();
+                    this.Hide();
                     lblMembershipStatus.Text = $"{UserDataManager.CurrentUser.MembershipStatus}";
 
-                    //membership pln pic
+                    //membership pln picture..
                     //load membership plan pics
                     if (lblMembershipStatus.Text == "Free")
                     {
@@ -204,7 +203,7 @@ namespace GymAndFitness
             }
             else
             {
-                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
         }

@@ -189,13 +189,11 @@ namespace GymAndFitness
 
                     if (result != null && result.ToString() == enteredKey)
                     {
-                        MessageBox.Show("License key validated successfully! You now have premium membership.", "Validation Success");
+                        MessageBox.Show("License key validated successfully!", "Validation Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                         CurrentUser.MembershipStatus = "Premium";
                         UpdateMembershipInDatabase("Premium");
 
-                        Features.OpenProfileForm();
-                        Application.OpenForms["PremiumForm"].Close();
                     }
                     else
                     {
@@ -222,7 +220,7 @@ namespace GymAndFitness
             }
         }
 
-        // Store license key
+        // Store license key 
         public static void StoreLicenseKey(string licenseKey)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

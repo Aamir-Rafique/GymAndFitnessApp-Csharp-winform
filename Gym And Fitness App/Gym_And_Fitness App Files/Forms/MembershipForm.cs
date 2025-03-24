@@ -5,22 +5,31 @@ namespace GymAndFitness
 {
     public partial class MembershipForm : Form
     {
-        public MembershipForm()
+        private MembershipForm()
         {
             InitializeComponent();
         }
 
+        private static MembershipForm instance;
+        public static MembershipForm GetInstance()
+        {
+            if (instance == null || instance.IsDisposed)
+            {
+                instance = new MembershipForm();
+            }
+            return instance;
+        }
         private void btnFreePlan_Click(object sender, EventArgs e)
         {
             if (UserDataManager.CurrentUser != null)
             {
                 MessageBox.Show("You are already using a free plan!", "Attention");
-                this.Close();
                 Features.OpenProfileForm();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("No user is logged in.");
+                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -34,13 +43,13 @@ namespace GymAndFitness
                 }
                 else
                 {
-                    Features.OpenPremiumForm();
+                    Features.OpenPaymentForm();
                     this.Close();
                 }
             }
             else
             {
-                MessageBox.Show("No user is logged in.");
+                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
         private void MembershipForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -49,6 +58,18 @@ namespace GymAndFitness
             {
                 Application.Exit(); // Exit the entire application
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Close();
         }
     }
 }
