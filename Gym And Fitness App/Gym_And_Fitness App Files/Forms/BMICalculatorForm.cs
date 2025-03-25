@@ -22,6 +22,15 @@ namespace GymAndFitness
             return instance;
         }
 
+        //method to update profile picture in the forms.. after it is changed in profile form...
+        public void RefreshProfilePicture()
+        {
+            if (UserDataManager.CurrentUser != null)
+            {
+                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+            }
+        }
+
 
         //load
         private async void BMICalculatorForm_Load(object sender, EventArgs e)

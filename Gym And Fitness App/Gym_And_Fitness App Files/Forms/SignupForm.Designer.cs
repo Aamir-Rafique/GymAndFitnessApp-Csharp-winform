@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignupForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBackToLogin = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.cmbFitnessLevel = new System.Windows.Forms.ComboBox();
@@ -64,11 +65,11 @@
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.ribbonControl1 = new GymAndFitness.Classes.RibbonControl();
-            this.btnBackToLogin = new System.Windows.Forms.PictureBox();
+            this.lblUsernameStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,6 +82,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(880, 68);
             this.panel1.TabIndex = 3;
+            // 
+            // btnBackToLogin
+            // 
+            this.btnBackToLogin.BackgroundImage = global::GymAndFitness.Properties.Resources.previous;
+            this.btnBackToLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackToLogin.Location = new System.Drawing.Point(23, 8);
+            this.btnBackToLogin.Name = "btnBackToLogin";
+            this.btnBackToLogin.Size = new System.Drawing.Size(42, 49);
+            this.btnBackToLogin.TabIndex = 3;
+            this.btnBackToLogin.TabStop = false;
+            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click_1);
             // 
             // label1
             // 
@@ -170,7 +183,7 @@
             // txtAge
             // 
             this.txtAge.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(175, 238);
+            this.txtAge.Location = new System.Drawing.Point(175, 239);
             this.txtAge.Name = "txtAge";
             this.txtAge.Size = new System.Drawing.Size(148, 26);
             this.txtAge.TabIndex = 2;
@@ -180,7 +193,7 @@
             // txtHeight
             // 
             this.txtHeight.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeight.Location = new System.Drawing.Point(496, 181);
+            this.txtHeight.Location = new System.Drawing.Point(496, 178);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(148, 26);
             this.txtHeight.TabIndex = 4;
@@ -202,7 +215,7 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(175, 179);
+            this.txtUsername.Location = new System.Drawing.Point(175, 176);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(148, 26);
             this.txtUsername.TabIndex = 1;
@@ -250,7 +263,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(367, 183);
+            this.label5.Location = new System.Drawing.Point(367, 180);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 21);
             this.label5.TabIndex = 47;
@@ -297,7 +310,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(47, 181);
+            this.label2.Location = new System.Drawing.Point(47, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 21);
             this.label2.TabIndex = 43;
@@ -457,17 +470,15 @@
             this.ribbonControl1.Size = new System.Drawing.Size(880, 34);
             this.ribbonControl1.TabIndex = 82;
             // 
-            // btnBackToLogin
+            // lblUsernameStatus
             // 
-            this.btnBackToLogin.BackgroundImage = global::GymAndFitness.Properties.Resources.previous;
-            this.btnBackToLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBackToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBackToLogin.Location = new System.Drawing.Point(23, 8);
-            this.btnBackToLogin.Name = "btnBackToLogin";
-            this.btnBackToLogin.Size = new System.Drawing.Size(42, 49);
-            this.btnBackToLogin.TabIndex = 3;
-            this.btnBackToLogin.TabStop = false;
-            this.btnBackToLogin.Click += new System.EventHandler(this.btnBackToLogin_Click_1);
+            this.lblUsernameStatus.AutoSize = true;
+            this.lblUsernameStatus.Font = new System.Drawing.Font("Cascadia Code", 9.267326F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameStatus.ForeColor = System.Drawing.Color.Purple;
+            this.lblUsernameStatus.Location = new System.Drawing.Point(175, 205);
+            this.lblUsernameStatus.Name = "lblUsernameStatus";
+            this.lblUsernameStatus.Size = new System.Drawing.Size(0, 17);
+            this.lblUsernameStatus.TabIndex = 83;
             // 
             // SignupForm
             // 
@@ -475,6 +486,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(880, 550);
+            this.Controls.Add(this.lblUsernameStatus);
             this.Controls.Add(this.cmbFitnessLevel);
             this.Controls.Add(this.txtTargetWeight);
             this.Controls.Add(this.txtConfirmPassword);
@@ -519,9 +531,9 @@
             this.Load += new System.EventHandler(this.SignupForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -564,5 +576,6 @@
         private System.Windows.Forms.ErrorProvider error;
         private Classes.RibbonControl ribbonControl1;
         private System.Windows.Forms.PictureBox btnBackToLogin;
+        private System.Windows.Forms.Label lblUsernameStatus;
     }
 }

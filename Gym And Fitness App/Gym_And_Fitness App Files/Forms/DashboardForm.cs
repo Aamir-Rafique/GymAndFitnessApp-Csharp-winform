@@ -22,6 +22,32 @@ namespace GymAndFitness
             return instance;
         }
 
+        //method to update profile picture in the forms.. after it is changed in profile form...
+
+        public void RefreshProfilePic_ProgressBarWeight()
+        {
+            if (UserDataManager.CurrentUser != null)
+            {
+                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                ProgressBarWeight();
+            }
+        }
+
+        public void ProgressBarWeight()
+        {
+            // Weight Progress
+            double startingWeight = UserDataManager.CurrentUser.StartingWeight;
+            double currentWeight = UserDataManager.CurrentUser.CurrentWeight;
+            double targetWeight = UserDataManager.CurrentUser.TargetWeight;
+            double weightProgressPercentage = CalculateWeightProgress(
+                startingWeight, currentWeight, targetWeight, UserDataManager.CurrentUser.FitnessGoal
+            );
+
+            // Update progress bar and label
+            progressBarWeight.Value = (int)weightProgressPercentage;
+            lblWeightProgess.Text = $"Weight Progress: {Math.Round(weightProgressPercentage)}% ({currentWeight} kg out of {targetWeight} kg)";
+        }
+
         //LOAD
         private async void DashboardForm_Load(object sender, EventArgs e)
         {
@@ -130,6 +156,7 @@ namespace GymAndFitness
 
         }
 
+
         private async Task DasboardFormLoadEvents()
         {
             // Start timers
@@ -154,17 +181,9 @@ namespace GymAndFitness
                 btnLogin.Visible = false;
                 btnLogin.Enabled = false;
 
-                // Weight Progress
-                double startingWeight = UserDataManager.CurrentUser.StartingWeight;
-                double currentWeight = UserDataManager.CurrentUser.CurrentWeight;
-                double targetWeight = UserDataManager.CurrentUser.TargetWeight;
-                double weightProgressPercentage = CalculateWeightProgress(
-                    startingWeight, currentWeight, targetWeight, UserDataManager.CurrentUser.FitnessGoal
-                );
+                //weight progress method..
+                ProgressBarWeight();
 
-                // Update progress bar and label
-                progressBarWeight.Value = (int)weightProgressPercentage;
-                lblWeightProgess.Text = $"Weight Progress: {Math.Round(weightProgressPercentage)}% ({currentWeight} kg out of {targetWeight} kg)";
 
                 // Water Intake Progress
                 lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";

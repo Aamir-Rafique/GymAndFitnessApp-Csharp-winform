@@ -65,6 +65,34 @@ namespace GymAndFitness
             }
         }
 
+        //helper method to check whether the entered username is avalable or not..
+        public static bool IsUsernameAvailable(string username)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM Users WHERE Username COLLATE Latin1_General_CS_AS = @Username";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Username", username);
+
+                        int count = (int)cmd.ExecuteScalar();
+
+                        return count == 0; // Returns true if username is available, false if taken
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false; // Return false in case of an error
+                }
+            }
+        }
+
+
 
 
         // Verify login
@@ -189,7 +217,7 @@ namespace GymAndFitness
 
                     if (result != null && result.ToString() == enteredKey)
                     {
-                        MessageBox.Show("License key validated successfully!", "Validation Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("License key validated successfully!", "Validation Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         CurrentUser.MembershipStatus = "Premium";
                         UpdateMembershipInDatabase("Premium");

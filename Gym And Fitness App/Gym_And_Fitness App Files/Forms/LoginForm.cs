@@ -63,7 +63,7 @@ namespace GymAndFitness
                     if (user != null && user.Password == txtPassword.Text)
                     {
                         UserDataManager.CurrentUser = user;
-                        MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!"," ",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!", " ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                         // Open main form

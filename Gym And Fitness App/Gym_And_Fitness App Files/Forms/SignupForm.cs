@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
@@ -44,7 +45,10 @@ namespace GymAndFitness
             {
                 txtUsername.Focus(); //isi pr focus!
                 error.SetError(this.txtUsername, "Please Enter your name");
+
+
             }
+
             else if (string.IsNullOrEmpty(txtAge.Text))
             {
                 txtAge.Focus(); //isi pr focus!
@@ -288,6 +292,12 @@ namespace GymAndFitness
             else
             {
                 e.Handled = true;
+            }
+
+            if (!UserDataManager.IsUsernameAvailable(txtUsername.Text))
+            {
+                lblUsernameStatus.ForeColor = Color.Red;
+                lblUsernameStatus.Text = "Username already taken!";
             }
         }
 

@@ -27,6 +27,14 @@ namespace GymAndFitness
             return instance;
         }
 
+        //method to update profile picture in the forms.. after it is changed in profile form...
+        public void RefreshProfilePicture()
+        {
+            if (UserDataManager.CurrentUser != null)
+            {
+                UserDataManager.ApplyProfilePicture(btnProfilePicture1);
+            }
+        }
 
         //load
         private async void WorkoutPlansForm_Load(object sender, EventArgs e)
@@ -470,6 +478,7 @@ namespace GymAndFitness
         private void btnProfilePicture1_Click(object sender, EventArgs e)
         {
             Features.OpenProfileForm();
+            this.Hide();
         }
 
         private void cmbWorkoutType_KeyPress(object sender, KeyPressEventArgs e)

@@ -22,7 +22,11 @@ namespace GymAndFitness.Classes
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit(); // Closes the entire application
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); // Closes the entire application
+            }
         }
 
         // Make the ribbon draggable (so users can move the window)

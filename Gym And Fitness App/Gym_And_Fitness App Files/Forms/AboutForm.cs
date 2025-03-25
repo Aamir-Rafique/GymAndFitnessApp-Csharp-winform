@@ -24,7 +24,14 @@ namespace GymAndFitness
             return instance;
         }
 
-       
+        //method to update profile picture in the forms.. after it is changed in profile form...
+        public void RefreshProfilePicture()
+        {
+            if (UserDataManager.CurrentUser != null)
+            {
+                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+            }
+        }
 
         private void AboutForm_Load(object sender, EventArgs e)
         {
@@ -72,7 +79,7 @@ namespace GymAndFitness
 
 
 
-            //old logic (without async..)
+        //old logic (without async..)
         //private void AboutFormLoadEvents()
         //{
         //    lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals by providing personalized workout plans, nutritional guidance, and progress tracking. Whether you're looking to build muscle, lose weight, or improve overall fitness, this app offers a comprehensive solution to support your journey. Our mission is to make fitness accessible, convenient, and enjoyable for everyone. Stay fit, stay healthy!";
