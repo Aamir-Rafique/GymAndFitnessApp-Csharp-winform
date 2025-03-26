@@ -23,12 +23,13 @@ namespace GymAndFitness
         }
 
         //method to update profile picture in the forms.. after it is changed in profile form...
-
-        public void RefreshProfilePic_ProgressBarWeight()
+        public void RefreshDashboardFormElements()
         {
             if (UserDataManager.CurrentUser != null)
             {
                 UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
+                PremiumFeatureDashboardForm();
                 ProgressBarWeight();
             }
         }
@@ -45,7 +46,11 @@ namespace GymAndFitness
 
             // Update progress bar and label
             progressBarWeight.Value = (int)weightProgressPercentage;
-            lblWeightProgess.Text = $"Weight Progress: {Math.Round(weightProgressPercentage)}% ({currentWeight} kg out of {targetWeight} kg)";
+            lblWeightProgess.Text = $"Fitness Progress: {Math.Round(weightProgressPercentage)}% ";
+            if (progressBarWeight.Value == 100)
+            {
+                lblWeightProgess.Text = $"Congratulations! You have achieved your goal.";
+            }
         }
 
         //LOAD
@@ -184,16 +189,17 @@ namespace GymAndFitness
                 //weight progress method..
                 ProgressBarWeight();
 
-
                 // Water Intake Progress
                 lblWaterIntake.Text = $"{UserDataManager.CurrentUser.DailyWaterIntake} / 8 Glasses";
                 progressBarWater.Value = (int)((UserDataManager.CurrentUser.DailyWaterIntake / 8.0) * 100);
-
-                // Disable water tracker for free members
-                if (IsFreeMember(UserDataManager.CurrentUser.MembershipStatus))
+                if (progressBarWater.Value == 100)
                 {
-                    DisableWaterTrackerFeatures();
+                    lblWaterIntake.Text = "Great!";
                 }
+
+
+                PremiumFeatureDashboardForm();
+
             }
             else
             {
@@ -216,46 +222,76 @@ namespace GymAndFitness
         {
             double weightProgressPercentage = 0;
 
-            // Handle null values and calculate progress
-            fitnessGoal = fitnessGoal?.ToLower();
+            // Ensure fitnessGoal is valid
+            if (string.IsNullOrWhiteSpace(fitnessGoal))
+            {
+                return 0; // No valid goal provided
+            }
+
+            fitnessGoal = fitnessGoal.ToLower();
+
             if (targetWeight != startingWeight)
             {
                 double weightDifference = Math.Abs(targetWeight - startingWeight);
+                double progress = Math.Abs(currentWeight - startingWeight);
+
+                // Check if progress should be calculated
                 bool isValidRange =
-                    (fitnessGoal == "muscle gain" && currentWeight >= startingWeight && currentWeight <= targetWeight) ||
-                    (fitnessGoal == "fat loss" && currentWeight <= startingWeight && currentWeight >= targetWeight);
+                    (fitnessGoal == "muscle gain" && currentWeight >= startingWeight) ||
+                    (fitnessGoal == "fat loss" && currentWeight <= startingWeight);
 
                 if (isValidRange)
                 {
-                    double progress = Math.Abs(currentWeight - startingWeight);
                     weightProgressPercentage = (progress / weightDifference) * 100;
+
+                    // **New Logic: Handle Overachievement**
+                    if ((fitnessGoal == "muscle gain" && currentWeight > targetWeight) ||
+                        (fitnessGoal == "fat loss" && currentWeight < targetWeight))
+                    {
+                        weightProgressPercentage = 100; // Cap at 100%
+                        // OR: Allow overachievement: weightProgressPercentage = (progress / weightDifference) * 110;
+                    }
                 }
             }
 
-            return Math.Min(100, Math.Max(0, weightProgressPercentage));
+            return Math.Min(100, weightProgressPercentage); // Ensure max is 100%
         }
 
-        // Helper Method to Check Membership Status
-        private bool IsFreeMember(string membershipStatus)
-        {
-            return membershipStatus == "Free" || string.IsNullOrEmpty(membershipStatus);
-        }
+
 
         // Helper Method to Disable Water Tracker Features
-        private void DisableWaterTrackerFeatures()
+        private void PremiumFeatureDashboardForm()
         {
-            lblPremiumMembers.Text = "For Premium Members Only!";
-            pnlWaterIntake.BackColor = Color.Gainsboro;
-            pnlWaterIntake.ForeColor = Color.Gray;
-            btnAddWater.BackColor = Color.Gainsboro;
-            btnAddWater.Enabled = false;
-            lblWaterIntake.ForeColor = Color.Gray;
-            lblGlasses.ForeColor = Color.Gray;
-            progressBarWater.Enabled = false;
-            progressBarWater.Value = 0;
-            toolTip.SetToolTip(pnlWaterIntake, "Upgrade to Premium to access this feature!");
-            toolTip.SetToolTip(pbwaterintake, "Upgrade to Premium to access this feature!");
-            pnlWaterIntake.Cursor = Cursors.Hand;
+            if (UserDataManager.CurrentUser.MembershipStatus == "Free" ||
+               UserDataManager.CurrentUser.MembershipStatus == null)
+            {
+                lblPremiumMembers.Text = "For Premium Members Only!";
+                pnlWaterIntake.BackColor = Color.Gainsboro;
+                pnlWaterIntake.ForeColor = Color.Gray;
+                btnAddWater.BackColor = Color.Gainsboro;
+                btnAddWater.Enabled = false;
+                lblWaterIntake.ForeColor = Color.Gray;
+                lblGlasses.ForeColor = Color.Gray;
+                progressBarWater.Enabled = false;
+                progressBarWater.Value = 0;
+                toolTip.SetToolTip(pnlWaterIntake, "Upgrade to Premium to access this feature!");
+                toolTip.SetToolTip(pbwaterintake, "Upgrade to Premium to access this feature!");
+                pnlWaterIntake.Cursor = Cursors.Hand;
+            }
+            else
+            {
+                lblPremiumMembers.Text = "";
+                pnlWaterIntake.BackColor = Color.Turquoise;
+                pnlWaterIntake.ForeColor = Color.Black;
+                btnAddWater.BackColor = Color.DodgerBlue;
+                btnAddWater.Enabled = true;
+                lblWaterIntake.ForeColor = Color.Blue;
+                lblGlasses.ForeColor = Color.Blue;
+                progressBarWater.Enabled = true;
+                toolTip.SetToolTip(pnlWaterIntake, "");
+                toolTip.SetToolTip(pbwaterintake, "");
+                pnlWaterIntake.Cursor = Cursors.Arrow;
+            }
         }
 
         public async void ReloadDashboardFormData()
@@ -514,11 +550,11 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
-                toolTip.SetToolTip(progressBarWater, $"Current Intake: {UserDataManager.CurrentUser.DailyWaterIntake} glass\nTarget Weight: {UserDataManager.CurrentUser.TargetWeight} kg");
+                toolTip.SetToolTip(progressBarWater, $"Current Intake: {UserDataManager.CurrentUser.DailyWaterIntake} glass\nTarget Intake: 8 glass");
             }
             else
             {
-                toolTip.SetToolTip(progressBarWeight, $"Login to view your progress!");
+                toolTip.SetToolTip(progressBarWater, $"Login to view your progress!");
             }
         }
 

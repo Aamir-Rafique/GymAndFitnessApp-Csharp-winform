@@ -45,6 +45,8 @@
             this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
             this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLinkedin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacebook)).BeginInit();
@@ -176,11 +178,12 @@
             this.lblPurpose.AutoSize = true;
             this.lblPurpose.BackColor = System.Drawing.Color.PaleGreen;
             this.lblPurpose.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurpose.Location = new System.Drawing.Point(132, 197);
+            this.lblPurpose.Location = new System.Drawing.Point(132, 228);
             this.lblPurpose.MaximumSize = new System.Drawing.Size(530, 0);
             this.lblPurpose.Name = "lblPurpose";
-            this.lblPurpose.Size = new System.Drawing.Size(0, 21);
+            this.lblPurpose.Size = new System.Drawing.Size(73, 21);
             this.lblPurpose.TabIndex = 8;
+            this.lblPurpose.Text = "loading..";
             // 
             // lblVersion
             // 
@@ -248,12 +251,40 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "About Gym && Fitness App";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.PaleGreen;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(262, 185);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 23);
+            this.label2.TabIndex = 43;
+            this.label2.Text = "Aamir Rafique";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.PaleGreen;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(133, 184);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 23);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "Developed by:";
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(782, 603);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
@@ -284,6 +315,8 @@
             this.Controls.SetChildIndex(this.pictureBox1, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.lblVersion, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLinkedin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacebook)).EndInit();
@@ -314,5 +347,7 @@
         private System.Windows.Forms.PictureBox pbMembershipStatus;
         private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }

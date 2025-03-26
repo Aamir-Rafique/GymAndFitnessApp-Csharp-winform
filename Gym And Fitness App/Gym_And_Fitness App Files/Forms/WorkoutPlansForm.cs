@@ -28,11 +28,13 @@ namespace GymAndFitness
         }
 
         //method to update profile picture in the forms.. after it is changed in profile form...
-        public void RefreshProfilePicture()
+        public void RefreshWorkoutPlansFormElements()
         {
             if (UserDataManager.CurrentUser != null)
             {
                 UserDataManager.ApplyProfilePicture(btnProfilePicture1);
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
+                PremiumFeatureWorkoutPlan();
             }
         }
 
@@ -87,11 +89,7 @@ namespace GymAndFitness
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
                 await Task.Run(() => UserDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId));
 
-                // Update save workout plan button for free members
-                if (UserDataManager.CurrentUser.MembershipStatus == "Free")
-                {
-                    btnSaveWorkoutPlan.BackColor = Color.Gray;
-                }
+
             }
 
             // Align combo box text to center
@@ -104,6 +102,18 @@ namespace GymAndFitness
             await WorkoutPlansFormLoadEvents();
         }
 
+        public void PremiumFeatureWorkoutPlan()
+        {
+            // Update save workout plan button for free members
+            if (UserDataManager.CurrentUser.MembershipStatus == "Free")
+            {
+                btnSaveWorkoutPlan.BackColor = Color.Gray;
+            }
+            else
+            {
+                btnSaveWorkoutPlan.BackColor = Color.MediumSpringGreen;
+            }
+        }
 
         private int imageIndex = 0;
 

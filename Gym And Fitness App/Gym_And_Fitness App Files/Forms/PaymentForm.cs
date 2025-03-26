@@ -22,6 +22,7 @@ namespace GymAndFitness
         }
         private void PaymentForm_Load(object sender, EventArgs e)
         {
+            textBox1.Focus();
             // Set placeholder for TextBox
             Features.SetTextBoxPlaceholder(txtEmail, "Enter Your Email...");
         }

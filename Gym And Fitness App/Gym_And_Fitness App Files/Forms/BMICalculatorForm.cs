@@ -23,11 +23,12 @@ namespace GymAndFitness
         }
 
         //method to update profile picture in the forms.. after it is changed in profile form...
-        public void RefreshProfilePicture()
+        public void RefreshBMIFormElements()
         {
             if (UserDataManager.CurrentUser != null)
             {
                 UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
             }
         }
 
@@ -210,5 +211,6 @@ namespace GymAndFitness
             Features.OpenProfileForm();
             this.Hide();
         }
+
     }
 }

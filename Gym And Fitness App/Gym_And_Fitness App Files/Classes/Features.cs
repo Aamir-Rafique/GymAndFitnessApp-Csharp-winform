@@ -9,8 +9,6 @@ namespace GymAndFitness
     public static class Features
     {
 
-
-
         //method for combo box.. so it could be selected using enter and arrow keys..
         public static void ComboBoxValidation(object sender, KeyPressEventArgs e)
         {
@@ -209,7 +207,7 @@ namespace GymAndFitness
                 AboutForm.GetInstance().ReloadAboutFormData();
                 hasAboutReloaded = true; // Set the flag to true after the method is called
             }
-            AboutForm.GetInstance().RefreshProfilePicture();
+            AboutForm.GetInstance().RefreshAboutFormElements();
             AboutForm.GetInstance().Show();
             AboutForm.GetInstance().BringToFront();
 
@@ -222,7 +220,7 @@ namespace GymAndFitness
                 BMICalculatorForm.GetInstance().ReloadBMICalculatorFormData();
                 hasBMIReloaded = true; // Set the flag to true after the method is called
             }
-            BMICalculatorForm.GetInstance().RefreshProfilePicture();
+            BMICalculatorForm.GetInstance().RefreshBMIFormElements();
             BMICalculatorForm.GetInstance().Show();
             BMICalculatorForm.GetInstance().BringToFront();
         }
@@ -235,7 +233,7 @@ namespace GymAndFitness
                 hasDashboardReloaded = true; // Set the flag to true after the method is called
             }
             DashboardForm.GetInstance().Show();
-            DashboardForm.GetInstance().RefreshProfilePic_ProgressBarWeight();
+            DashboardForm.GetInstance().RefreshDashboardFormElements();
             DashboardForm.GetInstance().BringToFront();
         }
 
@@ -250,7 +248,7 @@ namespace GymAndFitness
                 hasDietPlanReloaded = true; // Set the flag to true after the method is called
             }
             DietPlansForm.GetInstance().Show();
-            DietPlansForm.GetInstance().RefreshProfilePicture();
+            DietPlansForm.GetInstance().RefreshDietPlansFormElements();
             DietPlansForm.GetInstance().BringToFront();
         }
 
@@ -268,7 +266,7 @@ namespace GymAndFitness
                 hasMainReloaded = true; // Set the flag to true after the method is called
             }
             MainForm.GetInstance().Show();
-            MainForm.GetInstance().RefreshProfilePicture();
+            MainForm.GetInstance().RefreshMainFormElements();
             MainForm.GetInstance().BringToFront();
         }
         public static void OpenMembershipForm()
@@ -286,6 +284,7 @@ namespace GymAndFitness
                 ProfileForm.GetInstance().ReloadProfileFormData();
                 hasProfileReloaded = true; // Set the flag to true after the method is called
             }
+            ProfileForm.GetInstance().RefreshProfileFormElements();
             ProfileForm.GetInstance().Show();
             ProfileForm.GetInstance().BringToFront();
         }
@@ -301,7 +300,7 @@ namespace GymAndFitness
                 hasWorkoutPlanReloaded = true; // Set the flag to true after the method is called
             }
             WorkoutPlansForm.GetInstance().Show();
-            WorkoutPlansForm.GetInstance().RefreshProfilePicture();
+            WorkoutPlansForm.GetInstance().RefreshWorkoutPlansFormElements();
             WorkoutPlansForm.GetInstance().BringToFront();
         }
 

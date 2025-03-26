@@ -84,7 +84,6 @@
             this.nudCurrentWeight = new System.Windows.Forms.NumericUpDown();
             this.toolTipRefresh = new System.Windows.Forms.ToolTip(this.components);
             this.btnDeleteAccount = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -790,23 +789,6 @@
             this.btnDeleteAccount.UseVisualStyleBackColor = false;
             this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRefresh.Image = global::GymAndFitness.Properties.Resources.refresh1;
-            this.btnRefresh.Location = new System.Drawing.Point(463, 563);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(70, 70);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            this.btnRefresh.MouseEnter += new System.EventHandler(this.btnRefresh_MouseEnter);
-            // 
             // pbProfilePicture
             // 
             this.pbProfilePicture.BackColor = System.Drawing.Color.Transparent;
@@ -833,7 +815,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(879, 654);
             this.Controls.Add(this.btnDeleteAccount);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnChangeProfilePicture);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
@@ -862,7 +843,6 @@
             this.Controls.SetChildIndex(this.panel4, 0);
             this.Controls.SetChildIndex(this.panel6, 0);
             this.Controls.SetChildIndex(this.btnChangeProfilePicture, 0);
-            this.Controls.SetChildIndex(this.btnRefresh, 0);
             this.Controls.SetChildIndex(this.btnDeleteAccount, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -939,7 +919,6 @@
         private System.Windows.Forms.Button btnSaveCurrentHeightAndWeight;
         private System.Windows.Forms.NumericUpDown nudCurrentHeight;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ToolTip toolTipRefresh;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnLogout;

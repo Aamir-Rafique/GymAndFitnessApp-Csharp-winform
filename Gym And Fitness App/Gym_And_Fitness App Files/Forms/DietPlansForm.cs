@@ -27,11 +27,13 @@ namespace GymAndFitness
         }
 
         //method to update profile picture in the forms.. after it is changed in profile form...
-        public void RefreshProfilePicture()
+        public void RefreshDietPlansFormElements()
         {
             if (UserDataManager.CurrentUser != null)
             {
                 UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                pbMembershipStatus.Image = Features.MembershipStatusPic();
+                PremiumFeatureDietPlanForm();
             }
         }
 
@@ -103,13 +105,9 @@ namespace GymAndFitness
                 // Align combo box items in the center
                 Features.AlignComboBoxTextCenter(cmbDietType);
 
-                // Disable online food search feature for free members
-                if (UserDataManager.CurrentUser.MembershipStatus == "Free" ||
-                    UserDataManager.CurrentUser.MembershipStatus == null)
-                {
-                    rbtnOnline.BackColor = Color.Gainsboro;
-                    rbtnOnline.ForeColor = Color.Gray;
-                }
+                PremiumFeatureDietPlanForm();
+
+
             }
 
             // Set default text and style for the food item textbox
@@ -117,6 +115,21 @@ namespace GymAndFitness
             txtFoodItem.ForeColor = Color.Gray;
         }
 
+        public void PremiumFeatureDietPlanForm()
+        {
+            // Disable online food search feature for free members
+            if (UserDataManager.CurrentUser.MembershipStatus == "Free" ||
+                UserDataManager.CurrentUser.MembershipStatus == null)
+            {
+                rbtnOnline.BackColor = Color.Gainsboro;
+                rbtnOnline.ForeColor = Color.Gray;
+            }
+            else
+            {
+                rbtnOnline.BackColor = Color.Transparent;
+                rbtnOnline.ForeColor = Color.Black;
+            }
+        }
         public async void ReloadDietPlansFormData()
         {
             await DietPlansFormLoadEvents();

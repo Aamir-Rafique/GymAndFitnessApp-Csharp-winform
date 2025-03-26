@@ -221,6 +221,7 @@
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // cmbGender
             // 

@@ -75,22 +75,22 @@
             this.lbl1Develop.AutoSize = true;
             this.lbl1Develop.Font = new System.Drawing.Font("Segoe UI Semibold", 9.267326F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1Develop.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lbl1Develop.Location = new System.Drawing.Point(433, 259);
+            this.lbl1Develop.Location = new System.Drawing.Point(434, 260);
             this.lbl1Develop.Name = "lbl1Develop";
-            this.lbl1Develop.Size = new System.Drawing.Size(93, 17);
+            this.lbl1Develop.Size = new System.Drawing.Size(77, 17);
             this.lbl1Develop.TabIndex = 3;
-            this.lbl1Develop.Text = "Aamir Rafique";
+            this.lbl1Develop.Text = " AR FitTech";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cascadia Code Light", 8.267326F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(432, 244);
+            this.label4.Location = new System.Drawing.Point(433, 245);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 16);
+            this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Developed by";
+            this.label4.Text = "Powered by";
             // 
             // lblVersion
             // 

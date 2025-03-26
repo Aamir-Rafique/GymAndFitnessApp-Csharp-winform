@@ -522,7 +522,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(67, 10);
+            this.label12.Location = new System.Drawing.Point(91, 13);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 21);
             this.label12.TabIndex = 20;
@@ -532,7 +532,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(228, 10);
+            this.label11.Location = new System.Drawing.Point(262, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(56, 21);
             this.label11.TabIndex = 19;
@@ -542,7 +542,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(386, 10);
+            this.label10.Location = new System.Drawing.Point(415, 13);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 21);
             this.label10.TabIndex = 18;
@@ -552,7 +552,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(539, 10);
+            this.label8.Location = new System.Drawing.Point(568, 13);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 21);
             this.label8.TabIndex = 17;
@@ -714,14 +714,16 @@
             // rbtnOnline
             // 
             this.rbtnOnline.AutoSize = true;
+            this.rbtnOnline.BackColor = System.Drawing.Color.Transparent;
             this.rbtnOnline.Font = new System.Drawing.Font("Segoe UI Semibold", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnOnline.ForeColor = System.Drawing.Color.Black;
             this.rbtnOnline.Location = new System.Drawing.Point(26, 49);
             this.rbtnOnline.Name = "rbtnOnline";
             this.rbtnOnline.Size = new System.Drawing.Size(78, 27);
             this.rbtnOnline.TabIndex = 1;
             this.rbtnOnline.TabStop = true;
             this.rbtnOnline.Text = "Online";
-            this.rbtnOnline.UseVisualStyleBackColor = true;
+            this.rbtnOnline.UseVisualStyleBackColor = false;
             // 
             // label4
             // 

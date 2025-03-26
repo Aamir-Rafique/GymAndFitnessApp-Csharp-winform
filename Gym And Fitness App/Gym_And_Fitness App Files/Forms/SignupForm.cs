@@ -48,7 +48,11 @@ namespace GymAndFitness
 
 
             }
-
+            else if (!UserDataManager.IsUsernameAvailable(txtUsername.Text))
+            {
+                txtUsername.Focus(); //isi pr focus!
+                error.SetError(this.txtUsername, "This username is already taken!");
+            }
             else if (string.IsNullOrEmpty(txtAge.Text))
             {
                 txtAge.Focus(); //isi pr focus!
@@ -294,10 +298,33 @@ namespace GymAndFitness
                 e.Handled = true;
             }
 
+
+        }
+        private void txtUsername_Leave(object sender, EventArgs e)
+        {
             if (!UserDataManager.IsUsernameAvailable(txtUsername.Text))
             {
-                lblUsernameStatus.ForeColor = Color.Red;
-                lblUsernameStatus.Text = "Username already taken!";
+                if (!String.IsNullOrEmpty(txtUsername.Text))
+                {
+                    lblUsernameStatus.ForeColor = Color.Red;
+                    lblUsernameStatus.Text = "Username already taken!";
+                }
+                else
+                {
+                    lblUsernameStatus.Text = "";
+                }
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(txtUsername.Text))
+                {
+                    lblUsernameStatus.ForeColor = Color.MediumBlue;
+                    lblUsernameStatus.Text = "Username available!";
+                }
+                else
+                {
+                    lblUsernameStatus.Text = "";
+                }
             }
         }
 
@@ -468,5 +495,6 @@ namespace GymAndFitness
             Features.OpenLoginForm();
             this.Close();
         }
+
     }
 }
