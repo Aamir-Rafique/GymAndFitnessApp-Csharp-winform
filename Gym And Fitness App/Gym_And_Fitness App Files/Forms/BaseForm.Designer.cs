@@ -44,7 +44,7 @@
             // ribbonControl1
             // 
             this.ribbonControl1.AutoSize = true;
-            this.ribbonControl1.BackColor = System.Drawing.Color.DarkBlue;
+            this.ribbonControl1.BackColor = System.Drawing.Color.MediumBlue;
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Name = "ribbonControl1";

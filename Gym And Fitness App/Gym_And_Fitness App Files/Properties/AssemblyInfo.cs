@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GymAndFitness")]
 [assembly: AssemblyDescription("Gym and Fitness Application by Aamir Rafique is here to solve all your fitness related issues!")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("AR Tech")]
+[assembly: AssemblyCompany("AR FitTech")]
 [assembly: AssemblyProduct("Gym And Fitness")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]

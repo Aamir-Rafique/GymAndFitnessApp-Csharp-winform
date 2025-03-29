@@ -48,73 +48,91 @@ namespace GymAndFitness.Classes
             slideTimer.Start(); // Start the sliding animation
         }
 
+        //method to collapse the slide panel everytime the form is switched..
+        public void CollapsePanel()
+        {
+            if (!isPanelCollapsed)
+            {
+                slideTimer.Start(); // Collapse the panel automatically
+            }
+        }
+
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             Form currentForm = this.FindForm(); // Get the parent form containing this panel
-            if (currentForm != null)
+            if (currentForm != null && currentForm != MainForm.GetInstance())
             {
                 currentForm.Hide(); // Hide the current form
             }
+
+            CollapsePanel();
             Features.OpenMainForm();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             Form currentForm = this.FindForm(); // Get the parent form containing this panel
-            if (currentForm != null)
+            if (currentForm != null && currentForm != DashboardForm.GetInstance())
             {
                 currentForm.Hide(); // Hide the current form
             }
+            CollapsePanel();
             Features.OpenDashboardForm();
         }
 
         private void btnBMICalculator_Click(object sender, EventArgs e)
         {
             Form currentForm = this.FindForm(); // Get the parent form containing this panel
-            if (currentForm != null)
+            if (currentForm != null && currentForm != BMICalculatorForm.GetInstance())
             {
                 currentForm.Hide(); // Hide the current form
             }
+            CollapsePanel();
             Features.OpenBMICalculatorForm();
         }
 
         private void btnDietPlans_Click(object sender, EventArgs e)
         {
             Form currentForm = this.FindForm(); // Get the parent form containing this panel
-            if (currentForm != null)
+            if (currentForm != null && currentForm != DietPlansForm.GetInstance())
             {
                 currentForm.Hide(); // Hide the current form
             }
+            CollapsePanel();
             Features.OpenDietPlansForm();
         }
 
         private void btnWorkoutPlans_Click(object sender, EventArgs e)
         {
             Form currentForm = this.FindForm(); // Get the parent form containing this panel
-            if (currentForm != null)
+            if (currentForm != null && currentForm != WorkoutPlansForm.GetInstance())
             {
                 currentForm.Hide(); // Hide the current form
             }
+            CollapsePanel();
             Features.OpenWorkoutPlansForm();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
             Form currentForm = this.FindForm(); // Get the parent form containing this panel
-            if (currentForm != null)
+            if (currentForm != null && currentForm != ProfileForm.GetInstance())
             {
                 currentForm.Hide(); // Hide the current form
             }
+            CollapsePanel();
             Features.OpenProfileForm();
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
             Form currentForm = this.FindForm(); // Get the parent form containing this panel
-            if (currentForm != null)
+            if (currentForm != null && currentForm != AboutForm.GetInstance())
             {
                 currentForm.Hide(); // Hide the current form
             }
+            CollapsePanel();
             Features.OpenAboutForm();
         }
 
