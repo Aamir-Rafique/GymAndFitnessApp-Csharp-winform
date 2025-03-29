@@ -1,3 +1,6 @@
+C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.csproj.AssemblyReference.cache
+C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.exe.config
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Database_files\GymAndFitness_DB.mdf
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\Database_files\GymAndFitness_DB_log.ldf
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\GymAndFitness.exe.config
@@ -75,9 +78,6 @@ C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\System.Text.Json.xml
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\bin\Debug\System.ValueTuple.xml
-C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.csproj.AssemblyReference.cache
-C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.csproj.SuggestedBindingRedirects.cache
-C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.exe.config
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.Classes.RibbonControl.resources
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.Classes.RoundPictureBox.resources
 C:\Users\Aamir\Desktop\Github Repos\PROJECTS\Gym And Fitness App\Gym_And_Fitness App Files\obj\Debug\GymAndFitness.Classes.SlidePanel.resources

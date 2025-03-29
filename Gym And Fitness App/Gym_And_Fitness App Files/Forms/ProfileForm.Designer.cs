@@ -62,8 +62,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
-            this.lblMembershipStatus = new System.Windows.Forms.Label();
             this.btnGetMembershipPlan = new System.Windows.Forms.Button();
+            this.lblMembershipStatus = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -451,8 +451,8 @@
             this.panel4.AutoSize = true;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.pbMembershipStatus);
-            this.panel4.Controls.Add(this.lblMembershipStatus);
             this.panel4.Controls.Add(this.btnGetMembershipPlan);
+            this.panel4.Controls.Add(this.lblMembershipStatus);
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label8);
             this.panel4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -464,23 +464,12 @@
             // pbMembershipStatus
             // 
             this.pbMembershipStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMembershipStatus.Location = new System.Drawing.Point(50, 51);
+            this.pbMembershipStatus.Location = new System.Drawing.Point(34, 53);
             this.pbMembershipStatus.Name = "pbMembershipStatus";
             this.pbMembershipStatus.Size = new System.Drawing.Size(39, 35);
             this.pbMembershipStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMembershipStatus.TabIndex = 21;
             this.pbMembershipStatus.TabStop = false;
-            // 
-            // lblMembershipStatus
-            // 
-            this.lblMembershipStatus.AutoSize = true;
-            this.lblMembershipStatus.Font = new System.Drawing.Font("Segoe UI", 14.25743F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMembershipStatus.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblMembershipStatus.Location = new System.Drawing.Point(89, 53);
-            this.lblMembershipStatus.Name = "lblMembershipStatus";
-            this.lblMembershipStatus.Size = new System.Drawing.Size(102, 30);
-            this.lblMembershipStatus.TabIndex = 20;
-            this.lblMembershipStatus.Text = "Loading...";
             // 
             // btnGetMembershipPlan
             // 
@@ -500,6 +489,17 @@
             this.toolTipRefresh.SetToolTip(this.btnGetMembershipPlan, "Click to get membership now!");
             this.btnGetMembershipPlan.UseVisualStyleBackColor = false;
             this.btnGetMembershipPlan.Click += new System.EventHandler(this.btnGetMembershipPlan_Click);
+            // 
+            // lblMembershipStatus
+            // 
+            this.lblMembershipStatus.AutoSize = true;
+            this.lblMembershipStatus.Font = new System.Drawing.Font("Segoe UI", 15.9604F);
+            this.lblMembershipStatus.ForeColor = System.Drawing.Color.DarkGreen;
+            this.lblMembershipStatus.Location = new System.Drawing.Point(76, 56);
+            this.lblMembershipStatus.Name = "lblMembershipStatus";
+            this.lblMembershipStatus.Size = new System.Drawing.Size(107, 31);
+            this.lblMembershipStatus.TabIndex = 20;
+            this.lblMembershipStatus.Text = "Loading..";
             // 
             // pictureBox4
             // 
@@ -824,7 +824,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
-            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.DarkGreen;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

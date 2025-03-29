@@ -230,7 +230,7 @@
             this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProfilePicture.GradientAngle = 50F;
             this.btnProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.btnProfilePicture.Location = new System.Drawing.Point(643, 7);
+            this.btnProfilePicture.Location = new System.Drawing.Point(650, 9);
             this.btnProfilePicture.Name = "btnProfilePicture";
             this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
             this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -296,7 +296,6 @@
             this.Controls.Add(this.lblPurpose);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pbLinkedin);
-            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AboutForm";

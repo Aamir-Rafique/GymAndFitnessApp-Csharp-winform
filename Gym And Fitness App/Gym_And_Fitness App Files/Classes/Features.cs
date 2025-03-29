@@ -197,8 +197,11 @@ namespace GymAndFitness
             }
         }
 
-        //To open each form...
+        //variable.. To open each form after login, it must reload it's formload event to reload the data from database...
         private static bool hasDietPlanReloaded = false, hasMainReloaded = false, hasDashboardReloaded = false, hasWorkoutPlanReloaded = false, hasProfileReloaded = false, hasAboutReloaded = false, hasBMIReloaded = false;
+
+        //Variables for PRemium features, so that premium features should only be refreshed at the time when user upgrades to premium membership (which can happen only once..) otherwise in "free" , version the method shouldn't be invoked..
+        private static bool hasAboutPremRefreshed = false, hasDashboardPremRefreshed = false, hasBMIPremRefreshed = false, hasProfilePremRefreshed = false, hasDietPremRefreshed = false, hasWorkoutPremRefreshed = false, hasMainPremRefreshed = false;
 
         public static void OpenAboutForm()
         {
@@ -207,7 +210,11 @@ namespace GymAndFitness
                 AboutForm.GetInstance().ReloadAboutFormData();
                 hasAboutReloaded = true; // Set the flag to true after the method is called
             }
-            AboutForm.GetInstance().RefreshAboutFormElements();
+            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasAboutPremRefreshed)
+            {
+                AboutForm.GetInstance().RefreshPremiumFeaturesAboutForm();
+                hasAboutPremRefreshed = true;
+            }
             AboutForm.GetInstance().Show();
             AboutForm.GetInstance().BringToFront();
 
@@ -220,7 +227,11 @@ namespace GymAndFitness
                 BMICalculatorForm.GetInstance().ReloadBMICalculatorFormData();
                 hasBMIReloaded = true; // Set the flag to true after the method is called
             }
-            BMICalculatorForm.GetInstance().RefreshBMIFormElements();
+            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasBMIPremRefreshed)
+            {
+                BMICalculatorForm.GetInstance().RefreshPremiumFeaturesBMIForm();
+                hasBMIPremRefreshed = true;
+            }
             BMICalculatorForm.GetInstance().Show();
             BMICalculatorForm.GetInstance().BringToFront();
         }
@@ -232,8 +243,12 @@ namespace GymAndFitness
                 DashboardForm.GetInstance().ReloadDashboardFormData();
                 hasDashboardReloaded = true; // Set the flag to true after the method is called
             }
+            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasDashboardPremRefreshed)
+            {
+                DashboardForm.GetInstance().RefreshPremiumFeaturesDashboardForm();
+                hasDashboardPremRefreshed = true;
+            }
             DashboardForm.GetInstance().Show();
-            DashboardForm.GetInstance().RefreshDashboardFormElements();
             DashboardForm.GetInstance().BringToFront();
         }
 
@@ -247,8 +262,12 @@ namespace GymAndFitness
                 DietPlansForm.GetInstance().ReloadDietPlansFormData();
                 hasDietPlanReloaded = true; // Set the flag to true after the method is called
             }
+            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasDietPremRefreshed)
+            {
+                DietPlansForm.GetInstance().RefreshPremiumFeaturesDietForm();
+                hasDietPremRefreshed = true;
+            }
             DietPlansForm.GetInstance().Show();
-            DietPlansForm.GetInstance().RefreshDietPlansFormElements();
             DietPlansForm.GetInstance().BringToFront();
         }
 
@@ -266,7 +285,11 @@ namespace GymAndFitness
                 hasMainReloaded = true; // Set the flag to true after the method is called
             }
             MainForm.GetInstance().Show();
-            MainForm.GetInstance().RefreshMainFormElements();
+            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasMainPremRefreshed)
+            {
+                MainForm.GetInstance().RefreshPremiumFeaturesMainForm();
+                hasMainPremRefreshed = true;
+            }
             MainForm.GetInstance().BringToFront();
         }
         public static void OpenMembershipForm()
@@ -277,6 +300,7 @@ namespace GymAndFitness
         {
             PaymentForm.GetInstance().Show();
         }
+
         public static void OpenProfileForm()
         {
             if (UserDataManager.CurrentUser != null && !hasProfileReloaded)
@@ -284,14 +308,20 @@ namespace GymAndFitness
                 ProfileForm.GetInstance().ReloadProfileFormData();
                 hasProfileReloaded = true; // Set the flag to true after the method is called
             }
-            ProfileForm.GetInstance().RefreshProfileFormElements();
             ProfileForm.GetInstance().Show();
+            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasProfilePremRefreshed)
+            {
+                ProfileForm.GetInstance().RefreshPremiumFeaturesProfileForm();
+                hasProfilePremRefreshed = true;
+            }
             ProfileForm.GetInstance().BringToFront();
         }
+
         public static void OpenSignUpForm()
         {
             SignupForm.GetInstance().Show();
         }
+
         public static void OpenWorkoutPlansForm()
         {
             if (UserDataManager.CurrentUser != null && !hasWorkoutPlanReloaded)
@@ -300,7 +330,11 @@ namespace GymAndFitness
                 hasWorkoutPlanReloaded = true; // Set the flag to true after the method is called
             }
             WorkoutPlansForm.GetInstance().Show();
-            WorkoutPlansForm.GetInstance().RefreshWorkoutPlansFormElements();
+            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasWorkoutPremRefreshed)
+            {
+                WorkoutPlansForm.GetInstance().RefreshPremiumFeaturesWorkoutForm();
+                hasWorkoutPremRefreshed = true;
+            }
             WorkoutPlansForm.GetInstance().BringToFront();
         }
 

@@ -1,6 +1,8 @@
-﻿using GymAndFitness.Forms;
+﻿using GymAndFitness.Classes;
+using GymAndFitness.Forms;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +15,7 @@ namespace GymAndFitness
         private AboutForm()
         {
             InitializeComponent();
+
         }
 
         public static AboutForm GetInstance()
@@ -25,25 +28,21 @@ namespace GymAndFitness
         }
 
         //method to update profile picture in the forms.. after it is changed in profile form...
-        public void RefreshAboutFormElements()
+        public void RefreshPremiumFeaturesAboutForm()
         {
-            if (UserDataManager.CurrentUser != null)
-            {
-                UserDataManager.ApplyProfilePicture(btnProfilePicture);
-                pbMembershipStatus.Image = Features.MembershipStatusPic();
-            }
+            pbMembershipStatus.Image = Features.MembershipStatusPic();
         }
 
-        private void AboutForm_Load(object sender, EventArgs e)
+        private async void AboutForm_Load(object sender, EventArgs e)
         {
-            AboutFormLoadEvents();
+            await AboutFormLoadEvents();
         }
-        public void ReloadAboutFormData()
+        public async void ReloadAboutFormData()
         {
-            AboutFormLoadEvents();
+            await AboutFormLoadEvents();
         }
 
-        private async void AboutFormLoadEvents()
+        private async Task AboutFormLoadEvents()
         {
             lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals by providing personalized workout plans, nutritional guidance, and progress tracking. Whether you're looking to build muscle, lose weight, or improve overall fitness, this app offers a comprehensive solution to support your journey. Our mission is to make fitness accessible, convenient, and enjoyable for everyone. Stay fit, stay healthy!";
 
@@ -54,31 +53,12 @@ namespace GymAndFitness
             if (UserDataManager.CurrentUser != null)
             {
                 // Load membership plan pics asynchronously
-                await LoadMembershipPictureAsync();
+                pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
 
                 // Apply profile picture (assuming this method is lightweight)
                 UserDataManager.ApplyProfilePicture(btnProfilePicture);
             }
         }
-
-        // 🔹 Asynchronous method to load the membership status picture
-        private async Task LoadMembershipPictureAsync()
-        {
-            try
-            {
-                // Simulate loading time (if fetching from DB/API)
-                await Task.Delay(500);
-
-                // Load image in a separate thread to avoid UI freeze
-                pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to load membership status image: " + ex.Message);
-            }
-        }
-
-
 
         //old logic (without async..)
         //private void AboutFormLoadEvents()

@@ -27,14 +27,10 @@ namespace GymAndFitness
         }
 
         //method to update profile picture in the forms.. after it is changed in profile form...
-        public void RefreshDietPlansFormElements()
+        public void RefreshPremiumFeaturesDietForm()
         {
-            if (UserDataManager.CurrentUser != null)
-            {
-                UserDataManager.ApplyProfilePicture(btnProfilePicture);
-                pbMembershipStatus.Image = Features.MembershipStatusPic();
-                PremiumFeatureDietPlanForm();
-            }
+            pbMembershipStatus.Image = Features.MembershipStatusPic();
+            PremiumFeatureDietPlanForm();
         }
 
         //LOAD
@@ -50,7 +46,7 @@ namespace GymAndFitness
             ////  accessing current user 
             //if (UserDataManager.CurrentUser != null)
             //{
-            //    UserDataManager.ApplyProfilePicture(btnProfilePicture);
+            //    UserDataManager.ApplyProfilePicture(pbProfilePicture);
             //    //load membership plan pics
             //    pbMembershipStatus.Image = Features.MembershipStatusPic();
 
@@ -84,7 +80,7 @@ namespace GymAndFitness
             if (UserDataManager.CurrentUser != null)
             {
                 // Apply profile picture asynchronously
-                await Task.Run(() => UserDataManager.ApplyProfilePicture(btnProfilePicture));
+                await Task.Run(() => UserDataManager.ApplyProfilePicture(pbProfilePIcture));
 
                 // Load membership plan pictures asynchronously
                 pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
@@ -980,14 +976,7 @@ namespace GymAndFitness
 
         private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
-            {
-                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
-            }
-            else
-            {
-                toolTip1.SetToolTip(btnProfilePicture, "Profile");
-            }
+
         }
 
 
@@ -1015,15 +1004,29 @@ namespace GymAndFitness
             }
         }
 
-        private void btnProfilePicture_Click(object sender, EventArgs e)
+
+
+        private void cmbDietType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Features.ComboBoxValidation(sender, e);
+        }
+
+        private void pbProfilePIcture_Click(object sender, EventArgs e)
         {
             Features.OpenProfileForm();
             this.Hide();
         }
 
-        private void cmbDietType_KeyPress(object sender, KeyPressEventArgs e)
+        private void pbProfilePIcture_MouseEnter(object sender, EventArgs e)
         {
-            Features.ComboBoxValidation(sender, e);
+            if (UserDataManager.CurrentUser != null)
+            {
+                toolTip1.SetToolTip(pbProfilePIcture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+            }
+            else
+            {
+                toolTip1.SetToolTip(pbProfilePIcture, "Profile");
+            }
         }
     }
 }

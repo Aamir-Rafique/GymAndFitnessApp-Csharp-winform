@@ -62,7 +62,7 @@
             this.lblLoading.AutoSize = true;
             this.lblLoading.Font = new System.Drawing.Font("Cascadia Mono", 13.83168F, System.Drawing.FontStyle.Bold);
             this.lblLoading.ForeColor = System.Drawing.Color.White;
-            this.lblLoading.Location = new System.Drawing.Point(2, 195);
+            this.lblLoading.Location = new System.Drawing.Point(2, 203);
             this.lblLoading.MaximumSize = new System.Drawing.Size(350, 0);
             this.lblLoading.Name = "lblLoading";
             this.lblLoading.Size = new System.Drawing.Size(132, 27);
@@ -75,7 +75,7 @@
             this.lbl1Develop.AutoSize = true;
             this.lbl1Develop.Font = new System.Drawing.Font("Segoe UI Semibold", 9.267326F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1Develop.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lbl1Develop.Location = new System.Drawing.Point(434, 260);
+            this.lbl1Develop.Location = new System.Drawing.Point(446, 261);
             this.lbl1Develop.Name = "lbl1Develop";
             this.lbl1Develop.Size = new System.Drawing.Size(77, 17);
             this.lbl1Develop.TabIndex = 3;
@@ -86,9 +86,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cascadia Code Light", 8.267326F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(433, 245);
+            this.label4.Location = new System.Drawing.Point(446, 245);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 16);
+            this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 5;
             this.label4.Text = "Powered by";
             // 
@@ -116,7 +116,7 @@
             // 
             // progressBarLoading
             // 
-            this.progressBarLoading.Location = new System.Drawing.Point(0, 222);
+            this.progressBarLoading.Location = new System.Drawing.Point(0, 230);
             this.progressBarLoading.Name = "progressBarLoading";
             this.progressBarLoading.Size = new System.Drawing.Size(537, 11);
             this.progressBarLoading.TabIndex = 1;
@@ -143,13 +143,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SpringGreen;
             this.ClientSize = new System.Drawing.Size(535, 284);
+            this.Controls.Add(this.progressBarLoading);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbl1Develop);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.progressBarLoading);
             this.Controls.Add(this.lblLoading);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

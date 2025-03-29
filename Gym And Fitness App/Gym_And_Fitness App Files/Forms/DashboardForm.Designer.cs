@@ -98,7 +98,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 77);
+            this.panel1.Size = new System.Drawing.Size(805, 76);
             this.panel1.TabIndex = 0;
             // 
             // pbMembershipStatus
@@ -138,7 +138,7 @@
             this.pictureBox5.Image = global::GymAndFitness.Properties.Resources.Gym___FItness_logo;
             this.pictureBox5.Location = new System.Drawing.Point(35, 0);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox5.Size = new System.Drawing.Size(80, 73);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 17;
             this.pictureBox5.TabStop = false;
@@ -504,7 +504,7 @@
             // panel6
             // 
             this.panel6.AutoSize = true;
-            this.panel6.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel6.Controls.Add(this.lblWeightProgess);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.progressBarWeight);

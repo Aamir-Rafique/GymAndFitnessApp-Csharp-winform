@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DietPlansForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbProfilePIcture = new GymAndFitness.Classes.RoundPictureBox();
             this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
-            this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,8 +85,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabDietPlan = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePIcture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -105,8 +105,8 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.Controls.Add(this.pbProfilePIcture);
             this.panel1.Controls.Add(this.pbMembershipStatus);
-            this.panel1.Controls.Add(this.btnProfilePicture);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
@@ -115,6 +115,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(755, 77);
             this.panel1.TabIndex = 2;
+            // 
+            // pbProfilePIcture
+            // 
+            this.pbProfilePIcture.BackColor = System.Drawing.Color.Transparent;
+            this.pbProfilePIcture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbProfilePIcture.BorderColor = System.Drawing.Color.Lime;
+            this.pbProfilePIcture.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pbProfilePIcture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pbProfilePIcture.BorderSize = 2;
+            this.pbProfilePIcture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbProfilePIcture.GradientAngle = 50F;
+            this.pbProfilePIcture.Image = global::GymAndFitness.Properties.Resources.usernew;
+            this.pbProfilePIcture.Location = new System.Drawing.Point(674, 11);
+            this.pbProfilePIcture.Name = "pbProfilePIcture";
+            this.pbProfilePIcture.Size = new System.Drawing.Size(58, 58);
+            this.pbProfilePIcture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProfilePIcture.TabIndex = 42;
+            this.pbProfilePIcture.TabStop = false;
+            this.pbProfilePIcture.Click += new System.EventHandler(this.pbProfilePIcture_Click);
+            this.pbProfilePIcture.MouseEnter += new System.EventHandler(this.pbProfilePIcture_MouseEnter);
             // 
             // pbMembershipStatus
             // 
@@ -125,26 +145,6 @@
             this.pbMembershipStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMembershipStatus.TabIndex = 41;
             this.pbMembershipStatus.TabStop = false;
-            // 
-            // btnProfilePicture
-            // 
-            this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.btnProfilePicture.BorderColor = System.Drawing.Color.Lime;
-            this.btnProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
-            this.btnProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.btnProfilePicture.BorderSize = 2;
-            this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfilePicture.GradientAngle = 50F;
-            this.btnProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.btnProfilePicture.Location = new System.Drawing.Point(668, 8);
-            this.btnProfilePicture.Name = "btnProfilePicture";
-            this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
-            this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProfilePicture.TabIndex = 40;
-            this.btnProfilePicture.TabStop = false;
-            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click);
-            this.btnProfilePicture.MouseEnter += new System.EventHandler(this.btnProfilePicture_MouseEnter_1);
             // 
             // pictureBox3
             // 
@@ -781,7 +781,6 @@
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabDietPlan);
-            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 600);
@@ -795,8 +794,8 @@
             this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePIcture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.tabPage3.ResumeLayout(false);
@@ -832,7 +831,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ErrorProvider error;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.Timer timerForPics;
         private System.Windows.Forms.TabControl tabDietPlan;
         private System.Windows.Forms.TabPage tabPage2;
@@ -877,5 +875,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbDietType;
         private System.Windows.Forms.PictureBox pbMembershipStatus;
+        private Classes.RoundPictureBox pbProfilePIcture;
     }
 }

@@ -605,8 +605,6 @@ namespace GymAndFitness
             }
         }
 
-
-
         public static void UpdateProfilePictureInDatabase(byte[] profilePicture)
         {
             if (CurrentUser != null)

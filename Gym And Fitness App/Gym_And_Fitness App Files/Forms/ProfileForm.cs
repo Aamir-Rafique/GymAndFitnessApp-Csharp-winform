@@ -58,9 +58,7 @@ namespace GymAndFitness
                     lblTargetWeightRange.Text = UserDataManager.CurrentUser.TargetWeightRange;
 
                     LoadMembershipStatus_Pic();
-
                     PremiumFeaturesProfileForm();
-
                 }
                 else
                 {
@@ -105,6 +103,9 @@ namespace GymAndFitness
             else
             {
                 btnChangeProfilePicture.BackColor = Color.DodgerBlue;
+                btnGetMembershipPlan.Visible = false;
+                pbMembershipStatus.Size = new System.Drawing.Size(55, 51);
+                lblMembershipStatus.Location = new System.Drawing.Point(92, 63);
             }
         }
 
@@ -218,6 +219,12 @@ namespace GymAndFitness
                 else
                 {
                     UserDataManager.ChangeProfilePicture(pbProfilePicture);
+                    MessageBox.Show("Profile Picture updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult res = MessageBox.Show("Restart to see effect? \nClick 'Ok' to restart now\n'Cancel' to do this later.", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (res == DialogResult.OK)
+                    {
+                        Application.Restart();
+                    }
                 }
             }
             else
@@ -252,7 +259,7 @@ namespace GymAndFitness
                     UserDataManager.UpdateHeightAndWeight(UserDataManager.CurrentUser.Height, UserDataManager.CurrentUser.CurrentWeight, UserDataManager.CurrentUser.BMI);
                     MessageBox.Show("Height and weight updated successfully!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    RefreshProfileFormElements();
+                    RefreshPremiumFeaturesProfileForm();
                 }
                 else
                 {
@@ -266,16 +273,13 @@ namespace GymAndFitness
         }
 
 
-        public void RefreshProfileFormElements()
+        public void RefreshPremiumFeaturesProfileForm()
         {
-            if (UserDataManager.CurrentUser != null)
-            {
-                lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
-                lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
-                lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
-                LoadMembershipStatus_Pic();
-                PremiumFeaturesProfileForm();
-            }
+            lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
+            lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
+            lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
+            LoadMembershipStatus_Pic();
+            PremiumFeaturesProfileForm();
         }
 
 
