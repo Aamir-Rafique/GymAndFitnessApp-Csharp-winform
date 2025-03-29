@@ -85,6 +85,7 @@ namespace GymAndFitness
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
                 await Task.Run(() => UserDataManager.LoadWorkoutPlan(dgvWorkoutPlan, userId));
 
+                PremiumFeatureWorkoutPlan();
 
             }
 
@@ -101,7 +102,7 @@ namespace GymAndFitness
         public void PremiumFeatureWorkoutPlan()
         {
             // Update save workout plan button for free members
-            if (UserDataManager.CurrentUser.MembershipStatus == "Free")
+            if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
             {
                 btnSaveWorkoutPlan.BackColor = Color.Gray;
             }

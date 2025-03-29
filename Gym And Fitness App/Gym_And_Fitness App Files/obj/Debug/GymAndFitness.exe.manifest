@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VsFVog6MsjYmV5m4Y5lpihRXhKq6hu8aDGACI1Um3n8=</dsig:DigestValue>
+        <dsig:DigestValue>rjQIpPlUmF0qI/VdhaJNHh/Z6PGfdgugFansEafdHvU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -510,13 +510,13 @@
       <dsig:DigestValue>oL6Adro8kTAdk9snKOCHCqWtej2WLBeI3cZq6lvNrTs=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GymAndFitness.pdb" size="417280">
+  <file name="GymAndFitness.pdb" size="419328">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4FiQAEW8fZzMya93JAxnx46kg0UgHyGTrYriOIj81Cs=</dsig:DigestValue>
+      <dsig:DigestValue>v70XwKrjlxICws3FQ/g/X2/YSxLohHPl9vgNPVldtUk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ILLink\ILLink.Descriptors.LibraryBuild.xml" size="297" writeableType="applicationData">
