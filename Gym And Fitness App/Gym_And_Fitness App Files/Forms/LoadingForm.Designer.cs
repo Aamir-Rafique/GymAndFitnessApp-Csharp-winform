@@ -49,11 +49,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cascadia Code", 24.93762F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 27.80198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
             this.label2.Location = new System.Drawing.Point(155, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(293, 46);
+            this.label2.Size = new System.Drawing.Size(276, 52);
             this.label2.TabIndex = 2;
             this.label2.Text = "Gym && Fitness";
             // 
@@ -97,7 +97,7 @@
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersion.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblVersion.Location = new System.Drawing.Point(330, 98);
+            this.lblVersion.Location = new System.Drawing.Point(310, 103);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(118, 19);
             this.lblVersion.TabIndex = 7;

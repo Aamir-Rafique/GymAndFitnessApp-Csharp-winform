@@ -409,7 +409,7 @@
             this.btnChallenge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChallenge.Font = new System.Drawing.Font("Rockwell", 9.441584F, System.Drawing.FontStyle.Bold);
             this.btnChallenge.ForeColor = System.Drawing.Color.White;
-            this.btnChallenge.Location = new System.Drawing.Point(74, 91);
+            this.btnChallenge.Location = new System.Drawing.Point(75, 95);
             this.btnChallenge.Name = "btnChallenge";
             this.btnChallenge.Size = new System.Drawing.Size(155, 28);
             this.btnChallenge.TabIndex = 1;
@@ -566,7 +566,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 620);
             this.Controls.Add(this.pnlMain);
-            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(850, 620);
