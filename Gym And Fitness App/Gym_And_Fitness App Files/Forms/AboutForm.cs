@@ -1,8 +1,6 @@
-﻿using GymAndFitness.Classes;
-using GymAndFitness.Forms;
+﻿using GymAndFitness.Forms;
 using System;
 using System.Diagnostics;
-using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
