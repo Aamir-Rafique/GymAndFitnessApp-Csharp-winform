@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DietPlansForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbProfilePIcture = new GymAndFitness.Classes.RoundPictureBox();
+            this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabDietPlan = new System.Windows.Forms.TabControl();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePIcture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
@@ -105,7 +105,7 @@
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Blue;
-            this.panel1.Controls.Add(this.pbProfilePIcture);
+            this.panel1.Controls.Add(this.pbProfilePicture);
             this.panel1.Controls.Add(this.pbMembershipStatus);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label6);
@@ -116,25 +116,25 @@
             this.panel1.Size = new System.Drawing.Size(755, 77);
             this.panel1.TabIndex = 2;
             // 
-            // pbProfilePIcture
+            // pbProfilePicture
             // 
-            this.pbProfilePIcture.BackColor = System.Drawing.Color.Transparent;
-            this.pbProfilePIcture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.pbProfilePIcture.BorderColor = System.Drawing.Color.Lime;
-            this.pbProfilePIcture.BorderColor2 = System.Drawing.Color.HotPink;
-            this.pbProfilePIcture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.pbProfilePIcture.BorderSize = 2;
-            this.pbProfilePIcture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbProfilePIcture.GradientAngle = 50F;
-            this.pbProfilePIcture.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.pbProfilePIcture.Location = new System.Drawing.Point(674, 11);
-            this.pbProfilePIcture.Name = "pbProfilePIcture";
-            this.pbProfilePIcture.Size = new System.Drawing.Size(58, 58);
-            this.pbProfilePIcture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbProfilePIcture.TabIndex = 42;
-            this.pbProfilePIcture.TabStop = false;
-            this.pbProfilePIcture.Click += new System.EventHandler(this.pbProfilePIcture_Click);
-            this.pbProfilePIcture.MouseEnter += new System.EventHandler(this.pbProfilePIcture_MouseEnter);
+            this.pbProfilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.pbProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbProfilePicture.BorderColor = System.Drawing.Color.Lime;
+            this.pbProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pbProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pbProfilePicture.BorderSize = 2;
+            this.pbProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbProfilePicture.GradientAngle = 50F;
+            this.pbProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
+            this.pbProfilePicture.Location = new System.Drawing.Point(673, 6);
+            this.pbProfilePicture.Name = "pbProfilePicture";
+            this.pbProfilePicture.Size = new System.Drawing.Size(64, 64);
+            this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProfilePicture.TabIndex = 42;
+            this.pbProfilePicture.TabStop = false;
+            this.pbProfilePicture.Click += new System.EventHandler(this.pbProfilePicture_Click);
+            this.pbProfilePicture.MouseEnter += new System.EventHandler(this.pbProfilePicture_MouseEnter);
             // 
             // pbMembershipStatus
             // 
@@ -794,7 +794,7 @@
             this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePIcture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
@@ -875,6 +875,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbDietType;
         private System.Windows.Forms.PictureBox pbMembershipStatus;
-        private Classes.RoundPictureBox pbProfilePIcture;
+        private Classes.RoundPictureBox pbProfilePicture;
     }
 }

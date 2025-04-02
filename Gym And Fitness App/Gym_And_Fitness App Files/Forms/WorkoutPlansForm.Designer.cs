@@ -66,7 +66,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
-            this.btnProfilePicture1 = new GymAndFitness.Classes.RoundPictureBox();
+            this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerForPics = new System.Windows.Forms.Timer(this.components);
@@ -89,7 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkoutPlan)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -424,10 +424,10 @@
             this.Duration,
             this.Intensity});
             this.dgvWorkoutPlan.GridColor = System.Drawing.Color.LimeGreen;
-            this.dgvWorkoutPlan.Location = new System.Drawing.Point(6, 96);
+            this.dgvWorkoutPlan.Location = new System.Drawing.Point(18, 92);
             this.dgvWorkoutPlan.Name = "dgvWorkoutPlan";
             this.dgvWorkoutPlan.RowHeadersWidth = 43;
-            this.dgvWorkoutPlan.Size = new System.Drawing.Size(694, 282);
+            this.dgvWorkoutPlan.Size = new System.Drawing.Size(709, 285);
             this.dgvWorkoutPlan.TabIndex = 52;
             // 
             // Day
@@ -464,7 +464,7 @@
             this.btnSaveWorkoutPlan.ForeColor = System.Drawing.Color.White;
             this.btnSaveWorkoutPlan.Image = global::GymAndFitness.Properties.Resources.save1;
             this.btnSaveWorkoutPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveWorkoutPlan.Location = new System.Drawing.Point(275, 422);
+            this.btnSaveWorkoutPlan.Location = new System.Drawing.Point(304, 419);
             this.btnSaveWorkoutPlan.Name = "btnSaveWorkoutPlan";
             this.btnSaveWorkoutPlan.Size = new System.Drawing.Size(127, 44);
             this.btnSaveWorkoutPlan.TabIndex = 29;
@@ -505,7 +505,7 @@
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.Blue;
             this.panel1.Controls.Add(this.pbMembershipStatus);
-            this.panel1.Controls.Add(this.btnProfilePicture1);
+            this.panel1.Controls.Add(this.pbProfilePicture);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label1);
@@ -525,25 +525,25 @@
             this.pbMembershipStatus.TabIndex = 42;
             this.pbMembershipStatus.TabStop = false;
             // 
-            // btnProfilePicture1
+            // pbProfilePicture
             // 
-            this.btnProfilePicture1.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfilePicture1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.btnProfilePicture1.BorderColor = System.Drawing.Color.Lime;
-            this.btnProfilePicture1.BorderColor2 = System.Drawing.Color.HotPink;
-            this.btnProfilePicture1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.btnProfilePicture1.BorderSize = 2;
-            this.btnProfilePicture1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfilePicture1.GradientAngle = 50F;
-            this.btnProfilePicture1.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.btnProfilePicture1.Location = new System.Drawing.Point(666, 10);
-            this.btnProfilePicture1.Name = "btnProfilePicture1";
-            this.btnProfilePicture1.Size = new System.Drawing.Size(58, 58);
-            this.btnProfilePicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProfilePicture1.TabIndex = 41;
-            this.btnProfilePicture1.TabStop = false;
-            this.btnProfilePicture1.Click += new System.EventHandler(this.btnProfilePicture1_Click);
-            this.btnProfilePicture1.MouseEnter += new System.EventHandler(this.btnProfilePicture1_MouseEnter);
+            this.pbProfilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.pbProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbProfilePicture.BorderColor = System.Drawing.Color.Lime;
+            this.pbProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pbProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pbProfilePicture.BorderSize = 2;
+            this.pbProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbProfilePicture.GradientAngle = 50F;
+            this.pbProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
+            this.pbProfilePicture.Location = new System.Drawing.Point(666, 7);
+            this.pbProfilePicture.Name = "pbProfilePicture";
+            this.pbProfilePicture.Size = new System.Drawing.Size(64, 64);
+            this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProfilePicture.TabIndex = 41;
+            this.pbProfilePicture.TabStop = false;
+            this.pbProfilePicture.Click += new System.EventHandler(this.pbProfilePicture_Click);
+            this.pbProfilePicture.MouseEnter += new System.EventHandler(this.pbProfilePicture_MouseEnter);
             // 
             // pictureBox3
             // 
@@ -577,7 +577,6 @@
             this.ClientSize = new System.Drawing.Size(797, 640);
             this.Controls.Add(this.tabWorkoutPlan);
             this.Controls.Add(this.panel1);
-            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(797, 640);
@@ -615,7 +614,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -662,7 +661,7 @@
         private System.Windows.Forms.Panel pnlExerciseInfo;
         private System.Windows.Forms.Label lblExerciseInfo;
         private System.Windows.Forms.Label label4;
-        private Classes.RoundPictureBox btnProfilePicture1;
+        private Classes.RoundPictureBox pbProfilePicture;
         private System.Windows.Forms.PictureBox pbMembershipStatus;
     }
 }

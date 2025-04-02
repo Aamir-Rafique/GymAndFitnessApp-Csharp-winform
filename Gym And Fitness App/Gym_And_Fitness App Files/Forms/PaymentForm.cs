@@ -63,6 +63,17 @@ namespace GymAndFitness
 
                         MessageBox.Show("You have a Premium membership now!", "Congratulations", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        //since the premium membership has been activated now, so updating premium features of the forms..
+                        AboutForm.GetInstance().RefreshPremiumFeaturesAboutForm();
+                        BMICalculatorForm.GetInstance().RefreshPremiumFeaturesBMIForm();
+                        DashboardForm.GetInstance().RefreshPremiumFeaturesDashboardForm();
+                        DietPlansForm.GetInstance().RefreshPremiumFeaturesDietForm();
+                        MainForm.GetInstance().RefreshPremiumFeaturesMainForm();
+                        ProfileForm.GetInstance().RefreshPremiumFeaturesProfileForm();
+                        WorkoutPlansForm.GetInstance().RefreshPremiumFeaturesWorkoutForm();
+
+
+                        //open profile form and close this one..
                         Features.OpenProfileForm();
                         this.Close();
                     }

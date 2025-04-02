@@ -43,6 +43,7 @@ namespace GymAndFitness.Forms
             {
                 lblLoading.Text = "Initializing application...";
                 UpdateProgressBar(5, 15);
+
             }
             else if (elapsedTime < LOAD_RESOURCES_TIME)
             {
@@ -76,10 +77,27 @@ namespace GymAndFitness.Forms
                 //lblWelcome.Text = "Welcome!";
                 timerLoading.Stop();
 
+                // **Preload forms using Singleton GetInstance() method**
+                PreloadForms();
+
                 // Open LoginForm and close LoadingForm
                 this.Hide();
                 Features.OpenLoginForm();
             }
+        }
+
+        private void PreloadForms()
+        {
+            // GetInstance() ensures forms are created only if they are null or disposed
+            LoginForm.GetInstance();
+
+            AboutForm.GetInstance();
+            BMICalculatorForm.GetInstance();
+            DashboardForm.GetInstance();
+            DietPlansForm.GetInstance();
+            MainForm.GetInstance();
+            ProfileForm.GetInstance();
+            WorkoutPlansForm.GetInstance();
         }
 
         private void UpdateProgressBar(int min, int max)

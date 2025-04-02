@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Deployment.Application;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 
@@ -198,99 +199,47 @@ namespace GymAndFitness
         }
 
         //variable.. To open each form after login, it must reload it's formload event to reload the data from database...
-        private static bool hasDietPlanReloaded = false, hasMainReloaded = false, hasDashboardReloaded = false, hasWorkoutPlanReloaded = false, hasProfileReloaded = false, hasAboutReloaded = false, hasBMIReloaded = false;
+        //private static bool hasDietPlanReloaded = false, hasMainReloaded = false, hasDashboardReloaded = false, hasWorkoutPlanReloaded = false, hasProfileReloaded = false, hasAboutReloaded = false, hasBMIReloaded = false;
 
-        //Variables for PRemium features, so that premium features should only be refreshed at the time when user upgrades to premium membership (which can happen only once..) otherwise in "free" , version the method shouldn't be invoked..
-        private static bool hasAboutPremRefreshed = false, hasDashboardPremRefreshed = false, hasBMIPremRefreshed = false, hasProfilePremRefreshed = false, hasDietPremRefreshed = false, hasWorkoutPremRefreshed = false, hasMainPremRefreshed = false;
+        ////Variables for PRemium features, so that premium features should only be refreshed at the time when user upgrades to premium membership (which can happen only once..) otherwise in "free" , version the method shouldn't be invoked..
+        //private static bool hasWorkoutPremRefreshed = false;
 
         public static void OpenAboutForm()
         {
-            if (UserDataManager.CurrentUser != null && !hasAboutReloaded)
-            {
-                AboutForm.GetInstance().ReloadAboutFormData();
-                hasAboutReloaded = true; // Set the flag to true after the method is called
-            }
-            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasAboutPremRefreshed)
-            {
-                AboutForm.GetInstance().RefreshPremiumFeaturesAboutForm();
-                hasAboutPremRefreshed = true;
-            }
             AboutForm.GetInstance().Show();
-            AboutForm.GetInstance().BringToFront();
-
         }
 
         public static void OpenBMICalculatorForm()
         {
-            if (UserDataManager.CurrentUser != null && !hasBMIReloaded)
-            {
-                BMICalculatorForm.GetInstance().ReloadBMICalculatorFormData();
-                hasBMIReloaded = true; // Set the flag to true after the method is called
-            }
-            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasBMIPremRefreshed)
-            {
-                BMICalculatorForm.GetInstance().RefreshPremiumFeaturesBMIForm();
-                hasBMIPremRefreshed = true;
-            }
             BMICalculatorForm.GetInstance().Show();
-            BMICalculatorForm.GetInstance().BringToFront();
         }
 
         public static void OpenDashboardForm()
         {
-            if (UserDataManager.CurrentUser != null && !hasDashboardReloaded)
-            {
-                DashboardForm.GetInstance().ReloadDashboardFormData();
-                hasDashboardReloaded = true; // Set the flag to true after the method is called
-            }
-            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasDashboardPremRefreshed)
-            {
-                DashboardForm.GetInstance().RefreshPremiumFeaturesDashboardForm();
-                hasDashboardPremRefreshed = true;
-            }
             DashboardForm.GetInstance().Show();
-            DashboardForm.GetInstance().BringToFront();
         }
 
 
 
         public static void OpenDietPlansForm()
         {
-            //using this condition so this method refreshes data in form load event only when the user is logged in ...
-            if (UserDataManager.CurrentUser != null && !hasDietPlanReloaded)
-            {
-                DietPlansForm.GetInstance().ReloadDietPlansFormData();
-                hasDietPlanReloaded = true; // Set the flag to true after the method is called
-            }
-            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasDietPremRefreshed)
-            {
-                DietPlansForm.GetInstance().RefreshPremiumFeaturesDietForm();
-                hasDietPremRefreshed = true;
-            }
+            ////using this condition so this method refreshes data in form load event only when the user is logged in ...
+            //if (UserDataManager.CurrentUser != null && !hasDietPlanReloaded)
+            //{
+            //    DietPlansForm.GetInstance().ReloadDietPlansFormData();
+            //    hasDietPlanReloaded = true; // Set the flag to true after the method is called
+            //}
             DietPlansForm.GetInstance().Show();
-            DietPlansForm.GetInstance().BringToFront();
         }
 
         public static void OpenLoginForm()
         {
             LoginForm.GetInstance().Show();
-            //LoginForm.GetInstance().BringToFront();
         }
 
         public static void OpenMainForm()
         {
-            if (UserDataManager.CurrentUser != null && !hasMainReloaded)
-            {
-                MainForm.GetInstance().ReloadMainFormData();
-                hasMainReloaded = true; // Set the flag to true after the method is called
-            }
             MainForm.GetInstance().Show();
-            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasMainPremRefreshed)
-            {
-                MainForm.GetInstance().RefreshPremiumFeaturesMainForm();
-                hasMainPremRefreshed = true;
-            }
-            MainForm.GetInstance().BringToFront();
         }
         public static void OpenMembershipForm()
         {
@@ -303,18 +252,7 @@ namespace GymAndFitness
 
         public static void OpenProfileForm()
         {
-            if (UserDataManager.CurrentUser != null && !hasProfileReloaded)
-            {
-                ProfileForm.GetInstance().ReloadProfileFormData();
-                hasProfileReloaded = true; // Set the flag to true after the method is called
-            }
             ProfileForm.GetInstance().Show();
-            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasProfilePremRefreshed)
-            {
-                ProfileForm.GetInstance().RefreshPremiumFeaturesProfileForm();
-                hasProfilePremRefreshed = true;
-            }
-            ProfileForm.GetInstance().BringToFront();
         }
 
         public static void OpenSignUpForm()
@@ -324,18 +262,7 @@ namespace GymAndFitness
 
         public static void OpenWorkoutPlansForm()
         {
-            if (UserDataManager.CurrentUser != null && !hasWorkoutPlanReloaded)
-            {
-                WorkoutPlansForm.GetInstance().ReloadWorkoutPlansData();
-                hasWorkoutPlanReloaded = true; // Set the flag to true after the method is called
-            }
             WorkoutPlansForm.GetInstance().Show();
-            if (UserDataManager.CurrentUser != null && UserDataManager.CurrentUser.MembershipStatus == "Premium" && !hasWorkoutPremRefreshed)
-            {
-                WorkoutPlansForm.GetInstance().RefreshPremiumFeaturesWorkoutForm();
-                hasWorkoutPremRefreshed = true;
-            }
-            WorkoutPlansForm.GetInstance().BringToFront();
         }
 
         public static void LogoutNow()

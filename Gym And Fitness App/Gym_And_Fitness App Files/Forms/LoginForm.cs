@@ -42,12 +42,12 @@ namespace GymAndFitness
             if (string.IsNullOrEmpty(txtUsername.Text))
             {
                 txtUsername.Focus(); //isi pr focus!
-                errorUsername.SetError(this.txtUsername, "Please Enter your Username ");
+                error.SetError(this.txtUsername, "Please Enter your Username ");
             }
             else if (string.IsNullOrEmpty(txtPassword.Text))
             {
                 txtPassword.Focus(); //isi pr focus!
-                errorPassword.SetError(this.txtPassword, "Please Enter your Password");
+                error.SetError(this.txtPassword, "Please Enter your Password");
             }
             else
             {
@@ -59,19 +59,28 @@ namespace GymAndFitness
                     MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
+
                     User user = UserDataManager.GetUserDetails(txtUsername.Text);
                     if (user != null && user.Password == txtPassword.Text)
                     {
+                        // calling ReloadFormData(); in btnLogin in order to reload form data, at  the time when a user logs in..
+                        AboutForm.GetInstance().ReloadAboutFormData();
+                        BMICalculatorForm.GetInstance().ReloadBMICalculatorFormData();
+                        DashboardForm.GetInstance().ReloadDashboardFormData();
+                        DietPlansForm.GetInstance().ReloadDietPlansFormData();
+                        MainForm.GetInstance().ReloadMainFormData();
+                        ProfileForm.GetInstance().ReloadProfileFormData();
+                        WorkoutPlansForm.GetInstance().ReloadWorkoutPlansData();
+
                         UserDataManager.CurrentUser = user;
                         MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!", " ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                        // Open main form
 
                         // Navigate to MainForm
                         Features.OpenMainForm();
                         this.Close();
                     }
+
+                   
 
                 }
                 else
@@ -91,12 +100,12 @@ namespace GymAndFitness
 
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorUsername.Clear();
+            error.Clear();
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            errorPassword.Clear();
+            error.Clear();
         }
 
         private void lblGuest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

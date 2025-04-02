@@ -553,16 +553,6 @@ namespace GymAndFitness.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Food_To_Lose_Weight_Fast {
-            get {
-                object obj = ResourceManager.GetObject("Food To Lose Weight Fast", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap free3 {
             get {
                 object obj = ResourceManager.GetObject("free3", resourceCulture);
@@ -633,26 +623,6 @@ namespace GymAndFitness.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Gym___FItness {
-            get {
-                object obj = ResourceManager.GetObject("Gym & FItness", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Gym___FItness__1_ {
-            get {
-                object obj = ResourceManager.GetObject("Gym & FItness (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Gym___FItness_logo {
             get {
                 object obj = ResourceManager.GetObject("Gym & FItness logo", resourceCulture);
@@ -666,16 +636,6 @@ namespace GymAndFitness.Properties {
         internal static System.Drawing.Bitmap healthy_life {
             get {
                 object obj = ResourceManager.GetObject("healthy-life", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap High_Protein_foods_to_build_muscle {
-            get {
-                object obj = ResourceManager.GetObject("High Protein foods to build muscle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

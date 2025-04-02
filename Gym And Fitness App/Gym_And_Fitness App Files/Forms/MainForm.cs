@@ -21,11 +21,19 @@ namespace GymAndFitness
             return instance;
         }
 
-        //method to update profile picture in the forms.. after it is changed in profile form...
+        //method to refresh premium features. in the forms.. after it is changed in profile form...
         public void RefreshPremiumFeaturesMainForm()
         {
             pbMembershipStatus.Image = Features.MembershipStatusPic();
         }
+
+        //helper method for refreshing profile picture...
+        public void RefreshProfilePictureInForms()
+        {
+            UserDataManager.ApplyProfilePicture(pbProfilePicture);
+        }
+
+
         //form1 i.e. main
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -58,7 +66,7 @@ namespace GymAndFitness
         {
             if (UserDataManager.CurrentUser != null)
             {
-                UserDataManager.ApplyProfilePicture(btnProfilePicture);
+                UserDataManager.ApplyProfilePicture(pbProfilePicture);
                 btnLogout.Visible = true;
                 btnLogout.Enabled = true;
                 btnLogin.Visible = false;
@@ -83,18 +91,6 @@ namespace GymAndFitness
             MainFormLoadEvents();
         }
 
-        //hovering message
-        private void btnProfilePicture_MouseEnter(object sender, EventArgs e)
-        {
-            if (UserDataManager.CurrentUser != null)
-            {
-                toolTip1.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
-            }
-            else
-            {
-                toolTip1.SetToolTip(btnProfilePicture, "Profile");
-            }
-        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -108,7 +104,7 @@ namespace GymAndFitness
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
             Features.OpenLoginForm();
-            this.Close();
+            this.Hide();
         }
 
 
@@ -120,12 +116,22 @@ namespace GymAndFitness
             }
         }
 
-        private void btnProfilePicture_Click(object sender, EventArgs e)
+        private void pbProfilePicture_Click(object sender, EventArgs e)
         {
             Features.OpenProfileForm();
             this.Hide();
         }
 
-
+        private void pbProfilePicture_MouseEnter(object sender, EventArgs e)
+        {
+            if (UserDataManager.CurrentUser != null)
+            {
+                toolTip1.SetToolTip(pbProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+            }
+            else
+            {
+                toolTip1.SetToolTip(pbProfilePicture, "Profile");
+            }
+        }
     }
 }

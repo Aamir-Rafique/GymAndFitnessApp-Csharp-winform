@@ -41,15 +41,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.lblCreateAccount = new System.Windows.Forms.LinkLabel();
             this.chkShowPassword = new System.Windows.Forms.CheckBox();
-            this.errorUsername = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorPassword = new System.Windows.Forms.ErrorProvider(this.components);
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.lblGuest = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ribbonControl1 = new GymAndFitness.Classes.RibbonControl();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,7 +127,7 @@
             this.label4.Location = new System.Drawing.Point(203, 3);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 32);
+            this.label4.Size = new System.Drawing.Size(93, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "Sign in";
             // 
@@ -174,19 +172,15 @@
             this.chkShowPassword.AutoSize = true;
             this.chkShowPassword.Location = new System.Drawing.Point(354, 221);
             this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(114, 19);
+            this.chkShowPassword.Size = new System.Drawing.Size(102, 17);
             this.chkShowPassword.TabIndex = 3;
             this.chkShowPassword.Text = "Show Password";
             this.chkShowPassword.UseVisualStyleBackColor = true;
             this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
-            // errorUsername
+            // error
             // 
-            this.errorUsername.ContainerControl = this;
-            // 
-            // errorPassword
-            // 
-            this.errorPassword.ContainerControl = this;
+            this.error.ContainerControl = this;
             // 
             // label1
             // 
@@ -266,8 +260,7 @@
             this.VisibleChanged += new System.EventHandler(this.LoginForm_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -287,8 +280,7 @@
         private System.Windows.Forms.LinkLabel lblCreateAccount;
         private System.Windows.Forms.CheckBox chkShowPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ErrorProvider errorUsername;
-        private System.Windows.Forms.ErrorProvider errorPassword;
+        private System.Windows.Forms.ErrorProvider error;
         private System.Windows.Forms.LinkLabel lblGuest;
         private System.Windows.Forms.Label label1;
         private Classes.RibbonControl ribbonControl1;

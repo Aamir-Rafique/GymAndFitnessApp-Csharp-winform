@@ -27,12 +27,19 @@ namespace GymAndFitness
             return instance;
         }
 
-        //method to update profile picture in the forms.. after it is changed in profile form...
+        //method to refresh premium features. in the forms.. after it is changed in profile form...
         public void RefreshPremiumFeaturesWorkoutForm()
         {
             pbMembershipStatus.Image = Features.MembershipStatusPic();
             PremiumFeatureWorkoutPlan();
         }
+
+        //helper method for refreshing profile picture...
+        public void RefreshProfilePictureInForms()
+        {
+            UserDataManager.ApplyProfilePicture(pbProfilePicture);
+        }
+
 
         //load
         private async void WorkoutPlansForm_Load(object sender, EventArgs e)
@@ -79,7 +86,7 @@ namespace GymAndFitness
                 pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
 
                 // Apply profile picture asynchronously
-                await Task.Run(() => UserDataManager.ApplyProfilePicture(btnProfilePicture1));
+                await Task.Run(() => UserDataManager.ApplyProfilePicture(pbProfilePicture));
 
                 // Retrieve user ID and load workout plan asynchronously
                 int userId = UserDataManager.CurrentUser.UserID; // Replace with logic to get the logged-in user's ID
@@ -460,20 +467,6 @@ namespace GymAndFitness
 
             return formattedOutput.ToString();
         }
-
-
-        private void btnProfilePicture1_MouseEnter(object sender, EventArgs e)
-        {
-            if (UserDataManager.CurrentUser != null)
-            {
-                toolTip1.SetToolTip(btnProfilePicture1, $"{UserDataManager.CurrentUser.Username}'s Profile");
-            }
-            else
-            {
-                toolTip1.SetToolTip(btnProfilePicture1, "Profile");
-            }
-        }
-
         private void WorkoutPlansForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 0) // Check if all forms are closed
@@ -482,11 +475,6 @@ namespace GymAndFitness
             }
         }
 
-        private void btnProfilePicture1_Click(object sender, EventArgs e)
-        {
-            Features.OpenProfileForm();
-            this.Hide();
-        }
 
         private void cmbWorkoutType_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -497,6 +485,24 @@ namespace GymAndFitness
         {
             Features.ComboBoxValidation(sender, e);
 
+        }
+
+        private void pbProfilePicture_Click(object sender, EventArgs e)
+        {
+            Features.OpenProfileForm();
+            this.Hide();
+        }
+
+        private void pbProfilePicture_MouseEnter(object sender, EventArgs e)
+        {
+            if (UserDataManager.CurrentUser != null)
+            {
+                toolTip1.SetToolTip(pbProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+            }
+            else
+            {
+                toolTip1.SetToolTip(pbProfilePicture, "Profile");
+            }
         }
     }
 }

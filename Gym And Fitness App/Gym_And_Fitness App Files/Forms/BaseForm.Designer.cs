@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.slidePanel1 = new GymAndFitness.Classes.SlidePanel();
             this.ribbonControl1 = new GymAndFitness.Classes.RibbonControl();
+            this.slidePanel1 = new GymAndFitness.Classes.SlidePanel();
             this.SuspendLayout();
-            // 
-            // slidePanel1
-            // 
-            this.slidePanel1.BackColor = System.Drawing.Color.MediumBlue;
-            this.slidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.slidePanel1.Location = new System.Drawing.Point(0, 34);
-            this.slidePanel1.Name = "slidePanel1";
-            this.slidePanel1.Size = new System.Drawing.Size(45, 573);
-            this.slidePanel1.TabIndex = 1;
             // 
             // ribbonControl1
             // 
@@ -50,6 +41,15 @@
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Size = new System.Drawing.Size(696, 34);
             this.ribbonControl1.TabIndex = 0;
+            // 
+            // slidePanel1
+            // 
+            this.slidePanel1.BackColor = System.Drawing.Color.MediumBlue;
+            this.slidePanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.slidePanel1.Location = new System.Drawing.Point(0, 34);
+            this.slidePanel1.Name = "slidePanel1";
+            this.slidePanel1.Size = new System.Drawing.Size(45, 573);
+            this.slidePanel1.TabIndex = 1;
             // 
             // BaseForm
             // 
@@ -71,7 +71,8 @@
         }
 
         #endregion
-        private Classes.SlidePanel slidePanel1;
+
         private Classes.RibbonControl ribbonControl1;
+        private Classes.SlidePanel slidePanel1;
     }
 }

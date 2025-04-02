@@ -34,14 +34,14 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
-            this.btnProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
+            this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -100,9 +100,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Blue;
-            this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.pbMembershipStatus);
-            this.panel1.Controls.Add(this.btnProfilePicture);
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.pbProfilePicture);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -114,31 +114,32 @@
             // pbMembershipStatus
             // 
             this.pbMembershipStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbMembershipStatus.Location = new System.Drawing.Point(367, 25);
+            this.pbMembershipStatus.Location = new System.Drawing.Point(372, 25);
             this.pbMembershipStatus.Name = "pbMembershipStatus";
             this.pbMembershipStatus.Size = new System.Drawing.Size(30, 26);
             this.pbMembershipStatus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMembershipStatus.TabIndex = 22;
             this.pbMembershipStatus.TabStop = false;
             // 
-            // btnProfilePicture
+            // pbProfilePicture
             // 
-            this.btnProfilePicture.BackColor = System.Drawing.Color.Transparent;
-            this.btnProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
-            this.btnProfilePicture.BorderColor = System.Drawing.Color.Lime;
-            this.btnProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
-            this.btnProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.btnProfilePicture.BorderSize = 2;
-            this.btnProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfilePicture.GradientAngle = 50F;
-            this.btnProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
-            this.btnProfilePicture.Location = new System.Drawing.Point(668, 10);
-            this.btnProfilePicture.Name = "btnProfilePicture";
-            this.btnProfilePicture.Size = new System.Drawing.Size(58, 58);
-            this.btnProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnProfilePicture.TabIndex = 40;
-            this.btnProfilePicture.TabStop = false;
-            this.btnProfilePicture.Click += new System.EventHandler(this.btnProfilePicture_Click);
+            this.pbProfilePicture.BackColor = System.Drawing.Color.Transparent;
+            this.pbProfilePicture.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.pbProfilePicture.BorderColor = System.Drawing.Color.Lime;
+            this.pbProfilePicture.BorderColor2 = System.Drawing.Color.HotPink;
+            this.pbProfilePicture.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.pbProfilePicture.BorderSize = 2;
+            this.pbProfilePicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbProfilePicture.GradientAngle = 50F;
+            this.pbProfilePicture.Image = global::GymAndFitness.Properties.Resources.usernew;
+            this.pbProfilePicture.Location = new System.Drawing.Point(668, 5);
+            this.pbProfilePicture.Name = "pbProfilePicture";
+            this.pbProfilePicture.Size = new System.Drawing.Size(64, 64);
+            this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProfilePicture.TabIndex = 40;
+            this.pbProfilePicture.TabStop = false;
+            this.pbProfilePicture.Click += new System.EventHandler(this.pbProfilePicture_Click);
+            this.pbProfilePicture.MouseEnter += new System.EventHandler(this.pbProfilePicture_MouseEnter);
             // 
             // label1
             // 
@@ -147,7 +148,7 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.9604F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(85, 16);
+            this.label1.Location = new System.Drawing.Point(92, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(280, 40);
             this.label1.TabIndex = 0;
@@ -160,7 +161,7 @@
             this.pictureBox1.Image = global::GymAndFitness.Properties.Resources.Gym___FItness_logo;
             this.pictureBox1.Location = new System.Drawing.Point(17, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -199,7 +200,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
-            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(804, 604);
             this.MinimumSize = new System.Drawing.Size(804, 604);
@@ -213,7 +213,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -226,7 +226,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbMembershipStatus;
-        private Classes.RoundPictureBox btnProfilePicture;
+        private Classes.RoundPictureBox pbProfilePicture;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;

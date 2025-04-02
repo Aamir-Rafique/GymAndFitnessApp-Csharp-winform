@@ -12,7 +12,7 @@ namespace GymAndFitness.Forms
 
         private void BaseForm_Load(object sender, EventArgs e)
         {
-            slidePanel1.BringToFront();
+           slidePanel1.BringToFront();
         }
     }
 }

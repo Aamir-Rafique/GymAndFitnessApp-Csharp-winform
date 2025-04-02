@@ -22,12 +22,18 @@ namespace GymAndFitness
             return instance;
         }
 
-        //method to update profile picture in the forms.. after it is changed in profile form...
+        //method to refresh premium features. in the forms.. after it is changed in profile form...
         public void RefreshPremiumFeaturesDashboardForm()
         {
             pbMembershipStatus.Image = Features.MembershipStatusPic();
             PremiumFeatureDashboardForm();
-            ProgressBarWeight();
+            //ProgressBarWeight();
+        }
+
+        //helper method for refreshing profile picture...
+        public void RefreshProfilePictureInForms()
+        {
+            UserDataManager.ApplyProfilePicture(pbProfilePicture);
         }
 
         public void ProgressBarWeight()
@@ -171,7 +177,7 @@ namespace GymAndFitness
             if (UserDataManager.CurrentUser != null)
             {
                 // Apply profile picture asynchronously
-                await Task.Run(() => UserDataManager.ApplyProfilePicture(btnProfilePicture));
+                await Task.Run(() => UserDataManager.ApplyProfilePicture(pbProfilePicture));
 
                 // Load membership plan pictures asynchronously
                 pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
@@ -193,9 +199,7 @@ namespace GymAndFitness
                     lblWaterIntake.Text = "Great!";
                 }
 
-
                 PremiumFeatureDashboardForm();
-
             }
             else
             {
@@ -518,7 +522,7 @@ namespace GymAndFitness
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Features.OpenLoginForm();
-            this.Close();
+            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -527,18 +531,6 @@ namespace GymAndFitness
             if (result == DialogResult.OK)
             {
                 Features.LogoutNow();
-            }
-        }
-
-        private void btnProfilePicture_MouseEnter_1(object sender, EventArgs e)
-        {
-            if (UserDataManager.CurrentUser != null)
-            {
-                toolTip.SetToolTip(btnProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
-            }
-            else
-            {
-                toolTip.SetToolTip(btnProfilePicture, "Profile");
             }
         }
 
@@ -564,10 +556,23 @@ namespace GymAndFitness
             }
         }
 
-        private void btnProfilePicture_Click(object sender, EventArgs e)
+
+        private void pbProfilePicture_Click(object sender, EventArgs e)
         {
             Features.OpenProfileForm();
             this.Hide();
+        }
+
+        private void pbProfilePicture_MouseEnter(object sender, EventArgs e)
+        {
+            if (UserDataManager.CurrentUser != null)
+            {
+                toolTip.SetToolTip(pbProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+            }
+            else
+            {
+                toolTip.SetToolTip(pbProfilePicture, "Profile");
+            }
         }
     }
 }

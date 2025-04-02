@@ -127,9 +127,6 @@
   <data name="workout4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Workoutpics\workout4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bmiChartUnderW8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\bmiChartUnderW8.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fitness png" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\fitness png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,9 +199,6 @@
   <data name="DownwardDogImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\WorkoutType pics\DownwardDogImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bmiChartObese" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\bmiChartObese.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="SquatsImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\WorkoutType pics\SquatsImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -222,9 +216,6 @@
   </data>
   <data name="user_profilenew" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\user_profilenew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="High Protein foods to build muscle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\High Protein foods to build muscle.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\Logo_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,9 +286,6 @@
   <data name="Quinoa Bowl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\DietRecipes\Quinoa Bowl.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bmiChartOverW8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\bmiChartOverW8.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="crown1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\crown1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -321,9 +309,6 @@
   </data>
   <data name="BenchPressImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\WorkoutType pics\BenchPressImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bmiChartExtremeObese" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\bmiChartExtremeObese.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zucchini Noodles with Pesto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\DietRecipes\Zucchini Noodles with Pesto.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -355,17 +340,11 @@
   <data name="WarriorPoseImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\WorkoutType pics\WarriorPoseImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gym &amp; FItness" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Gym &amp; FItness.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Diet_Protien1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\Diet_Protien1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bmiChartNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\bmiChartNormal.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="communication" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\communication.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -460,9 +439,6 @@
   <data name="workout5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Workoutpics\workout5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Food To Lose Weight Fast" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Food To Lose Weight Fast.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ChildPoseImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\WorkoutType pics\ChildPoseImage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -487,9 +463,6 @@
   <data name="diet1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\diet1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Gym &amp; FItness (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Images\Gym &amp; FItness (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Protein Smoothie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Images\Dietpics\DietRecipes\Protein Smoothie.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -513,5 +486,20 @@
   </data>
   <data name="backbtnn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons\backbtnn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmiChartExtremeObese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\bmiChartExtremeObese.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmiChartNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\bmiChartNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmiChartObese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\bmiChartObese.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmiChartOverW8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\bmiChartOverW8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bmiChartUnderW8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\bmiChartUnderW8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

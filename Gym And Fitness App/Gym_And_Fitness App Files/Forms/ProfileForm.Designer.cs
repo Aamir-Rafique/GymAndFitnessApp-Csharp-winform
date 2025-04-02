@@ -137,7 +137,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(65, 149);
+            this.panel1.Location = new System.Drawing.Point(77, 136);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(285, 158);
             this.panel1.TabIndex = 3;
@@ -222,11 +222,10 @@
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label4);
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(65, 320);
+            this.panel2.Location = new System.Drawing.Point(77, 311);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(286, 210);
+            this.panel2.Size = new System.Drawing.Size(286, 217);
             this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblStartingWeight
             // 
@@ -350,11 +349,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 11);
+            this.label4.Location = new System.Drawing.Point(46, 10);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 23);
+            this.label4.Size = new System.Drawing.Size(92, 23);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Physique";
+            this.label4.Text = "PHYSIQUE";
             // 
             // panel3
             // 
@@ -368,9 +367,9 @@
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.label7);
             this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(363, 383);
+            this.panel3.Location = new System.Drawing.Point(378, 383);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(366, 147);
+            this.panel3.Size = new System.Drawing.Size(400, 145);
             this.panel3.TabIndex = 7;
             // 
             // label17
@@ -388,7 +387,7 @@
             this.lblTargetWeightRange.AutoSize = true;
             this.lblTargetWeightRange.Font = new System.Drawing.Font("Segoe UI", 12.11881F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTargetWeightRange.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTargetWeightRange.Location = new System.Drawing.Point(221, 75);
+            this.lblTargetWeightRange.Location = new System.Drawing.Point(225, 75);
             this.lblTargetWeightRange.Name = "lblTargetWeightRange";
             this.lblTargetWeightRange.Size = new System.Drawing.Size(80, 23);
             this.lblTargetWeightRange.TabIndex = 22;
@@ -410,7 +409,7 @@
             this.lblTargetWeight.AutoSize = true;
             this.lblTargetWeight.Font = new System.Drawing.Font("Rockwell", 12.11881F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTargetWeight.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblTargetWeight.Location = new System.Drawing.Point(185, 111);
+            this.lblTargetWeight.Location = new System.Drawing.Point(188, 111);
             this.lblTargetWeight.Name = "lblTargetWeight";
             this.lblTargetWeight.Size = new System.Drawing.Size(97, 20);
             this.lblTargetWeight.TabIndex = 15;
@@ -456,9 +455,9 @@
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label8);
             this.panel4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel4.Location = new System.Drawing.Point(364, 233);
+            this.panel4.Location = new System.Drawing.Point(378, 226);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(236, 144);
+            this.panel4.Size = new System.Drawing.Size(241, 144);
             this.panel4.TabIndex = 8;
             // 
             // pbMembershipStatus
@@ -647,9 +646,9 @@
             this.panel6.Controls.Add(this.lblFitnessLevel);
             this.panel6.Controls.Add(this.label3);
             this.panel6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel6.Location = new System.Drawing.Point(364, 149);
+            this.panel6.Location = new System.Drawing.Point(378, 136);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(236, 77);
+            this.panel6.Size = new System.Drawing.Size(241, 77);
             this.panel6.TabIndex = 20;
             // 
             // pictureBox5
@@ -683,9 +682,9 @@
             this.panel7.Controls.Add(this.nudCurrentWeight);
             this.panel7.Controls.Add(this.label15);
             this.panel7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel7.Location = new System.Drawing.Point(65, 552);
+            this.panel7.Location = new System.Drawing.Point(77, 545);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(387, 86);
+            this.panel7.Size = new System.Drawing.Size(383, 86);
             this.panel7.TabIndex = 37;
             // 
             // nudCurrentHeight
@@ -781,7 +780,7 @@
             this.btnDeleteAccount.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAccount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDeleteAccount.Image = global::GymAndFitness.Properties.Resources.deluser;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(787, 571);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(787, 569);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(61, 60);
             this.btnDeleteAccount.TabIndex = 38;

@@ -97,7 +97,7 @@
             this.lblVersion.AutoSize = true;
             this.lblVersion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.980198F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVersion.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lblVersion.Location = new System.Drawing.Point(310, 103);
+            this.lblVersion.Location = new System.Drawing.Point(311, 103);
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(118, 19);
             this.lblVersion.TabIndex = 7;
@@ -116,9 +116,9 @@
             // 
             // progressBarLoading
             // 
-            this.progressBarLoading.Location = new System.Drawing.Point(0, 230);
+            this.progressBarLoading.Location = new System.Drawing.Point(-1, 230);
             this.progressBarLoading.Name = "progressBarLoading";
-            this.progressBarLoading.Size = new System.Drawing.Size(537, 11);
+            this.progressBarLoading.Size = new System.Drawing.Size(538, 11);
             this.progressBarLoading.TabIndex = 1;
             // 
             // pictureBox1

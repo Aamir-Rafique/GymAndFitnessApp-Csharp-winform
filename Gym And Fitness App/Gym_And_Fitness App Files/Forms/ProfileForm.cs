@@ -53,8 +53,8 @@ namespace GymAndFitness
                     lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
                     lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
                     lblTargetWeight.Text = $"{UserDataManager.CurrentUser.TargetWeight} kg";
-                    lblFitnessGoal.Text = UserDataManager.CurrentUser.FitnessGoal;
-                    lblFitnessLevel.Text = UserDataManager.CurrentUser.FitnessLevel;
+                    lblFitnessGoal.Text = $"💪 {UserDataManager.CurrentUser.FitnessGoal}";
+                    lblFitnessLevel.Text = $"🏋️‍♀️ {UserDataManager.CurrentUser.FitnessLevel}";
                     lblTargetWeightRange.Text = UserDataManager.CurrentUser.TargetWeightRange;
 
                     LoadMembershipStatus_Pic();
@@ -219,12 +219,22 @@ namespace GymAndFitness
                 else
                 {
                     UserDataManager.ChangeProfilePicture(pbProfilePicture);
+
+                    //calling this method: (to refresh profile pictures in each form..)
+                    AboutForm.GetInstance().RefreshProfilePictureInForms();
+                    BMICalculatorForm.GetInstance().RefreshProfilePictureInForms();
+                    DashboardForm.GetInstance().RefreshProfilePictureInForms();
+                    DietPlansForm.GetInstance().RefreshProfilePictureInForms();
+                    MainForm.GetInstance().RefreshProfilePictureInForms();
+                    WorkoutPlansForm.GetInstance().RefreshProfilePictureInForms();
+
+
                     MessageBox.Show("Profile Picture updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DialogResult res = MessageBox.Show("Restart to see effect? \nClick 'Ok' to restart now\n'Cancel' to do this later.", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (res == DialogResult.OK)
-                    {
-                        Application.Restart();
-                    }
+                    //DialogResult res = MessageBox.Show("Restart now to see effect? \n\nClick 'Ok' to restart now or 'Cancel' to do this later.", "Success", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    //if (res == DialogResult.OK)
+                    //{
+                    //    Application.Restart();
+                    //}
                 }
             }
             else
@@ -260,6 +270,7 @@ namespace GymAndFitness
                     MessageBox.Show("Height and weight updated successfully!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     RefreshPremiumFeaturesProfileForm();
+                    DashboardForm.GetInstance().ProgressBarWeight(); //to refresh progress bar, everytime the weight/height is updated..
                 }
                 else
                 {
@@ -273,6 +284,7 @@ namespace GymAndFitness
         }
 
 
+        //method to refresh premium features. in the forms.. after it is changed in profile form...
         public void RefreshPremiumFeaturesProfileForm()
         {
             lblHeight.Text = $"{UserDataManager.CurrentUser.Height} cm";
@@ -287,7 +299,7 @@ namespace GymAndFitness
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Features.OpenLoginForm();
-            this.Close();
+            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -444,9 +456,5 @@ namespace GymAndFitness
             this.Hide();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
