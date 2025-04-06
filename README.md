@@ -9,6 +9,7 @@ The **Gym And Fitness Application** is a Full-stack WinForms **C#** fitness app
 
 ## 🎯 Features
 
+✅ Used OOP concepts (Encapsulation, inheritance etc.)
 ✅ **User Authentication**: Secure login/signup implementation using the **Singleton** design pattern.\
 ✅ **User-Friendly Interface**: Designed using **Windows Forms (WinForms)** for easy navigation and interaction.\
 ✅ **BMI Calculator Module**: Users can calculate their Body Mass Index.\
