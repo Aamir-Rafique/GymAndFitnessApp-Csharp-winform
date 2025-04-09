@@ -94,7 +94,8 @@ GymAndFitnessApp/
 ### 1️⃣ **Clone the Repository**
 
 ```sh
- git clone https://github.com/Aamir-Rafique/GymAndFitnessApp.git
+git clone https://github.com/Aamir-Rafique/GymAndFitnessApp.git  
+cd GymAndFitnessApp  
 ```
 
 ### 2️⃣ **Pre-requisites**
