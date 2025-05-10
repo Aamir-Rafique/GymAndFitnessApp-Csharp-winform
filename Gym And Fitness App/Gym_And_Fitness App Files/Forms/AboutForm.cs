@@ -13,7 +13,6 @@ namespace GymAndFitness
         private AboutForm()
         {
             InitializeComponent();
-
         }
 
         public static AboutForm GetInstance()
@@ -83,111 +82,46 @@ namespace GymAndFitness
         //}
 
         //YOutube
-        private void pbGmail_Click(object sender, EventArgs e)
+        private void pbYoutube_Click(object sender, EventArgs e)
         {
-            // The URL to open when the PictureBox is clicked
             string url = "https://www.example.com";
-            try
-            {
-                // Open the URL in the default web browser
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Required to open URLs in the default browser
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unable to open the link. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Features.OpenExternalLink(url);
+
         }
 
         //facebook
         private void pbFacebook_Click(object sender, EventArgs e)
         {
-            // The URL to open when the PictureBox is clicked
             string url = "https://www.example.com";
+            Features.OpenExternalLink(url);
 
-            try
-            {
-                // Open the URL in the default web browser
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Required to open URLs in the default browser
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unable to open the link. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
 
         //linkedin
         private void pbLinkedin_Click(object sender, EventArgs e)
         {
-            // The URL to open when the PictureBox is clicked
             string url = "https://www.linkedin.com/in/aamir-rafique-7a5bb1336/";
+            Features.OpenExternalLink(url);
 
-            try
-            {
-                // Open the URL in the default web browser
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Required to open URLs in the default browser
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unable to open the link. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
 
         //twitter
         private void pbTwitter_Click(object sender, EventArgs e)
         {
-            // The URL to open when the PictureBox is clicked
             string url = "https://www.example.com";
-
-            try
-            {
-                // Open the URL in the default web browser
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Required to open URLs in the default browser
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unable to open the link. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Features.OpenExternalLink(url);
         }
+
 
         //github
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pbGithub_Click(object sender, EventArgs e)
         {
-            // The URL to open when the PictureBox is clicked
             string url = "https://github.com/Aamir-Rafique";
-
-            try
-            {
-                // Open the URL in the default web browser
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Required to open URLs in the default browser
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unable to open the link. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            Features.OpenExternalLink(url);
         }
+
 
         private void AboutForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -205,14 +139,8 @@ namespace GymAndFitness
 
         private void pbProfilePicture_MouseEnter(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
-            {
-                toolTip1.SetToolTip(pbProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
-            }
-            else
-            {
-                toolTip1.SetToolTip(pbProfilePicture, "Profile");
-            }
+            Features.TooltipProfilePic(toolTip1, pbProfilePicture);
         }
+
     }
 }

@@ -88,11 +88,6 @@ namespace GymAndFitness
 
 
 
-
-
-
-
-
         //button event
         private void btnCalculate_Click(object sender, EventArgs e)
         {
@@ -200,14 +195,7 @@ namespace GymAndFitness
 
         private void pbProfilePicture_MouseEnter(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
-            {
-                toolTip1.SetToolTip(pbProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
-            }
-            else
-            {
-                toolTip1.SetToolTip(pbProfilePicture, "Profile");
-            }
+            Features.TooltipProfilePic(toolTip1, pbProfilePicture);
         }
     }
 }

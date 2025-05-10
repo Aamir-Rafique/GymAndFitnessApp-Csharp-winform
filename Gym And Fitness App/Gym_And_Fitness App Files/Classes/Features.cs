@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Deployment.Application;
+using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
@@ -7,8 +8,42 @@ using System.Windows.Forms;
 
 namespace GymAndFitness
 {
-    public static class Features
+    public class Features
     {
+
+        //helper method for tooltip at pbProfilePicture
+
+        public static void TooltipProfilePic(ToolTip toolTip,PictureBox picture)
+        {
+            if (UserDataManager.CurrentUser != null)
+            {
+                toolTip.SetToolTip(picture, $"{UserDataManager.CurrentUser.Username}'s Profile");
+            }
+            else
+            {
+                toolTip.SetToolTip(picture, "Profile");
+            }
+        }
+
+        //helper method to open external links..
+        public static void OpenExternalLink(string url)
+        {
+            try
+            {
+                // Open the URL in the default web browser
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true // Required to open URLs in the default browser
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to open the link. " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
         //method for combo box.. so it could be selected using enter and arrow keys..
         public static void ComboBoxValidation(object sender, KeyPressEventArgs e)

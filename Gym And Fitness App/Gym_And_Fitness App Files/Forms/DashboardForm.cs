@@ -464,10 +464,11 @@ namespace GymAndFitness
 
 
 
+        private Random random = new Random();
+        private int index;
         private void btnChallenge_Click_1(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int index = random.Next(challenges.Length);
+            index = random.Next(challenges.Length);
             lblChallenge.Text = challenges[index];
         }
 
@@ -565,14 +566,8 @@ namespace GymAndFitness
 
         private void pbProfilePicture_MouseEnter(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
-            {
-                toolTip.SetToolTip(pbProfilePicture, $"{UserDataManager.CurrentUser.Username}'s Profile");
-            }
-            else
-            {
-                toolTip.SetToolTip(pbProfilePicture, "Profile");
-            }
+            Features.TooltipProfilePic(toolTip, pbProfilePicture);
+
         }
     }
 }

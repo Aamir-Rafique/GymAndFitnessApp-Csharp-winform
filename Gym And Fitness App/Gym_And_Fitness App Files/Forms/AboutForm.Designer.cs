@@ -33,12 +33,11 @@
             this.lblVer = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbGithub = new System.Windows.Forms.PictureBox();
             this.pbLinkedin = new System.Windows.Forms.PictureBox();
             this.pbFacebook = new System.Windows.Forms.PictureBox();
             this.pbTwitter = new System.Windows.Forms.PictureBox();
-            this.pbGmail = new System.Windows.Forms.PictureBox();
+            this.pbYoutube = new System.Windows.Forms.PictureBox();
             this.lblPurpose = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -47,11 +46,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pbGithub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLinkedin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTwitter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbYoutube)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
@@ -96,26 +96,18 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "© AR FitTech  2025 Gym && Fitness App. All Rights Reserved.";
             // 
-            // toolTip1
+            // pbGithub
             // 
-            this.toolTip1.AutoPopDelay = 5000;
-            this.toolTip1.InitialDelay = 200;
-            this.toolTip1.ReshowDelay = 100;
-            this.toolTip1.ShowAlways = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::GymAndFitness.Properties.Resources.github;
-            this.pictureBox1.Location = new System.Drawing.Point(275, 497);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Github");
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbGithub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbGithub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbGithub.Image = global::GymAndFitness.Properties.Resources.github;
+            this.pbGithub.Location = new System.Drawing.Point(275, 497);
+            this.pbGithub.Name = "pbGithub";
+            this.pbGithub.Size = new System.Drawing.Size(52, 38);
+            this.pbGithub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbGithub.TabIndex = 15;
+            this.pbGithub.TabStop = false;
+            this.pbGithub.Click += new System.EventHandler(this.pbGithub_Click);
             // 
             // pbLinkedin
             // 
@@ -128,7 +120,6 @@
             this.pbLinkedin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLinkedin.TabIndex = 13;
             this.pbLinkedin.TabStop = false;
-            this.toolTip1.SetToolTip(this.pbLinkedin, "LinkedIn");
             this.pbLinkedin.Click += new System.EventHandler(this.pbLinkedin_Click);
             // 
             // pbFacebook
@@ -142,7 +133,6 @@
             this.pbFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFacebook.TabIndex = 12;
             this.pbFacebook.TabStop = false;
-            this.toolTip1.SetToolTip(this.pbFacebook, "Facebook");
             this.pbFacebook.Click += new System.EventHandler(this.pbFacebook_Click);
             // 
             // pbTwitter
@@ -156,22 +146,20 @@
             this.pbTwitter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTwitter.TabIndex = 11;
             this.pbTwitter.TabStop = false;
-            this.toolTip1.SetToolTip(this.pbTwitter, "X (Twitter)");
             this.pbTwitter.Click += new System.EventHandler(this.pbTwitter_Click);
             // 
-            // pbGmail
+            // pbYoutube
             // 
-            this.pbGmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbGmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbGmail.Image = global::GymAndFitness.Properties.Resources.youtube;
-            this.pbGmail.Location = new System.Drawing.Point(360, 497);
-            this.pbGmail.Name = "pbGmail";
-            this.pbGmail.Size = new System.Drawing.Size(52, 38);
-            this.pbGmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbGmail.TabIndex = 10;
-            this.pbGmail.TabStop = false;
-            this.toolTip1.SetToolTip(this.pbGmail, "Youtube");
-            this.pbGmail.Click += new System.EventHandler(this.pbGmail_Click);
+            this.pbYoutube.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbYoutube.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbYoutube.Image = global::GymAndFitness.Properties.Resources.youtube;
+            this.pbYoutube.Location = new System.Drawing.Point(360, 497);
+            this.pbYoutube.Name = "pbYoutube";
+            this.pbYoutube.Size = new System.Drawing.Size(52, 38);
+            this.pbYoutube.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbYoutube.TabIndex = 10;
+            this.pbYoutube.TabStop = false;
+            this.pbYoutube.Click += new System.EventHandler(this.pbYoutube_Click);
             // 
             // lblPurpose
             // 
@@ -278,6 +266,13 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "Developed by:";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 200;
+            this.toolTip1.ReshowDelay = 100;
+            this.toolTip1.ShowAlways = true;
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,10 +283,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbGithub);
             this.Controls.Add(this.pbFacebook);
             this.Controls.Add(this.pbTwitter);
-            this.Controls.Add(this.pbGmail);
+            this.Controls.Add(this.pbYoutube);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblVer);
             this.Controls.Add(this.lblPurpose);
@@ -309,19 +304,19 @@
             this.Controls.SetChildIndex(this.lblPurpose, 0);
             this.Controls.SetChildIndex(this.lblVer, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.pbGmail, 0);
+            this.Controls.SetChildIndex(this.pbYoutube, 0);
             this.Controls.SetChildIndex(this.pbTwitter, 0);
             this.Controls.SetChildIndex(this.pbFacebook, 0);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
+            this.Controls.SetChildIndex(this.pbGithub, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.lblVersion, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGithub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLinkedin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbTwitter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbYoutube)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
@@ -334,13 +329,12 @@
         #endregion
         private System.Windows.Forms.Label lblVer;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pbGmail;
+        private System.Windows.Forms.PictureBox pbYoutube;
         private System.Windows.Forms.PictureBox pbTwitter;
         private System.Windows.Forms.PictureBox pbFacebook;
         private System.Windows.Forms.PictureBox pbLinkedin;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbGithub;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label lblPurpose;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Panel panel2;
@@ -349,5 +343,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
