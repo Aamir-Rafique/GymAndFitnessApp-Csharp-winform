@@ -9,6 +9,7 @@ The **Gym And Fitness Application** is a Full-stack WinForms **C#** fitness app
 
 ## 🎯 Features
 
+✅ Used OOP concepts (Encapsulation, inheritance etc.)
 ✅ **User Authentication**: Secure login/signup implementation using the **Singleton** design pattern.\
 ✅ **User-Friendly Interface**: Designed using **Windows Forms (WinForms)** for easy navigation and interaction.\
 ✅ **BMI Calculator Module**: Users can calculate their Body Mass Index.\
@@ -62,14 +63,39 @@ The **Gym And Fitness Application** is a Full-stack WinForms **C#** fitness app
 - **.NET Framework / .NET Runtime** – Required for running the application on client machines.
 
 ---
+## 📁 Folder Structure
 
+```bash
+GymAndFitnessApp/
+└── Gym And Fitness App/
+    └── Gym_And_Fitness App Files/
+        ├── .vs/
+        ├── bin/
+        ├── Classes/
+        ├── Database_files/
+        ├── Forms/
+        ├── ILink/
+        ├── obj/
+        ├── packages/
+        ├── Properties/
+        ├── Resources/
+        ├── App.config
+        ├── fitness.ico
+        ├── Gym & Fitness App_TemporaryKey.pfx
+        ├── GymAndFitness.csproj
+        ├── GymAndFitness.csproj.user
+        ├── GymAndFitness.sln
+        ├── GymAndFitness_TemporaryKey.pfx
+        ├── packages.config
+```
+---
 ## 🚀 Installation & Setup
 
 ### 1️⃣ **Clone the Repository**
 
 ```sh
- git clone https://github.com/YourGitHubUsername/GymFitnessApp.git  
- cd GymFitnessApp  
+git clone https://github.com/Aamir-Rafique/GymAndFitnessApp.git  
+cd GymAndFitnessApp  
 ```
 
 ### 2️⃣ **Pre-requisites**
@@ -79,13 +105,19 @@ Before running the application, ensure you have the following installed:
 - **.NET Framework 4.7.2**
 - **SQL Server LocalDB 2022**
 
-📥 **Download Pre-requisites**: [https://drive.google.com/drive/folders/1mPM1e0lUOnBpXNq1te7qLpcnIdWKqpl_?usp=drive_link]
+📥 **Download Pre-requisites**: [https://drive.google.com/drive/folders/19yuz4dl7XkBuzsyXG0APTuoXJXrlclz6?usp=sharing]
 
-### 3️⃣ **Setup Instructions**
+### 3️⃣ **Run in Visual Studio**
 
-- Open the cloned folder and follow the steps mentioned in `README.txt`.
-- Install the application.
-- Run the application.
+1. Open Visual Studio.
+2. Go to File > Open > Project/Solution.
+3. Navigate to the repo:  GymAndFitnessApp/Gym And Fitness App/Gym_And_Fitness App Files/
+4. Select the solution file: GymAndFitness.sln
+5. Let NuGet restore all dependencies (automatically or manually).
+
+Press F5 or click Start to run the app.
+
+✅ Once built successfully, the application will launch.
 
 Once the application is installed using **ClickOnce Deployment**, you can directly access it from your desktop.
 
