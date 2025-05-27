@@ -1,86 +1,122 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\",
+  "WorkspaceRootPath": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-private\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\classes\\loadingformclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:classes\\loadingformclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\bmicalculatorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\bmicalculatorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\bmicalculatorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\bmicalculatorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-private\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-private\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\loadingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\loadingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-private\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\classes\\dashboardformclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:classes\\dashboardformclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\classes\\features.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\classes\\features.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:classes\\features.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\membershipform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\membershipform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\loadingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\loadingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\classes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:classes\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\workoutplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\signupform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\paymentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\membershipform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\membershipform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\membershipform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\membershipform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\dietplansform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\bmicalculatorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\bmicalculatorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\bmicalculatorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\bmicalculatorform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:forms\\aboutform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|c:\\users\\aamir\\desktop\\github repos\\projects-public\\gymandfitnessapp\\gym and fitness app\\gym_and_fitness app files\\classes\\dietplansformclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A4C0422-7845-4E68-9E47-519F4C47A9CD}|GymAndFitness.csproj|solutionrelative:classes\\dietplansformclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -99,42 +135,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DashboardForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DashboardForm.cs",
-              "RelativeDocumentMoniker": "Forms\\DashboardForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DashboardForm.cs",
-              "RelativeToolTip": "Forms\\DashboardForm.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAA+wHAAAAAYAAAAAAAAAA==",
+              "Title": "LoadingFormClass.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\LoadingFormClass.cs",
+              "RelativeDocumentMoniker": "Classes\\LoadingFormClass.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\LoadingFormClass.cs",
+              "RelativeToolTip": "Classes\\LoadingFormClass.cs",
+              "ViewState": "AgIAABsAAAAAzszMzIwkwCQAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T16:20:27.794Z",
+              "WhenOpened": "2025-05-27T18:22:24.361Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DashboardFormClass.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DashboardFormClass.cs",
-              "RelativeDocumentMoniker": "Classes\\DashboardFormClass.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DashboardFormClass.cs",
-              "RelativeToolTip": "Classes\\DashboardFormClass.cs",
-              "ViewState": "AgIAAIMBAAAAAAAAAAAAAH0BAAANAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "LoadingForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoadingForm.cs",
+              "RelativeDocumentMoniker": "Forms\\LoadingForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoadingForm.cs",
+              "RelativeToolTip": "Forms\\LoadingForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T16:21:15.459Z",
+              "WhenOpened": "2025-05-27T17:59:37.633Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AboutForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs",
-              "RelativeDocumentMoniker": "Forms\\AboutForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs",
-              "RelativeToolTip": "Forms\\AboutForm.cs",
-              "ViewState": "AgIAAAYAAADgZGZmZmYBwFIAAAAJAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\Program.cs",
+              "RelativeDocumentMoniker": "Classes\\Program.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\Program.cs",
+              "RelativeToolTip": "Classes\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T16:28:00.849Z",
+              "WhenOpened": "2025-05-27T19:42:56.788Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -151,84 +188,138 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BMICalculatorForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BMICalculatorForm.cs",
-              "RelativeDocumentMoniker": "Forms\\BMICalculatorForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BMICalculatorForm.cs [Design]",
-              "RelativeToolTip": "Forms\\BMICalculatorForm.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "Features.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\Features.cs",
+              "RelativeDocumentMoniker": "Classes\\Features.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\Features.cs",
+              "RelativeToolTip": "Classes\\Features.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T17:54:43.406Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BMICalculatorForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BMICalculatorForm.cs",
-              "RelativeDocumentMoniker": "Forms\\BMICalculatorForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BMICalculatorForm.cs",
-              "RelativeToolTip": "Forms\\BMICalculatorForm.cs",
-              "ViewState": "AgIAAEgAAAAwMzMzMzM6wF0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T17:54:44.657Z",
+              "WhenOpened": "2025-05-05T15:23:24.88Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DashboardForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DashboardForm.cs",
-              "RelativeDocumentMoniker": "Forms\\DashboardForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DashboardForm.cs [Design]",
-              "RelativeToolTip": "Forms\\DashboardForm.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoginForm.cs [Design]",
+              "RelativeToolTip": "Forms\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T15:17:43.003Z",
+              "WhenOpened": "2025-05-10T18:56:29.508Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AboutForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs",
-              "RelativeDocumentMoniker": "Forms\\AboutForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs [Design]",
-              "RelativeToolTip": "Forms\\AboutForm.cs [Design]",
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoginForm.cs",
+              "RelativeToolTip": "Forms\\LoginForm.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAiwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T16:27:58.99Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoadingForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoadingForm.cs",
-              "RelativeDocumentMoniker": "Forms\\LoadingForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoadingForm.cs [Design]",
-              "RelativeToolTip": "Forms\\LoadingForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:56:27.025Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-27T17:59:46.403Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "DietPlansForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs",
               "RelativeDocumentMoniker": "Forms\\DietPlansForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs [Design]",
               "RelativeToolTip": "Forms\\DietPlansForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:56:06.928Z",
+              "WhenOpened": "2025-05-27T18:01:21.477Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DietPlansForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs",
+              "RelativeDocumentMoniker": "Forms\\DietPlansForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs",
+              "RelativeToolTip": "Forms\\DietPlansForm.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAswI8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:56:08.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DietPlansFormClass.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DietPlansFormClass.cs",
+              "RelativeDocumentMoniker": "Classes\\DietPlansFormClass.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DietPlansFormClass.cs",
+              "RelativeToolTip": "Classes\\DietPlansFormClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgDAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T16:53:36.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SignupForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\SignupForm.cs",
+              "RelativeDocumentMoniker": "Forms\\SignupForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\SignupForm.cs [Design]",
+              "RelativeToolTip": "Forms\\SignupForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T18:01:01.572Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SignupForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\SignupForm.cs",
+              "RelativeDocumentMoniker": "Forms\\SignupForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\SignupForm.cs",
+              "RelativeToolTip": "Forms\\SignupForm.cs",
+              "ViewState": "AgIAANcBAAAAAAAAAAD4v+YBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T18:19:03.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WorkoutPlansForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\WorkoutPlansForm.cs",
+              "RelativeDocumentMoniker": "Forms\\WorkoutPlansForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\WorkoutPlansForm.cs",
+              "RelativeToolTip": "Forms\\WorkoutPlansForm.cs",
+              "ViewState": "AgIAAMcBAAAAAAAAAAASwNcBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T18:19:15.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProfileForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\ProfileForm.cs",
+              "RelativeDocumentMoniker": "Forms\\ProfileForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\ProfileForm.cs",
+              "RelativeToolTip": "Forms\\ProfileForm.cs",
+              "ViewState": "AgIAAKsBAAAAAAAAAAD4v7oBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:57:19.894Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "WorkoutPlansForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\WorkoutPlansForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\WorkoutPlansForm.cs",
               "RelativeDocumentMoniker": "Forms\\WorkoutPlansForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\WorkoutPlansForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\WorkoutPlansForm.cs [Design]",
               "RelativeToolTip": "Forms\\WorkoutPlansForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T16:20:14.391Z",
@@ -236,61 +327,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DietPlansForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs",
-              "RelativeDocumentMoniker": "Forms\\DietPlansForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs",
-              "RelativeToolTip": "Forms\\DietPlansForm.cs",
-              "ViewState": "AgIAAMMBAAAAIAAAAAAAwPsDAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:56:08.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MainForm.cs",
-              "RelativeDocumentMoniker": "Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MainForm.cs [Design]",
-              "RelativeToolTip": "Forms\\MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:56:31.854Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ProfileForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\ProfileForm.cs",
-              "RelativeDocumentMoniker": "Forms\\ProfileForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\ProfileForm.cs",
-              "RelativeToolTip": "Forms\\ProfileForm.cs",
-              "ViewState": "AgIAAAABAAAQAAAAAIA3wAgBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:57:19.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Features.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\Features.cs",
-              "RelativeDocumentMoniker": "Classes\\Features.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\Features.cs",
-              "RelativeToolTip": "Classes\\Features.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T15:23:24.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "ProfileForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\ProfileForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\ProfileForm.cs",
               "RelativeDocumentMoniker": "Forms\\ProfileForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\ProfileForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\ProfileForm.cs [Design]",
               "RelativeToolTip": "Forms\\ProfileForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T18:56:54.082Z",
@@ -298,35 +339,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "BaseForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BaseForm.cs",
-              "RelativeDocumentMoniker": "Forms\\BaseForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BaseForm.cs [Design]",
-              "RelativeToolTip": "Forms\\BaseForm.cs [Design]",
+              "DocumentIndex": 13,
+              "Title": "PaymentForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\PaymentForm.cs",
+              "RelativeDocumentMoniker": "Forms\\PaymentForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\PaymentForm.cs",
+              "RelativeToolTip": "Forms\\PaymentForm.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAvwJIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T15:14:52.363Z"
+              "WhenOpened": "2025-05-27T18:18:42.612Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "MembershipForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MembershipForm.cs",
+              "DocumentIndex": 15,
+              "Title": "MembershipForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MembershipForm.cs",
               "RelativeDocumentMoniker": "Forms\\MembershipForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MembershipForm.cs [Design]",
-              "RelativeToolTip": "Forms\\MembershipForm.cs [Design]",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MembershipForm.cs",
+              "RelativeToolTip": "Forms\\MembershipForm.cs",
+              "ViewState": "AgIAACgAAAAAmJmZmZnxvzgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:56:47.107Z"
+              "WhenOpened": "2025-05-27T18:18:27.518Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "Forms\\MainForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MainForm.cs",
               "RelativeToolTip": "Forms\\MainForm.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAIA3wH8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAvwGwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T18:56:33.689Z",
               "EditorCaption": ""
@@ -334,25 +379,138 @@
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoginForm.cs",
-              "RelativeDocumentMoniker": "Forms\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\LoginForm.cs [Design]",
-              "RelativeToolTip": "Forms\\LoginForm.cs [Design]",
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "Forms\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T18:56:29.508Z"
+              "WhenOpened": "2025-05-10T18:56:31.854Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 14,
+              "Title": "PaymentForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\PaymentForm.cs",
+              "RelativeDocumentMoniker": "Forms\\PaymentForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\PaymentForm.cs [Design]",
+              "RelativeToolTip": "Forms\\PaymentForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T18:00:38.295Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MembershipForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MembershipForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MembershipForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\MembershipForm.cs [Design]",
+              "RelativeToolTip": "Forms\\MembershipForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T18:56:47.107Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DashboardForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "Forms\\DashboardForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DashboardForm.cs",
+              "RelativeToolTip": "Forms\\DashboardForm.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAvwGUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T18:01:10.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DashboardForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "Forms\\DashboardForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DashboardForm.cs [Design]",
+              "RelativeToolTip": "Forms\\DashboardForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T18:01:08.195Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BMICalculatorForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BMICalculatorForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BMICalculatorForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BMICalculatorForm.cs",
+              "RelativeToolTip": "Forms\\BMICalculatorForm.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAD4v0sAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T17:54:44.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BMICalculatorForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BMICalculatorForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BMICalculatorForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BMICalculatorForm.cs [Design]",
+              "RelativeToolTip": "Forms\\BMICalculatorForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T17:54:43.406Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "BaseForm.cs",
-              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BaseForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BaseForm.cs",
               "RelativeDocumentMoniker": "Forms\\BaseForm.cs",
-              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Private\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BaseForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BaseForm.cs",
               "RelativeToolTip": "Forms\\BaseForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T15:14:54.006Z"
+              "WhenOpened": "2025-05-06T15:14:54.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "BaseForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BaseForm.cs",
+              "RelativeDocumentMoniker": "Forms\\BaseForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\BaseForm.cs [Design]",
+              "RelativeToolTip": "Forms\\BaseForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T15:14:52.363Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AboutForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs",
+              "RelativeDocumentMoniker": "Forms\\AboutForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs",
+              "RelativeToolTip": "Forms\\AboutForm.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAD4v1gAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T16:28:00.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AboutForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs",
+              "RelativeDocumentMoniker": "Forms\\AboutForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs [Design]",
+              "RelativeToolTip": "Forms\\AboutForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T16:27:58.99Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

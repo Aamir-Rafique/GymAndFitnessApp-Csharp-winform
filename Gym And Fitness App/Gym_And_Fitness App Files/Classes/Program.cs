@@ -15,7 +15,13 @@ namespace GymAndFitness
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoadingForm());
+
+            using (var loadingForm = new LoadingForm())
+            {
+                loadingForm.ShowDialog(); // Modal loading form
+            }
+            Application.Run(new LoginForm()); // Main form is now LoginForm
+
         }
     }
 }

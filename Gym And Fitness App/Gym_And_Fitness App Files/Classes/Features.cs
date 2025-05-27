@@ -2,7 +2,6 @@
 using System.Deployment.Application;
 using System.Diagnostics;
 using System.Drawing;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 
@@ -10,6 +9,17 @@ namespace GymAndFitness
 {
     public class Features
     {
+
+
+        //Helper MEthod for FormClosed Event for each form...
+        public static void FormClosedEvent()
+        {
+            if (Application.OpenForms.Count == 0) // Check if all forms are closed
+            {
+                Application.Exit(); // Exit the entire application
+            }
+        }
+
         //btnLogout logic in forms
         public static void BtnLogout()
         {
@@ -25,7 +35,7 @@ namespace GymAndFitness
 
         //helper method for tooltip at pbProfilePicture
 
-        public static void TooltipProfilePic(ToolTip toolTip,PictureBox picture)
+        public static void TooltipProfilePic(ToolTip toolTip, PictureBox picture)
         {
             if (UserDataManager.CurrentUser != null)
             {
@@ -283,6 +293,7 @@ namespace GymAndFitness
         {
             LoginForm.GetInstance().Show();
         }
+
 
         public static void OpenMainForm()
         {

@@ -745,7 +745,7 @@
             this.txtFoodItem.TabIndex = 3;
             this.txtFoodItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFoodItem.Enter += new System.EventHandler(this.txtFoodItem_Enter);
-            this.txtFoodItem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIngredient_KeyDown);
+            this.txtFoodItem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtFoodItem_KeyDown);
             this.txtFoodItem.Leave += new System.EventHandler(this.txtFoodItem_Leave);
             // 
             // label2

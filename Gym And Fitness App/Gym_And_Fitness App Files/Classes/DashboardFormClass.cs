@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -178,7 +173,7 @@ namespace GymAndFitness.Classes
             return Math.Min(100, weightProgressPercentage); // Ensure max is 100%
         }
 
-      
+
 
 
         //For motivational quotes

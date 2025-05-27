@@ -1,8 +1,6 @@
 ﻿using GymAndFitness.Classes;
 using GymAndFitness.Forms;
 using System;
-using System.Diagnostics;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -77,7 +75,7 @@ namespace GymAndFitness
             Features.OpenExternalLink(url);
         }
 
-        
+
         //github
         private void pbGithub_Click(object sender, EventArgs e)
         {
@@ -87,10 +85,7 @@ namespace GymAndFitness
 
         private void AboutForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms.Count == 0) // Check if all forms are closed
-            {
-                Application.Exit(); // Exit the entire application
-            }
+            Features.FormClosedEvent();
         }
 
         private void pbProfilePicture_Click(object sender, EventArgs e)

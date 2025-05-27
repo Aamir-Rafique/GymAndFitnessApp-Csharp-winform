@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace GymAndFitness.Classes
@@ -42,22 +38,22 @@ namespace GymAndFitness.Classes
             //    txtWeight.Focus(); //isi pr focus!
             //    error.SetError(txtWeight, "Please Enter your Weight");
             //}
-           
-                double height = 0;
-                try
-                {
-                    double weight = double.Parse(txtWeight.Text);
-                    height = double.Parse(txtHeight.Text);
-                    double bmi = Features.CalculateBMI(weight, height);
-                    lblBMI.Text = $"{bmi:F2}";
-                    lblBMI.ForeColor = Features.GetBMIColor(bmi);
-                    lblBMICategory.ForeColor = Features.GetBMIColor(bmi);
-                    lblBMICategory.Text = Features.GetBMICategory(bmi);
-                    pbBMIChart.Image = Features.GetBMIChartUpdate(bmi);
-                    lblTargetWeightRange.Text = Features.SuggestTargetWeightRange(height);
-                }
-                catch (FormatException ex) { MessageBox.Show("Please enter valid numeric values for height and weight: " + ex.Message); }
-                catch (Exception ex) { MessageBox.Show("An error occurred while calculating BMI: " + ex.Message); }
+
+            double height = 0;
+            try
+            {
+                double weight = double.Parse(txtWeight.Text);
+                height = double.Parse(txtHeight.Text);
+                double bmi = Features.CalculateBMI(weight, height);
+                lblBMI.Text = $"{bmi:F2}";
+                lblBMI.ForeColor = Features.GetBMIColor(bmi);
+                lblBMICategory.ForeColor = Features.GetBMIColor(bmi);
+                lblBMICategory.Text = Features.GetBMICategory(bmi);
+                pbBMIChart.Image = Features.GetBMIChartUpdate(bmi);
+                lblTargetWeightRange.Text = Features.SuggestTargetWeightRange(height);
+            }
+            catch (FormatException ex) { MessageBox.Show("Please enter valid numeric values for height and weight: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("An error occurred while calculating BMI: " + ex.Message); }
 
         }
 

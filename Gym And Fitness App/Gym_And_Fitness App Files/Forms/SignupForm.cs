@@ -484,10 +484,7 @@ namespace GymAndFitness
 
         private void SignupForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms.Count == 0) // Check if all forms are closed
-            {
-                Application.Exit(); // Exit the entire application
-            }
+            Features.FormClosedEvent();
         }
 
         private void btnBackToLogin_Click_1(object sender, EventArgs e)

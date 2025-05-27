@@ -1,8 +1,6 @@
 ﻿using GymAndFitness.Classes;
 using GymAndFitness.Forms;
 using System;
-using System.Drawing;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -101,10 +99,7 @@ namespace GymAndFitness
 
         private void DashboardForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms.Count == 0) // Check if all forms are closed
-            {
-                Application.Exit(); // Exit the entire application
-            }
+            Features.FormClosedEvent();
         }
 
         private void pbProfilePicture_Click(object sender, EventArgs e)

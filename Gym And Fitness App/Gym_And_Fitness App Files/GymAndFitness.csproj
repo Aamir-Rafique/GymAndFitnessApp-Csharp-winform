@@ -308,7 +308,9 @@
     <Compile Include="Classes\AboutFormClass.cs" />
     <Compile Include="Classes\BMICalFormClass.cs" />
     <Compile Include="Classes\DashboardFormClass.cs" />
+    <Compile Include="Classes\DietPlansFormClass.cs" />
     <Compile Include="Classes\Features.cs" />
+    <Compile Include="Classes\LoadingFormClass.cs" />
     <Compile Include="Classes\RibbonControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

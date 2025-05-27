@@ -94,11 +94,7 @@ namespace GymAndFitness
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to LOGOUT?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (result == DialogResult.OK)
-            {
-                Features.LogoutNow();
-            }
+            Features.BtnLogout();
         }
 
         private void btnLogin_Click_1(object sender, EventArgs e)
@@ -110,10 +106,7 @@ namespace GymAndFitness
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms.Count == 0) // Check if all forms are closed
-            {
-                Application.Exit(); // Exit the entire application
-            }
+            Features.FormClosedEvent();
         }
 
         private void pbProfilePicture_Click(object sender, EventArgs e)
