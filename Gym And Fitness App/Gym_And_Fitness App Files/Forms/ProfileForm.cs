@@ -1,4 +1,5 @@
-﻿using GymAndFitness.Forms;
+﻿using GymAndFitness.Classes;
+using GymAndFitness.Forms;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -270,7 +271,7 @@ namespace GymAndFitness
                     MessageBox.Show("Height and weight updated successfully!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     RefreshPremiumFeaturesProfileForm();
-                    DashboardForm.GetInstance().ProgressBarWeight(); //to refresh progress bar, everytime the weight/height is updated..
+                    DashboardForm.GetInstance().RefreshProgressBarWeight();//to refresh progress bar, everytime the weight/height is updated..
                 }
                 else
                 {

@@ -10,6 +10,18 @@ namespace GymAndFitness
 {
     public class Features
     {
+        //btnLogout logic in forms
+        public static void BtnLogout()
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to LOGOUT?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                LogoutNow();
+            }
+        }
+
+
+
 
         //helper method for tooltip at pbProfilePicture
 

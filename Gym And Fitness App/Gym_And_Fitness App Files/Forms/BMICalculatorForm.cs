@@ -1,4 +1,5 @@
-﻿using GymAndFitness.Forms;
+﻿using GymAndFitness.Classes;
+using GymAndFitness.Forms;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,137 +38,28 @@ namespace GymAndFitness
         //load
         private async void BMICalculatorForm_Load(object sender, EventArgs e)
         {
-
-            await BMICalculatorFormLoadEvents();
-
-            //old logic..
-
-            //// Set placeholder for TextBox
-            //Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
-            //Features.SetTextBoxPlaceholder(txtWeight, "Your weight in kg..");
-
-            ////loading behaviour of bmi scale/chart
-            //pbBMIChart.Image = Properties.Resources.bmiChartUnderW8;
-
-
-            ////  accessing current user 
-            //if (UserDataManager.CurrentUser != null)
-            //{
-            //    UserDataManager.ApplyProfilePicture(pbProfilePicture);
-            //    //load membership plan pics
-            //    pbMembershipStatus.Image = Features.MembershipStatusPic();
-
-            //}
-        }
-
-
-        private async Task BMICalculatorFormLoadEvents()
-        {
-            // Set placeholder for TextBox
-            Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
-            Features.SetTextBoxPlaceholder(txtWeight, "Your weight in kg..");
-
-            // Loading behavior of BMI scale/chart
-            pbBMIChart.Image = await Task.Run(() => Properties.Resources.bmiChartUnderW8);
-
-            // Accessing current user
-            if (UserDataManager.CurrentUser != null)
-            {
-                // Load membership plan pics asynchronously
-                pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
-
-                // Apply profile picture asynchronously
-                await Task.Run(() => UserDataManager.ApplyProfilePicture(pbProfilePicture));
-            }
+            await BMICalFormClass.BMICalculatorFormLoadEvents(txtHeight, txtWeight, pbBMIChart, pbMembershipStatus, pbProfilePicture);
         }
 
         public async void ReloadBMICalculatorFormData()
         {
-            await BMICalculatorFormLoadEvents();
+            await BMICalFormClass.BMICalculatorFormLoadEvents(txtHeight, txtWeight, pbBMIChart, pbMembershipStatus, pbProfilePicture);
         }
-
-
 
         //button event
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtHeight.Text))
-            {
-                txtHeight.Focus(); //isi pr focus!
-                error.SetError(this.txtHeight, "Please Enter your height");
-            }
-            else if (string.IsNullOrEmpty(txtWeight.Text))
-            {
-                txtWeight.Focus(); //isi pr focus!
-                error.SetError(this.txtWeight, "Please Enter your Weight");
-            }
-            else
-            {
-                double height = 0;
-                try
-                {
-                    double weight = double.Parse(txtWeight.Text);
-                    height = double.Parse(txtHeight.Text);
-                    double bmi = Features.CalculateBMI(weight, height);
-                    lblBMI.Text = $"{bmi:F2}";
-                    lblBMI.ForeColor = Features.GetBMIColor(bmi);
-                    lblBMICategory.ForeColor = Features.GetBMIColor(bmi);
-                    lblBMICategory.Text = Features.GetBMICategory(bmi);
-                    pbBMIChart.Image = Features.GetBMIChartUpdate(bmi);
-                    lblTargetWeightRange.Text = Features.SuggestTargetWeightRange(height);
-                }
-                catch (FormatException ex) { MessageBox.Show("Please enter valid numeric values for height and weight: " + ex.Message); }
-                catch (Exception ex) { MessageBox.Show("An error occurred while calculating BMI: " + ex.Message); }
-
-            }
+            BMICalFormClass.btnCalculateEvent(txtHeight, txtWeight, error, lblBMI, lblBMICategory, pbBMIChart, lblTargetWeightRange);
         }
-
 
         private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            error.Clear();
-            char ch = e.KeyChar;
-            if (char.IsDigit(ch) == true)
-            {
-                e.Handled = false;   //if e.handled is true, it will not let anything to be typed!
-            }
-            else if (ch == 8)  //8 represents backspace , ASCII code 8, BS or Backspace
-            {
-                e.Handled = false;
-            }
-            else if (ch == 46)  //ASCII code 46, for period(.)
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
+            BMICalFormClass.txtHeightAndWeightValidation(error, e);
         }
-
         private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            error.Clear();
-            char ch = e.KeyChar;
-            if (char.IsDigit(ch) == true)
-            {
-                e.Handled = false;   //if e.handled is true, it will not let anything to be typed!
-            }
-            else if (ch == 8)  //8 represents backspace , ASCII code 8, BS or Backspace
-            {
-                e.Handled = false;
-            }
-            else if (ch == 46)  //ASCII code 46, for period(.)
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-
+            BMICalFormClass.txtHeightAndWeightValidation(error, e);
         }
-
 
         private void txtWeight_KeyDown(object sender, KeyEventArgs e)
         {
@@ -178,7 +70,6 @@ namespace GymAndFitness
             }
         }
 
-
         private void BMICalculatorForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms.Count == 0) // Check if all forms are closed
@@ -186,7 +77,6 @@ namespace GymAndFitness
                 Application.Exit(); // Exit the entire application
             }
         }
-
         private void pbProfilePicture_Click(object sender, EventArgs e)
         {
             Features.OpenProfileForm();
@@ -197,5 +87,7 @@ namespace GymAndFitness
         {
             Features.TooltipProfilePic(toolTip1, pbProfilePicture);
         }
+    
+    
     }
 }

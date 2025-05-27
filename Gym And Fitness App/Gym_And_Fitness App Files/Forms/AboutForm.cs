@@ -1,4 +1,5 @@
-﻿using GymAndFitness.Forms;
+﻿using GymAndFitness.Classes;
+using GymAndFitness.Forms;
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -38,48 +39,12 @@ namespace GymAndFitness
 
         private async void AboutForm_Load(object sender, EventArgs e)
         {
-            await AboutFormLoadEvents();
+            await AboutFormClass.AboutFormLoadEvents(lblPurpose, lblVersion, pbMembershipStatus, pbProfilePicture);
         }
         public async void ReloadAboutFormData()
         {
-            await AboutFormLoadEvents();
+            await AboutFormClass.AboutFormLoadEvents(lblPurpose, lblVersion, pbMembershipStatus, pbProfilePicture);
         }
-
-        private async Task AboutFormLoadEvents()
-        {
-            lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals by providing personalized workout plans, nutritional guidance, and progress tracking. Whether you're looking to build muscle, lose weight, or improve overall fitness, this app offers a comprehensive solution to support your journey. Our mission is to make fitness accessible, convenient, and enjoyable for everyone. Stay fit, stay healthy!";
-
-            // Assign the version to the label
-            lblVersion.Text = Features.GetCurrentVersion();
-
-            // Accessing current user 
-            if (UserDataManager.CurrentUser != null)
-            {
-                // Load membership plan pics asynchronously
-                pbMembershipStatus.Image = await Task.Run(() => Features.MembershipStatusPic());
-
-                // Apply profile picture (assuming this method is lightweight)
-                UserDataManager.ApplyProfilePicture(pbProfilePicture);
-            }
-        }
-
-        //old logic (without async..)
-        //private void AboutFormLoadEvents()
-        //{
-        //    lblPurpose.Text = "The Gym && Fitness App is designed to help users achieve their fitness goals by providing personalized workout plans, nutritional guidance, and progress tracking. Whether you're looking to build muscle, lose weight, or improve overall fitness, this app offers a comprehensive solution to support your journey. Our mission is to make fitness accessible, convenient, and enjoyable for everyone. Stay fit, stay healthy!";
-
-        //    //  accessing current user 
-        //    if (UserDataManager.CurrentUser != null)
-        //    {
-        //        //load membership plan pics
-        //        pbMembershipStatus.Image = Features.MembershipStatusPic();
-        //        UserDataManager.ApplyProfilePicture(pbProfilePicture);
-        //    }
-
-
-        //    // Assign the version to the label
-        //    lblVersion.Text = Features.GetCurrentVersion();
-        //}
 
         //YOutube
         private void pbYoutube_Click(object sender, EventArgs e)
@@ -94,7 +59,6 @@ namespace GymAndFitness
         {
             string url = "https://www.example.com";
             Features.OpenExternalLink(url);
-
         }
 
 
@@ -103,7 +67,6 @@ namespace GymAndFitness
         {
             string url = "https://www.linkedin.com/in/aamir-rafique-7a5bb1336/";
             Features.OpenExternalLink(url);
-
         }
 
 
@@ -114,14 +77,13 @@ namespace GymAndFitness
             Features.OpenExternalLink(url);
         }
 
-
+        
         //github
         private void pbGithub_Click(object sender, EventArgs e)
         {
             string url = "https://github.com/Aamir-Rafique";
             Features.OpenExternalLink(url);
         }
-
 
         private void AboutForm_FormClosed(object sender, FormClosedEventArgs e)
         {
