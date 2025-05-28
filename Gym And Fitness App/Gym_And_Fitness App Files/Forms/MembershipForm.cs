@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GymAndFitness.Classes;
+using System;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -19,39 +20,17 @@ namespace GymAndFitness
             }
             return instance;
         }
+
         private void btnFreePlan_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
-            {
-                MessageBox.Show("You are already using a free plan!", "Attention");
-                Features.OpenProfileForm();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
+            MembershipFormClass.GetFreePlan();
         }
 
         private void btnPremiumPlan_Click(object sender, EventArgs e)
         {
-            if (UserDataManager.CurrentUser != null)
-            {
-                if (UserDataManager.CurrentUser.MembershipStatus == "Premium")
-                {
-                    MessageBox.Show("You are already a Premium member!");
-                }
-                else
-                {
-                    Features.OpenPaymentForm();
-                    this.Close();
-                }
-            }
-            else
-            {
-                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            MembershipFormClass.GetPremiumPlan();
         }
+
         private void MembershipForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Features.FormClosedEvent();

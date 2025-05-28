@@ -57,10 +57,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblSavedWorkoutPlan = new System.Windows.Forms.Label();
             this.dgvWorkoutPlan = new System.Windows.Forms.DataGridView();
-            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Workout = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Intensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSaveWorkoutPlan = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -70,6 +66,10 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.timerForPics = new System.Windows.Forms.Timer(this.components);
+            this.Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Workout = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Intensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -430,30 +430,6 @@
             this.dgvWorkoutPlan.Size = new System.Drawing.Size(709, 285);
             this.dgvWorkoutPlan.TabIndex = 52;
             // 
-            // Day
-            // 
-            this.Day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Day.HeaderText = "Day";
-            this.Day.Name = "Day";
-            // 
-            // Workout
-            // 
-            this.Workout.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Workout.HeaderText = "Workout";
-            this.Workout.Name = "Workout";
-            // 
-            // Duration
-            // 
-            this.Duration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Duration.HeaderText = "Duration";
-            this.Duration.Name = "Duration";
-            // 
-            // Intensity
-            // 
-            this.Intensity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Intensity.HeaderText = "Intensity";
-            this.Intensity.Name = "Intensity";
-            // 
             // btnSaveWorkoutPlan
             // 
             this.btnSaveWorkoutPlan.BackColor = System.Drawing.Color.MediumSpringGreen;
@@ -569,6 +545,30 @@
             this.timerForPics.Interval = 4500;
             this.timerForPics.Tick += new System.EventHandler(this.timerForPics_Tick);
             // 
+            // Day
+            // 
+            this.Day.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Day.HeaderText = "Day";
+            this.Day.Name = "Day";
+            // 
+            // Workout
+            // 
+            this.Workout.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Workout.HeaderText = "Workout";
+            this.Workout.Name = "Workout";
+            // 
+            // Duration
+            // 
+            this.Duration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Duration.HeaderText = "Duration";
+            this.Duration.Name = "Duration";
+            // 
+            // Intensity
+            // 
+            this.Intensity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Intensity.HeaderText = "Intensity";
+            this.Intensity.Name = "Intensity";
+            // 
             // WorkoutPlansForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,10 +642,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Day;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Workout;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Intensity;
         private System.Windows.Forms.PictureBox pictureBox3;
         //private Classes.RoundPictureBox btnProfilePicture;
         private System.Windows.Forms.Panel pnlExercises;
@@ -663,5 +659,9 @@
         private System.Windows.Forms.Label label4;
         private Classes.RoundPictureBox pbProfilePicture;
         private System.Windows.Forms.PictureBox pbMembershipStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Day;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Workout;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Intensity;
     }
 }

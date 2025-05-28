@@ -311,6 +311,11 @@
     <Compile Include="Classes\DietPlansFormClass.cs" />
     <Compile Include="Classes\Features.cs" />
     <Compile Include="Classes\LoadingFormClass.cs" />
+    <Compile Include="Classes\LoginFormClass.cs" />
+    <Compile Include="Classes\MainFormClass.cs" />
+    <Compile Include="Classes\MembershipFormClass.cs" />
+    <Compile Include="Classes\PaymentFormClass.cs" />
+    <Compile Include="Classes\ProfileFormClass.cs" />
     <Compile Include="Classes\RibbonControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -320,12 +325,14 @@
     <Compile Include="Classes\RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Classes\SignupFormClass.cs" />
     <Compile Include="Classes\SlidePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Classes\SlidePanel.Designer.cs">
       <DependentUpon>SlidePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\WorkoutPlansFormClass.cs" />
     <Compile Include="Forms\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>

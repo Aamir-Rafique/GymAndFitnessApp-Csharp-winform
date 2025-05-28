@@ -1,4 +1,5 @@
-﻿using GymAndFitness.Forms;
+﻿using GymAndFitness.Classes;
+using GymAndFitness.Forms;
 using System;
 using System.Windows.Forms;
 
@@ -33,64 +34,16 @@ namespace GymAndFitness
             UserDataManager.ApplyProfilePicture(pbProfilePicture);
         }
 
-
         //form1 i.e. main
         private void Form1_Load(object sender, EventArgs e)
         {
-            MainFormLoadEvents();
-
-            //old logic..
-            ////  accessing current user 
-            //if (UserDataManager.CurrentUser != null)
-            //{
-            //    UserDataManager.ApplyProfilePicture(btnProfilePicture);
-            //    btnLogout.Visible = true;
-            //    btnLogout.Enabled = true;
-            //    btnLogin.Visible = false;
-            //    btnLogin.Enabled = false;
-
-            //    //load membership plan pics
-            //    pbMembershipStatus.Image = Features.MembershipStatusPic();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No user is logged in.");
-            //    btnLogout.Visible = false;
-            //    btnLogout.Enabled = false;
-            //    btnLogin.Visible = true;
-            //    btnLogin.Enabled = true;
-            //}
-        }
-
-        private void MainFormLoadEvents()
-        {
-            if (UserDataManager.CurrentUser != null)
-            {
-                UserDataManager.ApplyProfilePicture(pbProfilePicture);
-                btnLogout.Visible = true;
-                btnLogout.Enabled = true;
-                btnLogin.Visible = false;
-                btnLogin.Enabled = false;
-
-                //load membership plan pics
-                pbMembershipStatus.Image = Features.MembershipStatusPic();
-            }
-            else
-            {
-                btnLogout.Visible = false;
-                btnLogout.Enabled = false;
-                btnLogin.Visible = true;
-                btnLogin.Enabled = true;
-
-                MessageBox.Show("No user is logged in.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            MainFormClass.MainFormLoadEvents(pbProfilePicture, btnLogout, btnLogin, pbMembershipStatus);
         }
 
         public void ReloadMainFormData()
         {
-            MainFormLoadEvents();
+            MainFormClass.MainFormLoadEvents(pbProfilePicture, btnLogout, btnLogin, pbMembershipStatus);
         }
-
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -102,7 +55,6 @@ namespace GymAndFitness
             Features.OpenLoginForm();
             this.Hide();
         }
-
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -118,7 +70,8 @@ namespace GymAndFitness
         private void pbProfilePicture_MouseEnter(object sender, EventArgs e)
         {
             Features.TooltipProfilePic(toolTip1, pbProfilePicture);
-
         }
+
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GymAndFitness.Classes;
+using System;
 using System.Windows.Forms;
 
 namespace GymAndFitness
@@ -20,73 +21,20 @@ namespace GymAndFitness
             return instance;
         }
 
-
-
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            bool check = chkShowPassword.Checked;
-
-            switch (check)
-            {
-                case true:
-                    txtPassword.UseSystemPasswordChar = false;
-                    break;
-                case false:
-                    txtPassword.UseSystemPasswordChar = true;
-                    break;
-            }
+            LoginFormClass.CheckPassword(chkShowPassword, txtPassword);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtUsername.Text))
+            LoginFormClass.LoginNow(txtUsername, txtPassword, error);
+
+            if (UserDataManager.CurrentUser != null)
             {
-                txtUsername.Focus(); //isi pr focus!
-                error.SetError(this.txtUsername, "Please Enter your Username ");
-            }
-            else if (string.IsNullOrEmpty(txtPassword.Text))
-            {
-                txtPassword.Focus(); //isi pr focus!
-                error.SetError(this.txtPassword, "Please Enter your Password");
-            }
-            else
-            {
-                string username = txtUsername.Text;
-                string password = txtPassword.Text;
-
-                if (UserDataManager.IsValidLogin(username, password))
-                {
-                    MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
-                    User user = UserDataManager.GetUserDetails(txtUsername.Text);
-                    if (user != null && user.Password == txtPassword.Text)
-                    {
-                        // calling ReloadFormData(); in btnLogin in order to reload form data, at  the time when a user logs in..
-                        AboutForm.GetInstance().ReloadAboutFormData();
-                        BMICalculatorForm.GetInstance().ReloadBMICalculatorFormData();
-                        DashboardForm.GetInstance().ReloadDashboardFormData();
-                        DietPlansForm.GetInstance().ReloadDietPlansFormData();
-                        MainForm.GetInstance().ReloadMainFormData();
-                        ProfileForm.GetInstance().ReloadProfileFormData();
-                        WorkoutPlansForm.GetInstance().ReloadWorkoutPlansData();
-
-                        UserDataManager.CurrentUser = user;
-                        MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!", " ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // Navigate to MainForm
-                        Features.OpenMainForm();
-                        this.Close();
-                    }
-
-
-
-                }
-                else
-                {
-                    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                // Navigate to MainForm
+                Features.OpenMainForm();
+                this.Hide();
             }
         }
 
@@ -111,7 +59,7 @@ namespace GymAndFitness
         private void lblGuest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Features.OpenMainForm();
-            this.Close();
+            this.Hide();
         }
 
         private void LoginForm_VisibleChanged(object sender, EventArgs e)
@@ -134,5 +82,8 @@ namespace GymAndFitness
         {
             Features.FormClosedEvent();
         }
+
+
+
     }
 }

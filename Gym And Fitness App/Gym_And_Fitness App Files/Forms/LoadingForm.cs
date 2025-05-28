@@ -6,7 +6,6 @@ namespace GymAndFitness.Forms
 {
     public partial class LoadingForm : Form
     {
-
         public LoadingForm()
         {
             InitializeComponent();
@@ -21,8 +20,6 @@ namespace GymAndFitness.Forms
         {
             LoadingFormClass.StartLoading(lblLoading, lblWelcome, progressBarLoading, timerLoading);
         }
-
-
 
 
     }

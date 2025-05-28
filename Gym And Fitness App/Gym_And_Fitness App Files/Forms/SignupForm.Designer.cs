@@ -57,6 +57,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pbUnitConverter = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTargetWeight = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -68,6 +69,7 @@
             this.lblUsernameStatus = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnitConverter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             this.SuspendLayout();
@@ -195,7 +197,7 @@
             this.txtHeight.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHeight.Location = new System.Drawing.Point(496, 178);
             this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(148, 26);
+            this.txtHeight.Size = new System.Drawing.Size(119, 26);
             this.txtHeight.TabIndex = 4;
             this.txtHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHeight_KeyPress);
@@ -389,6 +391,19 @@
             this.toolTip1.ReshowDelay = 100;
             this.toolTip1.ShowAlways = true;
             // 
+            // pbUnitConverter
+            // 
+            this.pbUnitConverter.BackgroundImage = global::GymAndFitness.Properties.Resources.exchange;
+            this.pbUnitConverter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbUnitConverter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbUnitConverter.Location = new System.Drawing.Point(621, 174);
+            this.pbUnitConverter.Name = "pbUnitConverter";
+            this.pbUnitConverter.Size = new System.Drawing.Size(24, 32);
+            this.pbUnitConverter.TabIndex = 4;
+            this.pbUnitConverter.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbUnitConverter, "Unit Converter");
+            this.pbUnitConverter.Click += new System.EventHandler(this.pbUnitConverter_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -487,6 +502,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(880, 550);
+            this.Controls.Add(this.pbUnitConverter);
             this.Controls.Add(this.lblUsernameStatus);
             this.Controls.Add(this.cmbFitnessLevel);
             this.Controls.Add(this.txtTargetWeight);
@@ -533,6 +549,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackToLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnitConverter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             this.ResumeLayout(false);
@@ -578,5 +595,6 @@
         private Classes.RibbonControl ribbonControl1;
         private System.Windows.Forms.PictureBox btnBackToLogin;
         private System.Windows.Forms.Label lblUsernameStatus;
+        private System.Windows.Forms.PictureBox pbUnitConverter;
     }
 }
