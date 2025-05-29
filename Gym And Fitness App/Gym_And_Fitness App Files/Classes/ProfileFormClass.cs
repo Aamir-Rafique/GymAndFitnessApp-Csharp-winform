@@ -6,7 +6,7 @@ namespace GymAndFitness.Classes
 {
     internal class ProfileFormClass
     {
-        public static void ProfileFormLoadEvents(PictureBox pbProfilePicture, NumericUpDown nudCurrentHeight, NumericUpDown nudCurrentWeight, Button btnLogout, Button btnLogin, Label lblUsername, Label lblAge, Label lblGender, Label lblHeight, Label lblStartingWeight, Label lblCurrentWeight, Label lblBMI, Label lblTargetWeight, Label lblFitnessGoal, Label lblFitnessLevel, Label lblTargetWeightRange, PictureBox pbMembershipStatus, Label lblMembershipStatus, Button btnChangeProfilePicture, Button btnGetMembershipPlan)
+        public static void ProfileFormLoadEvents(PictureBox pbProfilePicture, NumericUpDown nudCurrentHeight, NumericUpDown nudCurrentWeight, Button btnLogout, Button btnLogin, Label lblUsername, Label lblAge, Label lblGender, Label lblHeight, Label lblStartingWeight, Label lblCurrentWeight, Label lblBMI, Label lblTargetWeight, Label lblFitnessGoal, Label lblFitnessLevel, Label lblTargetWeightRange, PictureBox pbMembershipStatus, Label lblMembershipStatus, Button btnChangeProfilePicture, Button btnGetMembershipPlan, PictureBox pbPremiumVerified)
         {
             if (UserDataManager.CurrentUser != null)
             {
@@ -35,7 +35,7 @@ namespace GymAndFitness.Classes
                     lblTargetWeightRange.Text = UserDataManager.CurrentUser.TargetWeightRange;
 
                     LoadMembershipStatus_Pic(pbMembershipStatus, lblMembershipStatus);
-                    PremiumFeaturesProfileForm(btnChangeProfilePicture, btnGetMembershipPlan, pbMembershipStatus, lblMembershipStatus);
+                    PremiumFeaturesProfileForm(btnChangeProfilePicture, btnGetMembershipPlan, pbMembershipStatus, lblMembershipStatus, pbPremiumVerified);
                 }
                 else
                 {
@@ -69,7 +69,7 @@ namespace GymAndFitness.Classes
             }
         }
 
-        public static void PremiumFeaturesProfileForm(Button btnChangeProfilePicture, Button btnGetMembershipPlan, PictureBox pbMembershipStatus, Label lblMembershipStatus)
+        public static void PremiumFeaturesProfileForm(Button btnChangeProfilePicture, Button btnGetMembershipPlan, PictureBox pbMembershipStatus, Label lblMembershipStatus, PictureBox pbPremiumVerified)
         {
             if (UserDataManager.CurrentUser.MembershipStatus == "Free" || UserDataManager.CurrentUser.MembershipStatus == null)
             {
@@ -81,6 +81,7 @@ namespace GymAndFitness.Classes
                 btnGetMembershipPlan.Visible = false;
                 pbMembershipStatus.Size = new System.Drawing.Size(55, 51);
                 lblMembershipStatus.Location = new System.Drawing.Point(92, 63);
+                pbPremiumVerified.Visible = true;
             }
         }
 

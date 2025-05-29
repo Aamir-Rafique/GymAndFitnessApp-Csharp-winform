@@ -51,6 +51,11 @@
             this.pbMembershipStatus = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSubmitEmail = new System.Windows.Forms.Button();
+            this.txtOTP = new System.Windows.Forms.TextBox();
+            this.lblOTP = new System.Windows.Forms.Label();
+            this.pbOTPVerified = new System.Windows.Forms.PictureBox();
+            this.btnVerifyOTP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.groupBoxRadioButtons.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -61,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOTPVerified)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -76,10 +82,10 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Calibri", 10.69307F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(176, 281);
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(159, 274);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(226, 26);
+            this.txtEmail.Size = new System.Drawing.Size(219, 27);
             this.txtEmail.TabIndex = 5;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyDown);
@@ -88,27 +94,32 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 12.11881F);
-            this.label2.Location = new System.Drawing.Point(111, 284);
+            this.label2.Font = new System.Drawing.Font("Rockwell", 12.71881F);
+            this.label2.Location = new System.Drawing.Point(96, 277);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 45;
             this.label2.Text = "Email:";
             // 
             // btnActivatePremium
             // 
-            this.btnActivatePremium.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnActivatePremium.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
-            this.btnActivatePremium.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.btnActivatePremium.BackColor = System.Drawing.Color.Orange;
+            this.btnActivatePremium.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActivatePremium.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SpringGreen;
+            this.btnActivatePremium.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gold;
             this.btnActivatePremium.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActivatePremium.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActivatePremium.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnActivatePremium.Location = new System.Drawing.Point(211, 333);
+            this.btnActivatePremium.Image = global::GymAndFitness.Properties.Resources.key1;
+            this.btnActivatePremium.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActivatePremium.Location = new System.Drawing.Point(190, 372);
             this.btnActivatePremium.Name = "btnActivatePremium";
-            this.btnActivatePremium.Size = new System.Drawing.Size(157, 34);
+            this.btnActivatePremium.Size = new System.Drawing.Size(191, 34);
             this.btnActivatePremium.TabIndex = 6;
             this.btnActivatePremium.Text = "Activate Premium";
+            this.btnActivatePremium.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActivatePremium.UseVisualStyleBackColor = false;
+            this.btnActivatePremium.Visible = false;
             this.btnActivatePremium.Click += new System.EventHandler(this.btnActivatePremium_Click);
             // 
             // error
@@ -128,7 +139,7 @@
             this.groupBoxRadioButtons.Controls.Add(this.rbtnVisa);
             this.groupBoxRadioButtons.Location = new System.Drawing.Point(76, 119);
             this.groupBoxRadioButtons.Name = "groupBoxRadioButtons";
-            this.groupBoxRadioButtons.Size = new System.Drawing.Size(414, 130);
+            this.groupBoxRadioButtons.Size = new System.Drawing.Size(414, 120);
             this.groupBoxRadioButtons.TabIndex = 68;
             this.groupBoxRadioButtons.TabStop = false;
             // 
@@ -291,7 +302,7 @@
             this.label5.Location = new System.Drawing.Point(213, 9);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 32);
+            this.label5.Size = new System.Drawing.Size(175, 32);
             this.label5.TabIndex = 0;
             this.label5.Text = "Premium Plan";
             // 
@@ -305,12 +316,85 @@
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.Visible = false;
             // 
+            // btnSubmitEmail
+            // 
+            this.btnSubmitEmail.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnSubmitEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubmitEmail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime;
+            this.btnSubmitEmail.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubmitEmail.Font = new System.Drawing.Font("Segoe UI", 10.41881F, System.Drawing.FontStyle.Bold);
+            this.btnSubmitEmail.ForeColor = System.Drawing.Color.White;
+            this.btnSubmitEmail.Location = new System.Drawing.Point(373, 274);
+            this.btnSubmitEmail.Name = "btnSubmitEmail";
+            this.btnSubmitEmail.Size = new System.Drawing.Size(67, 27);
+            this.btnSubmitEmail.TabIndex = 73;
+            this.btnSubmitEmail.Text = "Submit";
+            this.btnSubmitEmail.UseVisualStyleBackColor = false;
+            this.btnSubmitEmail.Click += new System.EventHandler(this.btnSubmitEmail_Click);
+            // 
+            // txtOTP
+            // 
+            this.txtOTP.Font = new System.Drawing.Font("Segoe UI", 10.69307F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOTP.Location = new System.Drawing.Point(232, 323);
+            this.txtOTP.Name = "txtOTP";
+            this.txtOTP.Size = new System.Drawing.Size(82, 27);
+            this.txtOTP.TabIndex = 74;
+            this.txtOTP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtOTP.Visible = false;
+            this.txtOTP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOTP_KeyDown);
+            this.txtOTP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOTP_KeyPress);
+            // 
+            // lblOTP
+            // 
+            this.lblOTP.AutoSize = true;
+            this.lblOTP.Font = new System.Drawing.Font("Rockwell", 12.11881F);
+            this.lblOTP.Location = new System.Drawing.Point(179, 326);
+            this.lblOTP.Name = "lblOTP";
+            this.lblOTP.Size = new System.Drawing.Size(48, 20);
+            this.lblOTP.TabIndex = 75;
+            this.lblOTP.Text = "OTP:";
+            this.lblOTP.Visible = false;
+            // 
+            // pbOTPVerified
+            // 
+            this.pbOTPVerified.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbOTPVerified.Image = global::GymAndFitness.Properties.Resources.verified__;
+            this.pbOTPVerified.Location = new System.Drawing.Point(377, 316);
+            this.pbOTPVerified.Name = "pbOTPVerified";
+            this.pbOTPVerified.Size = new System.Drawing.Size(42, 38);
+            this.pbOTPVerified.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbOTPVerified.TabIndex = 76;
+            this.pbOTPVerified.TabStop = false;
+            this.pbOTPVerified.Visible = false;
+            // 
+            // btnVerifyOTP
+            // 
+            this.btnVerifyOTP.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnVerifyOTP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVerifyOTP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnVerifyOTP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVerifyOTP.Font = new System.Drawing.Font("Segoe UI", 9.41881F, System.Drawing.FontStyle.Bold);
+            this.btnVerifyOTP.ForeColor = System.Drawing.Color.White;
+            this.btnVerifyOTP.Location = new System.Drawing.Point(309, 323);
+            this.btnVerifyOTP.Name = "btnVerifyOTP";
+            this.btnVerifyOTP.Size = new System.Drawing.Size(56, 27);
+            this.btnVerifyOTP.TabIndex = 77;
+            this.btnVerifyOTP.Text = "Verify";
+            this.btnVerifyOTP.UseVisualStyleBackColor = false;
+            this.btnVerifyOTP.Visible = false;
+            this.btnVerifyOTP.Click += new System.EventHandler(this.btnVerifyOTP_Click);
+            // 
             // PaymentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(550, 390);
+            this.BackColor = System.Drawing.Color.PaleGreen;
+            this.ClientSize = new System.Drawing.Size(550, 420);
+            this.Controls.Add(this.btnVerifyOTP);
+            this.Controls.Add(this.btnSubmitEmail);
+            this.Controls.Add(this.pbOTPVerified);
+            this.Controls.Add(this.lblOTP);
+            this.Controls.Add(this.txtOTP);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
@@ -323,12 +407,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(550, 390);
-            this.MinimumSize = new System.Drawing.Size(550, 390);
+            this.MaximumSize = new System.Drawing.Size(550, 420);
+            this.MinimumSize = new System.Drawing.Size(550, 420);
             this.Name = "PaymentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gym & Fitness";
-            this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PaymentForm_FormClosed);
             this.Load += new System.EventHandler(this.PaymentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
@@ -343,6 +426,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOTPVerified)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,5 +455,10 @@
         private System.Windows.Forms.PictureBox pbMembershipStatus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSubmitEmail;
+        private System.Windows.Forms.TextBox txtOTP;
+        private System.Windows.Forms.Label lblOTP;
+        private System.Windows.Forms.Button btnVerifyOTP;
+        private System.Windows.Forms.PictureBox pbOTPVerified;
     }
 }

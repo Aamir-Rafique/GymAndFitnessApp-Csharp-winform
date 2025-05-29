@@ -58,7 +58,7 @@ namespace GymAndFitness.Classes
                             WorkoutPlansForm.GetInstance().ReloadWorkoutPlansData();
 
                             UserDataManager.CurrentUser = user;
-                            MessageBox.Show($"Welcome, {UserDataManager.CurrentUser.Username}!", " ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Welcome {UserDataManager.CurrentUser.Username}!", " ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             //opening main form and close login form in forms...btnlogin method event..
                         }

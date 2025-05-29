@@ -1,13 +1,6 @@
 ﻿using GymAndFitness.Classes;
 using GymAndFitness.Forms;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GymAndFitness

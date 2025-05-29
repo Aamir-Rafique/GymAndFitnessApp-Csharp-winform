@@ -205,7 +205,7 @@ namespace GymAndFitness.Classes
             {
                 e.Handled = false;   //if e.handled is true, it will not let anything to be typed!
             }
-            else if (ch == 8)  //8 represents backspace , ASCII code 8, BS or Backspace
+            else if (ch == 08)  //08 represents backspace , ASCII code 08, BS or Backspace
             {
                 e.Handled = false;
             }

@@ -321,18 +321,22 @@
             // 
             // btnUploadPicture
             // 
-            this.btnUploadPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnUploadPicture.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.btnUploadPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUploadPicture.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnUploadPicture.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btnUploadPicture.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkBlue;
             this.btnUploadPicture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUploadPicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUploadPicture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnUploadPicture.Location = new System.Drawing.Point(742, 367);
+            this.btnUploadPicture.Image = global::GymAndFitness.Properties.Resources.upload;
+            this.btnUploadPicture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUploadPicture.Location = new System.Drawing.Point(723, 367);
             this.btnUploadPicture.Name = "btnUploadPicture";
-            this.btnUploadPicture.Size = new System.Drawing.Size(71, 29);
+            this.btnUploadPicture.Size = new System.Drawing.Size(104, 29);
             this.btnUploadPicture.TabIndex = 11;
             this.btnUploadPicture.Text = "Upload";
+            this.btnUploadPicture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUploadPicture.UseVisualStyleBackColor = false;
             this.btnUploadPicture.Click += new System.EventHandler(this.btnUploadPicture_Click);
             // 
@@ -500,7 +504,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(880, 550);
             this.Controls.Add(this.pbUnitConverter);
             this.Controls.Add(this.lblUsernameStatus);

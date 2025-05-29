@@ -85,6 +85,7 @@
             this.toolTipRefresh = new System.Windows.Forms.ToolTip(this.components);
             this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.pbProfilePicture = new GymAndFitness.Classes.RoundPictureBox();
+            this.pbPremiumVerified = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -102,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPremiumVerified)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -524,9 +526,10 @@
             // 
             this.panel5.AutoSize = true;
             this.panel5.BackColor = System.Drawing.Color.Blue;
+            this.panel5.Controls.Add(this.pbPremiumVerified);
+            this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.btnLogout);
             this.panel5.Controls.Add(this.btnBackToDashboard);
-            this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.btnLogin);
             this.panel5.Location = new System.Drawing.Point(45, 34);
             this.panel5.Name = "panel5";
@@ -572,7 +575,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 15.68317F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(158, 20);
+            this.label9.Location = new System.Drawing.Point(164, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(301, 31);
             this.label9.TabIndex = 0;
@@ -805,6 +808,20 @@
             this.pbProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProfilePicture.TabIndex = 39;
             this.pbProfilePicture.TabStop = false;
+            this.pbProfilePicture.Click += new System.EventHandler(this.pbProfilePicture_Click);
+            // 
+            // pbPremiumVerified
+            // 
+            this.pbPremiumVerified.BackColor = System.Drawing.Color.Transparent;
+            this.pbPremiumVerified.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbPremiumVerified.Image = global::GymAndFitness.Properties.Resources.verified;
+            this.pbPremiumVerified.Location = new System.Drawing.Point(119, 15);
+            this.pbPremiumVerified.Name = "pbPremiumVerified";
+            this.pbPremiumVerified.Size = new System.Drawing.Size(49, 44);
+            this.pbPremiumVerified.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPremiumVerified.TabIndex = 77;
+            this.pbPremiumVerified.TabStop = false;
+            this.pbPremiumVerified.Visible = false;
             // 
             // ProfileForm
             // 
@@ -866,6 +883,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPremiumVerified)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -927,5 +945,6 @@
         private System.Windows.Forms.Label lblTargetWeightRange;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label lblStartingWeight;
+        private System.Windows.Forms.PictureBox pbPremiumVerified;
     }
 }

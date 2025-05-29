@@ -85,6 +85,11 @@ namespace GymAndFitness
             Features.TooltipProfilePic(toolTip1, pbProfilePicture);
         }
 
-
+        //unitconvertor
+        private void pbUnitConverter_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.google.com/search?q=inch+to+cm&oq=inch+to+cm&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOdIBCDgyMzhqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8";
+            Features.OpenExternalLink(url);
+        }
     }
 }

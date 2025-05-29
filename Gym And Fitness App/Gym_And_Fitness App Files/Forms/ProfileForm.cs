@@ -25,13 +25,13 @@ namespace GymAndFitness
         //LOAD
         private void ProfileForm_Load(object sender, EventArgs e)
         {
-            ProfileFormClass.ProfileFormLoadEvents(pbProfilePicture, nudCurrentHeight, nudCurrentWeight, btnLogout, btnLogin, lblUsername, lblAge, lblGender, lblHeight, lblStartingWeight, lblCurrentWeight, lblBMI, lblTargetWeight, lblFitnessGoal, lblFitnessLevel, lblTargetWeightRange, pbMembershipStatus, lblMembershipStatus, btnChangeProfilePicture, btnGetMembershipPlan);
+            ProfileFormClass.ProfileFormLoadEvents(pbProfilePicture, nudCurrentHeight, nudCurrentWeight, btnLogout, btnLogin, lblUsername, lblAge, lblGender, lblHeight, lblStartingWeight, lblCurrentWeight, lblBMI, lblTargetWeight, lblFitnessGoal, lblFitnessLevel, lblTargetWeightRange, pbMembershipStatus, lblMembershipStatus, btnChangeProfilePicture, btnGetMembershipPlan, pbPremiumVerified);
         }
 
 
         public void ReloadProfileFormData()
         {
-            ProfileFormClass.ProfileFormLoadEvents(pbProfilePicture, nudCurrentHeight, nudCurrentWeight, btnLogout, btnLogin, lblUsername, lblAge, lblGender, lblHeight, lblStartingWeight, lblCurrentWeight, lblBMI, lblTargetWeight, lblFitnessGoal, lblFitnessLevel, lblTargetWeightRange, pbMembershipStatus, lblMembershipStatus, btnChangeProfilePicture, btnGetMembershipPlan);
+            ProfileFormClass.ProfileFormLoadEvents(pbProfilePicture, nudCurrentHeight, nudCurrentWeight, btnLogout, btnLogin, lblUsername, lblAge, lblGender, lblHeight, lblStartingWeight, lblCurrentWeight, lblBMI, lblTargetWeight, lblFitnessGoal, lblFitnessLevel, lblTargetWeightRange, pbMembershipStatus, lblMembershipStatus, btnChangeProfilePicture, btnGetMembershipPlan, pbPremiumVerified);
         }
 
 
@@ -42,7 +42,7 @@ namespace GymAndFitness
             lblCurrentWeight.Text = $"{UserDataManager.CurrentUser.CurrentWeight} kg";
             lblBMI.Text = UserDataManager.CurrentUser.BMI.ToString("F2");
             ProfileFormClass.LoadMembershipStatus_Pic(pbMembershipStatus, lblMembershipStatus);
-            ProfileFormClass.PremiumFeaturesProfileForm(btnChangeProfilePicture, btnGetMembershipPlan, pbMembershipStatus, lblMembershipStatus);
+            ProfileFormClass.PremiumFeaturesProfileForm(btnChangeProfilePicture, btnGetMembershipPlan, pbMembershipStatus, lblMembershipStatus, pbPremiumVerified);
         }
 
         private void btnGetMembershipPlan_Click(object sender, EventArgs e)
@@ -111,5 +111,9 @@ namespace GymAndFitness
             this.Hide();
         }
 
+        private void pbProfilePicture_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

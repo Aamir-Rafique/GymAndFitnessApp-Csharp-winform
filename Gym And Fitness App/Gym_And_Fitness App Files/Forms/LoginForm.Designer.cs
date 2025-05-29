@@ -53,20 +53,22 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold);
             this.txtUsername.Location = new System.Drawing.Point(279, 145);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(179, 26);
+            this.txtUsername.Size = new System.Drawing.Size(179, 27);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.69307F, System.Drawing.FontStyle.Bold);
             this.txtPassword.Location = new System.Drawing.Point(279, 189);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(179, 26);
+            this.txtPassword.Size = new System.Drawing.Size(179, 27);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -74,20 +76,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Rockwell", 11.0802F);
+            this.label2.Font = new System.Drawing.Font("Rockwell", 11.51881F);
             this.label2.Location = new System.Drawing.Point(185, 192);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 19);
+            this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Rockwell", 11.0802F);
+            this.label3.Font = new System.Drawing.Font("Rockwell", 11.51881F);
             this.label3.Location = new System.Drawing.Point(183, 148);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 19);
+            this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Username:";
             // 
@@ -96,7 +98,7 @@
             this.btnLogin.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SpringGreen;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.980198F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -170,9 +172,10 @@
             // chkShowPassword
             // 
             this.chkShowPassword.AutoSize = true;
-            this.chkShowPassword.Location = new System.Drawing.Point(354, 221);
+            this.chkShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.941584F);
+            this.chkShowPassword.Location = new System.Drawing.Point(349, 222);
             this.chkShowPassword.Name = "chkShowPassword";
-            this.chkShowPassword.Size = new System.Drawing.Size(102, 17);
+            this.chkShowPassword.Size = new System.Drawing.Size(114, 19);
             this.chkShowPassword.TabIndex = 3;
             this.chkShowPassword.Text = "Show Password";
             this.chkShowPassword.UseVisualStyleBackColor = true;
@@ -231,11 +234,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGreen;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(519, 391);
-            this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.lblGuest);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chkShowPassword);

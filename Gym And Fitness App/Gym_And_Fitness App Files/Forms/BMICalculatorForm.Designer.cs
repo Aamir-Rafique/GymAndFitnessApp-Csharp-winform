@@ -53,6 +53,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pbUnitConverter = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.panel3.SuspendLayout();
@@ -60,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnitConverter)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -103,7 +105,7 @@
             this.txtHeight.Location = new System.Drawing.Point(164, 195);
             this.txtHeight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(176, 30);
+            this.txtHeight.Size = new System.Drawing.Size(153, 30);
             this.txtHeight.TabIndex = 2;
             this.txtHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHeight_KeyPress);
@@ -115,7 +117,7 @@
             this.txtWeight.Location = new System.Drawing.Point(164, 247);
             this.txtWeight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(176, 30);
+            this.txtWeight.Size = new System.Drawing.Size(153, 30);
             this.txtWeight.TabIndex = 3;
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWeight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWeight_KeyDown);
@@ -340,12 +342,26 @@
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.Visible = false;
             // 
+            // pbUnitConverter
+            // 
+            this.pbUnitConverter.BackgroundImage = global::GymAndFitness.Properties.Resources.exchange;
+            this.pbUnitConverter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbUnitConverter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbUnitConverter.Location = new System.Drawing.Point(331, 195);
+            this.pbUnitConverter.Name = "pbUnitConverter";
+            this.pbUnitConverter.Size = new System.Drawing.Size(36, 30);
+            this.pbUnitConverter.TabIndex = 75;
+            this.pbUnitConverter.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbUnitConverter, "Unit Converter");
+            this.pbUnitConverter.Click += new System.EventHandler(this.pbUnitConverter_Click);
+            // 
             // BMICalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGreen;
+            this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.pbUnitConverter);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pbBMIChart);
             this.Controls.Add(this.label4);
@@ -376,6 +392,7 @@
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.pbBMIChart, 0);
             this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.pbUnitConverter, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -385,6 +402,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnitConverter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +432,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pbUnitConverter;
     }
 }

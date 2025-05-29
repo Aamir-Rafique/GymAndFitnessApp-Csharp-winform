@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="17857960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GymAndFitness.exe" size="17884072">
       <assemblyIdentity name="GymAndFitness" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wVR5NFuGNJCHHyYKhLKtFwK/oRtqi0os5rFquC2Ky3Y=</dsig:DigestValue>
+        <dsig:DigestValue>wGR1Ryc84qkU+gKO2DTNIjTE+vYArtxlu2DE8PBdXKY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -510,13 +510,13 @@
       <dsig:DigestValue>YM1lkWMOuZIkAhVRvJHz0e6xa/mINe8mexFVx7snFW8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GymAndFitness.pdb" size="478720">
+  <file name="GymAndFitness.pdb" size="488960">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>kEfiQHGq0OsL4TUMBjLtCcs3sqhKTgiRB+J9ayXI17E=</dsig:DigestValue>
+      <dsig:DigestValue>zc4shbnk5MJ4iP7tnMlnXN8sT+lHi0kI8ZnzfUNPe8I=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ILLink\ILLink.Descriptors.LibraryBuild.xml" size="297" writeableType="applicationData">
