@@ -6,7 +6,7 @@ namespace GymAndFitness.Classes
 {
     internal class BMICalFormClass
     {
-        public static async Task BMICalculatorFormLoadEvents(System.Windows.Forms.TextBox txtHeight, System.Windows.Forms.TextBox txtWeight, PictureBox pbBMIChart, PictureBox pbMembershipStatus, PictureBox pbProfilePicture)
+        public static async Task BMICalculatorFormLoadEvents(TextBox txtHeight, TextBox txtWeight, PictureBox pbBMIChart, PictureBox pbMembershipStatus, PictureBox pbProfilePicture)
         {
             // Set placeholder for TextBox
             Features.SetTextBoxPlaceholder(txtHeight, "Your height in cm..");
@@ -26,18 +26,18 @@ namespace GymAndFitness.Classes
             }
         }
 
-        public static void btnCalculateEvent(System.Windows.Forms.TextBox txtHeight, System.Windows.Forms.TextBox txtWeight, ErrorProvider error, System.Windows.Forms.Label lblBMI, System.Windows.Forms.Label lblBMICategory, PictureBox pbBMIChart, System.Windows.Forms.Label lblTargetWeightRange)
+        public static void btnCalculateEvent(TextBox txtHeight, TextBox txtWeight, ErrorProvider error, Label lblBMI, Label lblBMICategory, PictureBox pbBMIChart, Label lblTargetWeightRange)
         {
-            //if (string.IsNullOrEmpty(txtHeight.Text))
-            //{
-            //    txtHeight.Focus(); //isi pr focus!
-            //    error.SetError(txtHeight, "Please Enter your height");
-            //}
-            //else if (string.IsNullOrEmpty(txtWeight.Text))
-            //{
-            //    txtWeight.Focus(); //isi pr focus!
-            //    error.SetError(txtWeight, "Please Enter your Weight");
-            //}
+            if (string.IsNullOrEmpty(txtHeight.Text))
+            {
+                txtHeight.Focus(); //isi pr focus!
+                error.SetError(txtHeight, "Please Enter your height");
+            }
+            else if (string.IsNullOrEmpty(txtWeight.Text))
+            {
+                txtWeight.Focus(); //isi pr focus!
+                error.SetError(txtWeight, "Please Enter your Weight");
+            }
 
             double height = 0;
             try

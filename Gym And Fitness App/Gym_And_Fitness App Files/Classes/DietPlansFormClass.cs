@@ -11,7 +11,7 @@ namespace GymAndFitness.Classes
 {
     internal class DietPlansFormClass
     {
-        public static async Task DietPlansFormLoadEvents(System.Windows.Forms.Timer timerForPics, PictureBox pbProfilePicture, PictureBox pbMembershipStatus, ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, RichTextBox richTextBoxNotesInput, ComboBox cmbDietType, TextBox txtFoodItem, RadioButton rbtnOnline)
+        public static async Task DietPlansFormLoadEvents(Timer timerForPics, PictureBox pbProfilePicture, PictureBox pbMembershipStatus, ListBox lstBreakfastInput, ListBox lstLunchInput, ListBox lstSnacksInput, ListBox lstDinnerInput, RichTextBox richTextBoxNotesInput, ComboBox cmbDietType, TextBox txtFoodItem, RadioButton rbtnOnline)
         {
             // Start timer for diet pictures
             timerForPics.Start();

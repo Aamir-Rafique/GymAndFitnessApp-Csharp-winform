@@ -99,5 +99,9 @@ namespace GymAndFitness
             Features.TooltipProfilePic(toolTip1, pbProfilePicture);
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

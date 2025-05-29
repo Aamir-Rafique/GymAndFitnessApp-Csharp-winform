@@ -14,5 +14,10 @@ namespace GymAndFitness.Forms
         {
             slidePanel1.BringToFront();
         }
+
+        private void slidePanel1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

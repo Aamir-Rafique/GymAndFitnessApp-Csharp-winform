@@ -10,7 +10,7 @@ namespace GymAndFitness.Classes
     {
         private static double height = 0;
 
-        public static void SignupNow(System.Windows.Forms.TextBox txtUsername, System.Windows.Forms.TextBox txtAge, System.Windows.Forms.TextBox txtHeight, System.Windows.Forms.TextBox txtWeight, System.Windows.Forms.TextBox txtTargetWeight, System.Windows.Forms.TextBox txtPassword, System.Windows.Forms.TextBox txtConfirmPassword, ErrorProvider error, System.Windows.Forms.ComboBox cmbGender, System.Windows.Forms.ComboBox cmbFitnessGoal, System.Windows.Forms.ComboBox cmbFitnessLevel, System.Windows.Forms.Label lblTargetWeightRange, System.Windows.Forms.Label lblProfilePicturePath, System.Windows.Forms.Button btnUploadPicture)
+        public static void SignupNow(TextBox txtUsername, TextBox txtAge, TextBox txtHeight, TextBox txtWeight, TextBox txtTargetWeight, TextBox txtPassword, TextBox txtConfirmPassword, ErrorProvider error, ComboBox cmbGender, ComboBox cmbFitnessGoal, ComboBox cmbFitnessLevel, Label lblTargetWeightRange, Label lblProfilePicturePath, Button btnUploadPicture)
         {
 
             if (string.IsNullOrEmpty(txtUsername.Text))
@@ -153,7 +153,7 @@ namespace GymAndFitness.Classes
 
 
 
-        public static void SignupFormLoadEvents(System.Windows.Forms.ComboBox cmbGender, System.Windows.Forms.ComboBox cmbFitnessGoal, System.Windows.Forms.ComboBox cmbFitnessLevel)
+        public static void SignupFormLoadEvents(ComboBox cmbGender, ComboBox cmbFitnessGoal, ComboBox cmbFitnessLevel)
         {
             // Align ComboBox text in center
             Features.AlignComboBoxTextCenter(cmbGender);
@@ -161,7 +161,7 @@ namespace GymAndFitness.Classes
             Features.AlignComboBoxTextCenter(cmbFitnessLevel);
         }
 
-        public static void SetProfilPic(ErrorProvider error, System.Windows.Forms.Label lblProfilePicturePath, PictureBox pbProfilePicture)
+        public static void SetProfilPic(ErrorProvider error, Label lblProfilePicturePath, PictureBox pbProfilePicture)
         {
             error.Clear();
             // Open a file dialog to select an image
@@ -219,7 +219,7 @@ namespace GymAndFitness.Classes
             }
         }
 
-        public static void TxtWeightKeyValidation(ErrorProvider error, KeyPressEventArgs e, System.Windows.Forms.TextBox txtHeight)
+        public static void TxtWeightKeyValidation(ErrorProvider error, KeyPressEventArgs e, TextBox txtHeight)
         {
             e.Handled = true;
             if (string.IsNullOrEmpty(txtHeight.Text))
@@ -296,7 +296,7 @@ namespace GymAndFitness.Classes
 
 
 
-        public static void CheckUsernameAvailability(System.Windows.Forms.TextBox txtUsername, System.Windows.Forms.Label lblUsernameStatus)
+        public static void CheckUsernameAvailability(TextBox txtUsername, Label lblUsernameStatus)
         {
             if (!UserDataManager.IsUsernameAvailable(txtUsername.Text))
             {
@@ -325,7 +325,7 @@ namespace GymAndFitness.Classes
         }
 
 
-        public static void ResetValuesNow(System.Windows.Forms.TextBox txtUsername, System.Windows.Forms.TextBox txtAge, System.Windows.Forms.TextBox txtHeight, System.Windows.Forms.TextBox txtWeight, System.Windows.Forms.TextBox txtTargetWeight, System.Windows.Forms.TextBox txtPassword, System.Windows.Forms.TextBox txtConfirmPassword, ErrorProvider error, System.Windows.Forms.ComboBox cmbGender, System.Windows.Forms.ComboBox cmbFitnessGoal, System.Windows.Forms.ComboBox cmbFitnessLevel, System.Windows.Forms.Label lblProfilePicturePath, PictureBox pbProfilePicture)
+        public static void ResetValuesNow(TextBox txtUsername, TextBox txtAge, TextBox txtHeight, TextBox txtWeight, TextBox txtTargetWeight, TextBox txtPassword, TextBox txtConfirmPassword, ErrorProvider error, ComboBox cmbGender, ComboBox cmbFitnessGoal, ComboBox cmbFitnessLevel, Label lblProfilePicturePath, PictureBox pbProfilePicture)
         {
             DialogResult result = MessageBox.Show("All the input data will be erased!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.OK)
@@ -361,7 +361,7 @@ namespace GymAndFitness.Classes
 
         }
 
-        public static void ConfirmPasswordValidation(System.Windows.Forms.TextBox txtPassword, System.Windows.Forms.TextBox txtConfirmPassword, ErrorProvider error)
+        public static void ConfirmPasswordValidation(TextBox txtPassword, TextBox txtConfirmPassword, ErrorProvider error)
         {
             if (txtConfirmPassword.Text != txtPassword.Text)
             {
@@ -376,7 +376,7 @@ namespace GymAndFitness.Classes
 
 
         //txtheight cannot be empty..
-        public static void TxtHeightValidation(System.Windows.Forms.TextBox txtHeight)
+        public static void TxtHeightValidation(TextBox txtHeight)
         {
             if (string.IsNullOrEmpty(txtHeight.Text))
             {
@@ -388,7 +388,7 @@ namespace GymAndFitness.Classes
             }
         }
 
-        public static void TxtWeightValidation(System.Windows.Forms.Label lblTargetWeightRange)
+        public static void TxtWeightValidation(Label lblTargetWeightRange)
         {
             lblTargetWeightRange.Text = Features.SuggestTargetWeightRange(height);
         }

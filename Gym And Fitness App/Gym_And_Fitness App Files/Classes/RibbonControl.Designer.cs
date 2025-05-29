@@ -46,7 +46,7 @@
             // 
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.Image = global::GymAndFitness.Properties.Resources.close_normal;
             this.btnClose.Location = new System.Drawing.Point(41, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(37, 34);
@@ -55,11 +55,13 @@
             this.btnClose.TabStop = false;
             this.toolTip1.SetToolTip(this.btnClose, "Close");
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
             // btnMinimize
             // 
             this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Image = global::GymAndFitness.Properties.Resources.minimize_normal;
             this.btnMinimize.Location = new System.Drawing.Point(5, 4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(29, 27);
@@ -68,6 +70,8 @@
             this.btnMinimize.TabStop = false;
             this.toolTip1.SetToolTip(this.btnMinimize, "Minimize");
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click_1);
+            this.btnMinimize.MouseLeave += new System.EventHandler(this.btnMinimize_MouseLeave);
+            this.btnMinimize.MouseHover += new System.EventHandler(this.btnMinimize_MouseHover);
             // 
             // pbAppIcon
             // 

@@ -59,5 +59,25 @@ namespace GymAndFitness.Classes
         {
 
         }
+
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            btnClose.Image = Properties.Resources.close;
+        }
+
+        private void btnMinimize_MouseHover(object sender, EventArgs e)
+        {
+            btnMinimize.Image = Properties.Resources.minimize1;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.Image = Properties.Resources.minimize_normal;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.Image = Properties.Resources.close_normal;
+        }
     }
 }

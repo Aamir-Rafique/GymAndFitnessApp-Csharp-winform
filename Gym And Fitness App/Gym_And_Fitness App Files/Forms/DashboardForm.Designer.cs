@@ -200,7 +200,7 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlMain.BackColor = System.Drawing.Color.PaleGreen;
             this.pnlMain.Controls.Add(this.pnlWaterIntake);
             this.pnlMain.Controls.Add(this.lblPremiumMembers);
             this.pnlMain.Controls.Add(this.pnlChallenge);

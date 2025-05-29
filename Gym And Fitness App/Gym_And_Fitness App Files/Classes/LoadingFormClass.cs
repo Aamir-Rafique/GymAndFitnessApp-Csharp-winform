@@ -15,7 +15,7 @@ namespace GymAndFitness.Classes
         private const int AlmostThereTime = 5000;
         private const int CompleteTime = 6000;
 
-        public static void LoadingFormLoadEvents(System.Windows.Forms.Timer timerLoading, System.Windows.Forms.Label lblVersion)
+        public static void LoadingFormLoadEvents(Timer timerLoading, Label lblVersion)
         {
             timerLoading.Start();
 
@@ -23,7 +23,7 @@ namespace GymAndFitness.Classes
             lblVersion.Text = "Version: " + Features.GetCurrentVersion();
         }
 
-        private static void UpdateProgressBarAndMessage(System.Windows.Forms.Label lblLoading, System.Windows.Forms.Label lblWelcome, ProgressBar progressBarLoading, System.Windows.Forms.Timer timerLoading)
+        private static void UpdateProgressBarAndMessage(Label lblLoading, Label lblWelcome, ProgressBar progressBarLoading, Timer timerLoading)
         {
             // Update progress bar and label based on elapsed time
             if (elapsedTime < initializeAppTime)

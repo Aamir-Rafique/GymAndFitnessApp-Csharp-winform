@@ -6,7 +6,7 @@ namespace GymAndFitness.Classes
     internal class LoginFormClass
     {
 
-        public static void CheckPassword(System.Windows.Forms.CheckBox chkShowPassword, System.Windows.Forms.TextBox txtPassword)
+        public static void CheckPassword(CheckBox chkShowPassword, TextBox txtPassword)
         {
             bool check = chkShowPassword.Checked;
 
@@ -22,7 +22,7 @@ namespace GymAndFitness.Classes
         }
 
         //validate login info
-        public static void LoginNow(System.Windows.Forms.TextBox txtUsername, System.Windows.Forms.TextBox txtPassword, ErrorProvider error)
+        public static void LoginNow(TextBox txtUsername, TextBox txtPassword, ErrorProvider error)
         {
             try
             {

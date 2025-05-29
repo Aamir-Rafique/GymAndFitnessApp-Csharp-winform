@@ -5,14 +5,14 @@ namespace GymAndFitness.Classes
 {
     internal class PaymentFormClass
     {
-        public static void PaymentFormLoadEvents(System.Windows.Forms.TextBox textBox1, System.Windows.Forms.TextBox txtEmail)
+        public static void PaymentFormLoadEvents(TextBox textBox1, TextBox txtEmail)
         {
             textBox1.Focus();
             // Set placeholder for TextBox
             Features.SetTextBoxPlaceholder(txtEmail, "Enter Your Email...");
         }
 
-        public static void ActivatePremium(ErrorProvider error, System.Windows.Forms.GroupBox groupBoxRadioButtons, System.Windows.Forms.TextBox txtEmail, System.Windows.Forms.RadioButton rbtnEasyPaisa, System.Windows.Forms.RadioButton rbtnJazzCash, System.Windows.Forms.RadioButton rbtnVisa, System.Windows.Forms.RadioButton rbtnPayPal)
+        public static void ActivatePremium(ErrorProvider error, GroupBox groupBoxRadioButtons, TextBox txtEmail, RadioButton rbtnEasyPaisa, RadioButton rbtnJazzCash, RadioButton rbtnVisa, RadioButton rbtnPayPal)
         {
 
             if (UserDataManager.CurrentUser != null)
@@ -74,12 +74,12 @@ namespace GymAndFitness.Classes
         }
 
 
-        private static bool IsAnyRadioButtonChecked(System.Windows.Forms.RadioButton rbtnEasyPaisa, System.Windows.Forms.RadioButton rbtnJazzCash, System.Windows.Forms.RadioButton rbtnVisa, System.Windows.Forms.RadioButton rbtnPayPal)
+        private static bool IsAnyRadioButtonChecked(RadioButton rbtnEasyPaisa, RadioButton rbtnJazzCash, RadioButton rbtnVisa, RadioButton rbtnPayPal)
         {
             return rbtnEasyPaisa.Checked || rbtnJazzCash.Checked || rbtnVisa.Checked || rbtnPayPal.Checked;
         }
 
-        private static string GetSelectedPaymentMethod(System.Windows.Forms.RadioButton rbtnEasyPaisa, System.Windows.Forms.RadioButton rbtnJazzCash, System.Windows.Forms.RadioButton rbtnVisa, System.Windows.Forms.RadioButton rbtnPayPal)
+        private static string GetSelectedPaymentMethod(RadioButton rbtnEasyPaisa, RadioButton rbtnJazzCash, RadioButton rbtnVisa, RadioButton rbtnPayPal)
         {
             if (rbtnEasyPaisa.Checked)
                 return "EasyPaisa";

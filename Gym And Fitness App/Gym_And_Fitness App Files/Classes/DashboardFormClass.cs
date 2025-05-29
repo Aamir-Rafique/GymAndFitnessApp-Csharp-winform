@@ -8,22 +8,22 @@ namespace GymAndFitness.Classes
     internal class DashboardFormClass
     {
         public static async Task DasboardFormLoadEvents(
-       System.Windows.Forms.Timer timerTime,
-       System.Windows.Forms.Timer timerQuote,
-       System.Windows.Forms.Label lblDate,
+       Timer timerTime,
+       Timer timerQuote,
+       Label lblDate,
        PictureBox pbProfilePicture,
        PictureBox pbMembershipStatus,
        Button btnLogout,
        Button btnLogin,
-       System.Windows.Forms.Label lblWaterIntake,
+       Label lblWaterIntake,
        ProgressBar progressBarWater,
        ProgressBar progressBarWeight,
-       System.Windows.Forms.Label lblWeightProgess,
+       Label lblWeightProgess,
        // Add these if PremiumFeatureDashboardForm needs them!
-       System.Windows.Forms.Label lblPremiumMembers,
+       Label lblPremiumMembers,
        Panel pnlWaterIntake,
        Button btnAddWater,
-       System.Windows.Forms.Label lblGlasses,
+       Label lblGlasses,
        ToolTip toolTip,
        PictureBox pbwaterintake
    )
@@ -76,7 +76,7 @@ namespace GymAndFitness.Classes
 
 
         // Helper Method to Disable Water Tracker/Premium Features
-        public static void PremiumFeatureDashboardForm(System.Windows.Forms.Label lblPremiumMembers, Panel pnlWaterIntake, Button btnAddWater, System.Windows.Forms.Label lblWaterIntake, System.Windows.Forms.Label lblGlasses, ProgressBar progressBarWater, ToolTip toolTip, PictureBox pbwaterintake)
+        public static void PremiumFeatureDashboardForm(Label lblPremiumMembers, Panel pnlWaterIntake, Button btnAddWater, Label lblWaterIntake, Label lblGlasses, ProgressBar progressBarWater, ToolTip toolTip, PictureBox pbwaterintake)
         {
             if (UserDataManager.CurrentUser.MembershipStatus == "Free" ||
                UserDataManager.CurrentUser.MembershipStatus == null)
@@ -111,7 +111,7 @@ namespace GymAndFitness.Classes
         }
 
 
-        public static void ProgressBarWeight(ProgressBar progressBarWeight, System.Windows.Forms.Label lblWeightProgess)
+        public static void ProgressBarWeight(ProgressBar progressBarWeight, Label lblWeightProgess)
         {
             // Weight Progress
             double startingWeight = UserDataManager.CurrentUser.StartingWeight;
@@ -218,7 +218,7 @@ namespace GymAndFitness.Classes
         private static int pauseCounter = 0;
         private static int pauseDuration = 13; // Adjust pause duration as needed
 
-        public static void GetQoutes(System.Windows.Forms.Label lblQuote)
+        public static void GetQoutes(Label lblQuote)
         {
             if (isTypingForward)
             {
@@ -318,7 +318,7 @@ namespace GymAndFitness.Classes
         private static Random random = new Random();
         private static int index;
 
-        public static void GetChallenges(System.Windows.Forms.Label lblChallenge)
+        public static void GetChallenges(Label lblChallenge)
         {
             index = random.Next(challenges.Length);
             lblChallenge.Text = challenges[index];
@@ -328,7 +328,7 @@ namespace GymAndFitness.Classes
 
         //Helper method for btnAddWater_Click
 
-        public static void SetWaterIntake(System.Windows.Forms.Label lblWaterIntake, ProgressBar progressBarWater)
+        public static void SetWaterIntake(Label lblWaterIntake, ProgressBar progressBarWater)
         {
             if (UserDataManager.CurrentUser != null)
             {
