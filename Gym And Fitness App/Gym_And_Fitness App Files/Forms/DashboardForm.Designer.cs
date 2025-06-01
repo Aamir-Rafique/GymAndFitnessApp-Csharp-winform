@@ -200,7 +200,7 @@
             // 
             // pnlMain
             // 
-            this.pnlMain.BackColor = System.Drawing.Color.PaleGreen;
+            this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlMain.Controls.Add(this.pnlWaterIntake);
             this.pnlMain.Controls.Add(this.lblPremiumMembers);
             this.pnlMain.Controls.Add(this.pnlChallenge);
@@ -482,12 +482,12 @@
             // 
             this.lblQuote.AutoSize = true;
             this.lblQuote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblQuote.Font = new System.Drawing.Font("Rockwell", 24.09901F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblQuote.Font = new System.Drawing.Font("Rockwell", 28.09901F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblQuote.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblQuote.Location = new System.Drawing.Point(142, 181);
+            this.lblQuote.Location = new System.Drawing.Point(142, 177);
             this.lblQuote.MaximumSize = new System.Drawing.Size(621, 0);
             this.lblQuote.Name = "lblQuote";
-            this.lblQuote.Size = new System.Drawing.Size(0, 42);
+            this.lblQuote.Size = new System.Drawing.Size(0, 50);
             this.lblQuote.TabIndex = 3;
             // 
             // label2

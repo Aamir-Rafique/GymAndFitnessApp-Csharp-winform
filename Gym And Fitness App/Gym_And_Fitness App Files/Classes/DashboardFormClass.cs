@@ -179,8 +179,14 @@ namespace GymAndFitness.Classes
         //For motivational quotes
         private static string[] quotes = {
                 "Believe in yourself!",
+                "Health is wealth!",
+                "A healthy body has a healthy mind.",
+                "Discipline is the key to success.",
                 "You are stronger than you think!",
                 "Every day is a second chance.",
+                "No pain, no gain.",
+                "Body under construction!",
+                "Sweat brings success.",
                 "Hard work pays off!",
                 "Success is a journey, not a destination.",
                 "Dream big.",
@@ -295,6 +301,7 @@ namespace GymAndFitness.Classes
             "Do 3 sets of 10 lunges.",
             "Run up and down the stairs for 5 minutes.",
             "Do 20 burpees.",
+            "Try Dopamine Detox for the whole day.",
             "Try a new healthy recipe.",
             "Do a 5-minute cool-down after your workout.",
             "Take a 10-minute power nap.",
@@ -317,6 +324,8 @@ namespace GymAndFitness.Classes
 
         private static Random random = new Random();
         private static int index;
+
+
 
         public static void GetChallenges(Label lblChallenge)
         {
