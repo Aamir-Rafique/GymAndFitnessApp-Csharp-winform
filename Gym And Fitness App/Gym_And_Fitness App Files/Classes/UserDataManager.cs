@@ -15,12 +15,6 @@ namespace GymAndFitness
 
         private static string connectionString = ConfigurationManager.ConnectionStrings["GymFitnessAppDbConnection"].ConnectionString;
 
-        // Constructor
-        //public UserDataManager()
-        //{
-        //    // Initialize any necessary objects or properties here
-        //}
-
         // Save user details
         public static void SignUpUser(string username, string password, int age, string gender, double height, double weight, double bmi, double targetWeight, string targetWeightRange, string fitnessGoal, string fitnessLevel, byte[] profilePicture, string membershipStatus, double currentWeight)
         {

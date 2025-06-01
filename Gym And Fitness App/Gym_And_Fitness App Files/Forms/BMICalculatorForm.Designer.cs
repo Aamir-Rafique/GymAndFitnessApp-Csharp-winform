@@ -38,6 +38,7 @@
             this.btnCalculate = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pbBMIChart = new System.Windows.Forms.PictureBox();
+            this.pbUnitConverter = new System.Windows.Forms.PictureBox();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,15 +54,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pbUnitConverter = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnitConverter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUnitConverter)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -71,9 +71,9 @@
             this.label2.Location = new System.Drawing.Point(68, 197);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 21);
+            this.label2.Size = new System.Drawing.Size(97, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Height (cm)";
+            this.label2.Text = "Height (cm):";
             // 
             // label3
             // 
@@ -82,9 +82,9 @@
             this.label3.Location = new System.Drawing.Point(68, 252);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 21);
+            this.label3.Size = new System.Drawing.Size(95, 21);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Weight (kg)";
+            this.label3.Text = "Weight (kg):";
             // 
             // label4
             // 
@@ -161,6 +161,19 @@
             this.pbBMIChart.TabIndex = 4;
             this.pbBMIChart.TabStop = false;
             this.toolTip1.SetToolTip(this.pbBMIChart, "BMI Scale");
+            // 
+            // pbUnitConverter
+            // 
+            this.pbUnitConverter.BackgroundImage = global::GymAndFitness.Properties.Resources.exchange;
+            this.pbUnitConverter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbUnitConverter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbUnitConverter.Location = new System.Drawing.Point(331, 195);
+            this.pbUnitConverter.Name = "pbUnitConverter";
+            this.pbUnitConverter.Size = new System.Drawing.Size(36, 30);
+            this.pbUnitConverter.TabIndex = 75;
+            this.pbUnitConverter.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbUnitConverter, "Unit Converter");
+            this.pbUnitConverter.Click += new System.EventHandler(this.pbUnitConverter_Click);
             // 
             // error
             // 
@@ -342,33 +355,20 @@
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.Visible = false;
             // 
-            // pbUnitConverter
-            // 
-            this.pbUnitConverter.BackgroundImage = global::GymAndFitness.Properties.Resources.exchange;
-            this.pbUnitConverter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbUnitConverter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbUnitConverter.Location = new System.Drawing.Point(331, 195);
-            this.pbUnitConverter.Name = "pbUnitConverter";
-            this.pbUnitConverter.Size = new System.Drawing.Size(36, 30);
-            this.pbUnitConverter.TabIndex = 75;
-            this.pbUnitConverter.TabStop = false;
-            this.toolTip1.SetToolTip(this.pbUnitConverter, "Unit Converter");
-            this.pbUnitConverter.Click += new System.EventHandler(this.pbUnitConverter_Click);
-            // 
             // BMICalculatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.txtWeight);
+            this.Controls.Add(this.txtHeight);
             this.Controls.Add(this.pbUnitConverter);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pbBMIChart);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnCalculate);
-            this.Controls.Add(this.txtWeight);
-            this.Controls.Add(this.txtHeight);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -385,15 +385,16 @@
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.txtHeight, 0);
-            this.Controls.SetChildIndex(this.txtWeight, 0);
             this.Controls.SetChildIndex(this.btnCalculate, 0);
             this.Controls.SetChildIndex(this.panel3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.pbBMIChart, 0);
             this.Controls.SetChildIndex(this.textBox1, 0);
             this.Controls.SetChildIndex(this.pbUnitConverter, 0);
+            this.Controls.SetChildIndex(this.txtHeight, 0);
+            this.Controls.SetChildIndex(this.txtWeight, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pbBMIChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUnitConverter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -402,7 +403,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbMembershipStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUnitConverter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

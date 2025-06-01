@@ -2,7 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
-    <PublishUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\Projects-Public\GymAndFitness_Setup\</PublishUrl>
+    <PublishUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\GymAndFitness_ClickOnceSetup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -12,7 +12,7 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\Projects-Public\GymAndFitness_Setup\</InstallUrl>
+    <InstallUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\GymAndFitness_ClickOnceSetup\</InstallUrl>
     <UpdateUrl>\\HP-PC\Users\Aamir\Desktop\Github Repos\Projects-Public\GymAndFitness_Setup\</UpdateUrl>
     <TargetCulture>en-US</TargetCulture>
     <ProductName>Gym And Fitness</ProductName>
@@ -22,7 +22,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>setup.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

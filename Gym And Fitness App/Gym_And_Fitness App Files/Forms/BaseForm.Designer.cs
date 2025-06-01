@@ -50,7 +50,6 @@
             this.slidePanel1.Name = "slidePanel1";
             this.slidePanel1.Size = new System.Drawing.Size(45, 573);
             this.slidePanel1.TabIndex = 1;
-            this.slidePanel1.Load += new System.EventHandler(this.slidePanel1_Load);
             // 
             // BaseForm
             // 

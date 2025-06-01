@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="GymAndFitness.exe" version="1.0.0.10" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="amd64" type="win32" />
+  <asmv1:assemblyIdentity name="GymAndFitness.exe" version="1.0.0.11" publicKeyToken="0000000000000000" language="en-US" processorArchitecture="amd64" type="win32" />
   <description asmv2:iconFile="fitness.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -74,7 +74,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wGR1Ryc84qkU+gKO2DTNIjTE+vYArtxlu2DE8PBdXKY=</dsig:DigestValue>
+        <dsig:DigestValue>M09XsETjp0tYwPKOIdXtKUx20UA/onG1pWu/u3oCfbE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -480,7 +480,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>nFvn/gZRBrx5orZRILUGl6OqZ2JqlWTOa6f7iKP+7WI=</dsig:DigestValue>
+      <dsig:DigestValue>Ez8KEBI8LAAW9ZYPHYYgp+8gSg0DCyw21z/xGNh7TS8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Database_files\GymAndFitness_DB_log.ldf" size="75497472" writeableType="applicationData">
@@ -489,7 +489,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ol+3T2pnBE1CyMxeGzqdvzI5H/fhPtMdqk5cg+TsB1Q=</dsig:DigestValue>
+      <dsig:DigestValue>3pHaXPh0VdZoIYaJvY34qV0jBmBSEqm3yf7T8C4qHpI=</dsig:DigestValue>
     </hash>
   </file>
   <file name="fitness.ico" size="191033">
@@ -510,13 +510,13 @@
       <dsig:DigestValue>YM1lkWMOuZIkAhVRvJHz0e6xa/mINe8mexFVx7snFW8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="GymAndFitness.pdb" size="488960">
+  <file name="GymAndFitness.pdb" size="486912">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>zc4shbnk5MJ4iP7tnMlnXN8sT+lHi0kI8ZnzfUNPe8I=</dsig:DigestValue>
+      <dsig:DigestValue>dEUKviVzVtfJsusFK38Kzih7Q4ftWLq+iNiIHjDpPIw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ILLink\ILLink.Descriptors.LibraryBuild.xml" size="297" writeableType="applicationData">
