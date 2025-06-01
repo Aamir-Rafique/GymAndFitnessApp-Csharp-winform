@@ -9,7 +9,7 @@ The **Gym And Fitness Application** is a Full-stack WinForms **C#** fitness app
 
 ## 🎯 Features
 
-✅ Used OOP concepts (Encapsulation, inheritance etc.)
+✅ Used OOP concepts (Encapsulation, inheritance etc.)\
 ✅ **User Authentication**: Secure login/signup implementation using the **Singleton** design pattern.\
 ✅ **User-Friendly Interface**: Designed using **Windows Forms (WinForms)** for easy navigation and interaction.\
 ✅ **BMI Calculator Module**: Users can calculate their Body Mass Index.\
@@ -22,7 +22,9 @@ The **Gym And Fitness Application** is a Full-stack WinForms **C#** fitness app
 ✅ **Workout Guides**: Comprehensive workout guides categorized by exercise type.\
 ✅ **Customized Workout Plans**: Personalized workout plans for structured exercise tracking.\
 ✅ **Challenges Section & Motivational Quotes**: To keep users motivated throughout their fitness journey.\
-✅ **SQL Database Integration**: Secure **storage and retrieval** of user data, including fitness progress, workouts, and nutrition records.
+✅ **SQL Database Integration**: Secure **storage and retrieval** of user data, including fitness progress, workouts, and nutrition records.\
+✅ **Email Verification for Premium Users**: Secure **Premium membership** for extra features with improved user experience.
+
 
 ---
 
@@ -105,7 +107,7 @@ Before running the application, ensure you have the following installed:
 - **.NET Framework 4.7.2**
 - **SQL Server LocalDB 2022**
 
-📥 **Download Pre-requisites**: [https://drive.google.com/drive/folders/19yuz4dl7XkBuzsyXG0APTuoXJXrlclz6?usp=sharing]
+📥 **Download Pre-requisites**: [https://drive.google.com/drive/folders/1mPM1e0lUOnBpXNq1te7qLpcnIdWKqpl_?usp=sharing]
 
 ### 3️⃣ **Run in Visual Studio**
 
