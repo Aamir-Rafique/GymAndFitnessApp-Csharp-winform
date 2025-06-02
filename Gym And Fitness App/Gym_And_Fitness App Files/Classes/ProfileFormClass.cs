@@ -168,6 +168,7 @@ namespace GymAndFitness.Classes
                     MessageBox.Show("Height and weight updated successfully!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     ProfileForm.GetInstance().RefreshPremiumFeaturesProfileForm();
+                    DashboardForm.GetInstance().RefreshProgressBarWeight();
                 }
                 else
                 {
