@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
@@ -95,14 +97,16 @@ namespace GymAndFitness.Classes
         {
             if (rbtnEasyPaisa.Checked)
                 return "EasyPaisa";
-            if (rbtnJazzCash.Checked)
+            else if (rbtnJazzCash.Checked)
                 return "JazzCash";
-            if (rbtnVisa.Checked)
+            else if (rbtnVisa.Checked)
                 return "Visa";
-            if (rbtnPayPal.Checked)
+            else if (rbtnPayPal.Checked)
                 return "PayPal";
-
-            return null; // No payment method selected
+            else
+            {
+                return null; // No payment method selected
+            }
         }
 
 
@@ -172,6 +176,7 @@ namespace GymAndFitness.Classes
         }
 
 
+
         private static void SendOTP(TextBox txtEmail, Label lblOTP, TextBox txtOTP, Button btnVerifyOTP, PictureBox pbOTPVerified, RadioButton rbtnEasyPaisa, RadioButton rbtnJazzCash, RadioButton rbtnVisa, RadioButton rbtnPayPal, GroupBox groupBoxRadioButtons)
         {
             // Generate a 6-digit verification OTP
@@ -182,6 +187,8 @@ namespace GymAndFitness.Classes
             {
                 // Determine the selected payment method
                 string paymentMethod = GetSelectedPaymentMethod(rbtnEasyPaisa, rbtnJazzCash, rbtnVisa, rbtnPayPal);
+                string username = UserDataManager.CurrentUser.Username;
+
 
                 // Replace with your Gmail and app password
                 string senderEmail = "gymandfitnessapp@gmail.com";
@@ -195,7 +202,7 @@ namespace GymAndFitness.Classes
                 mail.IsBodyHtml = true;   //to write the email body in HTML format to use formatting (bold, italic, emojis, etc.)
 
                 mail.Body = $@"
-<p>Hey <strong>Fitness Enthusiast</strong>,</p>
+<p>Assalam O Alaikum <strong>{username}</strong>,</p>
 
 <p>Welcome to <strong>Gym And Fitness App</strong>! 💪<br />
  We’re excited to have you on board to crush your fitness goals together.</p>
@@ -207,15 +214,20 @@ namespace GymAndFitness.Classes
     
 <p>Don’t share this code with anyone. It’s valid for the next <strong>10 minutes</strong>.</p>
 
-<p>💳 <strong>Selected Payment Method:</strong> 
-<span style='color: blue; font-weight: bold;'>{paymentMethod}</span> ✅</p>
+<p>💳 <strong>Selected Payment Method:</strong></p>
+<p>
+    <span style='color: blue; font-weight: bold;'> {paymentMethod}
+    </span>
+</p>
+
 
 <p>Ready to <em>sweat</em>, <em>smile</em>, and <em>succeed</em>? Let’s go! 🚀</p>
 
 <p>
 Stay strong,<br />
-— The <strong>Gym And Fitness App</strong> Team<br />
-🏃‍♀️ <a href='https://github.com/Aamir-Rafique/GymAndFitnessApp'>https://github.com/Aamir-Rafique/GymAndFitnessApp</a>
+Regards, 
+The <strong>Gym And Fitness App</strong> Team<br />
+<a href='https://github.com/Aamir-Rafique/GymAndFitnessApp'>https://github.com/Aamir-Rafique/GymAndFitnessApp</a>
 </p>";
 
 
