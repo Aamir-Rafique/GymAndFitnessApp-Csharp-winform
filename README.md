@@ -139,7 +139,7 @@ Once the application is installed using **ClickOnce Deployment**, you can direct
 
 ![Portfolio Screenshot](projectSS/loadingForm.jpg)  
 ![Portfolio Screenshot](projectSS/Login_new.png)  
-![Portfolio Screenshot](projectSS/aboutform.png)  
+![Portfolio Screenshot](projectSS/aboutform.jpg)  
 
 ---
 
