@@ -137,9 +137,9 @@ Once the application is installed using **ClickOnce Deployment**, you can direct
 ---
 ## 📷 Preview
 
-![Portfolio Screenshot](GymAndFitnessApp/projectSS/loadingForm.jpg)  
-![Portfolio Screenshot](GymAndFitnessApp/projectSS/Login_new.png)  
-![Portfolio Screenshot](GymAndFitnessApp/projectSS/aboutform.png)  
+![Portfolio Screenshot](projectSS/loadingForm.jpg)  
+![Portfolio Screenshot](projectSS/Login_new.png)  
+![Portfolio Screenshot](projectSS/aboutform.png)  
 
 ---
 
