@@ -135,6 +135,13 @@ Once the application is installed using **ClickOnce Deployment**, you can direct
 | Aamir Rafique    | Full-stack Developer (UI, Backend, Database)|
 
 ---
+## 📷 Preview
+
+![Portfolio Screenshot](GymAndFitnessApp/projectSS/loadingForm.jpg)  
+![Portfolio Screenshot](GymAndFitnessApp/projectSS/Login_new.png)  
+![Portfolio Screenshot](GymAndFitnessApp/projectSS/aboutform.png)  
+
+---
 
 ## 🎯 Conclusion
 
@@ -145,4 +152,9 @@ We encourage developers to contribute, improve, and expand this project. Feel fr
 📩 **For any queries or contributions, reach out via GitHub.**
 
 ---
+## 🧑‍💻 Author
 
+**Aamir Rafique**  
+📧 [amirrafique6400@gmail.com]  
+🔗 [LinkedIn](https://www.linkedin.com/in/aamir-rafique-7a5bb1336/)  
+🐙 [GitHub](https://github.com/Aamir-Rafique)
