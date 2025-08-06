@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DietPlansFormClass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Classes\\DietPlansFormClass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DashboardFormClass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Classes\\DashboardFormClass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Forms\\DietPlansForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Forms\\DietPlansForm.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Forms\\AboutForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DietPlansFormClass.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DietPlansFormClass.cs",
+              "RelativeDocumentMoniker": "Classes\\DietPlansFormClass.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DietPlansFormClass.cs",
+              "RelativeToolTip": "Classes\\DietPlansFormClass.cs",
+              "ViewState": "AgIAAM8BAAAAAAAAAAAAANQBAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T21:17:19.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardFormClass.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DashboardFormClass.cs",
+              "RelativeDocumentMoniker": "Classes\\DashboardFormClass.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Classes\\DashboardFormClass.cs",
+              "RelativeToolTip": "Classes\\DashboardFormClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T21:17:12.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DietPlansForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs",
+              "RelativeDocumentMoniker": "Forms\\DietPlansForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.cs",
+              "RelativeToolTip": "Forms\\DietPlansForm.cs",
+              "ViewState": "AgIAABUAAADAmZmZmZkXwCIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T21:16:36.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DietPlansForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\DietPlansForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\DietPlansForm.Designer.cs",
+              "RelativeToolTip": "Forms\\DietPlansForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T21:16:33.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AboutForm.cs",
+              "DocumentMoniker": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs",
+              "RelativeDocumentMoniker": "Forms\\AboutForm.cs",
+              "ToolTip": "C:\\Users\\Aamir\\Desktop\\Github Repos\\Projects-Public\\GymAndFitnessApp-Csharp-winform\\Gym And Fitness App\\Gym_And_Fitness App Files\\Forms\\AboutForm.cs",
+              "RelativeToolTip": "Forms\\AboutForm.cs",
+              "ViewState": "AgIAADEAAABAMzMzMzMrwEIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T21:16:01.712Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

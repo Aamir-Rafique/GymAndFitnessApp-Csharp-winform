@@ -8,22 +8,21 @@ The **Gym And Fitness Application** is a Full-stack WinForms **C#** fitness app
 ---
 
 ## 🎯 Features
-
-✅ Used OOP concepts (Encapsulation, inheritance etc.)\
-✅ **User Authentication**: Secure login/signup implementation using the **Singleton** design pattern.\
-✅ **User-Friendly Interface**: Designed using **Windows Forms (WinForms)** for easy navigation and interaction.\
-✅ **BMI Calculator Module**: Users can calculate their Body Mass Index.\
-✅ **Personal Profile**: To maintain a proper fitness profile.\
-✅ **Workout Module**: Users can access pre-defined workout routines or create their own custom plans.\
-✅ **Nutrition Tracking**: A built-in system to search for meals and track calorie intake.\
-✅ **Diet Plans (Customizable)**: Suggested meal recipes based on fitness goals + customized meal scheduling for breakfast, lunch, dinner, snacks, etc.\
-✅ **Water Intake Tracking**: A feature to track daily water intake.\
-✅ **Fitness Progress Monitoring**: Users can track their progress through visual analytics and reports.\
-✅ **Workout Guides**: Comprehensive workout guides categorized by exercise type.\
-✅ **Customized Workout Plans**: Personalized workout plans for structured exercise tracking.\
-✅ **Challenges Section & Motivational Quotes**: To keep users motivated throughout their fitness journey.\
-✅ **SQL Database Integration**: Secure **storage and retrieval** of user data, including fitness progress, workouts, and nutrition records.\
-✅ **Email Verification for Premium Users**: Secure **Premium membership** for extra features with improved user experience.
+- Used OOP concepts (Encapsulation, inheritance etc.)
+- **User Authentication**: Secure login/signup implementation using the **Singleton** design pattern.
+- **User-Friendly Interface**: Designed using **Windows Forms (WinForms)** for easy navigation and interaction.
+- **BMI Calculator Module**: Users can calculate their Body Mass Index.
+- **Personal Profile**: To maintain a proper fitness profile.
+- **Workout Module**: Users can access pre-defined workout routines or create their own custom plans.
+- **Nutrition Tracking**: A built-in system to search for meals and track calorie intake.
+- **Diet Plans (Customizable)**: Suggested meal recipes based on fitness goals + customized meal scheduling for breakfast, lunch, dinner, snacks, etc.
+- **Water Intake Tracking**: A feature to track daily water intake.
+- **Fitness Progress Monitoring**: Users can track their progress through visual analytics and reports.
+- **Workout Guides**: Comprehensive workout guides categorized by exercise type.
+- **Customized Workout Plans**: Personalized workout plans for structured exercise tracking.
+- **Challenges Section & Motivational Quotes**: To keep users motivated throughout their fitness journey.
+- **SQL Database Integration**: Secure **storage and retrieval** of user data, including fitness progress, workouts, and nutrition records.
+- **Email Verification for Premium Users**: Secure **Premium membership** for extra features with improved user experience.
 
 
 ---
@@ -71,24 +70,24 @@ The **Gym And Fitness Application** is a Full-stack WinForms **C#** fitness app
 GymAndFitnessApp/
 └── Gym And Fitness App/
     └── Gym_And_Fitness App Files/
-        ├── .vs/
-        ├── bin/
-        ├── Classes/
-        ├── Database_files/
-        ├── Forms/
-        ├── ILink/
-        ├── obj/
-        ├── packages/
-        ├── Properties/
-        ├── Resources/
-        ├── App.config
-        ├── fitness.ico
-        ├── Gym & Fitness App_TemporaryKey.pfx
-        ├── GymAndFitness.csproj
-        ├── GymAndFitness.csproj.user
-        ├── GymAndFitness.sln
-        ├── GymAndFitness_TemporaryKey.pfx
-        ├── packages.config
+        ├── .vs/                      # Visual Studio workspace files
+        ├── bin/                      # Compiled binaries (Debug/Release)
+        ├── Classes/                  # C# class files (business logic, models)
+        ├── Database_files/           # SQL database scripts and backups
+        ├── Forms/                    # WinForms UI forms
+        ├── ILink/                    # Interface and link files
+        ├── obj/                      # Temporary object files
+        ├── packages/                 # NuGet package dependencies
+        ├── Properties/               # Project properties and settings
+        ├── Resources/                # Images, icons, and other resources
+        ├── App.config                # Application configuration file
+        ├── fitness.ico               # Application icon
+        ├── GymAndFitness.sln         # Visual Studio solution file
+        ├── GymAndFitness.csproj      # Project file
+        ├── GymAndFitness.csproj.user # User-specific project settings
+        ├── Gym & Fitness App_TemporaryKey.pfx   # Temporary signing key (legacy)
+        ├── GymAndFitness_TemporaryKey.pfx       # Temporary signing key
+        ├── packages.config           # NuGet package configuration
 ```
 ---
 ## 🚀 Installation & Setup
@@ -143,6 +142,13 @@ Once the application is installed using **ClickOnce Deployment**, you can direct
 
 ---
 
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](./LICENSE) file for details.
+
+---
+
 ## 🎯 Conclusion
 
 The **Gym And Fitness Application** is a powerful fitness management tool designed for structured workouts, nutrition tracking, and motivation. Although developed for educational purposes, it showcases best practices in **C# WinForms development**, **API integration**, and **SQL database management**.
@@ -150,6 +156,7 @@ The **Gym And Fitness Application** is a powerful fitness management tool design
 We encourage developers to contribute, improve, and expand this project. Feel free to fork, modify, and experiment! 🚀
 
 📩 **For any queries or contributions, reach out via GitHub.**
+
 
 ---
 ## 🧑‍💻 Author
